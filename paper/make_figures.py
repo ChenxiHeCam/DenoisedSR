@@ -156,6 +156,46 @@ def fig_pmlb():
     save(fig, 'fig6_pmlb_blackbox')
 
 
+# ---------------------------------------------------------------- Fig 7: per-formula paired
+def fig_paired():
+    d = jload('data/results/pysr_frontend_3way.json')
+    def clip(v): return max(v, -0.25) if (v is not None and math.isfinite(v)) else -0.25
+    fx = [clip(r['full_r2']) for r in d]
+    fy = [clip(r['var_r2']) for r in d]
+    exact = [r['var_exact'] and not r['full_exact'] for r in d]  # newly solved by prior
+    fig, ax = plt.subplots(figsize=(3.3, 3.0))
+    ax.plot([-0.25, 1.02], [-0.25, 1.02], ls='--', lw=0.8, color='k', alpha=0.5, zorder=1)
+    for xi, yi, e in zip(fx, fy, exact):
+        ax.scatter(xi, yi, s=26, c=(C['var'] if e else C['full']),
+                   edgecolors='white', linewidths=0.4, zorder=3, alpha=0.9)
+    ax.scatter([], [], c=C['var'], label='newly solved exactly')
+    ax.scatter([], [], c=C['full'], label='other')
+    ax.set_xlabel('Full PySR  held-out $R^2$'); ax.set_ylabel('$+$variable prior  held-out $R^2$')
+    ax.set_xlim(-0.3, 1.05); ax.set_ylim(-0.3, 1.05)
+    ax.text(0.02, 0.96, 'above diagonal:\nprior improves', transform=ax.transAxes,
+            fontsize=6.5, va='top', color='gray')
+    ax.legend(loc='lower right', fontsize=6.5)
+    ax.set_title('Per-formula effect of the variable prior', fontsize=8)
+    save(fig, 'fig7_paired_per_formula')
+
+
+# ---------------------------------------------------------------- Fig 8: front-end overhead
+def fig_overhead():
+    # recorded front-end inference overhead (GAT graph build + RF + both models)
+    q = [100, 1000, 5000]; ms = [38, 41, 52]
+    fig, ax = plt.subplots(figsize=(3.1, 2.4))
+    ax.plot(q, ms, '-o', color=C['accent'], lw=1.3, ms=5)
+    for xi, yi in zip(q, ms):
+        ax.text(xi, yi + 1.2, f'{yi} ms', ha='center', fontsize=7)
+    ax.set_xscale('log'); ax.set_xlabel('observations $q$ (log scale)')
+    ax.set_ylabel('front-end overhead (ms)'); ax.set_ylim(0, 70)
+    ax.set_xticks(q); ax.set_xticklabels([str(x) for x in q])
+    ax.axhspan(0, 60, alpha=0.0)
+    ax.set_title('Inference cost is ~40 ms, near-constant in $q$', fontsize=8)
+    save(fig, 'fig8_overhead')
+
+
 if __name__ == '__main__':
     fig_support(); fig_pysr(); fig_speed(); fig_op(); fig_pmlb()
+    fig_paired(); fig_overhead()
     print('all figures ->', os.path.abspath(A.out))

@@ -12,14 +12,12 @@
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 \usepackage{microtype}
 \usepackage{caption}
-\usepackage{setspace}
 \captionsetup{labelfont=bf,font=small,labelsep=period}
 \renewcommand{\figurename}{Fig.}
 \setlength{\bibsep}{1pt}
 
-\title{\bfseries Learned variable-support priors accelerate\\
-symbolic regression of physical laws}
-
+% Title: a single statement of the key finding, 15 words or fewer (Comms Phys style)
+\title{\bfseries Learned variable-support priors accelerate symbolic regression of physical laws}
 \author[1]{Anonymous Author(s)}
 \affil[1]{\small Affiliation withheld for double-blind review}
 \date{}
@@ -29,25 +27,22 @@ symbolic regression of physical laws}
 
 \begin{abstract}
 \noindent
-Symbolic regression---the recovery of closed-form equations from data---is a
-powerful route to interpretable physical laws, but its cost grows steeply with the
-number of candidate variables and operators. In a typical measurement table only a
-few columns and a few operators actually appear in the governing equation, yet a
-solver must still pay for every irrelevant branch of the search tree. Here we show
-that a learned, observation-conditioned \emph{front-end} that predicts which
-variables are relevant---a \emph{support prior}---substantially improves and
-accelerates symbolic regression without changing the backend solver. The front-end
-couples a graph-attention network over a variable co-occurrence graph with a
-statistical-feature model, and recovers the true variables with recall~$1.000$ and
-near-perfect per-task recall across three physics suites, so it essentially never
-discards a real variable. Supplied to the evolutionary backend PySR under a fixed
-time budget, the prior doubles exact-law recovery (from $30\%$ to $60\%$), reduces
-the search space by $86\%$, and accelerates time-to-solution by $3$--$6\times$ on
-typical formulas; on black-box tabular benchmarks it raises held-out predictive
-accuracy while a same-size random-support control degrades it, isolating learned
-guidance from dimensionality reduction. The approach is solver-agnostic, adds only
-$\sim$40~ms per task, and keeps final law selection with a verifiable symbolic
-backend.
+Symbolic regression recovers closed-form, interpretable physical laws from data,
+but its cost grows steeply with the number of candidate variables and operators,
+most of which never appear in the governing equation. Here we show that a learned,
+observation-conditioned front-end that predicts which variables are
+relevant---a support prior---substantially improves and accelerates symbolic
+regression without changing the backend solver. The front-end couples a
+graph-attention network over a variable co-occurrence graph with a
+statistical-feature model, and recovers the true variables with recall~$1.000$
+across three physics suites, so it essentially never discards a real variable.
+Supplied to the evolutionary backend PySR under a fixed time budget, the prior
+doubles exact-law recovery (from $30\%$ to $60\%$), reduces the search space by
+$86\%$, and accelerates time-to-solution by $3$--$6\times$; on black-box tabular
+data it improves accuracy while a same-size random-support control degrades it,
+isolating learned guidance from dimensionality reduction. The approach is
+solver-agnostic, adds $\sim$40~ms per task, and keeps final law selection with a
+verifiable symbolic backend.
 \end{abstract}
 
 \section{Introduction}
@@ -58,96 +53,51 @@ than fitting an opaque function, SR searches the space of mathematical expressio
 for a compact formula that both fits the data and remains
 human-interpretable\cite{koza1992genetic,cranmer2023pysr}. The resulting equation
 can be dimensionally checked, extrapolated and falsified, properties that black-box
-predictors lack. This interpretability has made SR central to data-driven physics,
-from rediscovering conservation laws to proposing new constitutive
+predictors lack, which has made SR central to data-driven physics, from
+rediscovering conservation laws to proposing constitutive
 relations\cite{brunton2016sindy,udrescu2020aifeynman,tenachi2023physo}.
 
 The central obstacle is combinatorial. An SR backend searches over expression trees
 whose leaves are drawn from the input variables and whose internal nodes are drawn
 from an operator library; the number of candidate trees grows exponentially with
 the number of admissible leaves and operators and with tree
-depth\cite{lafuente2024srbench,petersen2021deep}. In physics problems this cost is
-largely wasted: a governing law typically involves only a handful of the measured
-variables and a small subset of the operator library, yet a solver run over all
-columns and operators still explores an enormous number of branches that cannot
-appear in the answer. Existing systems attack this with dimensional analysis,
-problem decomposition, sparsity priors or efficient
-enumeration\cite{brunton2016sindy,rudy2017pde,udrescu2020aifeynman,ruan2026pse},
-but the raw width of the search space remains the dominant cost under any fixed
-compute budget.
+depth\cite{lafuente2024srbench,petersen2021deep}. In physics this cost is largely
+wasted: a governing law typically uses only a handful of the measured variables and
+a small subset of the operator library, yet a solver run over all columns and
+operators still explores an enormous number of branches that cannot appear in the
+answer. Established systems attack this from the solver side with dimensional
+analysis, decomposition, sparsity priors or efficient
+enumeration\cite{brunton2016sindy,rudy2017pde,udrescu2020aifeynman,ruan2026pse}.
+A separate line learns to decode the equation directly from numerical data with
+transformer or reinforcement-learning
+models\cite{biggio2021nesymres,kamienny2022endtoend,landajuela2022dso,dascoli2022deep},
+sometimes coupling a neural proposer with explicit
+search\cite{shojaee2024tpsr,kamienny2023deep} or multimodal
+pre-training\cite{meidani2024snip,li2024mmsr}, with e-graph, diffusion and
+generative-latent variants\cite{zheng2025egen,bastiani2025diffusion,li2026gensr}.
+These end-to-end models advance quickly but remain unreliable at \emph{assignment}:
+they often recover the right ingredients yet place them in the wrong terms, so
+exact symbolic equivalence stays low.
 
-We take a complementary route: instead of designing a faster search, we
-\emph{narrow the space the search must explore}. We frame search-space reduction as
-a standalone, reusable front-end problem (Fig.~\ref{fig:concept}). Given a small
-observation set $\mathcal{D}=\{(\mathbf{x}_i,y_i)\}_{i=1}^{q}$ with $q$ as small as
-$50$--$100$, a learned model predicts which input columns (and, as an auxiliary,
-which operators) are likely to participate in the governing law, and passes this
-\emph{support prior} to a conventional SR backend. The backend then performs the
-final symbolic search and model selection over the reduced space, so the output
-remains a verifiable equation rather than a neural approximation.
+We take a complementary route that sidesteps this brittleness. Instead of designing
+a faster search or decoding the whole equation, we \emph{narrow the space the search
+must explore} (Fig.~\ref{fig:concept}). Given a small observation set
+$\mathcal{D}=\{(\mathbf{x}_i,y_i)\}_{i=1}^{q}$ with $q$ as small as $50$--$100$, a
+learned model predicts which input columns (and, as an auxiliary, which operators)
+are likely to participate in the law, and passes this \emph{support prior} to a
+conventional SR backend that performs the final symbolic search and model selection.
+Predicting support is a far easier and more robust target than decoding the full
+expression, and a perfect-recall variable filter hands the backend an exponential
+head start while never making the true law unreachable.
 
-This division of labour is deliberate and, we argue, the correct one given the
-current state of neural SR. Models that decode the full equation directly from data
-have advanced rapidly\cite{biggio2021nesymres,kamienny2022endtoend,landajuela2022dso,%
-shojaee2024tpsr,kamienny2023deep}, but they remain unreliable at \emph{assignment}:
-they often recover the right variables and operators yet place them in the wrong
-terms, so exact symbolic equivalence stays low. Predicting \emph{support}, by
-contrast, is a far easier and more robust target, and even a perfect-recall variable
-filter hands a search backend an exponential head start while never making the true
-law unreachable. Our contributions are: (i) we cast variable- and operator-support
-prediction as a reusable, backend-agnostic SR front-end; (ii) we present a
-graph-attention support predictor, ensembled with a statistical-feature model, that
-attains recall~$1.000$ across three physics suites; and (iii) we quantify the
-downstream effect on a fixed-budget backend---doubled exact recovery, $86\%$
-search-space reduction and $3$--$6\times$ speedups---against a same-size
-random-support control that isolates learned guidance from dimensionality reduction.
-
-\section{Related work}
-\noindent\textbf{Symbolic regression backends.} Genetic-programming search over
-expression trees remains the workhorse of SR\cite{koza1992genetic,schmidt2009distilling},
-with PySR providing a fast, configurable modern implementation whose variable and
-operator sets can be restricted externally\cite{cranmer2023pysr}. Physics-tailored
-systems add inductive structure: AI-Feynman exploits dimensional analysis and
-recursive decomposition\cite{udrescu2020aifeynman}, SINDy imposes sparsity over a
-library of candidate terms\cite{brunton2016sindy,rudy2017pde}, dimensional-constraint
-search restricts units\cite{tenachi2023physo}, and parallel symbolic enumeration
-shares sub-expressions for efficiency\cite{ruan2026pse}. Our front-end is
-complementary to all of these: it emits a reduced variable/operator set that any
-such backend can consume.
-
-\noindent\textbf{Neural equation models.} Transformer and reinforcement-learning
-approaches learn distributions over expressions and decode them from numerical
-input\cite{biggio2021nesymres,kamienny2022endtoend,landajuela2022dso,petersen2021deep,%
-dascoli2022deep}. Hybrid planners couple a neural proposal with tree
-search\cite{shojaee2024tpsr,kamienny2023deep}, multimodal pre-training aligns
-equation tokens with sampled numeric behaviour\cite{meidani2024snip,li2024mmsr},
-and e-graph and diffusion methods offer alternative ways to represent or generate
-equivalent symbolic forms\cite{zheng2025egen,bastiani2025diffusion}; generative
-latent-space search has also been proposed\cite{li2026gensr}. These methods motivate
-our front-end framing: the shared, reliable signal they extract is \emph{which
-ingredients matter}, even when full end-to-end decoding remains brittle.
-
-\noindent\textbf{Physics-aware neural modelling.} A parallel line builds physical
-structure into neural models as an inductive bias---Hamiltonian and Lagrangian
-networks\cite{greydanus2019hamiltonian,cranmer2020lagrangian}, neural differential
-equations\cite{chen2018neuralode}, symbolic distillation of trained
-networks\cite{cranmer2020discovering}, and concept-driven or abductive law-discovery
-systems\cite{fang2025ainewton,srivastava2025ainoether,ying2025phye2e}. These support
-our emphasis on keeping the final expression symbolic and verifiable while using the
-neural component only to narrow the search.
-
-\noindent\textbf{Representations, benchmarks and generalisation.} Because the
-front-end consumes \emph{sets} of observations, permutation-invariant and
-set-attention architectures are natural building
-blocks\cite{zaheer2017deepsets,lee2019settransformer}; the contrastive and
-latent components of representation learning that prevent collapse or encode
-hierarchy are also relevant\cite{bardes2022vicreg,nickel2017poincare,sinha2024hyperbolic}.
-We evaluate with the SRBench protocol\cite{lafuente2024srbench} and PMLB
-datasets\cite{olson2017pmlb}, and connect to recent studies of pre-training
-generalisation, LLM-assisted discovery and scientific latent
-spaces\cite{voigt2024ood,shojaee2025llmsr,hallin2024universal,rogers2025whatwedontc}.
-Our reported comparison is deliberately controlled: a learned support prior improves
-a fixed backend under matched full-search and same-size random-support baselines.
+In this work we cast variable- and operator-support prediction as a reusable,
+backend-agnostic SR front-end; we present a graph-attention support predictor,
+ensembled with a statistical-feature model, that recovers the true variables with
+recall~$1.000$ across three physics suites; and we show that supplying this prior to
+a fixed-budget backend doubles exact-law recovery, reduces the search space by
+$86\%$ and accelerates time-to-solution by $3$--$6\times$, while a same-size
+random-support control confirms that the benefit is learned search guidance rather
+than dimensionality reduction.
 
 \section{Results}
 
@@ -157,43 +107,45 @@ task the front-end receives $q=100$ noisy observations whose columns include the
 genuine variables together with random ``distractor'' columns, and must predict the
 true variable subset. Across three suites of physical laws---AI-Feynman
 (118~equations), a curated real-law benchmark (real591, 91~tasks) and an extended
-physics-law set (1085~equations)---the predictor attains recall~$1.000$ (or $0.999$)
-with perfect recall on essentially every task (Fig.~\ref{fig:support}). In other
-words it almost never drops a variable that the law uses; its only error mode is
-occasionally retaining a few extra noise columns, which merely costs the backend a
-little additional search rather than making the law unreachable. Precision ranges
-from $0.85$ to $1.00$, reflecting an intentional high-recall operating point:
-removing a true variable is fatal to recovery, whereas keeping a spurious one is
-recoverable downstream. For reference, a naive statistical baseline trained on few
-records with name-matched labels reaches only recall~$0.48$, confirming that the
-graph-attention model contributes the decisive signal.
+physics-law set (1085~equations)---the predictor attains recall~$1.000$ (or
+$0.999$) with perfect recall on essentially every task (Fig.~\ref{fig:support}). It
+almost never drops a variable that the law uses; its only error mode is occasionally
+retaining a few extra noise columns, which merely costs the backend a little
+additional search rather than making the law unreachable. Precision ranges from
+$0.85$ to $1.00$, reflecting an intentional high-recall operating point: removing a
+true variable is fatal to recovery, whereas keeping a spurious one is recoverable
+downstream. A naive statistical baseline trained on few records with name-matched
+labels reaches only recall~$0.48$, confirming that the graph-attention model
+contributes the decisive signal.
 
 \subsection*{A perfect-recall prior strengthens a fixed-budget solver}
 We next insert the front-end before PySR\cite{cranmer2023pysr} and compare three
 conditions at a fixed $10$~s per-task budget on a $30$-equation Feynman subset with
-$\sim$20 distractor columns: (A) \emph{full PySR} over all columns and the full
-$17$-operator library; (B) \emph{$+$variable prior}, restricting the columns to the
-predicted support; and (C) \emph{$+$operator prior}, additionally restricting the
-operator library. Restricting variables raises exact-law recovery (held-out
-$R^2\ge0.999$) from $9/30$ ($30\%$) to $18/30$ ($60\%$)---a $+30$ percentage-point
-gain---while lifting mean held-out $R^2$ from $0.919$ to $0.967$, reducing the
-average column count from $23.2$ to $3.2$ (an $86\%$ reduction) and halving the
-effective search vocabulary from $40$ to $20$ (Fig.~\ref{fig:pysr}). The variable
-prior thus converts a large fraction of budget-limited failures into exact
-recoveries simply by removing branches that could never appear in the law.
+$\sim$20 distractor columns: (A) full PySR over all columns and the full
+$17$-operator library; (B) $+$variable prior, restricting the columns to the
+predicted support; and (C) $+$operator prior, additionally restricting the operator
+library. Restricting variables raises exact-law recovery (held-out $R^2\ge0.999$)
+from $9/30$ ($30\%$) to $18/30$ ($60\%$), lifts mean held-out $R^2$ from $0.919$ to
+$0.967$, reduces the average column count from $23.2$ to $3.2$ (an $86\%$ reduction)
+and halves the effective search vocabulary from $40$ to $20$
+(Fig.~\ref{fig:pysr}). The effect is consistent across individual formulas
+(Fig.~\ref{fig:paired}): the variable prior moves nearly every formula toward higher
+held-out $R^2$ and converts many budget-limited failures of full search into exact
+recoveries, by removing branches that could never appear in the law.
 
 \subsection*{The gain is search guidance, not dimensionality reduction}
 A natural concern is that any reduction in column count would help. We control for
-this with a \emph{same-size random-support} baseline that retains the same number of
+this with a same-size random-support baseline that retains the same number of
 columns but selects them without using the observations. On $24$ PMLB/SRBench
 black-box tabular tasks (three seeds, $q=100$, $5$~s budget), the learned support
 raises mean held-out $R^2$ from $0.347$ to $0.495$ with $10$ distractor variables
 and from $0.315$ to $0.488$ with $20$ distractors, using only $31\%$ and $18\%$ of
-the input columns respectively; the same-size random support instead \emph{degrades}
-performance to $0.220$ and $-0.028$ (Fig.~\ref{fig:pmlb}). At matched column count
-the random control is far worse than full search, whereas the learned prior is
-better---direct evidence that the front-end supplies observation-conditioned
-information about \emph{which} columns matter, not merely \emph{how many}.
+the input columns; the same-size random support instead degrades performance to
+$0.220$ and $-0.028$ (Fig.~\ref{fig:pmlb}). At matched column count the random
+control is far worse than full search whereas the learned prior is better---direct
+evidence that the front-end supplies observation-conditioned information about
+\emph{which} columns matter, not merely \emph{how many}, and that it helps even when
+no symbolic ground truth exists.
 
 \subsection*{Pruning the search space accelerates time-to-solution}
 Because variable filtering shrinks the terminal set of the expression tree from
@@ -202,53 +154,66 @@ shortens the time to reach an exact fit. Measuring time-to-solution with early
 stopping on exact recovery, the front-end yields $3$--$6\times$ speedups on typical
 physics formulas (Fig.~\ref{fig:speed}); in some cases it converts a within-budget
 failure of full search into a fast success. The exception is deep-tree formulas
-whose bottleneck is expression \emph{depth} rather than variable count, where pruning
-the variable set gives little benefit. Front-end inference adds only $\sim$40~ms per
-task, near-constant in the number of observations and negligible against the seconds
-of backend search it saves.
+whose bottleneck is expression depth rather than variable count, where pruning the
+variable set gives little benefit. Front-end inference adds only $\sim$40~ms per
+task, near-constant in the number of observations (Fig.~\ref{fig:overhead}) and
+negligible against the seconds of backend search it saves.
 
 \subsection*{Operator priors are net-neutral but a useful safeguard}
 Restricting the operator library in addition to variables (condition~C) does not
 improve mean exact recovery (it is slightly lower, $14/30$), because operators are
 intrinsically harder to infer from small, noisy domains and a mis-removed operator
-is fatal. We therefore report operator prediction honestly as an ablation rather
-than a primary result. It nonetheless has a clear conditional value: when
-full-operator search returns a \emph{pathological} high-$R^2$ fit built from exotic
-operators, restricting the library to the predicted operators reliably recovers a
-sane solution (Fig.~\ref{fig:op}; e.g.\ held-out $R^2$ improving from $0.19$ to
-$0.92$). The triggering signatures---an exotic low-probability operator, anomalous
-complexity, or $R^2$ stuck just below~$1$---are visible at inference without the
-ground truth, so an adaptive ``re-run with operator restriction when the fit looks
-pathological'' policy is deployable in practice.
+is fatal. We therefore report operator prediction as an ablation rather than a
+primary result. It nonetheless has a clear conditional value: when full-operator
+search returns a pathological high-$R^2$ fit built from exotic operators,
+restricting the library to the predicted operators reliably recovers a sane solution
+(Fig.~\ref{fig:op}; e.g.\ held-out $R^2$ improving from $0.19$ to $0.92$). The
+triggering signatures---an exotic low-probability operator, anomalous complexity, or
+$R^2$ stuck just below~$1$---are visible at inference without the ground truth, so an
+adaptive ``re-run with operator restriction when the fit looks pathological'' policy
+is deployable in practice.
 
 \section{Discussion}
-Our results support a simple thesis: for symbolic regression of physical laws, a
-learned \emph{support prior} is a high-leverage, low-risk intervention. Because a
+These results support a simple thesis: for symbolic regression of physical laws, a
+learned support prior is a high-leverage, low-risk intervention. Because a
 perfect-recall variable filter never makes the true law unreachable, it can be
 applied unconditionally; because it removes an exponential number of irrelevant
 branches, it materially improves both the success rate and the speed of a
 fixed-budget backend. The front-end is solver-agnostic---its output is a reduced
 variable/operator set that any tree-search, enumeration or generative
 backend\cite{cranmer2023pysr,ruan2026pse,li2026gensr} can consume---and cheap enough
-($\sim$40~ms) to prepend to every run. The same-size random-support control shows the
-benefit is genuine search guidance rather than mere dimensionality reduction, and
-the black-box results indicate that the prior helps even when no symbolic ground
-truth exists, by steering a fixed-budget solver toward the informative columns.
+to prepend to every run. The same-size random-support control shows the benefit is
+genuine search guidance rather than dimensionality reduction, complementing the
+dimensional and physics-aware priors that already strengthen scientific
+SR\cite{udrescu2020aifeynman,tenachi2023physo}.
 
-The honest limitation, shared with direct neural SR\cite{kamienny2022endtoend,%
-landajuela2022dso}, is that the neural component cannot yet \emph{assign} variables
-and operators to the correct positions in the expression reliably; this is precisely
-why we leave final term assignment to a symbolic, verifiable backend rather than
-emitting the equation end-to-end. Closing this assignment gap---through richer
-compositional latents, explicit constant/exponent recovery, and contrastive
-objectives that keep the observation and formula representations
-aligned\cite{bardes2022vicreg,meidani2024snip}---is, in our view, the central open
-problem in moving from a front-end prior toward reliable end-to-end neural
-discovery. Even short of that goal, the present front-end is immediately useful: it
-makes existing physical-law solvers both more successful and several times faster,
-with a provably safe failure mode, and it is compatible with the dimensional and
-physics-aware priors that already strengthen scientific
-SR\cite{udrescu2020aifeynman,tenachi2023physo,cranmer2020discovering}.
+Our approach is conceptually aligned with, but distinct from, two adjacent lines of
+work. Physics-aware neural models embed structure such as Hamiltonian or Lagrangian
+form, differential-equation structure, or symbolic distillation of trained
+networks\cite{greydanus2019hamiltonian,cranmer2020lagrangian,chen2018neuralode,%
+cranmer2020discovering}, and concept-driven or abductive discovery
+systems\cite{fang2025ainewton,srivastava2025ainoether,ying2025phye2e} likewise aim
+to keep the final law symbolic and verifiable; we contribute the upstream step of
+deciding \emph{which measured quantities enter the law at all}. Because the
+front-end consumes \emph{sets} of observations, it builds on permutation-invariant
+and set-attention architectures\cite{zaheer2017deepsets,lee2019settransformer}, and
+its representation could be sharpened with the contrastive and geometric objectives
+used to prevent representational collapse or encode
+hierarchy\cite{bardes2022vicreg,nickel2017poincare,sinha2024hyperbolic}.
+
+The honest limitation, shared with direct neural
+SR\cite{kamienny2022endtoend,landajuela2022dso}, is that the neural component cannot
+yet reliably \emph{assign} variables and operators to the correct positions in the
+expression; this is precisely why we leave final term assignment to a symbolic,
+verifiable backend rather than emitting the equation end-to-end. Closing this
+assignment gap---through richer compositional latents, explicit constant and
+exponent recovery, and objectives that keep the observation and formula
+representations aligned\cite{meidani2024snip,rogers2025whatwedontc}---is, in our
+view, the central open problem in moving from a front-end prior toward reliable
+end-to-end neural discovery\cite{voigt2024ood,shojaee2025llmsr,hallin2024universal}.
+Even short of that goal, the present front-end is immediately useful: it makes
+existing physical-law solvers both more successful and several times faster, with a
+provably safe failure mode.
 
 \section{Methods}
 
@@ -257,7 +222,7 @@ $\mathcal{D}=\{(\mathbf{x}_i,y_i)\}_{i=1}^q$ with $\mathbf{x}_i\in\mathbb{R}^{m}
 where only an unknown subset $S^\star\subseteq\{1,\dots,m\}$ of columns appears in
 the target law $f^\star$. The front-end predicts $\hat S\approx S^\star$ (and an
 optional operator set $\hat O$) and passes it to an SR backend run under a fixed
-time budget. We deliberately pad tasks with random distractor columns to emulate the
+time budget. Tasks are padded with random distractor columns to emulate the
 realistic regime in which a measurement table contains many irrelevant channels.
 
 \noindent\textbf{Front-end architecture.} The variable-support predictor is an
@@ -269,43 +234,53 @@ encode a variable co-occurrence prior learned from a knowledge graph of physical
 laws together with observation-derived correlation. Attention over this graph lets
 the model reason about which columns \emph{jointly} support a plausible law rather
 than scoring columns in isolation. (2)~A random forest scores each column from the
-same per-column statistical features. The final score is
-$s(\text{col})=\mathrm{RF}(\text{col})+\sigma(\mathrm{GAT}(\text{col}))$, and a
+same per-column features. The final score is
+$s(\mathrm{col})=\mathrm{RF}(\mathrm{col})+\sigma(\mathrm{GAT}(\mathrm{col}))$, and a
 column is retained if $s\ge\tau$ with a low threshold ($\tau=0.10$) chosen to favour
 recall. An analogous graph-attention model with graph-level pooling produces the
 multi-label operator prediction used for the optional operator prior.
 
-\noindent\textbf{Training data.} The predictors are trained only on internal
+\noindent\textbf{Training.} The predictors are trained only on internal
 physical-law records---formula templates with sampled observation tables drawn from
 a curated knowledge graph of physical laws---never on the external evaluation suites.
-Training pools of $8$k--$40$k formulas were used, with observation tables pre-sampled
-across variable ranges and a $10$--$30$ distractor curriculum so the front-end is
-robust to the number of irrelevant columns at test time. An adversarial
-(GAN--graph-attention) variant was explored but gave no consistent gain and is not
-used.
+Training pools of $8000$--$40\,000$ formulas were used, with observation tables
+pre-sampled across variable ranges and a $10$--$30$ distractor curriculum so the
+front-end is robust to the number of irrelevant columns at test time. An adversarial
+variant (a generative-adversarial graph-attention model) was explored but gave no
+consistent gain and is not used.
 
 \noindent\textbf{Backend integration and evaluation.} We use
 PySR\cite{cranmer2023pysr} as the downstream backend because it exposes variable and
 operator restrictions directly and is reproducible locally; the same prior interface
 applies to enumeration\cite{ruan2026pse} and generative\cite{li2026gensr} backends.
 All comparisons fix the backend budget across conditions, so the only changed
-quantity is the search space exposed to the solver. \emph{Exact recovery} denotes
-held-out $R^2\ge0.999$. Support quality is measured by precision and recall against
-the known law variables; the same-size random-support control retains the same number
-of columns selected without the front-end, isolating learned guidance from
-dimensionality reduction. Time-to-solution is measured with early stopping on exact
-recovery, and front-end overhead is measured separately. All reported numbers are
-produced by the released evaluation scripts from the recorded result artifacts.
+quantity is the search space exposed to the solver. Exact recovery denotes held-out
+$R^2\ge0.999$. Support quality is measured by precision and recall against the known
+law variables; the same-size random-support control retains the same number of
+columns selected without the front-end. Time-to-solution is measured with early
+stopping on exact recovery, and front-end overhead is measured separately. All
+reported numbers are produced by the released evaluation scripts from the recorded
+result artifacts.
 
-\noindent\textbf{Data availability.} The external benchmarks (AI-Feynman,
-PMLB/SRBench) are public\cite{udrescu2020aifeynman,olson2017pmlb,lafuente2024srbench};
-the physical-law training records are materialised from public formula and range
-information. The recorded result artifacts that back every table and figure are
-released with the code.
+\section*{Data availability}
+The external benchmarks (AI-Feynman, PMLB/SRBench) are
+public\cite{udrescu2020aifeynman,olson2017pmlb,lafuente2024srbench}; the
+physical-law training records are materialised from public formula and range
+information. The recorded result artifacts that back every figure are released with
+the code.
 
-\noindent\textbf{Code availability.} Code for the front-end, training, evaluation
-and figure generation, together with the result artifacts and the trained
-graph-attention weights, is released at \url{https://github.com/<anonymized>}.
+\section*{Code availability}
+Code for the front-end, training, evaluation and figure generation, together with the
+result artifacts and the trained graph-attention weights, is released at
+\url{https://github.com/<anonymized>} under the MIT License.
+
+\section*{Author contributions}
+The author(s) conceived the study, designed and implemented the front-end and
+evaluation, performed the experiments and analysis, and wrote the manuscript.
+(Detailed per-author contributions will be added after de-anonymisation.)
+
+\section*{Competing interests}
+The authors declare no competing interests.
 
 \bibliographystyle{naturemag}
 \bibliography{references}
@@ -319,8 +294,8 @@ graph-attention weights, is released at \url{https://github.com/<anonymized>}.
 From a small set of observations the front-end predicts a compact support prior
 (relevant variables and, optionally, operators); a conventional symbolic-regression
 backend then performs the final search over the reduced space and returns a
-verifiable equation. The neural model proposes \emph{where} to look; the backend
-decides \emph{what} the law is.}
+verifiable equation. The neural model proposes where to look; the backend decides
+what the law is.}
 \label{fig:concept}
 \end{figure}
 
@@ -329,8 +304,8 @@ decides \emph{what} the law is.}
 \caption{\textbf{The front-end recovers every true variable.} Precision and recall of
 predicted variable support across three physics suites. Recall is $1.000$
 (AI-Feynman, real591) or $0.999$ (extended set), with perfect recall on
-$\sim$100\% of tasks, so a true variable is essentially never dropped; the
-high-recall bias trades a little precision for a safe failure mode.}
+$\sim$100\% of tasks; the high-recall operating point trades a little precision for a
+safe failure mode in which a true variable is essentially never dropped.}
 \label{fig:support}
 \end{figure}
 
@@ -339,10 +314,20 @@ high-recall bias trades a little precision for a safe failure mode.}
 \caption{\textbf{A variable prior strengthens a fixed-budget solver.} Full PySR
 versus $+$variable prior versus $+$operator prior on a $30$-equation Feynman subset
 ($10$~s budget, $\sim$20 distractors). The variable prior doubles exact recovery
-($30\%\!\to\!60\%$), raises mean $R^2$ ($0.919\!\to\!0.967$) and halves the search
-vocabulary ($40\!\to\!20$); adding the operator prior cuts the vocabulary further but
-does not improve exact recovery.}
+($30\%$ to $60\%$), raises mean held-out $R^2$ ($0.919$ to $0.967$) and halves the
+search vocabulary ($40$ to $20$); adding the operator prior cuts the vocabulary
+further but does not improve exact recovery.}
 \label{fig:pysr}
+\end{figure}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.46\linewidth]{figures/fig7_paired_per_formula.png}
+\caption{\textbf{The variable prior helps almost every formula.} Held-out $R^2$ of
+each Feynman formula under full PySR (horizontal axis) versus the same backend with
+the $+$variable prior (vertical axis); points above the diagonal are improved.
+Highlighted points are formulas the prior newly recovers exactly that full search
+fails to recover within budget. Values are clipped at $-0.25$ for display.}
+\label{fig:paired}
 \end{figure}
 
 \begin{figure}[h]\centering
@@ -350,8 +335,8 @@ does not improve exact recovery.}
 \caption{\textbf{The gain is search guidance, not fewer columns.} Mean held-out
 $R^2$ on $24$ PMLB/SRBench black-box tasks (three seeds, fixed $5$~s budget) at $10$
 and $20$ distractor variables. At matched, reduced column count (labels show columns
-relative to full search) the learned support \emph{improves} over full search while a
-same-size random support \emph{degrades} far below it.}
+relative to full search) the learned support improves over full search while a
+same-size random support degrades far below it.}
 \label{fig:pmlb}
 \end{figure}
 
@@ -362,6 +347,15 @@ speedup (full-search time divided by pruned-search time) with early stopping on 
 recovery. Typical physics formulas solve $3$--$6\times$ faster; deep-tree formulas
 (depth-, not variable-limited) show little gain.}
 \label{fig:speed}
+\end{figure}
+
+\begin{figure}[h]\centering
+\includegraphics[width=0.5\linewidth]{figures/fig8_overhead.png}
+\caption{\textbf{The front-end is cheap.} Front-end inference time (graph
+construction, random forest and graph-attention model) as a function of the number
+of observations $q$. The cost is $\sim$40~ms and near-constant in $q$, negligible
+against the seconds of backend search it saves.}
+\label{fig:overhead}
 \end{figure}
 
 \begin{figure}[h]\centering
