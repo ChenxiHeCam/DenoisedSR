@@ -128,6 +128,34 @@ def fig_op():
     save(fig, 'fig5_operator_safeguard')
 
 
+# ---------------------------------------------------------------- Fig 6: PMLB black-box
+def fig_pmlb():
+    p = ('data/results/remote_fetch/32345_pmlb_blackbox_priority_q100_20260506/'
+         'matrix_summary.json')
+    d = jload(p)['summaries']
+    H = {(s['distractors'], s['mode']): s['mean_r2'] for s in d if isinstance(s, dict)}
+    Hc = {(s['distractors'], s['mode']): s['mean_column_count'] for s in d if isinstance(s, dict)}
+    groups = [10, 20]
+    full = [H[(g, 'full')] for g in groups]
+    rand = [H[(g, 'random_variables')] for g in groups]
+    learn = [H[(g, 'learned_variables')] for g in groups]
+    x = np.arange(len(groups)); w = 0.26
+    fig, ax = plt.subplots(figsize=(3.7, 2.6))
+    ax.bar(x - w, full, w, label='full search', color=C['full'])
+    ax.bar(x,     rand, w, label='random support', color=C['random'])
+    ax.bar(x + w, learn, w, label='learned support', color=C['var'])
+    ax.axhline(0, lw=0.8, color='k')
+    for xi, g in zip(x, groups):
+        ax.text(xi + w, H[(g, 'learned_variables')] + 0.02,
+                f"{Hc[(g,'learned_variables')]/Hc[(g,'full')]*100:.0f}%\ncols",
+                ha='center', va='bottom', fontsize=6, color=C['var'])
+    ax.set_xticks(x); ax.set_xticklabels([f'{g} distractors' for g in groups])
+    ax.set_ylabel('Mean held-out $R^2$'); ax.set_ylim(-0.3, 0.7)
+    ax.legend(loc='upper left', fontsize=6.8, ncol=1)
+    ax.set_title('PMLB/SRBench black-box (fixed budget)', fontsize=8)
+    save(fig, 'fig6_pmlb_blackbox')
+
+
 if __name__ == '__main__':
-    fig_support(); fig_pysr(); fig_speed(); fig_op()
+    fig_support(); fig_pysr(); fig_speed(); fig_op(); fig_pmlb()
     print('all figures ->', os.path.abspath(A.out))
