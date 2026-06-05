@@ -1,0 +1,520 @@
+[
+  {
+    "law_id": "boltzmann_entropy_formula",
+    "truth": "S - k_B * log(W) = 0",
+    "symbols": [
+      "S",
+      "W",
+      "k_B"
+    ],
+    "target": "S",
+    "learned_cols": [
+      "k_B"
+    ],
+    "full_expr": "1.30625256452267*exp(cos(x1*(0.60452104*log(x0) + 4.07898836764615/x1) + 0.13544595)) - 0.5086131",
+    "full_r2": 0.9957,
+    "learned_expr": "cos(-1.3274363/x0) + 0.9475082",
+    "learned_r2": 0.3869
+  },
+  {
+    "law_id": "GIBBS_DUHEM_001",
+    "truth": "S*dT - V*dP + N*dmu = 0",
+    "symbols": [
+      "dT",
+      "dmu"
+    ],
+    "target": "N",
+    "learned_cols": [
+      "dmu"
+    ],
+    "full_expr": "cos(x1*0.38202065) + 0.9661267",
+    "full_r2": 0.3023,
+    "learned_expr": "(x0 + sin(x0))/x0",
+    "learned_r2": 0.2704
+  },
+  {
+    "law_id": "innermost_stable_circular_orbit_kerr",
+    "truth": "R_ISCO - (G * M / c**2 * (3 + Z2 - sqrt((3 - Z1) * (3 + Z1 + 2 * Z2)))) = 0",
+    "symbols": [
+      "M",
+      "c"
+    ],
+    "target": "R_ISCO",
+    "learned_cols": [
+      "G",
+      "Z2"
+    ],
+    "full_expr": "log(x0/x7 + 3.5908692)",
+    "full_r2": -0.1679,
+    "learned_expr": "exp(0.6384761*sin(sqrt(exp(1.4686757/x0))))",
+    "learned_r2": -0.0522
+  },
+  {
+    "law_id": "innermost_stable_circular_orbit_schwarzschild",
+    "truth": "R_ISCO - (6 * G * M / c**2) = 0",
+    "symbols": [
+      "G",
+      "M",
+      "R_ISCO",
+      "c"
+    ],
+    "target": "R_ISCO",
+    "learned_cols": [
+      "G"
+    ],
+    "full_expr": "1.91553220909956*x1*exp(1.64320487509501*sqrt(x0)/x2 - 0.530350819589791*x2/sqrt(x0))",
+    "full_r2": 0.994,
+    "learned_expr": "sqrt(x0 + 2.1839085)",
+    "learned_r2": 0.1219
+  },
+  {
+    "law_id": "chirp_mass_binary",
+    "truth": "M_c - ((m1 * m2)**(3/5) / (m1 + m2)**(1/5)) = 0",
+    "symbols": [
+      "M_c",
+      "m1",
+      "m2"
+    ],
+    "target": "M_c",
+    "learned_cols": [
+      "m2",
+      "m1"
+    ],
+    "full_expr": "0.036910746*x0*log(x1) + 0.8178097578288*sqrt(x1*(x0 - 0.09204583)) + 0.08665001",
+    "full_r2": 0.9999,
+    "learned_expr": "sqrt(x0*(0.766917*x1*cos(-0.11208926*x0 + 0.11208926*x1 - 0.11208926*log(x0) + 0.11208926*log(x1) + 0.035957616/x0) - 0.015412432618287))",
+    "learned_r2": 1.0
+  },
+  {
+    "law_id": "gravitational_wave_strain_amplitude",
+    "truth": "h - (4 * (G * M_c)**(5/3) * (pi * f_GW)**(2/3) / (c**4 * d_L)) = 0",
+    "symbols": [
+      "G",
+      "c",
+      "h"
+    ],
+    "target": "h",
+    "learned_cols": [
+      "c"
+    ],
+    "full_expr": "x4 + 0.30151457*x6 + exp(sqrt((0.83058596 + 9.058873/x1)*(x0 - log(x6)/(-exp(x11) + 2.0634272/x8)) + 24.99686)*cos(x1))",
+    "full_r2": NaN,
+    "learned_expr": "exp(exp((x0 + x0 + 0.000910438/cos(exp(x0)))/(x0 + 0.072044216)))/(1.3214614*(x0 - 1*0.25507772))",
+    "learned_r2": -9.4687
+  },
+  {
+    "law_id": "brunt_vaisala_frequency",
+    "truth": "N**2 - ( g / theta * dtheta_dz ) = 0",
+    "symbols": [
+      "N",
+      "dtheta_dz",
+      "g",
+      "theta"
+    ],
+    "target": "N",
+    "learned_cols": [
+      "dtheta_dz"
+    ],
+    "full_expr": "sqrt(x0*x1/x2)",
+    "full_r2": 1.0,
+    "learned_expr": "log(3.83642515892074*sqrt(x0))",
+    "learned_r2": 0.6306
+  },
+  {
+    "law_id": "lapse_rate_dry_adiabatic",
+    "truth": "dT_dz - ( -g / cp ) = 0",
+    "symbols": [
+      "cp",
+      "dT_dz",
+      "g"
+    ],
+    "target": "dT_dz",
+    "learned_cols": [
+      "g"
+    ],
+    "full_expr": "x1*(-1.0)/x0",
+    "full_r2": 1.0,
+    "learned_expr": "sqrt(0.36345592 - x0)",
+    "learned_r2": 0.4394
+  },
+  {
+    "law_id": "nernst_equation_22",
+    "truth": "E - ( (R * T) / (z * F) * log( c_out / c_in ) ) = 0",
+    "symbols": [
+      "T",
+      "c_out"
+    ],
+    "target": "E",
+    "learned_cols": [
+      "c_in",
+      "c_out",
+      "z"
+    ],
+    "full_expr": "x4*(x1 - 0.92563826)/exp(3.1399531 - 1.0503545/x8)",
+    "full_r2": -6535.0506,
+    "learned_expr": "-(x0 + cos(x1)) + exp(sin(-0.89368266 + 2.8933349/x0)/x0)",
+    "learned_r2": -0.2476
+  },
+  {
+    "law_id": "hagen_poiseuille_22",
+    "truth": "Q - ( (pi * R**4 * Delta_P) / (8 * eta * L) ) = 0",
+    "symbols": [
+      "Q",
+      "R"
+    ],
+    "target": "Q",
+    "learned_cols": [
+      "Delta_P",
+      "L"
+    ],
+    "full_expr": "cos(x2 + x9) + 1.976933",
+    "full_r2": -0.5358,
+    "learned_expr": "sqrt(exp(0.602858759123766*exp(-cos(4.96590869057051*exp(-0.3258656*x1 - cos(1.5295218*exp(cos(1.5023377*x0))))))))",
+    "learned_r2": -0.1376
+  },
+  {
+    "law_id": "fick_second_law_22",
+    "truth": "d_c / d_t - ( D * d**2_c / d_x**2 ) = 0",
+    "symbols": [
+      "d",
+      "d_x"
+    ],
+    "target": "_c",
+    "learned_cols": [
+      "D",
+      "d"
+    ],
+    "full_expr": "cos(sin(6.713404*x7)) + cos(sin(x3 - sqrt(x7)))",
+    "full_r2": -0.0361,
+    "learned_expr": "x0*(-0.078140184) - 1*(-1.6813092)",
+    "learned_r2": 0.0711
+  },
+  {
+    "law_id": "b3_blasius_similarity_variable",
+    "truth": "eta - y * sqrt(U_inf / (nu * x)) = 0",
+    "symbols": [
+      "nu",
+      "x"
+    ],
+    "target": "eta",
+    "learned_cols": [
+      "y"
+    ],
+    "full_expr": "log(x2 + cos(x10) + 3.0751226)",
+    "full_r2": -0.1371,
+    "learned_expr": "sqrt(x0)",
+    "learned_r2": 0.3959
+  },
+  {
+    "law_id": "young_laplace_equation",
+    "truth": "delta_P - ( gamma * ( 1 / R1 + 1 / R2 ) ) = 0",
+    "symbols": [
+      "R1",
+      "R2",
+      "delta_P",
+      "gamma"
+    ],
+    "target": "delta_P",
+    "learned_cols": [
+      "gamma"
+    ],
+    "full_expr": "-1*0.058123443 - 1*(-0.058123436) + x2/x1 + x2/x0",
+    "full_r2": 1.0,
+    "learned_expr": "1.70177800284241*sqrt(x0)",
+    "learned_r2": 0.5548
+  },
+  {
+    "law_id": "stokes_einstein_equation",
+    "truth": "D - ( k_B * T / ( 6 * pi * mu * r ) ) = 0",
+    "symbols": [
+      "D",
+      "r"
+    ],
+    "target": "D",
+    "learned_cols": [
+      "r",
+      "mu"
+    ],
+    "full_expr": "-0.19337304/(-log(x0)*sin(x8) + log(x10) - 2.1531293)",
+    "full_r2": -0.0451,
+    "learned_expr": "sin(0.8073481/x0)*(sin(0.8614777/((x0*(-0.10141593)))) + 1.6074433)*0.12179056/(x1*x0)",
+    "learned_r2": 0.1943
+  },
+  {
+    "law_id": "einstein_solid_specific_heat",
+    "truth": "C_V - 3*R*(Theta_E/T)**2 * exp(Theta_E/T)/(exp(Theta_E/T) - 1)**2 = 0",
+    "symbols": [
+      "C_V",
+      "R"
+    ],
+    "target": "C_V",
+    "learned_cols": [
+      "R",
+      "T"
+    ],
+    "full_expr": "x0*exp(cos(x5*(x0 + cos(x9))*(x5/cos(x9 + x9) + 4.1725445)*0.023473436))",
+    "full_r2": 0.4363,
+    "learned_expr": "x0*exp(cos(exp(x0/((x1*x1)) - exp(x1) - 1.160953)))",
+    "learned_r2": 0.8092
+  },
+  {
+    "law_id": "hertz_contact_radius_16",
+    "truth": "a**3 - (3*F*R)/(4*E_star) = 0",
+    "symbols": [
+      "E_star",
+      "F",
+      "R",
+      "a"
+    ],
+    "target": "E_star",
+    "learned_cols": [
+      "F"
+    ],
+    "full_expr": "-0.7914712*(-0.9476024)*x1*x0/(x2*x2*x2)",
+    "full_r2": 1.0,
+    "learned_expr": "cos(0.7639159*sqrt(exp(x0)) + 0.7639159*cos(x0)) + 1.6309526",
+    "learned_r2": -0.595
+  },
+  {
+    "law_id": "strain_displacement_linear_16",
+    "truth": "epsilon_ij - (1/2) * (grad(u)_ij + grad(u)_ji) = 0",
+    "symbols": [
+      "epsilon_ij",
+      "grad_u_ij",
+      "grad_u_ji"
+    ],
+    "target": "epsilon_ij",
+    "learned_cols": [
+      "grad_u_ji"
+    ],
+    "full_expr": "(x0 + x1)*0.5",
+    "full_r2": 1.0,
+    "learned_expr": "exp(sin(x0*0.31689113))",
+    "learned_r2": 0.8124
+  },
+  {
+    "law_id": "hooke_law_3d_isotropic",
+    "truth": "sigma_ij - ( E / (1 + nu) ) * ( epsilon_ij + ( nu / (1 - 2*nu) ) * delta_ij * epsilon_kk ) = 0",
+    "symbols": [
+      "delta_ij",
+      "sigma_ij"
+    ],
+    "target": "sigma_ij",
+    "learned_cols": [
+      "E"
+    ],
+    "full_expr": "-0.018983291/(x7 - 0.39335957)",
+    "full_r2": -0.0867,
+    "learned_expr": "0.057886872/cos(-x0 - 40.693115)",
+    "learned_r2": 0.0058
+  },
+  {
+    "law_id": "strain_displacement_linear",
+    "truth": "epsilon_ij - 0.5 * ( u_i_j + u_j_i ) = 0",
+    "symbols": [
+      "epsilon_ij",
+      "u_i_j",
+      "u_j_i"
+    ],
+    "target": "epsilon_ij",
+    "learned_cols": [
+      "u_j_i"
+    ],
+    "full_expr": "x1*0.5 - (x0*(-0.5) - (-3.1023237e-10)*x10*exp(x1))",
+    "full_r2": 1.0,
+    "learned_expr": "exp(x0*0.23885165)",
+    "learned_r2": 0.759
+  },
+  {
+    "law_id": "acceleration_equation_lcdm",
+    "truth": "ddot_a / a - (-4 * pi * G / 3 * (rho_m + 3 * p / c**2) + Lambda * c**2 / 3) = 0",
+    "symbols": [
+      "p",
+      "rho_m"
+    ],
+    "target": "ddot_a",
+    "learned_cols": [
+      "p",
+      "rho_m",
+      "G"
+    ],
+    "full_expr": "log(10.6528480762181*cos(cos(0.181090114762*exp(x11 + x8/x10))) - 3.09765934556785)",
+    "full_r2": -0.146,
+    "learned_expr": "1.6674411 + sin((x2 + 1.2132745)*x1*17.869791)*(-0.415672)",
+    "learned_r2": -0.1803
+  },
+  {
+    "law_id": "plane_stress_constitutive_16",
+    "truth": "epsilon_xx - (1/E) * (sigma_xx - nu * sigma_yy) = 0",
+    "symbols": [
+      "sigma_xx",
+      "sigma_yy"
+    ],
+    "target": "epsilon_xx",
+    "learned_cols": [
+      "sigma_yy"
+    ],
+    "full_expr": "sqrt(exp(1.90233580087726*exp(-exp(x1))))",
+    "full_r2": 0.2627,
+    "learned_expr": "exp(sin(cos(exp(x0))))",
+    "learned_r2": 0.0588
+  },
+  {
+    "law_id": "rlc_series__critically_damped",
+    "truth": "q - (A + B*t) * exp(-R*t/(2*L_ind)) = 0",
+    "symbols": [
+      "B",
+      "t"
+    ],
+    "target": "q",
+    "learned_cols": [
+      "A",
+      "t"
+    ],
+    "full_expr": "1.48851984005599*exp(sin(x9/(x8 - 0.69593906)))**(1/4)",
+    "full_r2": -0.076,
+    "learned_expr": "cos(cos(x0*x0*0.34725925))*2.340962",
+    "learned_r2": -0.0116
+  },
+  {
+    "law_id": "rlc_series__underdamped",
+    "truth": "q - Q0 * exp(-R*t/(2*L_ind)) * cos(omega_d * t + phi) = 0",
+    "symbols": [
+      "Q0",
+      "R",
+      "phi"
+    ],
+    "target": "q",
+    "learned_cols": [
+      "Q0"
+    ],
+    "full_expr": "log(-x10 + x2 + 4.854713)",
+    "full_r2": -0.0201,
+    "learned_expr": "cos(2.2985125/x0) - 1*(-0.86133885)",
+    "learned_r2": 0.2715
+  },
+  {
+    "law_id": "stokes_flow_stress_16",
+    "truth": "sigma_ij - (-p*delta_ij + mu*(grad(u)_ij + grad(u)_ji)) = 0",
+    "symbols": [
+      "mu",
+      "p"
+    ],
+    "target": "sigma_ij",
+    "learned_cols": [
+      "mu",
+      "grad_u_ij",
+      "p",
+      "delta_ij",
+      "grad_u_ji"
+    ],
+    "full_expr": "x0*(sin(x9*x9*4.6370482 - 0.97990423/x11) + 2.6383107) + x0 - x1 - (x1 - cos(x9*x9))",
+    "full_r2": 0.2497,
+    "learned_expr": "x0*(x1 + x4) - x2*x3",
+    "learned_r2": 1.0
+  },
+  {
+    "law_id": "b3_froude_number_def",
+    "truth": "Fr - U / sqrt(g * L) = 0",
+    "symbols": [
+      "L",
+      "U"
+    ],
+    "target": "Fr",
+    "learned_cols": [
+      "U",
+      "g",
+      "L"
+    ],
+    "full_expr": "3.0697465*x1/(x0*sqrt(x6) + 2.109111)",
+    "full_r2": 0.6151,
+    "learned_expr": "x0/sqrt(x2*(x1 + 4.3033197e-8*cos(0.49964038/sin(cos(x2)))))",
+    "learned_r2": 1.0
+  },
+  {
+    "law_id": "b3_weber_number_def",
+    "truth": "We - rho * U**2 * L / sigma = 0",
+    "symbols": [
+      "U",
+      "sigma"
+    ],
+    "target": "We",
+    "learned_cols": [
+      "L",
+      "sigma"
+    ],
+    "full_expr": "sqrt(exp(sqrt(exp(cos(95.640541528223*x8 + log(x1))))))",
+    "full_r2": -0.1802,
+    "learned_expr": "log(log(x0) + 5.6971574)",
+    "learned_r2": 0.1764
+  },
+  {
+    "law_id": "dissipation_rate_eq",
+    "truth": "depsilon_dt - ( C_eps1 * P_k * epsilon / k - C_eps2 * epsilon**2 / k + d_dx( ( nu + nu_t / sigma_eps ) * depsilon_dx ) ) = 0",
+    "symbols": [
+      "depsilon_dt",
+      "epsilon"
+    ],
+    "target": "depsilon_dt",
+    "learned_cols": [
+      "C_eps1"
+    ],
+    "full_expr": "cos(cos(-x0 + 2.3900476 + 3.8106384 + 2.4360545/x3))*2.1594613",
+    "full_r2": -0.1574,
+    "learned_expr": "sin(-1.1941726/(x0 - 0.67082024))*(-0.9223494) - 1*(-1.720056)",
+    "learned_r2": -0.1809
+  },
+  {
+    "law_id": "spalart_allmaras_eq",
+    "truth": "dnu_tilde_dt - ( C_b1 * S_tilde * nu_tilde - C_w1 * f_w * ( nu_tilde / d )**2 + ( 1.0 / sigma ) * d_dx( ( nu + nu_tilde ) * dnu_tilde_dx ) ) = 0",
+    "symbols": [
+      "d",
+      "d_dx"
+    ],
+    "target": "dnu_tilde_dt",
+    "learned_cols": [
+      "C_b1",
+      "d",
+      "C_w1"
+    ],
+    "full_expr": "cos(cos(x7/x1))/0.49793097",
+    "full_r2": -0.1276,
+    "learned_expr": "sin(0.016164273/cos(x2)) + 1.512494",
+    "learned_r2": -0.0921
+  },
+  {
+    "law_id": "turbulent_kinetic_energy_eq",
+    "truth": "dk_dt - ( P_k - epsilon + d_dx( ( nu + nu_t / sigma_k ) * dk_dx ) ) = 0",
+    "symbols": [
+      "dk_dx",
+      "epsilon"
+    ],
+    "target": "dk_dt",
+    "learned_cols": [
+      "P_k",
+      "sigma_k"
+    ],
+    "full_expr": "exp(cos(sin(-x11 + x4 + (x10 + x9 - (0.07087685 + x0*(-0.3428004)))/(x1 - x10))) - 1*0.26417452)",
+    "full_r2": -0.1324,
+    "learned_expr": "exp(x0*0.056632288) + sin(x1)",
+    "learned_r2": -0.1855
+  },
+  {
+    "law_id": "kolmogorov_length_scale",
+    "truth": "eta - ( ( nu**3 / epsilon )**(0.25) ) = 0",
+    "symbols": [
+      "epsilon",
+      "eta",
+      "nu"
+    ],
+    "target": "eta",
+    "learned_cols": [
+      "nu",
+      "epsilon"
+    ],
+    "full_expr": "sqrt(x1*sqrt(x1/x0))",
+    "full_r2": 1.0,
+    "learned_expr": "sqrt(x0*sqrt(x0/x1))",
+    "learned_r2": 1.0
+  }
+]

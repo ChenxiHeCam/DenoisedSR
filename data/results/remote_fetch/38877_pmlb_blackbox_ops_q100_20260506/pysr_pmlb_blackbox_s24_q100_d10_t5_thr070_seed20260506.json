@@ -1,0 +1,7727 @@
+{
+  "summary": {
+    "records": 24,
+    "method": "pysr",
+    "q": 100,
+    "heldout": 200,
+    "distractors": 10,
+    "timeout_seconds": 5,
+    "support_threshold": 0.7,
+    "seed": 20260506,
+    "auto_pmlb_blackbox": 24,
+    "min_features": 5,
+    "max_features": 10,
+    "usable_train_records": 58,
+    "support_examples": 1093,
+    "op_examples": 58,
+    "full_mean_r2": 0.36783546653746196,
+    "full_success_r2_099": 0,
+    "full_mean_columns": 14.708333333333334,
+    "full_mean_elapsed_seconds": 695.8844649891058,
+    "random_variables_mean_r2": 0.2602918589314981,
+    "random_variables_success_r2_099": 0,
+    "random_variables_mean_columns": 4.666666666666667,
+    "random_variables_mean_elapsed_seconds": 5.3333016236623125,
+    "learned_variables_mean_r2": 0.5404277159717306,
+    "learned_variables_success_r2_099": 0,
+    "learned_variables_mean_columns": 4.666666666666667,
+    "learned_variables_mean_elapsed_seconds": 5.315890769163768,
+    "learned_ops_mean_r2": 0.2374126573208919,
+    "learned_ops_success_r2_099": 0,
+    "learned_ops_mean_columns": 14.708333333333334,
+    "learned_ops_mean_elapsed_seconds": 5.386365622282028,
+    "learned_prior_mean_r2": 0.4421342974046914,
+    "learned_prior_success_r2_099": 0,
+    "learned_prior_mean_columns": 4.666666666666667,
+    "learned_prior_mean_elapsed_seconds": 5.284281690915425
+  },
+  "rows": [
+    {
+      "idx": 0,
+      "dataset": "1027_ESL",
+      "source": "pmlb",
+      "path": "1027_ESL",
+      "rows": 488,
+      "original_columns": [
+        "in1",
+        "in2",
+        "in3",
+        "in4"
+      ],
+      "full_columns": [
+        "in1",
+        "in2",
+        "in3",
+        "in4",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "in4",
+        "in3",
+        "in2",
+        "in1"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "in4": 0.8651112088601779,
+          "in3": 0.8614026612648554,
+          "in2": 0.8451541487138587,
+          "in1": 0.8431702728728149,
+          "distr_5": 0.5236751285590001,
+          "distr_8": 0.4788511751154366,
+          "distr_6": 0.45534735337951915,
+          "distr_1": 0.4296360170340371,
+          "distr_2": 0.4270505606649677,
+          "distr_3": 0.36085431013260433,
+          "distr_7": 0.3488522399733668,
+          "distr_4": 0.34762526864932897,
+          "distr_0": 0.34302100825084114,
+          "distr_9": 0.3289908650126944
+        },
+        "op_probabilities": {
+          "+": 0.8918996924675532,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.31757905926643865,
+          "^": 0.8136781097953343,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4261415059384071
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_9",
+        "in1",
+        "distr_1",
+        "distr_3"
+      ],
+      "learned_ops": {
+        "expression": "v2 - 0.04761511",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 0.7296496080003122,
+          "nmse": 0.3738389968107555,
+          "r2": 0.6261610031892445
+        },
+        "ok": true,
+        "elapsed_seconds": 7.888343811035156,
+        "columns": [
+          "in1",
+          "in2",
+          "in3",
+          "in4",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "v2 - 1*(-0.060002483)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 0.7708012166761652,
+          "nmse": 0.39492319384978564,
+          "r2": 0.6050768061502143
+        },
+        "ok": true,
+        "elapsed_seconds": 16578.177007198334,
+        "columns": [
+          "in1",
+          "in2",
+          "in3",
+          "in4",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "v1 - 0.21999209",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 1.299201344762568,
+          "nmse": 0.6656511866186258,
+          "r2": 0.33434881338137423
+        },
+        "ok": true,
+        "elapsed_seconds": 5.31921648979187,
+        "columns": [
+          "distr_9",
+          "in1",
+          "distr_1",
+          "distr_3"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "v1 - 1*(-1.0596424) - 0.90254724*v1/v2",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": Infinity,
+          "nmse": Infinity,
+          "r2": -Infinity
+        },
+        "ok": true,
+        "elapsed_seconds": 5.289950132369995,
+        "columns": [
+          "in4",
+          "in3",
+          "in2",
+          "in1"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "v1 + sqrt(v2) - 2.1893177",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.7458353137257396,
+          "nmse": 0.3821318101347439,
+          "r2": 0.617868189865256
+        },
+        "ok": true,
+        "elapsed_seconds": 5.524292945861816,
+        "columns": [
+          "in4",
+          "in3",
+          "in2",
+          "in1"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 1,
+      "dataset": "690_visualizing_galaxy",
+      "source": "pmlb",
+      "path": "690_visualizing_galaxy",
+      "rows": 323,
+      "original_columns": [
+        "eastwest",
+        "northsouth",
+        "angle",
+        "radialposition"
+      ],
+      "full_columns": [
+        "eastwest",
+        "northsouth",
+        "angle",
+        "radialposition",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "eastwest",
+        "northsouth",
+        "radialposition",
+        "distr_4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "eastwest": 0.8326085537561392,
+          "northsouth": 0.8297229822336086,
+          "radialposition": 0.8247636956557184,
+          "distr_4": 0.7383279588444602,
+          "distr_3": 0.6461216533502921,
+          "angle": 0.5075783476573168,
+          "distr_7": 0.49658973208334556,
+          "distr_5": 0.3676512271214288,
+          "distr_0": 0.33677512347487687,
+          "distr_1": 0.3032312063245667,
+          "distr_9": 0.26135457568262493,
+          "distr_2": 0.2583634984958511,
+          "distr_8": 0.22271505582681916,
+          "distr_6": 0.16379308329029738
+        },
+        "op_probabilities": {
+          "+": 0.8756707876788922,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.39737310059153685,
+          "^": 0.6880651270019847,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2808292633067489
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_5",
+        "angle",
+        "radialposition",
+        "northsouth"
+      ],
+      "learned_ops": {
+        "expression": "1594.5575 - v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 5288.209054012604,
+          "nmse": 0.6261385543977293,
+          "r2": 0.37386144560227075
+        },
+        "ok": true,
+        "elapsed_seconds": 5.477025747299194,
+        "columns": [
+          "eastwest",
+          "northsouth",
+          "angle",
+          "radialposition",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "-(v1 + v1 + v5) + exp(v4) - 59.99561 - 1*(-1648.7219)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 3179.810040253167,
+          "nmse": 0.3764982892181172,
+          "r2": 0.6235017107818828
+        },
+        "ok": true,
+        "elapsed_seconds": 5.495688438415527,
+        "columns": [
+          "eastwest",
+          "northsouth",
+          "angle",
+          "radialposition",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "v2*1.3888022 + v3*(-2.0483203) - v3 - sin(cos(v3)*(-2.759623)) + 1597.349",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 885.3512337126517,
+          "nmse": 0.10482803080382243,
+          "r2": 0.8951719691961776
+        },
+        "ok": true,
+        "elapsed_seconds": 5.324424505233765,
+        "columns": [
+          "distr_5",
+          "angle",
+          "radialposition",
+          "northsouth"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "v0 + v1*(-2.653293) - (v0 - 91.31882) - (v3/4090.34 - (v2 + v2 + 729.3541) - 1*786.3176) - 8.326987",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 1202.4464587531525,
+          "nmse": 0.14237298104791854,
+          "r2": 0.8576270189520815
+        },
+        "ok": true,
+        "elapsed_seconds": 5.29955792427063,
+        "columns": [
+          "eastwest",
+          "northsouth",
+          "radialposition",
+          "distr_4"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "-v1 + (-(v1 - 681.96533 - v2/v0) - 22.738201)*2.3971436",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 2107.3762700342336,
+          "nmse": 0.24951916949843203,
+          "r2": 0.750480830501568
+        },
+        "ok": true,
+        "elapsed_seconds": 5.3212971687316895,
+        "columns": [
+          "eastwest",
+          "northsouth",
+          "radialposition",
+          "distr_4"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 2,
+      "dataset": "1096_FacultySalaries",
+      "source": "pmlb",
+      "path": "1096_FacultySalaries",
+      "rows": 50,
+      "original_columns": [
+        "CIC.institutions",
+        "average.salary",
+        "full.prof.salary",
+        "assoc.prof.salary"
+      ],
+      "full_columns": [
+        "CIC.institutions",
+        "average.salary",
+        "full.prof.salary",
+        "assoc.prof.salary",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "distr_7",
+        "assoc.prof.salary",
+        "full.prof.salary",
+        "average.salary"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "distr_7": 0.936984308817915,
+          "assoc.prof.salary": 0.8856976223603507,
+          "full.prof.salary": 0.8743973755299337,
+          "average.salary": 0.8619798046873931,
+          "CIC.institutions": 0.6384976017815165,
+          "distr_1": 0.5451208295394214,
+          "distr_4": 0.5296230872762124,
+          "distr_0": 0.42833752924477986,
+          "distr_8": 0.40092236508116696,
+          "distr_3": 0.39904176035114636,
+          "distr_2": 0.35605528237655987,
+          "distr_5": 0.3504811997065594,
+          "distr_6": 0.31902339893108933,
+          "distr_9": 0.23624076036792904
+        },
+        "op_probabilities": {
+          "+": 0.8971727621474025,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3866971491878097,
+          "^": 0.9616954550247023,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.40763832545396045
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "CIC.institutions",
+        "average.salary",
+        "distr_9",
+        "distr_7"
+      ],
+      "learned_ops": {
+        "expression": "-0.893059676033672*v10 + 0.893059676033672*v3 - 0.893059676033672*sqrt(v9)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 3.6555963775160576,
+          "nmse": 0.17493274660098584,
+          "r2": 0.8250672533990142
+        },
+        "ok": true,
+        "elapsed_seconds": 5.294774055480957,
+        "columns": [
+          "CIC.institutions",
+          "average.salary",
+          "full.prof.salary",
+          "assoc.prof.salary",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "(v3 + 1.5888524)**0.9553665 - 0.69757664/sin(v6)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 2.489887728828452,
+          "nmse": 0.11914961449546368,
+          "r2": 0.8808503855045363
+        },
+        "ok": true,
+        "elapsed_seconds": 5.393351078033447,
+        "columns": [
+          "CIC.institutions",
+          "average.salary",
+          "full.prof.salary",
+          "assoc.prof.salary",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "(v1 - 1*(-1.1161823))*0.60667443 + 7.2943263",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 3.34622090853954,
+          "nmse": 0.160128075918003,
+          "r2": 0.839871924081997
+        },
+        "ok": true,
+        "elapsed_seconds": 5.302840709686279,
+        "columns": [
+          "CIC.institutions",
+          "average.salary",
+          "distr_9",
+          "distr_7"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "v1*0.8404427",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 3.221632291628306,
+          "nmse": 0.154166085944069,
+          "r2": 0.845833914055931
+        },
+        "ok": true,
+        "elapsed_seconds": 5.327940225601196,
+        "columns": [
+          "distr_7",
+          "assoc.prof.salary",
+          "full.prof.salary",
+          "average.salary"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "v1 - sqrt(v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 4.151729886764948,
+          "nmse": 0.19867442606743368,
+          "r2": 0.8013255739325663
+        },
+        "ok": true,
+        "elapsed_seconds": 5.323427200317383,
+        "columns": [
+          "distr_7",
+          "assoc.prof.salary",
+          "full.prof.salary",
+          "average.salary"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 3,
+      "dataset": "485_analcatdata_vehicle",
+      "source": "pmlb",
+      "path": "485_analcatdata_vehicle",
+      "rows": 48,
+      "original_columns": [
+        "Alcohol-related",
+        "Gender",
+        "Type",
+        "Age"
+      ],
+      "full_columns": [
+        "Alcohol-related",
+        "Gender",
+        "Type",
+        "Age",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "Alcohol-related",
+        "Type",
+        "distr_2"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "Alcohol-related": 0.9393461522347701,
+          "Type": 0.8571046538174836,
+          "distr_2": 0.7639458418095113,
+          "Gender": 0.6638793783554401,
+          "Age": 0.6339112866813097,
+          "distr_8": 0.5203788391781333,
+          "distr_6": 0.49288073056209497,
+          "distr_0": 0.48737113996965836,
+          "distr_1": 0.48364835177875815,
+          "distr_5": 0.44440924808728016,
+          "distr_3": 0.40446287309763873,
+          "distr_4": 0.3874064788691577,
+          "distr_7": 0.3364318492575539,
+          "distr_9": 0.16644719077472436
+        },
+        "op_probabilities": {
+          "+": 0.8971727621474025,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3432591498514361,
+          "^": 0.9605746911476076,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4965159337199629
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_7",
+        "distr_0",
+        "Type"
+      ],
+      "learned_ops": {
+        "expression": "(v7*(v5 - 1*(-0.75806344))/(v12 - 1*0.06420072))**v4 - 1*(-131.10065) + 179.87148",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 70185.64716033768,
+          "nmse": 0.8865772846360318,
+          "r2": 0.1134227153639682
+        },
+        "ok": true,
+        "elapsed_seconds": 5.311167240142822,
+        "columns": [
+          "Alcohol-related",
+          "Gender",
+          "Type",
+          "Age",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "(v9*(v5 + v5))**v12 + 306.1049",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 64352.04334329342,
+          "nmse": 0.8128878503854321,
+          "r2": 0.1871121496145679
+        },
+        "ok": true,
+        "elapsed_seconds": 5.275324106216431,
+        "columns": [
+          "Alcohol-related",
+          "Gender",
+          "Type",
+          "Age",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "v1 + v2*(-161.65268) + 425.9509",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 72590.39425656658,
+          "nmse": 0.9169537823541549,
+          "r2": 0.08304621764584508
+        },
+        "ok": true,
+        "elapsed_seconds": 5.415577411651611,
+        "columns": [
+          "distr_7",
+          "distr_0",
+          "Type"
+        ],
+        "column_count": 3,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "-exp(v0 + v0 + 4.1841226) + 263.32535 + 359.04758",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 35160.93179828408,
+          "nmse": 0.4441489777501315,
+          "r2": 0.5558510222498685
+        },
+        "ok": true,
+        "elapsed_seconds": 5.395344972610474,
+        "columns": [
+          "Alcohol-related",
+          "Type",
+          "distr_2"
+        ],
+        "column_count": 3,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "669.688698126908 - 378.25494*sqrt(v0 + v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 40314.18396209613,
+          "nmse": 0.5092442856269687,
+          "r2": 0.49075571437303134
+        },
+        "ok": true,
+        "elapsed_seconds": 5.303910493850708,
+        "columns": [
+          "Alcohol-related",
+          "Type",
+          "distr_2"
+        ],
+        "column_count": 3,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 4,
+      "dataset": "1029_LEV",
+      "source": "pmlb",
+      "path": "1029_LEV",
+      "rows": 1000,
+      "original_columns": [
+        "In1",
+        "In2",
+        "In3",
+        "In4"
+      ],
+      "full_columns": [
+        "In1",
+        "In2",
+        "In3",
+        "In4",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "In3",
+        "In1",
+        "In2",
+        "In4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "In3": 0.9138578746100267,
+          "In1": 0.9096782775211123,
+          "In2": 0.9096782775211123,
+          "In4": 0.8726338788264767,
+          "distr_4": 0.5868631108028032,
+          "distr_3": 0.5719711153575533,
+          "distr_5": 0.5671040205564449,
+          "distr_0": 0.5105239410683725,
+          "distr_1": 0.4214631291710447,
+          "distr_6": 0.38059608047413573,
+          "distr_8": 0.3512406299270963,
+          "distr_7": 0.3393467334887723,
+          "distr_2": 0.3216640224162757,
+          "distr_9": 0.29024982358443213
+        },
+        "op_probabilities": {
+          "+": 0.8704404526900783,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.38758482728115645,
+          "^": 0.7891385481238665,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.39412416716321347
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_0",
+        "distr_2",
+        "distr_7",
+        "distr_3"
+      ],
+      "learned_ops": {
+        "expression": "sqrt(v1 + v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 0.6684457844548359,
+          "nmse": 0.8435711565558255,
+          "r2": 0.15642884344417451
+        },
+        "ok": true,
+        "elapsed_seconds": 5.230209589004517,
+        "columns": [
+          "In1",
+          "In2",
+          "In3",
+          "In4",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "sqrt(1.6172949**v1 + v7 - 1.1725038)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 0.553403616379654,
+          "nmse": 0.6983892180460047,
+          "r2": 0.30161078195399527
+        },
+        "ok": true,
+        "elapsed_seconds": 5.312073469161987,
+        "columns": [
+          "In1",
+          "In2",
+          "In3",
+          "In4",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "1.51784407855632*exp(exp(-0.028923905*v0)) + 1.51784407855632*log(sin(0.2382259/0.9281404**v3))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.8464596045594834,
+          "nmse": 1.0682226205950072,
+          "r2": -0.06822262059500717
+        },
+        "ok": true,
+        "elapsed_seconds": 5.327898740768433,
+        "columns": [
+          "distr_0",
+          "distr_2",
+          "distr_7",
+          "distr_3"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "sqrt(v1 + v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.46793669496353296,
+          "nmse": 0.5905309123719499,
+          "r2": 0.4094690876280501
+        },
+        "ok": true,
+        "elapsed_seconds": 5.359910488128662,
+        "columns": [
+          "In3",
+          "In1",
+          "In2",
+          "In4"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "sqrt(v1 + v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.46793669496353296,
+          "nmse": 0.5905309123719499,
+          "r2": 0.4094690876280501
+        },
+        "ok": true,
+        "elapsed_seconds": 5.283294677734375,
+        "columns": [
+          "In3",
+          "In1",
+          "In2",
+          "In4"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 5,
+      "dataset": "1030_ERA",
+      "source": "pmlb",
+      "path": "1030_ERA",
+      "rows": 1000,
+      "original_columns": [
+        "in1",
+        "in2",
+        "in3",
+        "in4"
+      ],
+      "full_columns": [
+        "in1",
+        "in2",
+        "in3",
+        "in4",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "in2",
+        "in1",
+        "in4",
+        "in3"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "in2": 0.9146978000549671,
+          "in1": 0.8941938947163696,
+          "in4": 0.8703361237068744,
+          "in3": 0.8205106334832989,
+          "distr_8": 0.49429638783756974,
+          "distr_7": 0.46104103487763576,
+          "distr_3": 0.45342518024510564,
+          "distr_2": 0.4499006151999769,
+          "distr_0": 0.4413047318126949,
+          "distr_6": 0.3472530326492174,
+          "distr_4": 0.33307831772082686,
+          "distr_1": 0.33114323197788587,
+          "distr_5": 0.29654436482551894,
+          "distr_9": 0.24485116654852135
+        },
+        "op_probabilities": {
+          "+": 0.7367766331626137,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5442957116136716,
+          "^": 0.7307459345593201,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.3219421895097948
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_2",
+        "in3",
+        "distr_5",
+        "distr_8"
+      ],
+      "learned_ops": {
+        "expression": "sqrt(v1) + 1.656233",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 3.27399346948084,
+          "nmse": 0.7950879952112099,
+          "r2": 0.20491200478879013
+        },
+        "ok": true,
+        "elapsed_seconds": 5.290724992752075,
+        "columns": [
+          "in1",
+          "in2",
+          "in3",
+          "in4",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "sqrt(v0 + 10.314855)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 3.5236149039367284,
+          "nmse": 0.8557084600146264,
+          "r2": 0.14429153998537358
+        },
+        "ok": true,
+        "elapsed_seconds": 5.308514356613159,
+        "columns": [
+          "in1",
+          "in2",
+          "in3",
+          "in4",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "sqrt(v1 + 9.676413)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 4.054055274334301,
+          "nmse": 0.9845256902900963,
+          "r2": 0.01547430970990371
+        },
+        "ok": true,
+        "elapsed_seconds": 5.431097984313965,
+        "columns": [
+          "distr_2",
+          "in3",
+          "distr_5",
+          "distr_8"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "sqrt(v0) + 1.694733",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 3.2734171515210675,
+          "nmse": 0.7949480366268354,
+          "r2": 0.20505196337316456
+        },
+        "ok": true,
+        "elapsed_seconds": 5.301814794540405,
+        "columns": [
+          "in2",
+          "in1",
+          "in4",
+          "in3"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "sqrt(v0) + 1.8146957",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 3.2906310074983893,
+          "nmse": 0.7991284146167261,
+          "r2": 0.20087158538327388
+        },
+        "ok": true,
+        "elapsed_seconds": 5.2434656620025635,
+        "columns": [
+          "in2",
+          "in1",
+          "in4",
+          "in3"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 6,
+      "dataset": "529_pollen",
+      "source": "pmlb",
+      "path": "529_pollen",
+      "rows": 3848,
+      "original_columns": [
+        "RIDGE",
+        "NUB",
+        "CRACK",
+        "WEIGHT"
+      ],
+      "full_columns": [
+        "RIDGE",
+        "NUB",
+        "CRACK",
+        "WEIGHT",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "WEIGHT",
+        "CRACK",
+        "RIDGE",
+        "NUB"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "WEIGHT": 0.9842286212251595,
+          "CRACK": 0.9596095745800689,
+          "RIDGE": 0.9425568991265881,
+          "NUB": 0.9388071643081678,
+          "distr_1": 0.629050441068415,
+          "distr_4": 0.5542180367170955,
+          "distr_0": 0.5202454136877636,
+          "distr_7": 0.49326676532216984,
+          "distr_8": 0.49286167999748887,
+          "distr_9": 0.45170441837116243,
+          "distr_2": 0.4463723564103305,
+          "distr_5": 0.43727513798908335,
+          "distr_6": 0.3588261609457905,
+          "distr_3": 0.32202044174551386
+        },
+        "op_probabilities": {
+          "+": 0.8652713437448052,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.49600538990554077,
+          "^": 0.8784235186609518,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.43118961937483186
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_1",
+        "distr_2",
+        "distr_8",
+        "distr_5"
+      ],
+      "learned_ops": {
+        "expression": "v0*(-0.31423712)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 5.856590489820978,
+          "nmse": 0.6255394019866843,
+          "r2": 0.37446059801331566
+        },
+        "ok": true,
+        "elapsed_seconds": 5.192097425460815,
+        "columns": [
+          "RIDGE",
+          "NUB",
+          "CRACK",
+          "WEIGHT",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "full": {
+        "expression": "-v0 + (v3 - v9 - 1*(-0.78703225))*(-0.4795954) - 0.36658406",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13"
+        ],
+        "score": {
+          "mse": 3.592993039736417,
+          "nmse": 0.38376572876751364,
+          "r2": 0.6162342712324864
+        },
+        "ok": true,
+        "elapsed_seconds": 5.361462116241455,
+        "columns": [
+          "RIDGE",
+          "NUB",
+          "CRACK",
+          "WEIGHT",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 14,
+        "full_column_count": 14
+      },
+      "random_variables": {
+        "expression": "cos(v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 9.800969944233513,
+          "nmse": 1.0468365320165496,
+          "r2": -0.04683653201654958
+        },
+        "ok": true,
+        "elapsed_seconds": 5.405989408493042,
+        "columns": [
+          "distr_1",
+          "distr_2",
+          "distr_8",
+          "distr_5"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_variables": {
+        "expression": "v2*(-0.31423452)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 5.85658352213079,
+          "nmse": 0.625538657771298,
+          "r2": 0.374461342228702
+        },
+        "ok": true,
+        "elapsed_seconds": 5.300726413726807,
+        "columns": [
+          "WEIGHT",
+          "CRACK",
+          "RIDGE",
+          "NUB"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      },
+      "learned_prior": {
+        "expression": "(v0/2.0902128 + v2 + 0.04805053)*(-0.8867092)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 3.191288305612097,
+          "nmse": 0.34085985382268236,
+          "r2": 0.6591401461773176
+        },
+        "ok": true,
+        "elapsed_seconds": 5.221524715423584,
+        "columns": [
+          "WEIGHT",
+          "CRACK",
+          "RIDGE",
+          "NUB"
+        ],
+        "column_count": 4,
+        "full_column_count": 14
+      }
+    },
+    {
+      "idx": 7,
+      "dataset": "597_fri_c2_500_5",
+      "source": "pmlb",
+      "path": "597_fri_c2_500_5",
+      "rows": 500,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz2",
+        "oz5",
+        "oz1",
+        "oz4",
+        "oz3"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz2": 0.8219860074394134,
+          "oz5": 0.8006841509329609,
+          "oz1": 0.7892351437785976,
+          "oz4": 0.779599572982852,
+          "oz3": 0.7353319474058717,
+          "distr_8": 0.5312246922011419,
+          "distr_2": 0.48817398485310276,
+          "distr_4": 0.4383368969238887,
+          "distr_3": 0.4360065671197322,
+          "distr_1": 0.4133228345295605,
+          "distr_7": 0.4096176178637826,
+          "distr_6": 0.4083235690122908,
+          "distr_0": 0.3995028009550614,
+          "distr_5": 0.3993877190640763,
+          "distr_9": 0.3888660901078474
+        },
+        "op_probabilities": {
+          "+": 0.7503975480031856,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.4108517553871596,
+          "^": 0.7400432338740566,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.513998623016474
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_2",
+        "oz5",
+        "distr_9",
+        "distr_3",
+        "oz3"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.37081468",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.9032542790110392,
+          "nmse": 0.9829894887508407,
+          "r2": 0.01701051124915931
+        },
+        "ok": true,
+        "elapsed_seconds": 5.3134753704071045,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v0/(-0.46104246))*1.0841824",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.45006407391464903,
+          "nmse": 0.48979369841111436,
+          "r2": 0.5102063015888856
+        },
+        "ok": true,
+        "elapsed_seconds": 5.299225330352783,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "v1*0.18492492",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8919917629861109,
+          "nmse": 0.9707327686592252,
+          "r2": 0.029267231340774802
+        },
+        "ok": true,
+        "elapsed_seconds": 5.235983610153198,
+        "columns": [
+          "distr_2",
+          "oz5",
+          "distr_9",
+          "distr_3",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "-sin(v0*(v2 - 1*(-1.6436461)) - 0.6892323) - 0.30377916",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.3066045770400139,
+          "nmse": 0.3336702448431441,
+          "r2": 0.6663297551568559
+        },
+        "ok": true,
+        "elapsed_seconds": 5.274217844009399,
+        "columns": [
+          "oz2",
+          "oz5",
+          "oz1",
+          "oz4",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v0*(1.6911187 - 5.151267/(v0**2 + sqrt(1.1249638**v4)))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5221986309312403,
+          "nmse": 0.5682959684481222,
+          "r2": 0.43170403155187775
+        },
+        "ok": true,
+        "elapsed_seconds": 5.292496919631958,
+        "columns": [
+          "oz2",
+          "oz5",
+          "oz1",
+          "oz4",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 8,
+      "dataset": "617_fri_c3_500_5",
+      "source": "pmlb",
+      "path": "617_fri_c3_500_5",
+      "rows": 500,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz4",
+        "oz2",
+        "oz1",
+        "oz3",
+        "oz5"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz4": 0.7963222519253587,
+          "oz2": 0.7923511852464298,
+          "oz1": 0.7756431272317559,
+          "oz3": 0.7445287703860175,
+          "oz5": 0.7095723085914099,
+          "distr_3": 0.5705489479521402,
+          "distr_8": 0.5310262164831078,
+          "distr_0": 0.524779243902454,
+          "distr_1": 0.519249036784168,
+          "distr_9": 0.4860915780417128,
+          "distr_7": 0.4570756901078806,
+          "distr_4": 0.4499348982888642,
+          "distr_2": 0.4041589791499965,
+          "distr_5": 0.3914735190996913,
+          "distr_6": 0.37948642400041827
+        },
+        "op_probabilities": {
+          "+": 0.7117094453797926,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3122031143805377,
+          "^": 0.7083821446464599,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.3803227782596329
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_4",
+        "distr_6",
+        "distr_1",
+        "distr_7",
+        "oz2"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.48440295",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.9088284267576938,
+          "nmse": 0.8897507568014789,
+          "r2": 0.11024924319852114
+        },
+        "ok": true,
+        "elapsed_seconds": 5.285227060317993,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v3)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 1.034260265971771,
+          "nmse": 1.0125495938337645,
+          "r2": -0.012549593833764527
+        },
+        "ok": true,
+        "elapsed_seconds": 5.329515695571899,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "0.051649414 + sin(cos((v4 + 0.4976233)*(-2.4395368)))/(v1**0.11643628)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.6124281446424032,
+          "nmse": 0.5995723605676607,
+          "r2": 0.4004276394323393
+        },
+        "ok": true,
+        "elapsed_seconds": 5.27095365524292,
+        "columns": [
+          "distr_4",
+          "distr_6",
+          "distr_1",
+          "distr_7",
+          "oz2"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(sin(v4/(v3 + v4 - 1*(-2.8583486)))) + cos(-0.22264676*v1/(-0.19571178) + exp(v2))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5112493929728444,
+          "nmse": 0.5005175024451161,
+          "r2": 0.49948249755488394
+        },
+        "ok": true,
+        "elapsed_seconds": 5.299653053283691,
+        "columns": [
+          "oz4",
+          "oz2",
+          "oz1",
+          "oz3",
+          "oz5"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v0*0.48439264",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.908825849342924,
+          "nmse": 0.8897482334905056,
+          "r2": 0.11025176650949442
+        },
+        "ok": true,
+        "elapsed_seconds": 5.3070385456085205,
+        "columns": [
+          "oz4",
+          "oz2",
+          "oz1",
+          "oz3",
+          "oz5"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 9,
+      "dataset": "631_fri_c1_500_5",
+      "source": "pmlb",
+      "path": "631_fri_c1_500_5",
+      "rows": 500,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz5",
+        "oz2",
+        "oz1",
+        "oz4",
+        "oz3"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz5": 0.8289287499354919,
+          "oz2": 0.8136267994478465,
+          "oz1": 0.8101596519652429,
+          "oz4": 0.8058921509599589,
+          "oz3": 0.787953936031242,
+          "distr_7": 0.5261647323802056,
+          "distr_5": 0.5105103856548522,
+          "distr_6": 0.48007355898177484,
+          "distr_4": 0.47785904278294433,
+          "distr_3": 0.4612320611033302,
+          "distr_8": 0.45514784870936725,
+          "distr_2": 0.44917386537913373,
+          "distr_0": 0.448015584198473,
+          "distr_1": 0.4192301864350301,
+          "distr_9": 0.4161334232669336
+        },
+        "op_probabilities": {
+          "+": 0.7666410954789323,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5001080728848875,
+          "^": 0.853728896524745,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.31342261850795855
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_6",
+        "distr_5",
+        "oz2",
+        "distr_2",
+        "distr_3"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.31328562",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.84300829202355,
+          "nmse": 0.8298808043757332,
+          "r2": 0.1701191956242668
+        },
+        "ok": true,
+        "elapsed_seconds": 5.327362775802612,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "v3*0.31323236",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.843021223021175,
+          "nmse": 0.8298935340093703,
+          "r2": 0.17010646599062973
+        },
+        "ok": true,
+        "elapsed_seconds": 5.409605503082275,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(v2/(-0.47243217))*0.83246225",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.528075510880713,
+          "nmse": 0.5198522172170638,
+          "r2": 0.48014778278293624
+        },
+        "ok": true,
+        "elapsed_seconds": 5.241110801696777,
+        "columns": [
+          "distr_6",
+          "distr_5",
+          "oz2",
+          "distr_2",
+          "distr_3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(v2*(-2.200339))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.7149625135832538,
+          "nmse": 0.7038289794833852,
+          "r2": 0.2961710205166148
+        },
+        "ok": true,
+        "elapsed_seconds": 5.370412111282349,
+        "columns": [
+          "oz5",
+          "oz2",
+          "oz1",
+          "oz4",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v3*0.3133311",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8429972543839861,
+          "nmse": 0.8298699386164206,
+          "r2": 0.17013006138357945
+        },
+        "ok": true,
+        "elapsed_seconds": 5.2780444622039795,
+        "columns": [
+          "oz5",
+          "oz2",
+          "oz1",
+          "oz4",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 10,
+      "dataset": "649_fri_c0_500_5",
+      "source": "pmlb",
+      "path": "649_fri_c0_500_5",
+      "rows": 500,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz3",
+        "oz4",
+        "oz5",
+        "oz2",
+        "oz1"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz3": 0.7948172405860006,
+          "oz4": 0.789579999388088,
+          "oz5": 0.7886079098967311,
+          "oz2": 0.7675993637681625,
+          "oz1": 0.7584347270753454,
+          "distr_3": 0.4868230780896906,
+          "distr_7": 0.4641167687268089,
+          "distr_1": 0.4593682385931914,
+          "distr_9": 0.4507501015730662,
+          "distr_2": 0.44778950830146397,
+          "distr_5": 0.4380737983297544,
+          "distr_4": 0.4328594641558086,
+          "distr_0": 0.4239357265153291,
+          "distr_6": 0.41956645753556054,
+          "distr_8": 0.3994521732534482
+        },
+        "op_probabilities": {
+          "+": 0.7221191637136571,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.34773490805623136,
+          "^": 0.7334040718762662,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.41777508491601584
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_5",
+        "distr_9",
+        "distr_1",
+        "oz2",
+        "oz3"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.61654276",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6258285206594884,
+          "nmse": 0.6265054486734256,
+          "r2": 0.3734945513265744
+        },
+        "ok": true,
+        "elapsed_seconds": 5.195626735687256,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v3)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6500627360166739,
+          "nmse": 0.6507658769926759,
+          "r2": 0.34923412300732415
+        },
+        "ok": true,
+        "elapsed_seconds": 5.275141477584839,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "v3*0.26261047",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8883453801249224,
+          "nmse": 0.8893062597493036,
+          "r2": 0.11069374025069645
+        },
+        "ok": true,
+        "elapsed_seconds": 5.379376649856567,
+        "columns": [
+          "distr_5",
+          "distr_9",
+          "distr_1",
+          "oz2",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.6500627360166739,
+          "nmse": 0.6507658769926759,
+          "r2": 0.34923412300732415
+        },
+        "ok": true,
+        "elapsed_seconds": 5.307500839233398,
+        "columns": [
+          "oz3",
+          "oz4",
+          "oz5",
+          "oz2",
+          "oz1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "0.5997087*v1 + 0.39072994846623*v3 + 0.387412825303834*v4*sqrt(0.29651636**v4) + 0.24864566",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.34643502323813924,
+          "nmse": 0.346809745010154,
+          "r2": 0.6531902549898461
+        },
+        "ok": true,
+        "elapsed_seconds": 5.2272748947143555,
+        "columns": [
+          "oz3",
+          "oz4",
+          "oz5",
+          "oz2",
+          "oz1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 11,
+      "dataset": "579_fri_c0_250_5",
+      "source": "pmlb",
+      "path": "579_fri_c0_250_5",
+      "rows": 250,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz5",
+        "oz1",
+        "oz3",
+        "oz2",
+        "oz4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz5": 0.8153033124641255,
+          "oz1": 0.8083467934265648,
+          "oz3": 0.800730538395342,
+          "oz2": 0.7744974568522633,
+          "oz4": 0.7715420059675971,
+          "distr_1": 0.49508144398009624,
+          "distr_4": 0.49408306226700593,
+          "distr_9": 0.4828089664617125,
+          "distr_5": 0.45376950073558314,
+          "distr_7": 0.4270211207863265,
+          "distr_0": 0.41996435195020365,
+          "distr_3": 0.4184949287752523,
+          "distr_6": 0.4102403588291925,
+          "distr_8": 0.397963684506216,
+          "distr_2": 0.3217976896384438
+        },
+        "op_probabilities": {
+          "+": 0.6323267026929185,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2983027165916694,
+          "^": 0.7251488533060658,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.5381771064443941
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_2",
+        "oz4",
+        "oz1",
+        "oz2",
+        "distr_0"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.73295933",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.8170934868208517,
+          "nmse": 0.9348017313493068,
+          "r2": 0.06519826865069323
+        },
+        "ok": true,
+        "elapsed_seconds": 5.2540693283081055,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v3)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.8553117440930167,
+          "nmse": 0.97852560584276,
+          "r2": 0.02147439415723995
+        },
+        "ok": true,
+        "elapsed_seconds": 5.461878299713135,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8553117440930167,
+          "nmse": 0.97852560584276,
+          "r2": 0.02147439415723995
+        },
+        "ok": true,
+        "elapsed_seconds": 5.288808584213257,
+        "columns": [
+          "distr_2",
+          "oz4",
+          "oz1",
+          "oz2",
+          "distr_0"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "(v4 + sin(v0) + sin(v1))*0.6171633",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5005376483288723,
+          "nmse": 0.5726437278111952,
+          "r2": 0.4273562721888048
+        },
+        "ok": true,
+        "elapsed_seconds": 5.250100374221802,
+        "columns": [
+          "oz5",
+          "oz1",
+          "oz3",
+          "oz2",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "(v1*0.50164115 + v4 + (0.032029383 - v0)*(-0.019098582*v1 - 0.4681727))*0.73561597",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5132130057231283,
+          "nmse": 0.5871450623937577,
+          "r2": 0.41285493760624226
+        },
+        "ok": true,
+        "elapsed_seconds": 5.29838752746582,
+        "columns": [
+          "oz5",
+          "oz1",
+          "oz3",
+          "oz2",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 12,
+      "dataset": "596_fri_c2_250_5",
+      "source": "pmlb",
+      "path": "596_fri_c2_250_5",
+      "rows": 250,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz2",
+        "oz5",
+        "oz1",
+        "oz4",
+        "oz3"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz2": 0.8182263569942309,
+          "oz5": 0.7852579557783934,
+          "oz1": 0.782510773982157,
+          "oz4": 0.7815424928688119,
+          "oz3": 0.778907195108644,
+          "distr_4": 0.5686061996181434,
+          "distr_2": 0.5222578485162387,
+          "distr_0": 0.5109299110455262,
+          "distr_3": 0.47031497284416696,
+          "distr_7": 0.4656046221910854,
+          "distr_6": 0.4410900733826756,
+          "distr_8": 0.41472842523609743,
+          "distr_1": 0.39709843103577186,
+          "distr_5": 0.3876645040527451,
+          "distr_9": 0.32929003742307633
+        },
+        "op_probabilities": {
+          "+": 0.7486494763904066,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.48661044884420146,
+          "^": 0.7127586360423259,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.34803964702251855
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_2",
+        "distr_8",
+        "oz2",
+        "distr_3",
+        "distr_0"
+      ],
+      "learned_ops": {
+        "expression": "0.432264918770885*v4",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 1.0622366639013192,
+          "nmse": 1.040361975134647,
+          "r2": -0.0403619751346469
+        },
+        "ok": true,
+        "elapsed_seconds": 5.391809940338135,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v1)*(-0.5079393)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.7710294007242708,
+          "nmse": 0.7551515566016128,
+          "r2": 0.24484844339838718
+        },
+        "ok": true,
+        "elapsed_seconds": 5.2744317054748535,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "(sin(sin(v2/(-0.45164692))) + 0.15812384)*1.1222751",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.4881815157658002,
+          "nmse": 0.4781283712247346,
+          "r2": 0.5218716287752654
+        },
+        "ok": true,
+        "elapsed_seconds": 5.291167736053467,
+        "columns": [
+          "distr_2",
+          "distr_8",
+          "oz2",
+          "distr_3",
+          "distr_0"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(v2/(-0.44832936))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.6232180749862858,
+          "nmse": 0.6103841163333992,
+          "r2": 0.3896158836666008
+        },
+        "ok": true,
+        "elapsed_seconds": 5.326164960861206,
+        "columns": [
+          "oz2",
+          "oz5",
+          "oz1",
+          "oz4",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "0.14253439 + (v0 - v1)*(-0.3752434)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8812951915651769,
+          "nmse": 0.8631466389100182,
+          "r2": 0.1368533610899818
+        },
+        "ok": true,
+        "elapsed_seconds": 5.398642539978027,
+        "columns": [
+          "oz2",
+          "oz5",
+          "oz1",
+          "oz4",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 13,
+      "dataset": "601_fri_c1_250_5",
+      "source": "pmlb",
+      "path": "601_fri_c1_250_5",
+      "rows": 250,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz4",
+        "oz3",
+        "oz2",
+        "oz5",
+        "oz1"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz4": 0.8133951072670486,
+          "oz3": 0.803860292320211,
+          "oz2": 0.7931935814046622,
+          "oz5": 0.7904326013706349,
+          "oz1": 0.7661921260397705,
+          "distr_4": 0.524060400107998,
+          "distr_9": 0.5099160430846914,
+          "distr_5": 0.5076940108686349,
+          "distr_8": 0.502347563684552,
+          "distr_6": 0.4674653558941886,
+          "distr_3": 0.4404928682037938,
+          "distr_7": 0.4235458558534973,
+          "distr_2": 0.4151788618248115,
+          "distr_0": 0.3877880610169546,
+          "distr_1": 0.33583911997134236
+        },
+        "op_probabilities": {
+          "+": 0.7277611950612172,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5592916979573269,
+          "^": 0.8620389510667649,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.40099578492143906
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_3",
+        "oz2",
+        "distr_9",
+        "distr_1",
+        "distr_5"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.4049737",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.85015945024967,
+          "nmse": 0.8622858500725991,
+          "r2": 0.13771414992740094
+        },
+        "ok": true,
+        "elapsed_seconds": 5.288865566253662,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v1*(-2.118076))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.5130667365494882,
+          "nmse": 0.5203849547748074,
+          "r2": 0.4796150452251926
+        },
+        "ok": true,
+        "elapsed_seconds": 5.306513071060181,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "cos(v1 + v1 - 1*(-1.1667479))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.49457231953748004,
+          "nmse": 0.5016267393716696,
+          "r2": 0.49837326062833043
+        },
+        "ok": true,
+        "elapsed_seconds": 5.287545442581177,
+        "columns": [
+          "distr_3",
+          "oz2",
+          "distr_9",
+          "distr_1",
+          "distr_5"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "cos(v2)*v2*(-1.7370365)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5238173282080356,
+          "nmse": 0.5312888894006609,
+          "r2": 0.4687111105993391
+        },
+        "ok": true,
+        "elapsed_seconds": 5.311864852905273,
+        "columns": [
+          "oz4",
+          "oz3",
+          "oz2",
+          "oz5",
+          "oz1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "(v0 - 2.176818*v2)/(v4*v4*v4*2.685808*v2 + 1.9471967)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5193546278679243,
+          "nmse": 0.5267625345442136,
+          "r2": 0.4732374654557864
+        },
+        "ok": true,
+        "elapsed_seconds": 5.21245813369751,
+        "columns": [
+          "oz4",
+          "oz3",
+          "oz2",
+          "oz5",
+          "oz1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 14,
+      "dataset": "613_fri_c3_250_5",
+      "source": "pmlb",
+      "path": "613_fri_c3_250_5",
+      "rows": 250,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz2",
+        "oz4",
+        "oz3",
+        "oz5",
+        "oz1"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz2": 0.8227809421318842,
+          "oz4": 0.8112805275465637,
+          "oz3": 0.8083649520712388,
+          "oz5": 0.7876924567065562,
+          "oz1": 0.7481723312901246,
+          "distr_6": 0.514375838009181,
+          "distr_5": 0.4859840753530205,
+          "distr_0": 0.4824080604944507,
+          "distr_2": 0.46171467353408796,
+          "distr_7": 0.4574012493850935,
+          "distr_8": 0.4573515444248889,
+          "distr_9": 0.4178976061222228,
+          "distr_4": 0.40540535319159376,
+          "distr_1": 0.37068585946154753,
+          "distr_3": 0.35899022328204633
+        },
+        "op_probabilities": {
+          "+": 0.7753964891853433,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.4065941636804074,
+          "^": 0.708780011292763,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.39472479194491145
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_4",
+        "distr_8",
+        "distr_1",
+        "distr_6",
+        "oz5"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.58961886",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6724009914001481,
+          "nmse": 0.8232814413299023,
+          "r2": 0.17671855867009767
+        },
+        "ok": true,
+        "elapsed_seconds": 5.315634250640869,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v3)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.7504359965794385,
+          "nmse": 0.9188267667530773,
+          "r2": 0.08117323324692272
+        },
+        "ok": true,
+        "elapsed_seconds": 5.271089792251587,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "v2**v4*(0.13041963 + (0.39759415**v4)**v4*(-1.0656625)*exp(v4)/(v2/0.6250012))/v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.9274432018189466,
+          "nmse": 1.1355527218292465,
+          "r2": -0.1355527218292465
+        },
+        "ok": true,
+        "elapsed_seconds": 5.431831121444702,
+        "columns": [
+          "distr_4",
+          "distr_8",
+          "distr_1",
+          "distr_6",
+          "oz5"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(sin(v0)*(-1.974757)/cos(sin(v4)))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.4603364827190211,
+          "nmse": 0.5636316540826116,
+          "r2": 0.4363683459173884
+        },
+        "ok": true,
+        "elapsed_seconds": 5.367882966995239,
+        "columns": [
+          "oz2",
+          "oz4",
+          "oz3",
+          "oz5",
+          "oz1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v1/1.6963421",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.6723663028855873,
+          "nmse": 0.8232389690393638,
+          "r2": 0.17676103096063622
+        },
+        "ok": true,
+        "elapsed_seconds": 5.19421124458313,
+        "columns": [
+          "oz2",
+          "oz4",
+          "oz3",
+          "oz5",
+          "oz1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 15,
+      "dataset": "210_cloud",
+      "source": "pmlb",
+      "path": "210_cloud",
+      "rows": 108,
+      "original_columns": [
+        "seeded",
+        "season",
+        "NC",
+        "SC",
+        "NWC"
+      ],
+      "full_columns": [
+        "seeded",
+        "season",
+        "NC",
+        "SC",
+        "NWC",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "SC",
+        "NC",
+        "NWC",
+        "seeded"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "SC": 0.8758072615791845,
+          "NC": 0.8650896618079337,
+          "NWC": 0.8409167462137227,
+          "seeded": 0.7060021468823663,
+          "season": 0.6410921828690754,
+          "distr_5": 0.5480773451744005,
+          "distr_7": 0.5279046510977851,
+          "distr_1": 0.5054884175168992,
+          "distr_4": 0.494398546211872,
+          "distr_9": 0.4902024580004501,
+          "distr_3": 0.44486093410277944,
+          "distr_8": 0.42022059234082065,
+          "distr_6": 0.391614013579815,
+          "distr_0": 0.3843189931093601,
+          "distr_2": 0.36514472087436295
+        },
+        "op_probabilities": {
+          "+": 0.8238727934859903,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2863580933213717,
+          "^": 0.7389361937600462,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.5394920320244209
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "NWC",
+        "distr_4",
+        "distr_2",
+        "season"
+      ],
+      "learned_ops": {
+        "expression": "v3/0.9868517",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.41095761898442185,
+          "nmse": 0.36900207840113114,
+          "r2": 0.6309979215988688
+        },
+        "ok": true,
+        "elapsed_seconds": 5.305410385131836,
+        "columns": [
+          "seeded",
+          "season",
+          "NC",
+          "SC",
+          "NWC",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "v3*1.0133499",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.41093251956291316,
+          "nmse": 0.3689795414331434,
+          "r2": 0.6310204585668566
+        },
+        "ok": true,
+        "elapsed_seconds": 5.261662721633911,
+        "columns": [
+          "seeded",
+          "season",
+          "NC",
+          "SC",
+          "NWC",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sqrt(v0)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.43272956872546375,
+          "nmse": 0.38855128331706185,
+          "r2": 0.6114487166829381
+        },
+        "ok": true,
+        "elapsed_seconds": 5.3002400398254395,
+        "columns": [
+          "NWC",
+          "distr_4",
+          "distr_2",
+          "season"
+        ],
+        "column_count": 4,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sqrt(v0*v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.07391776483960134,
+          "nmse": 0.06637134243668297,
+          "r2": 0.933628657563317
+        },
+        "ok": true,
+        "elapsed_seconds": 5.390704870223999,
+        "columns": [
+          "SC",
+          "NC",
+          "NWC",
+          "seeded"
+        ],
+        "column_count": 4,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "sqrt(v0*v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.07391776483960134,
+          "nmse": 0.06637134243668297,
+          "r2": 0.933628657563317
+        },
+        "ok": true,
+        "elapsed_seconds": 5.294180631637573,
+        "columns": [
+          "SC",
+          "NC",
+          "NWC",
+          "seeded"
+        ],
+        "column_count": 4,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 16,
+      "dataset": "594_fri_c2_100_5",
+      "source": "pmlb",
+      "path": "594_fri_c2_100_5",
+      "rows": 100,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz2",
+        "oz4",
+        "oz5",
+        "oz1",
+        "oz3"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz2": 0.8137889558732062,
+          "oz4": 0.8032097092526115,
+          "oz5": 0.7882853158207224,
+          "oz1": 0.770649331180849,
+          "oz3": 0.7589465340369017,
+          "distr_9": 0.6179405720155584,
+          "distr_3": 0.5361675613270259,
+          "distr_8": 0.49279936726570195,
+          "distr_0": 0.4697763388211853,
+          "distr_4": 0.457737776250511,
+          "distr_6": 0.4448511836314875,
+          "distr_5": 0.43280396140003147,
+          "distr_1": 0.42824397982744666,
+          "distr_7": 0.4154579722747279,
+          "distr_2": 0.3949888012526543
+        },
+        "op_probabilities": {
+          "+": 0.7586843166294025,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5620871010239905,
+          "^": 0.7689404260102026,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4032882708494742
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_6",
+        "distr_1",
+        "oz2",
+        "distr_4",
+        "distr_9"
+      ],
+      "learned_ops": {
+        "expression": "v1*(-0.40324125)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.829020543321916,
+          "nmse": 0.8373945021591076,
+          "r2": 0.1626054978408924
+        },
+        "ok": true,
+        "elapsed_seconds": 5.194015264511108,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(sin(sin(v0)*(-2.9156692)))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6165449680286159,
+          "nmse": 0.6227727053568868,
+          "r2": 0.3772272946431132
+        },
+        "ok": true,
+        "elapsed_seconds": 5.47903037071228,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(v2*(-1.9297589))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.6474287910119847,
+          "nmse": 0.653968486668045,
+          "r2": 0.34603151333195503
+        },
+        "ok": true,
+        "elapsed_seconds": 5.402137041091919,
+        "columns": [
+          "distr_6",
+          "distr_1",
+          "oz2",
+          "distr_4",
+          "distr_9"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(-v3 - v3 + 0.2832324)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5083967746934964,
+          "nmse": 0.5135321042079921,
+          "r2": 0.4864678957920079
+        },
+        "ok": true,
+        "elapsed_seconds": 5.321731805801392,
+        "columns": [
+          "oz2",
+          "oz4",
+          "oz5",
+          "oz1",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v0*(-0.403293)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8290205457202617,
+          "nmse": 0.8373945045816791,
+          "r2": 0.16260549541832092
+        },
+        "ok": true,
+        "elapsed_seconds": 5.1873085498809814,
+        "columns": [
+          "oz2",
+          "oz4",
+          "oz5",
+          "oz1",
+          "oz3"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 17,
+      "dataset": "611_fri_c3_100_5",
+      "source": "pmlb",
+      "path": "611_fri_c3_100_5",
+      "rows": 100,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz3",
+        "oz5",
+        "oz1",
+        "oz2",
+        "oz4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz3": 0.8321630638974375,
+          "oz5": 0.819247770988976,
+          "oz1": 0.8148461263184157,
+          "oz2": 0.8110589249092232,
+          "oz4": 0.7953481302394976,
+          "distr_8": 0.5419967517183591,
+          "distr_5": 0.5273188761291951,
+          "distr_6": 0.5133684766886948,
+          "distr_4": 0.5047644746706665,
+          "distr_3": 0.4997856210314113,
+          "distr_9": 0.4846262046558516,
+          "distr_7": 0.484250792508176,
+          "distr_0": 0.39404723950467807,
+          "distr_2": 0.3871896557067067,
+          "distr_1": 0.37163286867109707
+        },
+        "op_probabilities": {
+          "+": 0.7226135127485876,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.44620726618803835,
+          "^": 0.9159284976831296,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.547894676657475
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_9",
+        "distr_2",
+        "oz1",
+        "oz5",
+        "distr_8"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.5424458",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6986972196261548,
+          "nmse": 0.7057547769026002,
+          "r2": 0.29424522309739976
+        },
+        "ok": true,
+        "elapsed_seconds": 5.284372329711914,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "v3/1.8434527",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6986972198948314,
+          "nmse": 0.7057547771739907,
+          "r2": 0.2942452228260093
+        },
+        "ok": true,
+        "elapsed_seconds": 5.563222169876099,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "v3*sin(v2) - 1*0.4282835",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.66683980528745,
+          "nmse": 0.6735755700619943,
+          "r2": 0.3264244299380057
+        },
+        "ok": true,
+        "elapsed_seconds": 5.4214465618133545,
+        "columns": [
+          "distr_9",
+          "distr_2",
+          "oz1",
+          "oz5",
+          "distr_8"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "-(-0.4476385)*(v4 - 0.023829177*sin(v3) - 0.47110108) + sin(v3*(-v3 - 1.8146154))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.2863503864981991,
+          "nmse": 0.2892428185804745,
+          "r2": 0.7107571814195255
+        },
+        "ok": true,
+        "elapsed_seconds": 5.304525136947632,
+        "columns": [
+          "oz3",
+          "oz5",
+          "oz1",
+          "oz2",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v4*0.54245466",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.6986972197398178,
+          "nmse": 0.7057547770174113,
+          "r2": 0.2942452229825887
+        },
+        "ok": true,
+        "elapsed_seconds": 5.208594083786011,
+        "columns": [
+          "oz3",
+          "oz5",
+          "oz1",
+          "oz2",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 18,
+      "dataset": "624_fri_c0_100_5",
+      "source": "pmlb",
+      "path": "624_fri_c0_100_5",
+      "rows": 100,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz3",
+        "oz5",
+        "oz1",
+        "oz2",
+        "oz4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz3": 0.8112485493185704,
+          "oz5": 0.8043894574928931,
+          "oz1": 0.8005057216669309,
+          "oz2": 0.7805408135471885,
+          "oz4": 0.763804652392432,
+          "distr_4": 0.5324804670292516,
+          "distr_5": 0.5071732580496342,
+          "distr_1": 0.5059414555843638,
+          "distr_6": 0.5012762124268914,
+          "distr_9": 0.46608013606606524,
+          "distr_2": 0.4549600838382579,
+          "distr_8": 0.4297007759669681,
+          "distr_3": 0.4222683718349475,
+          "distr_0": 0.40805999049474434,
+          "distr_7": 0.39345248560827334
+        },
+        "op_probabilities": {
+          "+": 0.64256391403123,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.34264050210783087,
+          "^": 0.7465282351629969,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4587229640713009
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "oz1",
+        "distr_0",
+        "distr_2",
+        "distr_9",
+        "distr_6"
+      ],
+      "learned_ops": {
+        "expression": "(v1 + v3)*0.5097684",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.5041623504782252,
+          "nmse": 0.5092549035566183,
+          "r2": 0.4907450964433817
+        },
+        "ok": true,
+        "elapsed_seconds": 5.29362678527832,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.7775453393944555,
+          "nmse": 0.7853993390197099,
+          "r2": 0.21460066098029007
+        },
+        "ok": true,
+        "elapsed_seconds": 5.297161340713501,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(v0)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8991747284847744,
+          "nmse": 0.9082573087829955,
+          "r2": 0.09174269121700451
+        },
+        "ok": true,
+        "elapsed_seconds": 5.429607629776001,
+        "columns": [
+          "oz1",
+          "distr_0",
+          "distr_2",
+          "distr_9",
+          "distr_6"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "(0.88772964 - (v2 + v4 + 0.48648357))*(-0.4289409) - (v3 + exp(-0.9410891))/(-1.6584895)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.35500312225670094,
+          "nmse": 0.35858901525599496,
+          "r2": 0.641410984744005
+        },
+        "ok": true,
+        "elapsed_seconds": 5.280057191848755,
+        "columns": [
+          "oz3",
+          "oz5",
+          "oz1",
+          "oz2",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v2 - (-0.4673349)*v3 + (-v2 + v4)/1.8897225",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.3461120766613772,
+          "nmse": 0.3496081610472878,
+          "r2": 0.6503918389527121
+        },
+        "ok": true,
+        "elapsed_seconds": 5.309720993041992,
+        "columns": [
+          "oz3",
+          "oz5",
+          "oz1",
+          "oz2",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 19,
+      "dataset": "656_fri_c1_100_5",
+      "source": "pmlb",
+      "path": "656_fri_c1_100_5",
+      "rows": 100,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz1",
+        "oz2",
+        "oz5",
+        "oz3",
+        "oz4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz1": 0.8229274495148939,
+          "oz2": 0.8142097768952328,
+          "oz5": 0.798490921180757,
+          "oz3": 0.7931890079785685,
+          "oz4": 0.7882129857759631,
+          "distr_1": 0.519932168216135,
+          "distr_7": 0.4982568091832586,
+          "distr_9": 0.4861375892095766,
+          "distr_8": 0.4777025636350654,
+          "distr_3": 0.44046546316105323,
+          "distr_0": 0.4391004837350152,
+          "distr_5": 0.439009383822604,
+          "distr_4": 0.4381270912288584,
+          "distr_2": 0.4085004049120764,
+          "distr_6": 0.34601126460528453
+        },
+        "op_probabilities": {
+          "+": 0.6215955157856565,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3167123206544474,
+          "^": 0.7548868721902595,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4817561965190664
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_3",
+        "oz3",
+        "distr_2",
+        "distr_0",
+        "distr_1"
+      ],
+      "learned_ops": {
+        "expression": "v0*(-0.3557628)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.8646862872590613,
+          "nmse": 0.8734204770009786,
+          "r2": 0.12657952299902142
+        },
+        "ok": true,
+        "elapsed_seconds": 5.197840452194214,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "cos(v0*(sin(v8) + 1.1633855) - 1*(-0.72862595))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.575080879440848,
+          "nmse": 0.5808897671172176,
+          "r2": 0.4191102328827824
+        },
+        "ok": true,
+        "elapsed_seconds": 5.372177600860596,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(exp(v2))*0.17039362*v3",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.9397154665084926,
+          "nmse": 0.9492075254307136,
+          "r2": 0.05079247456928637
+        },
+        "ok": true,
+        "elapsed_seconds": 5.302045583724976,
+        "columns": [
+          "distr_3",
+          "oz3",
+          "distr_2",
+          "distr_0",
+          "distr_1"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "cos((v0 + 0.4067637)*(-1.9175131))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5301474299890956,
+          "nmse": 0.5355024452275035,
+          "r2": 0.46449755477249655
+        },
+        "ok": true,
+        "elapsed_seconds": 5.283825635910034,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz5",
+          "oz3",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v4*0.3866537",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.8419735421348444,
+          "nmse": 0.8504783106075711,
+          "r2": 0.14952168939242894
+        },
+        "ok": true,
+        "elapsed_seconds": 5.300422191619873,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz5",
+          "oz3",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 20,
+      "dataset": "687_sleuth_ex1605",
+      "source": "pmlb",
+      "path": "687_sleuth_ex1605",
+      "rows": 62,
+      "original_columns": [
+        "FMED",
+        "TMIQ",
+        "Age2IQ",
+        "Age4IQ",
+        "Age8IQ"
+      ],
+      "full_columns": [
+        "FMED",
+        "TMIQ",
+        "Age2IQ",
+        "Age4IQ",
+        "Age8IQ",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "Age8IQ",
+        "Age4IQ",
+        "Age2IQ",
+        "distr_1",
+        "TMIQ",
+        "distr_2"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "Age8IQ": 0.8819951545581477,
+          "Age4IQ": 0.8793065870899582,
+          "Age2IQ": 0.8777707541573058,
+          "distr_1": 0.8762792240976227,
+          "TMIQ": 0.8560211055467448,
+          "distr_2": 0.7314105263633833,
+          "distr_3": 0.5625981442155005,
+          "FMED": 0.5369117491886286,
+          "distr_9": 0.5299516156936253,
+          "distr_0": 0.47154370790542527,
+          "distr_4": 0.4663331827369697,
+          "distr_6": 0.4227065399647473,
+          "distr_8": 0.28488701492471896,
+          "distr_7": 0.21892051931355497,
+          "distr_5": 0.20224395678581653
+        },
+        "op_probabilities": {
+          "+": 0.8973331565319348,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.4001381703505463,
+          "^": 0.8075098124361516,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4426523703674673
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_4",
+        "distr_3",
+        "FMED",
+        "distr_0",
+        "distr_8",
+        "distr_5"
+      ],
+      "learned_ops": {
+        "expression": "v4 - 1*8.048439",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 96.20733611091458,
+          "nmse": 0.41413279493567823,
+          "r2": 0.5858672050643218
+        },
+        "ok": true,
+        "elapsed_seconds": 5.22019624710083,
+        "columns": [
+          "FMED",
+          "TMIQ",
+          "Age2IQ",
+          "Age4IQ",
+          "Age8IQ",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "v4 - 8.048441",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 96.20733611112617,
+          "nmse": 0.41413279493658905,
+          "r2": 0.585867205063411
+        },
+        "ok": true,
+        "elapsed_seconds": 5.269773721694946,
+        "columns": [
+          "FMED",
+          "TMIQ",
+          "Age2IQ",
+          "Age4IQ",
+          "Age8IQ",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "v1 + (v0 + 14.88465)**1.4466323 - (v1 + 3.796903)**1.6201779 + 25.297268 + 37.442863",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5"
+        ],
+        "score": {
+          "mse": 226.13821509450028,
+          "nmse": 0.9734314953995112,
+          "r2": 0.026568504600488763
+        },
+        "ok": true,
+        "elapsed_seconds": 5.310349941253662,
+        "columns": [
+          "distr_4",
+          "distr_3",
+          "FMED",
+          "distr_0",
+          "distr_8",
+          "distr_5"
+        ],
+        "column_count": 6,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "v0*0.928892",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5"
+        ],
+        "score": {
+          "mse": 93.7856651838937,
+          "nmse": 0.4037085030888961,
+          "r2": 0.596291496911104
+        },
+        "ok": true,
+        "elapsed_seconds": 5.313471794128418,
+        "columns": [
+          "Age8IQ",
+          "Age4IQ",
+          "Age2IQ",
+          "distr_1",
+          "TMIQ",
+          "distr_2"
+        ],
+        "column_count": 6,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "v0*0.9288921",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5"
+        ],
+        "score": {
+          "mse": 93.7856651840234,
+          "nmse": 0.40370850308945444,
+          "r2": 0.5962914969105455
+        },
+        "ok": true,
+        "elapsed_seconds": 5.288378715515137,
+        "columns": [
+          "Age8IQ",
+          "Age4IQ",
+          "Age2IQ",
+          "distr_1",
+          "TMIQ",
+          "distr_2"
+        ],
+        "column_count": 6,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 21,
+      "dataset": "599_fri_c2_1000_5",
+      "source": "pmlb",
+      "path": "599_fri_c2_1000_5",
+      "rows": 1000,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz3",
+        "oz2",
+        "oz5",
+        "oz1",
+        "oz4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz3": 0.827364670694231,
+          "oz2": 0.7846066735927064,
+          "oz5": 0.7773748715416918,
+          "oz1": 0.775008886494768,
+          "oz4": 0.7518449606359854,
+          "distr_7": 0.5350906126167593,
+          "distr_9": 0.5010692155032648,
+          "distr_4": 0.48566588123601495,
+          "distr_6": 0.4444221919185972,
+          "distr_2": 0.4307243681435219,
+          "distr_8": 0.40438779104692446,
+          "distr_5": 0.4013506949979112,
+          "distr_0": 0.39616960891105574,
+          "distr_1": 0.3942779396901277,
+          "distr_3": 0.38246635070491025
+        },
+        "op_probabilities": {
+          "+": 0.7753614482923612,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5566513637342472,
+          "^": 0.8003813845931738,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.30321674527502496
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_0",
+        "distr_6",
+        "distr_3",
+        "distr_2",
+        "oz2"
+      ],
+      "learned_ops": {
+        "expression": "v4/3.6755083 - 0.056662437*v6/v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 1.6570471322138463,
+          "nmse": 1.787321582410233,
+          "r2": -0.7873215824102331
+        },
+        "ok": true,
+        "elapsed_seconds": 5.298336982727051,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(-0.80733216/v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.639231873016513,
+          "nmse": 0.6894872816807041,
+          "r2": 0.31051271831929594
+        },
+        "ok": true,
+        "elapsed_seconds": 5.252728700637817,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "cos(exp(v4)*1.3372922)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.5491721694914191,
+          "nmse": 0.5923472253198364,
+          "r2": 0.4076527746801636
+        },
+        "ok": true,
+        "elapsed_seconds": 5.293578624725342,
+        "columns": [
+          "distr_0",
+          "distr_6",
+          "distr_3",
+          "distr_2",
+          "oz2"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin(v1*(-2.2917745))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.467975394921665,
+          "nmse": 0.5047668875072779,
+          "r2": 0.49523311249272206
+        },
+        "ok": true,
+        "elapsed_seconds": 5.287503480911255,
+        "columns": [
+          "oz3",
+          "oz2",
+          "oz5",
+          "oz1",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "0.15552539 + v3/(v3*(v1*(-1.4327672) + 0.15358502/((v1*(-0.5693815)))))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.531000966799802,
+          "nmse": 0.5727474311331211,
+          "r2": 0.4272525688668789
+        },
+        "ok": true,
+        "elapsed_seconds": 5.313115835189819,
+        "columns": [
+          "oz3",
+          "oz2",
+          "oz5",
+          "oz1",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 22,
+      "dataset": "609_fri_c0_1000_5",
+      "source": "pmlb",
+      "path": "609_fri_c0_1000_5",
+      "rows": 1000,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz1",
+        "oz3",
+        "oz2",
+        "oz4",
+        "oz5"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz1": 0.8241858125143755,
+          "oz3": 0.8218956280201712,
+          "oz2": 0.8202730467167776,
+          "oz4": 0.7958406521499127,
+          "oz5": 0.7675239348489832,
+          "distr_8": 0.5346618131363361,
+          "distr_1": 0.5300729454672856,
+          "distr_6": 0.470550322688508,
+          "distr_4": 0.46692091355251475,
+          "distr_2": 0.461003243609982,
+          "distr_5": 0.4441226599777899,
+          "distr_0": 0.438420143206474,
+          "distr_3": 0.42522054485333244,
+          "distr_7": 0.337329944670981,
+          "distr_9": 0.32961028001949566
+        },
+        "op_probabilities": {
+          "+": 0.7176726040229807,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.44881657024749383,
+          "^": 0.8916156332240891,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.48580993175145026
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "distr_4",
+        "distr_2",
+        "oz1",
+        "distr_7",
+        "oz2"
+      ],
+      "learned_ops": {
+        "expression": "v3*0.67755866",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.6735815198065486,
+          "nmse": 0.6586790928805577,
+          "r2": 0.3413209071194423
+        },
+        "ok": true,
+        "elapsed_seconds": 5.19964861869812,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(v3)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.702828074579399,
+          "nmse": 0.6872785921263139,
+          "r2": 0.3127214078736861
+        },
+        "ok": true,
+        "elapsed_seconds": 5.4526166915893555,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.9198575980473822,
+          "nmse": 0.8995065191740255,
+          "r2": 0.10049348082597453
+        },
+        "ok": true,
+        "elapsed_seconds": 5.303650379180908,
+        "columns": [
+          "distr_4",
+          "distr_2",
+          "oz1",
+          "distr_7",
+          "oz2"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "v3*0.5744459 - sin(v2/(v0 - 1*1.857309) - sin(v0)) + 0.15131246",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.2827537739367981,
+          "nmse": 0.27649808352630195,
+          "r2": 0.723501916473698
+        },
+        "ok": true,
+        "elapsed_seconds": 5.314053535461426,
+        "columns": [
+          "oz1",
+          "oz3",
+          "oz2",
+          "oz4",
+          "oz5"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "(v0 + v3 + v4)*0.45993882",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.443599732584296,
+          "nmse": 0.433785460065173,
+          "r2": 0.5662145399348271
+        },
+        "ok": true,
+        "elapsed_seconds": 5.298936128616333,
+        "columns": [
+          "oz1",
+          "oz3",
+          "oz2",
+          "oz4",
+          "oz5"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    },
+    {
+      "idx": 23,
+      "dataset": "612_fri_c1_1000_5",
+      "source": "pmlb",
+      "path": "612_fri_c1_1000_5",
+      "rows": 1000,
+      "original_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5"
+      ],
+      "full_columns": [
+        "oz1",
+        "oz2",
+        "oz3",
+        "oz4",
+        "oz5",
+        "distr_0",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "distr_9"
+      ],
+      "learned_columns": [
+        "oz2",
+        "oz3",
+        "oz1",
+        "oz5",
+        "oz4"
+      ],
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "oz2": 0.8408938377395024,
+          "oz3": 0.8130447698147736,
+          "oz1": 0.7970425281811859,
+          "oz5": 0.7895366363968864,
+          "oz4": 0.7726201693729703,
+          "distr_6": 0.5115064782946406,
+          "distr_4": 0.45812190244616263,
+          "distr_0": 0.45035917199208997,
+          "distr_9": 0.45009669109113215,
+          "distr_3": 0.438482623057212,
+          "distr_7": 0.43394599571805814,
+          "distr_5": 0.4232035749326078,
+          "distr_8": 0.4052633188174382,
+          "distr_2": 0.3982544176266328,
+          "distr_1": 0.39801669152834
+        },
+        "op_probabilities": {
+          "+": 0.5526461417086689,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.34091110593667767,
+          "^": 0.72833734867528,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4511602889920249
+        }
+      },
+      "q": 100,
+      "heldout": 200,
+      "method": "pysr",
+      "seed": 20260506,
+      "distractors": 10,
+      "timeout_seconds": 5,
+      "support_threshold": 0.7,
+      "random_columns": [
+        "oz5",
+        "distr_0",
+        "distr_6",
+        "oz2",
+        "distr_2"
+      ],
+      "learned_ops": {
+        "expression": "v1*(-0.32651606)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.8936553958160726,
+          "nmse": 0.8315923833645342,
+          "r2": 0.16840761663546577
+        },
+        "ok": true,
+        "elapsed_seconds": 5.222913980484009,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "full": {
+        "expression": "sin(sin((0.17657533 - v1)/0.429705))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7",
+          "v8",
+          "v9",
+          "v10",
+          "v11",
+          "v12",
+          "v13",
+          "v14"
+        ],
+        "score": {
+          "mse": 0.5588514481086356,
+          "nmse": 0.5200400622602309,
+          "r2": 0.4799599377397691
+        },
+        "ok": true,
+        "elapsed_seconds": 5.327964782714844,
+        "columns": [
+          "oz1",
+          "oz2",
+          "oz3",
+          "oz4",
+          "oz5",
+          "distr_0",
+          "distr_1",
+          "distr_2",
+          "distr_3",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_7",
+          "distr_8",
+          "distr_9"
+        ],
+        "column_count": 15,
+        "full_column_count": 15
+      },
+      "random_variables": {
+        "expression": "sin(cos(exp(v3)))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.7454794242973192,
+          "nmse": 0.6937070084319396,
+          "r2": 0.30629299156806045
+        },
+        "ok": true,
+        "elapsed_seconds": 5.282360315322876,
+        "columns": [
+          "oz5",
+          "distr_0",
+          "distr_6",
+          "oz2",
+          "distr_2"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_variables": {
+        "expression": "sin((v0 + v2)*(-1.144364))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.43362960886479535,
+          "nmse": 0.40351468991468314,
+          "r2": 0.5964853100853169
+        },
+        "ok": true,
+        "elapsed_seconds": 5.302463054656982,
+        "columns": [
+          "oz2",
+          "oz3",
+          "oz1",
+          "oz5",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      },
+      "learned_prior": {
+        "expression": "-0.6111606*v0/(0.009275383**v2 + v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.7133644922378448,
+          "nmse": 0.663822409717532,
+          "r2": 0.33617759028246796
+        },
+        "ok": true,
+        "elapsed_seconds": 5.192336320877075,
+        "columns": [
+          "oz2",
+          "oz3",
+          "oz1",
+          "oz5",
+          "oz4"
+        ],
+        "column_count": 5,
+        "full_column_count": 15
+      }
+    }
+  ]
+}

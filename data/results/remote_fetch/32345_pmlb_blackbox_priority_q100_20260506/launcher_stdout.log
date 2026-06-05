@@ -1,0 +1,15 @@
+[start] Wed May  6 19:47:31 CST 2026
+[env]
+pysr True
+pmlb True
+sklearn True
+sympy True
+numpy True
+pandas True
+[run] q=100 d=10 t=5 thr=0.70 seed=20260506
+[run] q=100 d=10 t=5 thr=0.70 seed=20260507
+[run] q=100 d=10 t=5 thr=0.70 seed=20260508
+[run] q=100 d=20 t=5 thr=0.70 seed=20260506
+[run] q=100 d=20 t=5 thr=0.70 seed=20260507
+[run] q=100 d=20 t=5 thr=0.70 seed=20260508
+[done] Wed May  6 20:31:18 CST 2026

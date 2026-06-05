@@ -1,0 +1,131 @@
+{
+  "srbench": {
+    "root": "D:\\Physics Fundation model\\references\\external_repos\\srbench",
+    "datasets_info": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\srbench\\docs\\csv\\datasets_info.csv",
+      "exists": true,
+      "bytes": 17774
+    },
+    "groundtruth_results_csv": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\srbench\\docs\\csv\\groundtruth.csv",
+      "exists": true,
+      "bytes": 457369
+    },
+    "dataset_count": 417,
+    "dataset_groups": {
+      "black-box": 284,
+      "feynman": 119,
+      "strogatz": 14
+    },
+    "groundtruth_result_rows": 5451,
+    "groundtruth_result_groups": {
+      "Feynman": 4863,
+      "Strogatz": 588
+    },
+    "note": "docs/csv/groundtruth.csv stores baseline result metrics, not formula definitions."
+  },
+  "gensr": {
+    "root": "D:\\Physics Fundation model\\references\\external_repos\\ICLR26-GenSR",
+    "readme": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\ICLR26-GenSR\\README.md",
+      "exists": true,
+      "bytes": 2442
+    },
+    "eval_script": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\ICLR26-GenSR\\scripts\\eval.sh",
+      "exists": true,
+      "bytes": 730
+    },
+    "checkpoint": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\ICLR26-GenSR\\weights\\checkpoint.pth",
+      "exists": false,
+      "bytes": 0
+    },
+    "feynman_csv": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\ICLR26-GenSR\\datasets\\feynman\\FeynmanEquations.csv",
+      "exists": false,
+      "bytes": 0
+    },
+    "pmlb_summary": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\ICLR26-GenSR\\datasets\\pmlb\\pmlb\\all_summary_stats.tsv",
+      "exists": false,
+      "bytes": 0
+    },
+    "note": "Official GenSR eval is pending until checkpoint and datasets are present."
+  },
+  "ai_feynman": {
+    "root": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman",
+    "readme": {
+      "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\README.md",
+      "exists": true,
+      "bytes": 5351
+    },
+    "example_data_files": [
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\example_data\\example1.txt",
+        "exists": true,
+        "bytes": 11333619
+      },
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\example_data\\example2.txt",
+        "exists": true,
+        "bytes": 9077635
+      },
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\example_data\\example3.txt",
+        "exists": true,
+        "bytes": 11493481
+      }
+    ],
+    "ops_files": [
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\aifeynman\\10ops.txt",
+        "exists": true,
+        "bytes": 12
+      },
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\aifeynman\\14ops.txt",
+        "exists": true,
+        "bytes": 16
+      },
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\aifeynman\\19ops.txt",
+        "exists": true,
+        "bytes": 19
+      },
+      {
+        "path": "D:\\Physics Fundation model\\references\\external_repos\\AI-Feynman\\aifeynman\\7ops.txt",
+        "exists": true,
+        "bytes": 9
+      }
+    ],
+    "note": "Example data are numeric tables; official Feynman database formulas are not fully mirrored locally."
+  },
+  "pmlb": {
+    "root": "D:\\Physics Fundation model\\references\\external_repos\\pmlb",
+    "dataset_dirs": 451,
+    "sample_dataset_dirs": [
+      "1027_ESL",
+      "1028_SWD",
+      "1029_LEV",
+      "1030_ERA",
+      "1089_USCrime",
+      "1096_FacultySalaries",
+      "1191_BNG_pbc",
+      "1193_BNG_lowbwt",
+      "1196_BNG_pharynx",
+      "1199_BNG_echoMonths",
+      "1201_BNG_breastTumor",
+      "1203_BNG_pwLinear",
+      "1595_poker",
+      "192_vineyard",
+      "197_cpu_act",
+      "201_pol",
+      "210_cloud",
+      "215_2dplanes",
+      "218_house_8L",
+      "225_puma8NH"
+    ],
+    "note": "PMLB is useful for black-box SR benchmark, usually without symbolic ground-truth formulas."
+  }
+}

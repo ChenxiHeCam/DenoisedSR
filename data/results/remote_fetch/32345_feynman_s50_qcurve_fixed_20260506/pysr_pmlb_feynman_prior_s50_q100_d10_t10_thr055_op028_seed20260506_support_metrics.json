@@ -1,0 +1,2297 @@
+{
+  "summary": {
+    "records": 50,
+    "variable": {
+      "precision": 0.7561190476190476,
+      "recall": 0.9566666666666667,
+      "f1": 0.8183448773448774,
+      "perfect_recall": 43,
+      "count": 50
+    },
+    "operator": {
+      "precision": 0.492,
+      "recall": 0.926,
+      "f1": 0.6107806637806638,
+      "perfect_recall": 37,
+      "count": 50
+    }
+  },
+  "records": [
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_10_7",
+      "truth_variables": [
+        "c",
+        "m_0",
+        "v"
+      ],
+      "predicted_variables": [
+        "c",
+        "m_0",
+        "v"
+      ],
+      "truth_ops": [
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_11_19",
+      "truth_variables": [
+        "x1",
+        "x2",
+        "x3",
+        "y1",
+        "y2",
+        "y3"
+      ],
+      "predicted_variables": [
+        "distr_5",
+        "distr_7",
+        "x1",
+        "x2",
+        "x3",
+        "y1",
+        "y2",
+        "y3"
+      ],
+      "truth_ops": [
+        "*",
+        "+"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 6,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_12_1",
+      "truth_variables": [
+        "Nn",
+        "mu"
+      ],
+      "predicted_variables": [
+        "Nn",
+        "mu"
+      ],
+      "truth_ops": [
+        "*"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_12_11",
+      "truth_variables": [
+        "B",
+        "Ef",
+        "q",
+        "theta",
+        "v"
+      ],
+      "predicted_variables": [
+        "B",
+        "Ef",
+        "q",
+        "theta",
+        "v"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "sin"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 0.6666666666666666,
+        "f1": 0.4444444444444444,
+        "tp": 2,
+        "fp": 4,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_12_2",
+      "truth_variables": [
+        "epsilon",
+        "q1",
+        "q2",
+        "r"
+      ],
+      "predicted_variables": [
+        "distr_3",
+        "distr_5",
+        "distr_7",
+        "distr_8",
+        "epsilon",
+        "q1",
+        "q2",
+        "r"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 4,
+        "fp": 4,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_12_4",
+      "truth_variables": [
+        "epsilon",
+        "q1",
+        "r"
+      ],
+      "predicted_variables": [
+        "distr_1",
+        "distr_3",
+        "distr_6",
+        "distr_7",
+        "distr_9",
+        "epsilon",
+        "q1",
+        "r"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.375,
+        "recall": 1.0,
+        "f1": 0.5454545454545454,
+        "tp": 3,
+        "fp": 5,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_12_5",
+      "truth_variables": [
+        "Ef",
+        "q2"
+      ],
+      "predicted_variables": [
+        "Ef",
+        "q2"
+      ],
+      "truth_ops": [
+        "*"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_13_12",
+      "truth_variables": [
+        "G",
+        "m1",
+        "m2",
+        "r1",
+        "r2"
+      ],
+      "predicted_variables": [
+        "G",
+        "distr_0",
+        "m1",
+        "m2",
+        "r1",
+        "r2"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_13_4",
+      "truth_variables": [
+        "m",
+        "u",
+        "v",
+        "w"
+      ],
+      "predicted_variables": [
+        "m",
+        "u",
+        "v",
+        "w"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_14_3",
+      "truth_variables": [
+        "g",
+        "m",
+        "z"
+      ],
+      "predicted_variables": [
+        "g",
+        "m",
+        "z"
+      ],
+      "truth_ops": [
+        "*"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_14_4",
+      "truth_variables": [
+        "k_spring",
+        "x"
+      ],
+      "predicted_variables": [
+        "k_spring",
+        "x"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_15_10",
+      "truth_variables": [
+        "c",
+        "m_0",
+        "v"
+      ],
+      "predicted_variables": [
+        "c",
+        "distr_3",
+        "m_0",
+        "v"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_15_3t",
+      "truth_variables": [
+        "c",
+        "t",
+        "u",
+        "x"
+      ],
+      "predicted_variables": [
+        "c",
+        "distr_4",
+        "distr_8",
+        "t",
+        "x"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666665,
+        "tp": 3,
+        "fp": 2,
+        "fn": 1
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_15_3x",
+      "truth_variables": [
+        "c",
+        "t",
+        "u",
+        "x"
+      ],
+      "predicted_variables": [
+        "c",
+        "t",
+        "u",
+        "x"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_16_6",
+      "truth_variables": [
+        "c",
+        "u",
+        "v"
+      ],
+      "predicted_variables": [
+        "c",
+        "distr_5",
+        "u",
+        "v"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_18_12",
+      "truth_variables": [
+        "F",
+        "r",
+        "theta"
+      ],
+      "predicted_variables": [
+        "F",
+        "r",
+        "theta"
+      ],
+      "truth_ops": [
+        "*",
+        "sin"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 0.5,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 5,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_18_14",
+      "truth_variables": [
+        "m",
+        "r",
+        "theta",
+        "v"
+      ],
+      "predicted_variables": [
+        "m",
+        "r",
+        "theta",
+        "v"
+      ],
+      "truth_ops": [
+        "*",
+        "sin"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 0.5,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 5,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_18_4",
+      "truth_variables": [
+        "m1",
+        "m2",
+        "r1",
+        "r2"
+      ],
+      "predicted_variables": [
+        "distr_0",
+        "m1",
+        "m2",
+        "r1",
+        "r2"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_24_6",
+      "truth_variables": [
+        "m",
+        "omega",
+        "omega_0",
+        "x"
+      ],
+      "predicted_variables": [
+        "distr_1",
+        "distr_5",
+        "m",
+        "omega",
+        "omega_0",
+        "x"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_25_13",
+      "truth_variables": [
+        "C",
+        "q"
+      ],
+      "predicted_variables": [
+        "C",
+        "q"
+      ],
+      "truth_ops": [
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_26_2",
+      "truth_variables": [
+        "n",
+        "theta2"
+      ],
+      "predicted_variables": [
+        "distr_2",
+        "distr_3",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "n",
+        "theta2"
+      ],
+      "truth_ops": [
+        "*",
+        "sin"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 2,
+        "fp": 6,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 0.5,
+        "f1": 0.25,
+        "tp": 1,
+        "fp": 5,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_27_6",
+      "truth_variables": [
+        "d1",
+        "d2",
+        "n"
+      ],
+      "predicted_variables": [
+        "d1",
+        "d2",
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_6",
+        "distr_8",
+        "n"
+      ],
+      "truth_ops": [
+        "+",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.375,
+        "recall": 1.0,
+        "f1": 0.5454545454545454,
+        "tp": 3,
+        "fp": 5,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_29_16",
+      "truth_variables": [
+        "theta1",
+        "theta2",
+        "x1",
+        "x2"
+      ],
+      "predicted_variables": [
+        "distr_9",
+        "theta1",
+        "theta2",
+        "x1",
+        "x2"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "-",
+        "^",
+        "cos",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_29_4",
+      "truth_variables": [
+        "c",
+        "omega"
+      ],
+      "predicted_variables": [
+        "c",
+        "omega"
+      ],
+      "truth_ops": [
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_30_3",
+      "truth_variables": [
+        "Int_0",
+        "n",
+        "theta"
+      ],
+      "predicted_variables": [
+        "Int_0",
+        "distr_2",
+        "n",
+        "theta"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "^",
+        "sin"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "tp": 3,
+        "fp": 3,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_30_5",
+      "truth_variables": [
+        "d",
+        "lambd",
+        "n"
+      ],
+      "predicted_variables": [
+        "d",
+        "distr_1",
+        "distr_3",
+        "distr_4",
+        "distr_6",
+        "distr_8",
+        "distr_9",
+        "n"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.25,
+        "recall": 0.6666666666666666,
+        "f1": 0.36363636363636365,
+        "tp": 2,
+        "fp": 6,
+        "fn": 1
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_32_17",
+      "truth_variables": [
+        "Ef",
+        "c",
+        "epsilon",
+        "omega",
+        "omega_0",
+        "r"
+      ],
+      "predicted_variables": [
+        "distr_9",
+        "epsilon",
+        "omega",
+        "omega_0",
+        "r"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1": 0.7272727272727272,
+        "tp": 4,
+        "fp": 1,
+        "fn": 2
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_32_5",
+      "truth_variables": [
+        "a",
+        "c",
+        "epsilon",
+        "q"
+      ],
+      "predicted_variables": [
+        "a",
+        "c",
+        "distr_1",
+        "distr_2",
+        "distr_8",
+        "distr_9",
+        "epsilon",
+        "q"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 4,
+        "fp": 4,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_34_1",
+      "truth_variables": [
+        "c",
+        "omega_0",
+        "v"
+      ],
+      "predicted_variables": [
+        "c",
+        "distr_4",
+        "omega_0",
+        "v"
+      ],
+      "truth_ops": [
+        "-",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_34_14",
+      "truth_variables": [
+        "c",
+        "omega_0",
+        "v"
+      ],
+      "predicted_variables": [
+        "c",
+        "distr_7",
+        "omega_0"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "operator": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_34_27",
+      "truth_variables": [
+        "h",
+        "omega"
+      ],
+      "predicted_variables": [
+        "h",
+        "omega"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_34_8",
+      "truth_variables": [
+        "B",
+        "p",
+        "q",
+        "v"
+      ],
+      "predicted_variables": [
+        "B",
+        "distr_3",
+        "distr_9",
+        "p",
+        "q",
+        "v"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_37_4",
+      "truth_variables": [
+        "I1",
+        "I2",
+        "delta"
+      ],
+      "predicted_variables": [
+        "I1",
+        "I2",
+        "delta",
+        "distr_3"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "cos",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "tp": 3,
+        "fp": 3,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_38_12",
+      "truth_variables": [
+        "epsilon",
+        "h",
+        "m",
+        "q"
+      ],
+      "predicted_variables": [
+        "distr_1",
+        "distr_5",
+        "epsilon",
+        "h",
+        "m",
+        "q"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "^"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_39_1",
+      "truth_variables": [
+        "V",
+        "pr"
+      ],
+      "predicted_variables": [
+        "V",
+        "pr"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_39_11",
+      "truth_variables": [
+        "V",
+        "gamma",
+        "pr"
+      ],
+      "predicted_variables": [
+        "V",
+        "distr_6",
+        "gamma",
+        "pr"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_39_22",
+      "truth_variables": [
+        "T",
+        "V",
+        "kb",
+        "n"
+      ],
+      "predicted_variables": [
+        "T",
+        "V",
+        "kb",
+        "n"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_40_1",
+      "truth_variables": [
+        "T",
+        "g",
+        "kb",
+        "m",
+        "n_0",
+        "x"
+      ],
+      "predicted_variables": [
+        "T",
+        "distr_2",
+        "distr_7",
+        "g",
+        "kb",
+        "m",
+        "n_0",
+        "x"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "exp"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "tp": 6,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 0.75,
+        "f1": 0.6,
+        "tp": 3,
+        "fp": 3,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_41_16",
+      "truth_variables": [
+        "T",
+        "c",
+        "h",
+        "kb",
+        "omega"
+      ],
+      "predicted_variables": [
+        "T",
+        "c",
+        "distr_0",
+        "distr_6",
+        "h",
+        "kb",
+        "omega"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "exp"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1": 0.8333333333333333,
+        "tp": 5,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727272,
+        "tp": 4,
+        "fp": 2,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_43_16",
+      "truth_variables": [
+        "Volt",
+        "d",
+        "mu_drift",
+        "q"
+      ],
+      "predicted_variables": [
+        "Volt",
+        "d",
+        "mu_drift",
+        "q"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_43_31",
+      "truth_variables": [
+        "T",
+        "kb",
+        "mob"
+      ],
+      "predicted_variables": [
+        "T",
+        "kb",
+        "mob"
+      ],
+      "truth_ops": [
+        "*"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "f1": 0.2857142857142857,
+        "tp": 1,
+        "fp": 5,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_43_43",
+      "truth_variables": [
+        "A",
+        "gamma",
+        "kb",
+        "v"
+      ],
+      "predicted_variables": [
+        "A",
+        "distr_3",
+        "distr_5",
+        "gamma",
+        "kb",
+        "v"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_44_4",
+      "truth_variables": [
+        "T",
+        "V1",
+        "V2",
+        "kb",
+        "n"
+      ],
+      "predicted_variables": [
+        "T",
+        "V1",
+        "V2",
+        "kb",
+        "n"
+      ],
+      "truth_ops": [
+        "*",
+        "/"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_47_23",
+      "truth_variables": [
+        "gamma",
+        "pr",
+        "rho"
+      ],
+      "predicted_variables": [
+        "distr_6",
+        "distr_7",
+        "distr_9",
+        "gamma",
+        "pr",
+        "rho"
+      ],
+      "truth_ops": [
+        "*",
+        "/",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_48_2",
+      "truth_variables": [
+        "c",
+        "m",
+        "v"
+      ],
+      "predicted_variables": [
+        "c",
+        "m"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "tp": 2,
+        "fp": 0,
+        "fn": 1
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_50_26",
+      "truth_variables": [
+        "alpha",
+        "omega",
+        "t",
+        "x1"
+      ],
+      "predicted_variables": [
+        "distr_6",
+        "omega",
+        "t",
+        "x1"
+      ],
+      "truth_ops": [
+        "*",
+        "+",
+        "^",
+        "cos"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^"
+      ],
+      "variable": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1
+      },
+      "operator": {
+        "precision": 0.6,
+        "recall": 0.75,
+        "f1": 0.6666666666666665,
+        "tp": 3,
+        "fp": 2,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_6_2",
+      "truth_variables": [
+        "sigma",
+        "theta"
+      ],
+      "predicted_variables": [
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_5",
+        "distr_6",
+        "distr_8",
+        "sigma",
+        "theta"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "exp",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4,
+        "tp": 2,
+        "fp": 6,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_6_2a",
+      "truth_variables": [
+        "theta"
+      ],
+      "predicted_variables": [
+        "distr_1",
+        "distr_2",
+        "distr_3",
+        "distr_4",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "theta"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "exp",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.125,
+        "recall": 1.0,
+        "f1": 0.2222222222222222,
+        "tp": 1,
+        "fp": 7,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_6_2b",
+      "truth_variables": [
+        "sigma",
+        "theta",
+        "theta1"
+      ],
+      "predicted_variables": [
+        "distr_0",
+        "distr_1",
+        "distr_5",
+        "distr_6",
+        "distr_7",
+        "distr_8",
+        "sigma",
+        "theta"
+      ],
+      "truth_ops": [
+        "*",
+        "-",
+        "/",
+        "^",
+        "exp",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.25,
+        "recall": 0.6666666666666666,
+        "f1": 0.36363636363636365,
+        "tp": 2,
+        "fp": 6,
+        "fn": 1
+      },
+      "operator": {
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334,
+        "tp": 5,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "source": "artifacts/sr_frontend_prior/remote_32345_feynman_s50_qcurve_fixed_20260506/pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json",
+      "law_id": "pmlb_feynman_I_8_14",
+      "truth_variables": [
+        "x1",
+        "x2",
+        "y1",
+        "y2"
+      ],
+      "predicted_variables": [
+        "distr_7",
+        "x1",
+        "x2",
+        "y1",
+        "y2"
+      ],
+      "truth_ops": [
+        "+",
+        "-",
+        "^",
+        "sqrt"
+      ],
+      "predicted_ops": [
+        "*",
+        "+",
+        "-",
+        "/",
+        "^",
+        "sqrt"
+      ],
+      "variable": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      "operator": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,4538 @@
+{
+  "summary": {
+    "train_records_jsonl": "/root/autodl-tmp/physics_fm_remote/artifacts/sr_frontend_prior/stage3_residual_proxy_32345_s64_records.jsonl",
+    "tasks_jsonl": "/root/autodl-tmp/physics_fm_remote/artifacts/sr_frontend_prior/pmlb_feynman_open_formula_tasks_20260506.jsonl",
+    "records": 50,
+    "q": 50,
+    "heldout": 200,
+    "distractors": 10,
+    "timeout_seconds": 10,
+    "support_threshold": 0.55,
+    "op_threshold": 0.28,
+    "elapsed_seconds": 548.0888822078705,
+    "usable_train_records": 58,
+    "support_examples": 1093,
+    "op_examples": 58,
+    "learned_variables_success_r2_0999": 9,
+    "learned_variables_mean_r2": 0.7322513199328141,
+    "learned_variables_mean_columns": 4.2,
+    "learned_variables_support_recall": 0.9103333333333333,
+    "learned_variables_support_precision": 0.8176190476190476
+  },
+  "rows": [
+    {
+      "idx": 0,
+      "law_id": "pmlb_feynman_I_10_7",
+      "method": "pysr",
+      "formula": "m = m_0/sqrt(1-v**2/c**2)",
+      "truth_surface": "m - ( m_0 / sqrt ( 1 - v ^ 2 / c ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "m_0": 0.8046191919671748,
+          "c": 0.710536761002636,
+          "distr_8": 0.5004239346003789,
+          "distr_4": 0.4705867026580984,
+          "distr_3": 0.4020802622284803,
+          "distr_7": 0.39780230116383264,
+          "distr_6": 0.39629034853291434,
+          "distr_5": 0.35230556049862705,
+          "distr_9": 0.3264512964329835,
+          "distr_0": 0.313114332350274,
+          "v": 0.2957049299662683,
+          "distr_2": 0.29216562183836353,
+          "distr_1": 0.24656233159794652
+        },
+        "op_probabilities": {
+          "+": 0.9045836510746538,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.36320027941667427,
+          "^": 0.834284851633143,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4510438562345307
+        }
+      },
+      "learned_variables": {
+        "expression": "v0/(sqrt(v0**(-0.029965179) + 0.037430108) - 0.2438504/v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.011987536507355241,
+          "nmse": 0.007963354114836358,
+          "r2": 0.9920366458851636
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 29.895132780075073,
+        "columns": [
+          "m_0",
+          "c"
+        ],
+        "column_count": 2,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "m_0",
+          "v",
+          "c"
+        ],
+        "support_recall": 0.6666666666666666,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 1,
+      "law_id": "pmlb_feynman_I_11_19",
+      "method": "pysr",
+      "formula": "A = x1*y1+x2*y2+x3*y3",
+      "truth_surface": "A - ( x1 * y1 + x2 * y2 + x3 * y3 ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x1": 0.9037799666074993,
+          "y2": 0.8934933053542845,
+          "x2": 0.8813923941279208,
+          "x3": 0.776389567586481,
+          "y1": 0.7285690376002222,
+          "distr_1": 0.699943876860527,
+          "y3": 0.5971223387640378,
+          "distr_6": 0.5172584412553058,
+          "distr_0": 0.4420270845977564,
+          "distr_4": 0.39659620112052313,
+          "distr_8": 0.31282929410086713,
+          "distr_2": 0.2800322657392833,
+          "distr_9": 0.25477276372083946,
+          "distr_3": 0.19018708590505515,
+          "distr_5": 0.17786072619308196,
+          "distr_7": 0.1748841135653249
+        },
+        "op_probabilities": {
+          "+": 0.9146972527626427,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.6784389404839386,
+          "^": 0.9011556333727924,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.17591898778642956
+        }
+      },
+      "learned_variables": {
+        "expression": "v4 + sqrt(v2**2.7987847*v3) + (v0 + v1)**1.37879 + 3.038179",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6"
+        ],
+        "score": {
+          "mse": 24.551006824891232,
+          "nmse": 0.3174528150799195,
+          "r2": 0.6825471849200805
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.337862253189087,
+        "columns": [
+          "x1",
+          "y2",
+          "x2",
+          "x3",
+          "y1",
+          "distr_1",
+          "y3"
+        ],
+        "column_count": 7,
+        "full_column_count": 16,
+        "oracle_columns": [
+          "x1",
+          "x2",
+          "x3",
+          "y1",
+          "y2",
+          "y3"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.8571428571428571,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 2,
+      "law_id": "pmlb_feynman_I_12_1",
+      "method": "pysr",
+      "formula": "F = mu*Nn",
+      "truth_surface": "F - ( mu * Nn ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "Nn": 0.897787991055703,
+          "mu": 0.8571637101561007,
+          "distr_6": 0.5092502302593817,
+          "distr_9": 0.451242066500908,
+          "distr_0": 0.4306441881224046,
+          "distr_2": 0.4277921128599903,
+          "distr_4": 0.4186008186956321,
+          "distr_1": 0.3981914879559557,
+          "distr_5": 0.3877560605122335,
+          "distr_3": 0.3359098169018214,
+          "distr_8": 0.3082754432862948,
+          "distr_7": 0.24598909401222263
+        },
+        "op_probabilities": {
+          "+": 0.8988057997893432,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.36698833860254026,
+          "^": 0.8661940243621397,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4580300289145434
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.0,
+          "nmse": 0.0,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.389483213424683,
+        "columns": [
+          "Nn",
+          "mu"
+        ],
+        "column_count": 2,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "mu",
+          "Nn"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 3,
+      "law_id": "pmlb_feynman_I_12_11",
+      "method": "pysr",
+      "formula": "F = q*(Ef+B*v*sin(theta))",
+      "truth_surface": "F - ( q * ( Ef + B * v * sin ( theta ) ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "theta": 0.8713654873733029,
+          "q": 0.6436821035756563,
+          "B": 0.6223478648842828,
+          "Ef": 0.6217990640219657,
+          "v": 0.5231435068051865,
+          "distr_9": 0.43896506710631994,
+          "distr_0": 0.4367982398799665,
+          "distr_4": 0.4121453389467902,
+          "distr_7": 0.3876461844855344,
+          "distr_2": 0.37815954112478567,
+          "distr_6": 0.3738050876789994,
+          "distr_3": 0.3712067628337167,
+          "distr_1": 0.3619999877204987,
+          "distr_5": 0.3606501553456379,
+          "distr_8": 0.3196354297661378
+        },
+        "op_probabilities": {
+          "+": 0.9028954053218874,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3520158036569738,
+          "^": 0.6819040822032808,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.47354724712321394
+        }
+      },
+      "learned_variables": {
+        "expression": "v1 + cos(v0*(-0.4740564))*47.593407",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 302.6679697900809,
+          "nmse": 0.44640047523660853,
+          "r2": 0.5535995247633915
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.403156280517578,
+        "columns": [
+          "theta",
+          "q",
+          "B",
+          "Ef"
+        ],
+        "column_count": 4,
+        "full_column_count": 15,
+        "oracle_columns": [
+          "q",
+          "Ef",
+          "B",
+          "v",
+          "theta"
+        ],
+        "support_recall": 0.8,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 4,
+      "law_id": "pmlb_feynman_I_12_2",
+      "method": "pysr",
+      "formula": "F = q1*q2*r/(4*pi*epsilon*r**3)",
+      "truth_surface": "F - ( q1 * q2 * r / ( 4 * pi * epsilon * r ^ 3 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "q2": 0.814702869038812,
+          "q1": 0.7914519573967558,
+          "r": 0.7817777029791039,
+          "epsilon": 0.7547798728085889,
+          "distr_6": 0.6643295772879104,
+          "distr_4": 0.6482832388600496,
+          "distr_3": 0.6469764306388593,
+          "distr_0": 0.6368303492620258,
+          "distr_5": 0.6206961911486244,
+          "distr_7": 0.6003862464453888,
+          "distr_8": 0.5866164365815718,
+          "distr_2": 0.5838545379897241,
+          "distr_1": 0.5693656982997845,
+          "distr_9": 0.5191394814447992
+        },
+        "op_probabilities": {
+          "+": 0.8827677762568623,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3055845339686883,
+          "^": 0.5096264347973033,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.44390695443374917
+        }
+      },
+      "learned_variables": {
+        "expression": "sqrt(exp(-v2 - 1.1011667*v3))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "score": {
+          "mse": 0.004046823770550429,
+          "nmse": 0.556764548960534,
+          "r2": 0.44323545103946604
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.554492712020874,
+        "columns": [
+          "q2",
+          "q1",
+          "r",
+          "epsilon",
+          "distr_6",
+          "distr_4",
+          "distr_3",
+          "distr_0"
+        ],
+        "column_count": 8,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "q1",
+          "q2",
+          "epsilon",
+          "r"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.5,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 5,
+      "law_id": "pmlb_feynman_I_12_4",
+      "method": "pysr",
+      "formula": "Ef = q1*r/(4*pi*epsilon*r**3)",
+      "truth_surface": "Ef - ( q1 * r / ( 4 * pi * epsilon * r ^ 3 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "epsilon": 0.8115175288033523,
+          "r": 0.7881759708912495,
+          "q1": 0.7690717002307775,
+          "distr_9": 0.6620985117259713,
+          "distr_4": 0.658440541024982,
+          "distr_5": 0.6583314035863418,
+          "distr_6": 0.6573905422328038,
+          "distr_0": 0.6475992324875995,
+          "distr_2": 0.6185047930305277,
+          "distr_7": 0.6172580931755598,
+          "distr_8": 0.6127650159302072,
+          "distr_1": 0.5968515782586,
+          "distr_3": 0.5569200138555886
+        },
+        "op_probabilities": {
+          "+": 0.8765379593581072,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2743261283027098,
+          "^": 0.3935714944243543,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.46062335783867486
+        }
+      },
+      "learned_variables": {
+        "expression": "0.09612187/(v1**2.171406)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "score": {
+          "mse": 0.00023898519072715216,
+          "nmse": 0.39880107669724113,
+          "r2": 0.6011989233027588
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.243022203445435,
+        "columns": [
+          "epsilon",
+          "r",
+          "q1",
+          "distr_9",
+          "distr_4",
+          "distr_5",
+          "distr_6",
+          "distr_0"
+        ],
+        "column_count": 8,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "q1",
+          "epsilon",
+          "r"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.375,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 6,
+      "law_id": "pmlb_feynman_I_12_5",
+      "method": "pysr",
+      "formula": "F = q2*Ef",
+      "truth_surface": "F - ( q2 * Ef ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "Ef": 0.8843380097466464,
+          "q2": 0.8843380097466464,
+          "distr_8": 0.4742919923101903,
+          "distr_4": 0.4358246866666318,
+          "distr_5": 0.39960591102896714,
+          "distr_7": 0.36005352626051496,
+          "distr_1": 0.3506968163583418,
+          "distr_0": 0.3487357271337261,
+          "distr_6": 0.3319596144717163,
+          "distr_9": 0.295848488286981,
+          "distr_3": 0.2477111886764749,
+          "distr_2": 0.2241174006764452
+        },
+        "op_probabilities": {
+          "+": 0.8875215326552054,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3612574196207635,
+          "^": 0.8004429801175965,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.3957021603026661
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.0,
+          "nmse": 0.0,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.290419101715088,
+        "columns": [
+          "Ef",
+          "q2"
+        ],
+        "column_count": 2,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "q2",
+          "Ef"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 7,
+      "law_id": "pmlb_feynman_I_13_12",
+      "method": "pysr",
+      "formula": "U = G*m1*m2*(1/r2-1/r1)",
+      "truth_surface": "U - ( G * m1 * m2 * ( 1 / r2 - 1 / r1 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "r1": 0.8068314000730316,
+          "r2": 0.7347926571709094,
+          "m1": 0.6700137966604457,
+          "G": 0.6336562633849562,
+          "m2": 0.5731115920077302,
+          "distr_8": 0.4921890095463529,
+          "distr_1": 0.47868997301503446,
+          "distr_4": 0.4564192138476557,
+          "distr_2": 0.4460410883047829,
+          "distr_6": 0.4197598257244892,
+          "distr_9": 0.41635771267464966,
+          "distr_7": 0.3945725243297034,
+          "distr_5": 0.37966861654050144,
+          "distr_0": 0.37915658759380294,
+          "distr_3": 0.36762398809343694
+        },
+        "op_probabilities": {
+          "+": 0.9024360913608315,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.27268544366875097,
+          "^": 0.6718237625764903,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.515523059571621
+        }
+      },
+      "learned_variables": {
+        "expression": "v2*(v0 - v1)/0.5651728",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 27.111023808876794,
+          "nmse": 0.5299683756810092,
+          "r2": 0.4700316243189908
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.411376714706421,
+        "columns": [
+          "r1",
+          "r2",
+          "m1",
+          "G",
+          "m2"
+        ],
+        "column_count": 5,
+        "full_column_count": 15,
+        "oracle_columns": [
+          "m1",
+          "m2",
+          "r1",
+          "r2",
+          "G"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 8,
+      "law_id": "pmlb_feynman_I_13_4",
+      "method": "pysr",
+      "formula": "K = 1/2*m*(v**2+u**2+w**2)",
+      "truth_surface": "K - ( 1 / 2 * m * ( v ^ 2 + u ^ 2 + w ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "m": 0.9278280951163062,
+          "v": 0.9092326602879798,
+          "w": 0.7886661739390214,
+          "u": 0.6209629446480169,
+          "distr_8": 0.47083839671752015,
+          "distr_1": 0.3204272041244602,
+          "distr_7": 0.284791267913895,
+          "distr_9": 0.2792219173811749,
+          "distr_2": 0.26523044367175025,
+          "distr_4": 0.2596441917406577,
+          "distr_5": 0.24926513336778885,
+          "distr_0": 0.22702502905482047,
+          "distr_6": 0.22031992975321216,
+          "distr_3": 0.18244618822215364
+        },
+        "op_probabilities": {
+          "+": 0.8831564532901258,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.4337731602902932,
+          "^": 0.84490675490414,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4078585781122119
+        }
+      },
+      "learned_variables": {
+        "expression": "(v1 + sqrt(v3))*(0.488530548474712*v0*(v2 + v3) + v0 - sqrt(v0 + 1))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 32.26048749573937,
+          "nmse": 0.05274344385711829,
+          "r2": 0.9472565561428817
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.340808629989624,
+        "columns": [
+          "m",
+          "v",
+          "w",
+          "u"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "m",
+          "v",
+          "u",
+          "w"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 9,
+      "law_id": "pmlb_feynman_I_14_3",
+      "method": "pysr",
+      "formula": "U = m*g*z",
+      "truth_surface": "U - ( m * g * z ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "g": 0.9220982437849856,
+          "m": 0.9216489940302708,
+          "z": 0.9147216018511753,
+          "distr_5": 0.9093302857729962,
+          "distr_2": 0.459696746681259,
+          "distr_3": 0.458553859099136,
+          "distr_9": 0.4081143525206037,
+          "distr_7": 0.30467869902689204,
+          "distr_6": 0.2787218256477219,
+          "distr_0": 0.26376124921241184,
+          "distr_4": 0.26246993582029576,
+          "distr_1": 0.25701700140012906,
+          "distr_8": 0.2145789005548046
+        },
+        "op_probabilities": {
+          "+": 0.8898374089553405,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.43954756322493754,
+          "^": 0.9153397502362256,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.43424053591975376
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*v1*v2",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.0,
+          "nmse": 0.0,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.272897005081177,
+        "columns": [
+          "g",
+          "m",
+          "z",
+          "distr_5"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "m",
+          "g",
+          "z"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 10,
+      "law_id": "pmlb_feynman_I_14_4",
+      "method": "pysr",
+      "formula": "U = 1/2*k_spring*x**2",
+      "truth_surface": "U - ( 1 / 2 * k_spring * x ^ 2 ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x": 0.9141435453686687,
+          "k_spring": 0.9081314188651728,
+          "distr_7": 0.6507607182196266,
+          "distr_4": 0.626708780032891,
+          "distr_0": 0.5471581284646139,
+          "distr_5": 0.5202337423388016,
+          "distr_3": 0.3745035826179203,
+          "distr_8": 0.33460568653442513,
+          "distr_9": 0.2984908094481785,
+          "distr_6": 0.29437719415352165,
+          "distr_1": 0.16942969198489727,
+          "distr_2": 0.16529059543070512
+        },
+        "op_probabilities": {
+          "+": 0.9098666197137179,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.6417542288722978,
+          "^": 0.9321307597616554,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.24865283522430776
+        }
+      },
+      "learned_variables": {
+        "expression": "(v0 + v0)*(v1 + 1.4030377) - 1*10.82374",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 6.697301280114818,
+          "nmse": 0.04324707330502065,
+          "r2": 0.9567529266949794
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.318664073944092,
+        "columns": [
+          "x",
+          "k_spring",
+          "distr_7",
+          "distr_4"
+        ],
+        "column_count": 4,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "k_spring",
+          "x"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.5,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 11,
+      "law_id": "pmlb_feynman_I_15_10",
+      "method": "pysr",
+      "formula": "p = m_0*v/sqrt(1-v**2/c**2)",
+      "truth_surface": "p - ( m_0 * v / sqrt ( 1 - v ^ 2 / c ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "m_0": 0.8311766205409749,
+          "v": 0.6605149053419052,
+          "c": 0.6544213522402929,
+          "distr_7": 0.46787046216931566,
+          "distr_2": 0.4639221695066049,
+          "distr_6": 0.4416648434667788,
+          "distr_3": 0.4182405962950817,
+          "distr_5": 0.41657352725908625,
+          "distr_0": 0.39559981220733725,
+          "distr_1": 0.3368243647814471,
+          "distr_9": 0.30733686975834956,
+          "distr_8": 0.28217992934177827,
+          "distr_4": 0.26513282363357804
+        },
+        "op_probabilities": {
+          "+": 0.904671673241449,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.382604241435455,
+          "^": 0.8868599099525839,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.46136897506076124
+        }
+      },
+      "learned_variables": {
+        "expression": "v1*(v0 + (3.638295 - v1)/v2) - 1*0.34696618",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 0.028870309806805973,
+          "nmse": 0.007277483164046438,
+          "r2": 0.9927225168359536
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.4883394241333,
+        "columns": [
+          "m_0",
+          "v",
+          "c"
+        ],
+        "column_count": 3,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "m_0",
+          "v",
+          "c"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 12,
+      "law_id": "pmlb_feynman_I_15_3t",
+      "method": "pysr",
+      "formula": "t1 = (t-u*x/c**2)/sqrt(1-u**2/c**2)",
+      "truth_surface": "t1 - ( ( t - u * x / c ^ 2 ) / sqrt ( 1 - u ^ 2 / c ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "t": 0.8070542022791871,
+          "c": 0.7001524289778078,
+          "x": 0.5021045922844327,
+          "distr_9": 0.4932686609558122,
+          "distr_1": 0.45079667579428645,
+          "distr_2": 0.4209297606156896,
+          "distr_3": 0.38191687659298207,
+          "distr_5": 0.37635703315382124,
+          "distr_7": 0.36641498569400915,
+          "distr_4": 0.33411162935216193,
+          "distr_0": 0.3334081332695433,
+          "distr_8": 0.29642218588519975,
+          "distr_6": 0.2909844352787468,
+          "u": 0.24328464434398273
+        },
+        "op_probabilities": {
+          "+": 0.9190769972346667,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3739888327654111,
+          "^": 0.7538618913559035,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4484333572180363
+        }
+      },
+      "learned_variables": {
+        "expression": "v0 - 0.420655607355946/(0.5407661*v1)**v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.007282513226804034,
+          "nmse": 0.005459890011088952,
+          "r2": 0.9945401099889111
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.409874677658081,
+        "columns": [
+          "t",
+          "c"
+        ],
+        "column_count": 2,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "x",
+          "c",
+          "u",
+          "t"
+        ],
+        "support_recall": 0.5,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 13,
+      "law_id": "pmlb_feynman_I_15_3x",
+      "method": "pysr",
+      "formula": "x1 = (x-u*t)/sqrt(1-u**2/c**2)",
+      "truth_surface": "x1 - ( ( x - u * t ) / sqrt ( 1 - u ^ 2 / c ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x": 0.8432258823299086,
+          "c": 0.7999932668804777,
+          "t": 0.6538875742237945,
+          "distr_7": 0.5091851091087769,
+          "distr_6": 0.45575269072419516,
+          "distr_5": 0.3941576663001268,
+          "u": 0.3922689590208577,
+          "distr_3": 0.3758439054221096,
+          "distr_9": 0.32236922357973563,
+          "distr_2": 0.292707371244909,
+          "distr_4": 0.2919919303529365,
+          "distr_0": 0.2648122847578637,
+          "distr_8": 0.2524166930782593,
+          "distr_1": 0.20210272861125247
+        },
+        "op_probabilities": {
+          "+": 0.9246231090700778,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3528056991405851,
+          "^": 0.8008487148002515,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4835864718997963
+        }
+      },
+      "learned_variables": {
+        "expression": "v0 + (0.049678177 - v2)*1.4758198",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 0.1855109926336594,
+          "nmse": 0.06886733202068888,
+          "r2": 0.9311326679793112
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.306912899017334,
+        "columns": [
+          "x",
+          "c",
+          "t"
+        ],
+        "column_count": 3,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "x",
+          "u",
+          "c",
+          "t"
+        ],
+        "support_recall": 0.75,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 14,
+      "law_id": "pmlb_feynman_I_16_6",
+      "method": "pysr",
+      "formula": "v1 = (u+v)/(1+u*v/c**2)",
+      "truth_surface": "v1 - ( ( u + v ) / ( 1 + u * v / c ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "c": 0.8142855308211208,
+          "u": 0.6026203010134297,
+          "v": 0.5712456113777904,
+          "distr_0": 0.5697058467953603,
+          "distr_3": 0.5387291923921079,
+          "distr_5": 0.5295793827305139,
+          "distr_4": 0.4229447120893735,
+          "distr_6": 0.4081097964165707,
+          "distr_9": 0.3859326756219597,
+          "distr_7": 0.35564340947666206,
+          "distr_1": 0.3169347593399148,
+          "distr_8": 0.30804042885190785,
+          "distr_2": 0.29315220753510207
+        },
+        "op_probabilities": {
+          "+": 0.9053983706914568,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5643810334354938,
+          "^": 0.8711115703289865,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2536942693436171
+        }
+      },
+      "learned_variables": {
+        "expression": "v0 - 0.13209434",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.09459914616639992,
+          "nmse": 0.07589552851625554,
+          "r2": 0.9241044714837444
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.501914501190186,
+        "columns": [
+          "c",
+          "u",
+          "v",
+          "distr_0"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "c",
+          "v",
+          "u"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 15,
+      "law_id": "pmlb_feynman_I_18_12",
+      "method": "pysr",
+      "formula": "tau = r*F*sin(theta)",
+      "truth_surface": "tau - ( r * F * sin ( theta ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "theta": 0.80607344248556,
+          "r": 0.6401977191094962,
+          "F": 0.6068989186577924,
+          "distr_1": 0.4693116506611718,
+          "distr_9": 0.4613618998864106,
+          "distr_0": 0.45511410348261755,
+          "distr_5": 0.4355133182506832,
+          "distr_3": 0.40280190929345333,
+          "distr_4": 0.38004965948382663,
+          "distr_7": 0.37019701701600694,
+          "distr_8": 0.35416768055982656,
+          "distr_6": 0.34590265496189315,
+          "distr_2": 0.3249432587790036
+        },
+        "op_probabilities": {
+          "+": 0.9235093941933114,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.16453831981315087,
+          "^": 0.6261120273537706,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.5629804457017106
+        }
+      },
+      "learned_variables": {
+        "expression": "(v0 + v1)*sin(v0)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 16.452546710316227,
+          "nmse": 0.29488640495773855,
+          "r2": 0.7051135950422615
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.654118776321411,
+        "columns": [
+          "theta",
+          "r",
+          "F"
+        ],
+        "column_count": 3,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "r",
+          "F",
+          "theta"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 16,
+      "law_id": "pmlb_feynman_I_18_14",
+      "method": "pysr",
+      "formula": "L = m*r*v*sin(theta)",
+      "truth_surface": "L - ( m * r * v * sin ( theta ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "theta": 0.8156317739889186,
+          "r": 0.6727267181251421,
+          "m": 0.607974735094852,
+          "v": 0.5438242228761381,
+          "distr_1": 0.4759949776179592,
+          "distr_6": 0.4349608211742046,
+          "distr_0": 0.41320771265692563,
+          "distr_5": 0.40622950627570026,
+          "distr_3": 0.3888557899716512,
+          "distr_2": 0.3833193461289586,
+          "distr_4": 0.3749160991728521,
+          "distr_7": 0.35452482637094973,
+          "distr_8": 0.33838598205040743,
+          "distr_9": 0.2957671731556313
+        },
+        "op_probabilities": {
+          "+": 0.9075393260246375,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.28186079708833905,
+          "^": 0.6690021841683442,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.48323601341347694
+        }
+      },
+      "learned_variables": {
+        "expression": "v1*(-(-2.784735)*v2*sin(v0) - 0.03832286)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 69.67074078346548,
+          "nmse": 0.11541998184317903,
+          "r2": 0.884580018156821
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.352627992630005,
+        "columns": [
+          "theta",
+          "r",
+          "m"
+        ],
+        "column_count": 3,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "m",
+          "r",
+          "v",
+          "theta"
+        ],
+        "support_recall": 0.75,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 17,
+      "law_id": "pmlb_feynman_I_18_4",
+      "method": "pysr",
+      "formula": "r = (m1*r1+m2*r2)/(m1+m2)",
+      "truth_surface": "r - ( ( m1 * r1 + m2 * r2 ) / ( m1 + m2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "r1": 0.803835022987165,
+          "r2": 0.7946020077810803,
+          "m2": 0.6837698395715401,
+          "m1": 0.5765974190172067,
+          "distr_2": 0.5190297984374318,
+          "distr_6": 0.5154705344566708,
+          "distr_0": 0.5087716632756186,
+          "distr_1": 0.5038688819834845,
+          "distr_3": 0.4741693516552451,
+          "distr_4": 0.47122382730061696,
+          "distr_9": 0.4622365534942175,
+          "distr_8": 0.35220718952319835,
+          "distr_7": 0.3426999700145309,
+          "distr_5": 0.2738073365388168
+        },
+        "op_probabilities": {
+          "+": 0.8884632774379386,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5644670021215998,
+          "^": 0.7852718281163555,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.26902692668832556
+        }
+      },
+      "learned_variables": {
+        "expression": "1.47646979550482*sqrt(v0) + log(v1 - 1.0871904)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": Infinity,
+          "nmse": Infinity,
+          "r2": -Infinity
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.361955881118774,
+        "columns": [
+          "r1",
+          "r2",
+          "m2",
+          "m1"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "m1",
+          "m2",
+          "r1",
+          "r2"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 18,
+      "law_id": "pmlb_feynman_I_24_6",
+      "method": "pysr",
+      "formula": "E_n = 1/2*m*(omega**2+omega_0**2)*1/2*x**2",
+      "truth_surface": "E_n - ( 1 / 2 * m * ( omega ^ 2 + omega_0 ^ 2 ) * 1 / 2 * x ^ 2 ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x": 0.9413916499251817,
+          "omega": 0.9402695264301277,
+          "m": 0.6845379671186977,
+          "omega_0": 0.6831861694814819,
+          "distr_4": 0.48625656900729325,
+          "distr_7": 0.46395784570862086,
+          "distr_2": 0.41701092185565936,
+          "distr_0": 0.3939557065603865,
+          "distr_8": 0.34010942938175454,
+          "distr_9": 0.30545995597927755,
+          "distr_3": 0.28390495535262406,
+          "distr_6": 0.24560578877325556,
+          "distr_5": 0.21323419342206607,
+          "distr_1": 0.18896846419943936
+        },
+        "op_probabilities": {
+          "+": 0.9054269470366549,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.6524511205954135,
+          "^": 0.9529021005612008,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.261583948746221
+        }
+      },
+      "learned_variables": {
+        "expression": "5.2151970215384*sqrt(v0*log(v3))*(v1*(v0 - 1.3880376) + v2)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 35.08784643374111,
+          "nmse": 0.17875562296310332,
+          "r2": 0.8212443770368967
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.308125257492065,
+        "columns": [
+          "x",
+          "omega",
+          "m",
+          "omega_0"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "m",
+          "omega",
+          "omega_0",
+          "x"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 19,
+      "law_id": "pmlb_feynman_I_25_13",
+      "method": "pysr",
+      "formula": "Volt = q/C",
+      "truth_surface": "Volt - ( q / C ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "C": 0.7713843089035604,
+          "q": 0.7636638270886674,
+          "distr_5": 0.5246883254743023,
+          "distr_0": 0.4751687919287011,
+          "distr_7": 0.4460643789041056,
+          "distr_9": 0.4196363179715961,
+          "distr_4": 0.4191060269340521,
+          "distr_3": 0.40890939561952083,
+          "distr_6": 0.3464338210192904,
+          "distr_1": 0.33579480052742106,
+          "distr_8": 0.3176318337902022,
+          "distr_2": 0.26887099906472
+        },
+        "op_probabilities": {
+          "+": 0.8827578356187545,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.27936485747915274,
+          "^": 0.6843524233561662,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4761109281942873
+        }
+      },
+      "learned_variables": {
+        "expression": "v1/v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.0,
+          "nmse": 0.0,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.338732957839966,
+        "columns": [
+          "C",
+          "q"
+        ],
+        "column_count": 2,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "q",
+          "C"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 20,
+      "law_id": "pmlb_feynman_I_26_2",
+      "method": "pysr",
+      "formula": "theta1 = arcsin(n*sin(theta2))",
+      "truth_surface": "theta1 - ( arcsin ( n * sin ( theta2 ) ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "theta2": 0.7928364573152881,
+          "n": 0.7019653461923524,
+          "distr_4": 0.490553398893625,
+          "distr_8": 0.4835766929706723,
+          "distr_6": 0.4818751667266017,
+          "distr_7": 0.4796440606770048,
+          "distr_3": 0.4752134246637383,
+          "distr_1": 0.47153172264928056,
+          "distr_9": 0.4582809145003153,
+          "distr_5": 0.4571444992501044,
+          "distr_2": 0.44234695237041405,
+          "distr_0": 0.4031448558746999
+        },
+        "op_probabilities": {
+          "+": 0.8722567415113263,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2892548879489359,
+          "^": 0.36927635763723554,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.46172690972622205
+        }
+      },
+      "learned_variables": {
+        "expression": "sin(v0)*1.1126007*v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.001841298373202595,
+          "nmse": 0.00799173784312363,
+          "r2": 0.9920082621568763
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.306208610534668,
+        "columns": [
+          "theta2",
+          "n"
+        ],
+        "column_count": 2,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "n",
+          "theta2"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 21,
+      "law_id": "pmlb_feynman_I_27_6",
+      "method": "pysr",
+      "formula": "foc = 1/(1/d1+n/d2)",
+      "truth_surface": "foc - ( 1 / ( 1 / d1 + n / d2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "d2": 0.7945395789558531,
+          "d1": 0.7678068441409602,
+          "n": 0.7655924480936966,
+          "distr_2": 0.6176255709039176,
+          "distr_5": 0.5308527101890943,
+          "distr_3": 0.4921288058146483,
+          "distr_7": 0.4897217077732154,
+          "distr_4": 0.48496895095050746,
+          "distr_0": 0.4845429242450428,
+          "distr_6": 0.4702993137201827,
+          "distr_8": 0.4631415069270174,
+          "distr_1": 0.4615035417968912,
+          "distr_9": 0.3371314398750536
+        },
+        "op_probabilities": {
+          "+": 0.8637809907184517,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5463080731076644,
+          "^": 0.5897392070163133,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2623693400481696
+        }
+      },
+      "learned_variables": {
+        "expression": "(v0 + v1)*0.3898732/(v2 - (-0.10492695)*(v0 + 1.4054959)/(v2 - 0.45387238))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.022207733116468217,
+          "nmse": 0.17941136346942907,
+          "r2": 0.8205886365305709
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.43041706085205,
+        "columns": [
+          "d2",
+          "d1",
+          "n",
+          "distr_2"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "d1",
+          "d2",
+          "n"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 22,
+      "law_id": "pmlb_feynman_I_29_16",
+      "method": "pysr",
+      "formula": "x = sqrt(x1**2+x2**2-2*x1*x2*cos(theta1-theta2))",
+      "truth_surface": "x - ( sqrt ( x1 ^ 2 + x2 ^ 2 - 2 * x1 * x2 * cos ( theta1 - theta2 ) ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x1": 0.687882044481106,
+          "theta2": 0.6389082758166671,
+          "x2": 0.6023917695752472,
+          "distr_6": 0.5408095047997808,
+          "theta1": 0.5043261611938271,
+          "distr_2": 0.4750576834790496,
+          "distr_8": 0.4589266529480053,
+          "distr_3": 0.4317843284196318,
+          "distr_7": 0.42997602751101804,
+          "distr_1": 0.35558091766382494,
+          "distr_9": 0.30686388674372284,
+          "distr_0": 0.28374052618489043,
+          "distr_4": 0.2758548062018541,
+          "distr_5": 0.2751433096937364
+        },
+        "op_probabilities": {
+          "+": 0.7259098780586531,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.4052468442096679,
+          "^": 0.7468325808762908,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.17697882370790363
+        }
+      },
+      "learned_variables": {
+        "expression": "log(v2) + 2.4501047",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 3.0480157517897455,
+          "nmse": 0.9427396317827292,
+          "r2": 0.05726036821727076
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.379021406173706,
+        "columns": [
+          "x1",
+          "theta2",
+          "x2"
+        ],
+        "column_count": 3,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "x1",
+          "x2",
+          "theta1",
+          "theta2"
+        ],
+        "support_recall": 0.75,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 23,
+      "law_id": "pmlb_feynman_I_29_4",
+      "method": "pysr",
+      "formula": "k = omega/c",
+      "truth_surface": "k - ( omega / c ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "c": 0.8085626284410792,
+          "omega": 0.7459036685858031,
+          "distr_3": 0.514375505103273,
+          "distr_9": 0.49892812536969217,
+          "distr_0": 0.45063289774887766,
+          "distr_5": 0.44218584254423915,
+          "distr_1": 0.4011949260046265,
+          "distr_4": 0.39470937464818995,
+          "distr_6": 0.3943299039312283,
+          "distr_8": 0.3866062694062688,
+          "distr_7": 0.3856933823865288,
+          "distr_2": 0.3284710694393225
+        },
+        "op_probabilities": {
+          "+": 0.902669517405718,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.30298647211977053,
+          "^": 0.7353574232941112,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.40692711785977276
+        }
+      },
+      "learned_variables": {
+        "expression": "v1/v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.0,
+          "nmse": 0.0,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.40011715888977,
+        "columns": [
+          "c",
+          "omega"
+        ],
+        "column_count": 2,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "omega",
+          "c"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 24,
+      "law_id": "pmlb_feynman_I_30_3",
+      "method": "pysr",
+      "formula": "Int = Int_0*sin(n*theta/2)**2/sin(theta/2)**2",
+      "truth_surface": "Int - ( Int_0 * sin ( n * theta / 2 ) ^ 2 / sin ( theta / 2 ) ^ 2 ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "Int_0": 0.785946273882738,
+          "distr_4": 0.6357995521682204,
+          "theta": 0.5878622553445498,
+          "n": 0.5684115388750924,
+          "distr_9": 0.5426386818822243,
+          "distr_0": 0.5227123676735604,
+          "distr_5": 0.479704176664824,
+          "distr_1": 0.47571931089972525,
+          "distr_6": 0.4631860700542566,
+          "distr_7": 0.45847246456712937,
+          "distr_3": 0.42479146737684437,
+          "distr_2": 0.38664826303933053,
+          "distr_8": 0.30149958856935927
+        },
+        "op_probabilities": {
+          "+": 0.9226753712594179,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.30077403533884794,
+          "^": 0.682929982583935,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.49981723214343793
+        }
+      },
+      "learned_variables": {
+        "expression": "sqrt(v0)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 8.412447385259439,
+          "nmse": 1.1272091076595927,
+          "r2": -0.1272091076595927
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.405189752578735,
+        "columns": [
+          "Int_0",
+          "distr_4",
+          "theta",
+          "n"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "Int_0",
+          "theta",
+          "n"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 25,
+      "law_id": "pmlb_feynman_I_30_5",
+      "method": "pysr",
+      "formula": "theta = arcsin(lambd/(n*d))",
+      "truth_surface": "theta - ( arcsin ( lambd / ( n * d ) ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "n": 0.7956842184028303,
+          "d": 0.7123684067520749,
+          "distr_3": 0.681296490529812,
+          "distr_8": 0.6634047140285773,
+          "distr_6": 0.6518332918423935,
+          "distr_1": 0.637320748838764,
+          "distr_5": 0.6270784467950938,
+          "distr_7": 0.6263345443559704,
+          "distr_0": 0.5969184654970392,
+          "distr_2": 0.5964105102583511,
+          "distr_4": 0.5939859336807939,
+          "distr_9": 0.5253126975687846,
+          "lambd": 0.3921105707755277
+        },
+        "op_probabilities": {
+          "+": 0.8684547120588397,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5675951276514485,
+          "^": 0.6047846699226141,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2886321156750339
+        }
+      },
+      "learned_variables": {
+        "expression": "0.49466783/v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "score": {
+          "mse": 0.004756262197689248,
+          "nmse": 0.50426206935689,
+          "r2": 0.49573793064311
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.323944091796875,
+        "columns": [
+          "n",
+          "d",
+          "distr_3",
+          "distr_8",
+          "distr_6",
+          "distr_1",
+          "distr_5",
+          "distr_7"
+        ],
+        "column_count": 8,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "lambd",
+          "d",
+          "n"
+        ],
+        "support_recall": 0.6666666666666666,
+        "support_precision": 0.25,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 26,
+      "law_id": "pmlb_feynman_I_32_17",
+      "method": "pysr",
+      "formula": "Pwr = (1/2*epsilon*c*Ef**2)*(8*pi*r**2/3)*(omega**4/(omega**2-omega_0**2)**2)",
+      "truth_surface": "Pwr - ( ( 1 / 2 * epsilon * c * Ef ^ 2 ) * ( 8 * pi * r ^ 2 / 3 ) * ( omega ^ 4 / ( omega ^ 2 - omega_0 ^ 2 ) ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "omega_0": 0.8307533415393002,
+          "omega": 0.7648106417088146,
+          "distr_2": 0.5564387267116028,
+          "distr_5": 0.5556090751781756,
+          "distr_4": 0.4649167380680493,
+          "r": 0.43181894578068375,
+          "distr_3": 0.4053651441014856,
+          "distr_0": 0.4017040847568056,
+          "distr_8": 0.39231408165487464,
+          "Ef": 0.3763664860265205,
+          "distr_7": 0.357355049826023,
+          "distr_9": 0.3284675317208941,
+          "epsilon": 0.327720144584523,
+          "c": 0.3187944421350775,
+          "distr_1": 0.2796299931651582,
+          "distr_6": 0.26941007172112547
+        },
+        "op_probabilities": {
+          "+": 0.9443165701533415,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.45783073634219595,
+          "^": 0.8748537125249233,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.35344177036238766
+        }
+      },
+      "learned_variables": {
+        "expression": "exp((v1 + sin(v0))/0.694125) - 1*2.1171072",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 10.3670659192853,
+          "nmse": 0.40179413458648994,
+          "r2": 0.5982058654135101
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.3594331741333,
+        "columns": [
+          "omega_0",
+          "omega",
+          "distr_2",
+          "distr_5"
+        ],
+        "column_count": 4,
+        "full_column_count": 16,
+        "oracle_columns": [
+          "epsilon",
+          "c",
+          "Ef",
+          "r",
+          "omega",
+          "omega_0"
+        ],
+        "support_recall": 0.3333333333333333,
+        "support_precision": 0.5,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 27,
+      "law_id": "pmlb_feynman_I_32_5",
+      "method": "pysr",
+      "formula": "Pwr = q**2*a**2/(6*pi*epsilon*c**3)",
+      "truth_surface": "Pwr - ( q ^ 2 * a ^ 2 / ( 6 * pi * epsilon * c ^ 3 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "c": 0.7615284825947254,
+          "q": 0.6903778211499954,
+          "a": 0.6745219504179886,
+          "epsilon": 0.630451231397039,
+          "distr_0": 0.5073654376550406,
+          "distr_9": 0.48275648992274167,
+          "distr_6": 0.47270514934805863,
+          "distr_7": 0.45003120083810255,
+          "distr_4": 0.43750669236331013,
+          "distr_2": 0.41615798735074827,
+          "distr_8": 0.36217935559890196,
+          "distr_5": 0.3497793976839029,
+          "distr_3": 0.32624593006152713,
+          "distr_1": 0.29007534496924053
+        },
+        "op_probabilities": {
+          "+": 0.8749094548413903,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5465679364465712,
+          "^": 0.7609612766086806,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2470032171259925
+        }
+      },
+      "learned_variables": {
+        "expression": "1/(0.15570135*((v0/0.8968884)**v3*sin(v1**0.5801723))**1.7408534)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.3594590707675346,
+          "nmse": 0.6649096644754121,
+          "r2": 0.3350903355245879
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.34852147102356,
+        "columns": [
+          "c",
+          "q",
+          "a",
+          "epsilon"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "q",
+          "a",
+          "epsilon",
+          "c"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 28,
+      "law_id": "pmlb_feynman_I_34_1",
+      "method": "pysr",
+      "formula": "omega = omega_0/(1-v/c)",
+      "truth_surface": "omega - ( omega_0 / ( 1 - v / c ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "omega_0": 0.8315282395508435,
+          "c": 0.6757343270383463,
+          "v": 0.5806098616444014,
+          "distr_1": 0.5356612118164391,
+          "distr_4": 0.4802728593226604,
+          "distr_0": 0.4714594443451826,
+          "distr_5": 0.467406790904451,
+          "distr_2": 0.41680602477318834,
+          "distr_3": 0.4105337115533282,
+          "distr_8": 0.33156197260510417,
+          "distr_6": 0.2946201560888746,
+          "distr_9": 0.2672689844288733,
+          "distr_7": 0.2568264099709321
+        },
+        "op_probabilities": {
+          "+": 0.8999688573680389,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5627905884515639,
+          "^": 0.8790180555057925,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2504397267446263
+        }
+      },
+      "learned_variables": {
+        "expression": "v0 + v0/v1 + v0/v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2"
+        ],
+        "score": {
+          "mse": 0.1808341653184536,
+          "nmse": 0.06138561170038711,
+          "r2": 0.9386143882996129
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.30676794052124,
+        "columns": [
+          "omega_0",
+          "c",
+          "v"
+        ],
+        "column_count": 3,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "c",
+          "v",
+          "omega_0"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 29,
+      "law_id": "pmlb_feynman_I_34_14",
+      "method": "pysr",
+      "formula": "omega = (1+v/c)/sqrt(1-v**2/c**2)*omega_0",
+      "truth_surface": "omega - ( ( 1 + v / c ) / sqrt ( 1 - v ^ 2 / c ^ 2 ) * omega_0 ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "omega_0": 0.826982785005389,
+          "c": 0.7314070091791256,
+          "distr_1": 0.5867822947626169,
+          "distr_6": 0.5772977996582261,
+          "distr_5": 0.47425851209327524,
+          "distr_3": 0.4728079659303676,
+          "distr_7": 0.4001701051672567,
+          "distr_9": 0.3355593547603609,
+          "distr_2": 0.32136773680475034,
+          "distr_4": 0.30458631438211986,
+          "v": 0.2937579097733281,
+          "distr_0": 0.2691470717413768,
+          "distr_8": 0.21425897180699618
+        },
+        "op_probabilities": {
+          "+": 0.904835755516187,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.6004772218908911,
+          "^": 0.8642318115238333,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.25760574911024586
+        }
+      },
+      "learned_variables": {
+        "expression": "0.12457835 - (-1.8961692)*v0*(v1**(-0.869196) + 0.45311278)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.08585363420930538,
+          "nmse": 0.03043618963681434,
+          "r2": 0.9695638103631856
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.306036949157715,
+        "columns": [
+          "omega_0",
+          "c",
+          "distr_1",
+          "distr_6"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "c",
+          "v",
+          "omega_0"
+        ],
+        "support_recall": 0.6666666666666666,
+        "support_precision": 0.5,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 30,
+      "law_id": "pmlb_feynman_I_34_27",
+      "method": "pysr",
+      "formula": "E_n = (h/(2*pi))*omega",
+      "truth_surface": "E_n - ( ( h / ( 2 * pi ) ) * omega ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "h": 0.7800879380354465,
+          "omega": 0.7736308961237465,
+          "distr_4": 0.5760608649963029,
+          "distr_3": 0.5704040068941328,
+          "distr_0": 0.5536704925221949,
+          "distr_9": 0.5095115143472768,
+          "distr_5": 0.4988845618152828,
+          "distr_7": 0.49481706045451507,
+          "distr_2": 0.4151616894810282,
+          "distr_6": 0.3493090898937282,
+          "distr_1": 0.3322688687107763,
+          "distr_8": 0.31563587120688114
+        },
+        "op_probabilities": {
+          "+": 0.9091722040603697,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2819882994999042,
+          "^": 0.653784930938673,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.43877350328958387
+        }
+      },
+      "learned_variables": {
+        "expression": "0.331100990610208*sqrt(v0*sqrt(log(v0)))*log(sqrt(v0))**(1/4)*log(exp(v1))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.011300800675394504,
+          "nmse": 0.016034698240169842,
+          "r2": 0.9839653017598302
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.397623062133789,
+        "columns": [
+          "h",
+          "omega",
+          "distr_4",
+          "distr_3",
+          "distr_0"
+        ],
+        "column_count": 5,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "omega",
+          "h"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.4,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 31,
+      "law_id": "pmlb_feynman_I_34_8",
+      "method": "pysr",
+      "formula": "omega = q*v*B/p",
+      "truth_surface": "omega - ( q * v * B / p ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "B": 0.9031113947976034,
+          "p": 0.7929942921504614,
+          "v": 0.7654275320846832,
+          "q": 0.645997548054509,
+          "distr_3": 0.47098454603023004,
+          "distr_6": 0.4313886823446691,
+          "distr_9": 0.4077733376969313,
+          "distr_1": 0.33442398802233975,
+          "distr_0": 0.31787997761175923,
+          "distr_7": 0.30878952287231665,
+          "distr_4": 0.30166746653203297,
+          "distr_5": 0.27712431719063707,
+          "distr_8": 0.23438574257800524,
+          "distr_2": 0.15259953906448864
+        },
+        "op_probabilities": {
+          "+": 0.9046562997838364,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5750521046004583,
+          "^": 0.873787324939554,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.1984717065158065
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*v2*v3/v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 1.7665553896293032e-30,
+          "nmse": 1.3279453102465706e-32,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.389598608016968,
+        "columns": [
+          "B",
+          "p",
+          "v",
+          "q"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "q",
+          "v",
+          "B",
+          "p"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 32,
+      "law_id": "pmlb_feynman_I_37_4",
+      "method": "pysr",
+      "formula": "Int = I1+I2+2*sqrt(I1*I2)*cos(delta)",
+      "truth_surface": "Int - ( I1 + I2 + 2 * sqrt ( I1 * I2 ) * cos ( delta ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "I2": 0.7104928736941596,
+          "delta": 0.6586581596466576,
+          "distr_4": 0.6262859000687511,
+          "I1": 0.5771503174194587,
+          "distr_3": 0.4985479927833213,
+          "distr_5": 0.37737564228202614,
+          "distr_1": 0.360730206025018,
+          "distr_0": 0.346326263948424,
+          "distr_7": 0.3158800583539133,
+          "distr_9": 0.3093968193644301,
+          "distr_8": 0.3011848450982516,
+          "distr_2": 0.29462513146894476,
+          "distr_6": 0.27748279727683933
+        },
+        "op_probabilities": {
+          "+": 0.9073137491274731,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.27956502595435295,
+          "^": 0.6880439114070381,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.3563429671019231
+        }
+      },
+      "learned_variables": {
+        "expression": "v0 - cos((v1/0.15212889 + v3)*(-0.26003215))/0.28838986",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 2.544966097534886,
+          "nmse": 0.3351088489728871,
+          "r2": 0.6648911510271129
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.313094139099121,
+        "columns": [
+          "I2",
+          "delta",
+          "distr_4",
+          "I1"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "I1",
+          "I2",
+          "delta"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 33,
+      "law_id": "pmlb_feynman_I_38_12",
+      "method": "pysr",
+      "formula": "r = 4*pi*epsilon*(h/(2*pi))**2/(m*q**2)",
+      "truth_surface": "r - ( 4 * pi * epsilon * ( h / ( 2 * pi ) ) ^ 2 / ( m * q ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "h": 0.7604854641262228,
+          "q": 0.7449953198605332,
+          "epsilon": 0.6508627751847428,
+          "m": 0.6151828213928701,
+          "distr_5": 0.5140980096929338,
+          "distr_9": 0.48001126130300464,
+          "distr_7": 0.4762710688180026,
+          "distr_3": 0.475715530989177,
+          "distr_4": 0.47258002632700363,
+          "distr_0": 0.4404841798356958,
+          "distr_8": 0.4391204255685505,
+          "distr_6": 0.40267186631602153,
+          "distr_2": 0.3246865663334236,
+          "distr_1": 0.2862508836256782
+        },
+        "op_probabilities": {
+          "+": 0.8927164932201808,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.25491078208630646,
+          "^": 0.6819769802929588,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4543016805183195
+        }
+      },
+      "learned_variables": {
+        "expression": "4.54430362*(v0 - 1.09382)*exp(-1.06084174126021*v1/sqrt(v2/v3))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.28071797172347845,
+          "nmse": 0.12242737044794066,
+          "r2": 0.8775726295520594
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.307647943496704,
+        "columns": [
+          "h",
+          "q",
+          "epsilon",
+          "m"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "m",
+          "q",
+          "h",
+          "epsilon"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 34,
+      "law_id": "pmlb_feynman_I_39_1",
+      "method": "pysr",
+      "formula": "E_n = 3/2*pr*V",
+      "truth_surface": "E_n - ( 3 / 2 * pr * V ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "V": 0.9332988477244168,
+          "pr": 0.9110753149057907,
+          "distr_9": 0.4692309435114398,
+          "distr_3": 0.4238304441229143,
+          "distr_7": 0.37057730042390136,
+          "distr_0": 0.3605411264823194,
+          "distr_4": 0.3548749753805065,
+          "distr_5": 0.342739397541024,
+          "distr_8": 0.32292220660796833,
+          "distr_2": 0.31274431696968896,
+          "distr_6": 0.2906706679756051,
+          "distr_1": 0.25185727701420485
+        },
+        "op_probabilities": {
+          "+": 0.9251067400224589,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.46792487214322065,
+          "^": 0.8817318821449424,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.4353238479217042
+        }
+      },
+      "learned_variables": {
+        "expression": "(-v0 + v0/0.9980694 + v1)**1.0039754*(v0 + 0.007255383/(v1*(v0 + cos(exp(v1)))))*1.4881332",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 0.00014844992266886906,
+          "nmse": 2.8011585072315817e-06,
+          "r2": 0.9999971988414927
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.410444021224976,
+        "columns": [
+          "V",
+          "pr"
+        ],
+        "column_count": 2,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "pr",
+          "V"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 35,
+      "law_id": "pmlb_feynman_I_39_11",
+      "method": "pysr",
+      "formula": "E_n = 1/(gamma-1)*pr*V",
+      "truth_surface": "E_n - ( 1 / ( gamma - 1 ) * pr * V ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "V": 0.8555697045448063,
+          "gamma": 0.7682721244356397,
+          "pr": 0.7585850111599584,
+          "distr_4": 0.5549622472374917,
+          "distr_0": 0.5456797009011108,
+          "distr_7": 0.5232872164181214,
+          "distr_6": 0.48935953748471983,
+          "distr_9": 0.41217617549665647,
+          "distr_5": 0.36818192932924515,
+          "distr_8": 0.3623557218331025,
+          "distr_2": 0.3490670298673026,
+          "distr_1": 0.3211971541199459,
+          "distr_3": 0.28587542359033796
+        },
+        "op_probabilities": {
+          "+": 0.9098666197137179,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.6534824314399111,
+          "^": 0.8963777072257338,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.25891092263047377
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*(v1 + v2)/log(v1**v1 + v3)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 1.1909006059242946,
+          "nmse": 0.1166660552041723,
+          "r2": 0.8833339447958277
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.307180404663086,
+        "columns": [
+          "V",
+          "gamma",
+          "pr",
+          "distr_4"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "gamma",
+          "pr",
+          "V"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 36,
+      "law_id": "pmlb_feynman_I_39_22",
+      "method": "pysr",
+      "formula": "pr = n*kb*T/V",
+      "truth_surface": "pr - ( n * kb * T / V ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "V": 0.9188956960614957,
+          "kb": 0.8961152391971527,
+          "T": 0.6647540879109589,
+          "n": 0.5931924665368206,
+          "distr_1": 0.4669910125309776,
+          "distr_7": 0.462147852213334,
+          "distr_5": 0.44028190962308067,
+          "distr_3": 0.3943306347476744,
+          "distr_2": 0.37998569688939043,
+          "distr_9": 0.36015045677995267,
+          "distr_0": 0.33597707868716487,
+          "distr_6": 0.3194177405534487,
+          "distr_4": 0.19715303193626546,
+          "distr_8": 0.18138883068748393
+        },
+        "op_probabilities": {
+          "+": 0.915384155203931,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5145988863064406,
+          "^": 0.8776615817014976,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.31223065522950183
+        }
+      },
+      "learned_variables": {
+        "expression": "v1*v3 - (v0 - v2 - 3.09129518969206/(v2**v3)**3.772574)*sqrt(exp(v1))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 29.12036255190099,
+          "nmse": 0.33513686962783973,
+          "r2": 0.6648631303721603
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.32544231414795,
+        "columns": [
+          "V",
+          "kb",
+          "T",
+          "n"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "n",
+          "T",
+          "V",
+          "kb"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 37,
+      "law_id": "pmlb_feynman_I_40_1",
+      "method": "pysr",
+      "formula": "n = n_0*exp(-m*g*x/(kb*T))",
+      "truth_surface": "n - ( n_0 * exp ( - m * g * x / ( kb * T ) ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "m": 0.7208517840282848,
+          "n_0": 0.6763605487961557,
+          "x": 0.670917292414135,
+          "kb": 0.6566569142165077,
+          "T": 0.6549887416732593,
+          "g": 0.6524683170570034,
+          "distr_3": 0.5972709311662845,
+          "distr_6": 0.5049649331124527,
+          "distr_7": 0.4985109435824085,
+          "distr_9": 0.49067579348076895,
+          "distr_1": 0.4685752239446406,
+          "distr_8": 0.45033254363820285,
+          "distr_5": 0.41957878422670297,
+          "distr_4": 0.4062220460482452,
+          "distr_0": 0.39503425945417725,
+          "distr_2": 0.34010839534506077
+        },
+        "op_probabilities": {
+          "+": 0.8529525510831895,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5261073844232806,
+          "^": 0.5054399423555609,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.18965624841679246
+        }
+      },
+      "learned_variables": {
+        "expression": "(v1*(-0.15496677) + v3)*v1*0.23012792/((v5 - 0.7107225)*v0**0.80792373*0.8764061)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6"
+        ],
+        "score": {
+          "mse": 0.40547821551217283,
+          "nmse": 0.7414655738487855,
+          "r2": 0.25853442615121447
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.298604726791382,
+        "columns": [
+          "m",
+          "n_0",
+          "x",
+          "kb",
+          "T",
+          "g",
+          "distr_3"
+        ],
+        "column_count": 7,
+        "full_column_count": 16,
+        "oracle_columns": [
+          "n_0",
+          "m",
+          "x",
+          "T",
+          "g",
+          "kb"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.8571428571428571,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 38,
+      "law_id": "pmlb_feynman_I_41_16",
+      "method": "pysr",
+      "formula": "L_rad = h/(2*pi)*omega**3/(pi**2*c**2*(exp((h/(2*pi))*omega/(kb*T))-1))",
+      "truth_surface": "L_rad - ( h / ( 2 * pi ) * omega ^ 3 / ( pi ^ 2 * c ^ 2 * ( exp ( ( h / ( 2 * pi ) ) * omega / ( kb * T ) ) - 1 ) ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "kb": 0.8099580300299828,
+          "c": 0.7868379480822543,
+          "T": 0.7704817261256823,
+          "omega": 0.6609216405076139,
+          "h": 0.5461346525180625,
+          "distr_1": 0.5295435365599322,
+          "distr_4": 0.4939434643361444,
+          "distr_9": 0.48335245373775054,
+          "distr_5": 0.47750882717755316,
+          "distr_6": 0.41909916069579395,
+          "distr_3": 0.4059969877456563,
+          "distr_8": 0.39210403264425275,
+          "distr_2": 0.3710817541829316,
+          "distr_0": 0.3480913836934201,
+          "distr_7": 0.3475105212455137
+        },
+        "op_probabilities": {
+          "+": 0.9344934011196462,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5928559633307081,
+          "^": 0.8609580267975852,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.22729566832229192
+        }
+      },
+      "learned_variables": {
+        "expression": "(v2 + v3 - 3.6140938)*log(v0)/(v1 - 0.77986413)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.7298984414201887,
+          "nmse": 0.1511404137868703,
+          "r2": 0.8488595862131297
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.35907793045044,
+        "columns": [
+          "kb",
+          "c",
+          "T",
+          "omega"
+        ],
+        "column_count": 4,
+        "full_column_count": 15,
+        "oracle_columns": [
+          "omega",
+          "T",
+          "h",
+          "kb",
+          "c"
+        ],
+        "support_recall": 0.8,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 39,
+      "law_id": "pmlb_feynman_I_43_16",
+      "method": "pysr",
+      "formula": "v = mu_drift*q*Volt/d",
+      "truth_surface": "v - ( mu_drift * q * Volt / d ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "d": 0.9089163896029672,
+          "mu_drift": 0.8703939340230549,
+          "q": 0.6495936078636656,
+          "Volt": 0.6383900580976958,
+          "distr_0": 0.5351271157232385,
+          "distr_3": 0.5121919675066791,
+          "distr_5": 0.47919835925590537,
+          "distr_8": 0.38673994167766185,
+          "distr_2": 0.32044311922144153,
+          "distr_7": 0.31723926987134027,
+          "distr_4": 0.3157583238066385,
+          "distr_1": 0.25837295324771176,
+          "distr_6": 0.2476363616428261,
+          "distr_9": 0.2428105750924873
+        },
+        "op_probabilities": {
+          "+": 0.8989733129514418,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5889110457515767,
+          "^": 0.8856241603800171,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2223970838738081
+        }
+      },
+      "learned_variables": {
+        "expression": "v2*v3 + exp(-v0 + v1)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 20.18155739534484,
+          "nmse": 0.263989452247406,
+          "r2": 0.736010547752594
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.421623468399048,
+        "columns": [
+          "d",
+          "mu_drift",
+          "q",
+          "Volt"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "mu_drift",
+          "q",
+          "Volt",
+          "d"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 40,
+      "law_id": "pmlb_feynman_I_43_31",
+      "method": "pysr",
+      "formula": "D = mob*kb*T",
+      "truth_surface": "D - ( mob * kb * T ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "T": 0.9216489940302708,
+          "kb": 0.8847420956829865,
+          "mob": 0.7913529559753562,
+          "distr_4": 0.7776909124772672,
+          "distr_9": 0.646811188993027,
+          "distr_8": 0.4976189262341274,
+          "distr_5": 0.47664225960334994,
+          "distr_3": 0.4528936972443604,
+          "distr_2": 0.4195219093049508,
+          "distr_6": 0.2892080750832151,
+          "distr_1": 0.2650202389896611,
+          "distr_7": 0.2458406168424632,
+          "distr_0": 0.15233449585477105
+        },
+        "op_probabilities": {
+          "+": 0.8999688573680389,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.6578476754103335,
+          "^": 0.9316881429773596,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.24677044947726964
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*v1*v2",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 0.0,
+          "nmse": 0.0,
+          "r2": 1.0
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.276623725891113,
+        "columns": [
+          "T",
+          "kb",
+          "mob",
+          "distr_4",
+          "distr_9"
+        ],
+        "column_count": 5,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "mob",
+          "T",
+          "kb"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.6,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 41,
+      "law_id": "pmlb_feynman_I_43_43",
+      "method": "pysr",
+      "formula": "kappa = 1/(gamma-1)*kb*v/A",
+      "truth_surface": "kappa - ( 1 / ( gamma - 1 ) * kb * v / A ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "gamma": 0.7373569611668297,
+          "v": 0.7333119335255341,
+          "A": 0.6411634111030612,
+          "kb": 0.6378233618766723,
+          "distr_0": 0.5833165430239328,
+          "distr_6": 0.5765162325946657,
+          "distr_5": 0.520780694017625,
+          "distr_4": 0.4787415498767891,
+          "distr_3": 0.453707413462299,
+          "distr_2": 0.4504738812926062,
+          "distr_9": 0.431193811747671,
+          "distr_1": 0.4155252374010039,
+          "distr_7": 0.387505295395822,
+          "distr_8": 0.31119683834660233
+        },
+        "op_probabilities": {
+          "+": 0.8939586688448876,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5511323658656179,
+          "^": 0.7486001174224521,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.161722867806192
+        }
+      },
+      "learned_variables": {
+        "expression": "sqrt(v1 + sin(v0))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5"
+        ],
+        "score": {
+          "mse": 2.270279082464142,
+          "nmse": 0.7886586532494729,
+          "r2": 0.21134134675052707
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.315240621566772,
+        "columns": [
+          "gamma",
+          "v",
+          "A",
+          "kb",
+          "distr_0",
+          "distr_6"
+        ],
+        "column_count": 6,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "gamma",
+          "kb",
+          "A",
+          "v"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.6666666666666666,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 42,
+      "law_id": "pmlb_feynman_I_44_4",
+      "method": "pysr",
+      "formula": "E_n = n*kb*T*ln(V2/V1)",
+      "truth_surface": "E_n - ( n * kb * T * ln ( V2 / V1 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "V1": 0.8086825155290546,
+          "V2": 0.6285593496853483,
+          "kb": 0.6274509039389371,
+          "T": 0.5879594918719269,
+          "n": 0.5708329817509693,
+          "distr_6": 0.4688265007430512,
+          "distr_5": 0.40814770849939136,
+          "distr_8": 0.38298282099978437,
+          "distr_9": 0.3734636870707801,
+          "distr_1": 0.3700536224942238,
+          "distr_2": 0.367302969742427,
+          "distr_0": 0.3662780678184509,
+          "distr_4": 0.3576398736056643,
+          "distr_7": 0.34344192698386583,
+          "distr_3": 0.3367517886725139
+        },
+        "op_probabilities": {
+          "+": 0.9086597432288696,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.29127114217557265,
+          "^": 0.5801777866224922,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.5052241912854206
+        }
+      },
+      "learned_variables": {
+        "expression": "v3*(-v0 + v1)*(v4 - 1*0.16204214)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4"
+        ],
+        "score": {
+          "mse": 46.852513011712944,
+          "nmse": 0.14307970852134663,
+          "r2": 0.8569202914786533
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.384206295013428,
+        "columns": [
+          "V1",
+          "V2",
+          "kb",
+          "T",
+          "n"
+        ],
+        "column_count": 5,
+        "full_column_count": 15,
+        "oracle_columns": [
+          "n",
+          "kb",
+          "T",
+          "V1",
+          "V2"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 43,
+      "law_id": "pmlb_feynman_I_47_23",
+      "method": "pysr",
+      "formula": "c = sqrt(gamma*pr/rho)",
+      "truth_surface": "c - ( sqrt ( gamma * pr / rho ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "pr": 0.7703532528333485,
+          "gamma": 0.7416824247282037,
+          "rho": 0.726997869191441,
+          "distr_3": 0.5817093246082935,
+          "distr_9": 0.506668339000731,
+          "distr_2": 0.5048085389799106,
+          "distr_5": 0.4107266102065343,
+          "distr_4": 0.40426620397850427,
+          "distr_6": 0.38652119831930987,
+          "distr_1": 0.36184489901617556,
+          "distr_0": 0.3474546306690066,
+          "distr_8": 0.3365489016885498,
+          "distr_7": 0.2940378352151585
+        },
+        "op_probabilities": {
+          "+": 0.878349683727411,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.5848556619857322,
+          "^": 0.814980700227865,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2450201640784983
+        }
+      },
+      "learned_variables": {
+        "expression": "(v0 - 0.8920564)*0.4243287 + (0.9567216 - v1)*(-3.2621572)/(v1*(v2/1.2163533))",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 0.0747952197226053,
+          "nmse": 0.21416217033502385,
+          "r2": 0.7858378296649762
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.313606262207031,
+        "columns": [
+          "pr",
+          "gamma",
+          "rho",
+          "distr_3"
+        ],
+        "column_count": 4,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "gamma",
+          "pr",
+          "rho"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.75,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 44,
+      "law_id": "pmlb_feynman_I_48_2",
+      "method": "pysr",
+      "formula": "E_n = m*c**2/sqrt(1-v**2/c**2)",
+      "truth_surface": "E_n - ( m * c ^ 2 / sqrt ( 1 - v ^ 2 / c ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "c": 0.9257135697686624,
+          "m": 0.9232826405708515,
+          "distr_8": 0.44449668222274846,
+          "distr_3": 0.39977195359008133,
+          "distr_5": 0.3113851769445157,
+          "distr_4": 0.2979234411679504,
+          "distr_1": 0.28867281916665866,
+          "distr_0": 0.2469454890115124,
+          "distr_7": 0.24172779911352926,
+          "v": 0.22658558830133102,
+          "distr_9": 0.22032823225199663,
+          "distr_6": 0.17523763753719215,
+          "distr_2": 0.1699263542140767
+        },
+        "op_probabilities": {
+          "+": 0.8765673306371822,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.3915782989934308,
+          "^": 0.7629549812305159,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.430171882497206
+        }
+      },
+      "learned_variables": {
+        "expression": "v0*v0*v1 + v1",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 3.742575262786391,
+          "nmse": 0.00034523394839472264,
+          "r2": 0.9996547660516053
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.484122514724731,
+        "columns": [
+          "c",
+          "m"
+        ],
+        "column_count": 2,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "m",
+          "v",
+          "c"
+        ],
+        "support_recall": 0.6666666666666666,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 45,
+      "law_id": "pmlb_feynman_I_50_26",
+      "method": "pysr",
+      "formula": "x = x1*(cos(omega*t)+alpha*cos(omega*t)**2)",
+      "truth_surface": "x - ( x1 * ( cos ( omega * t ) + alpha * cos ( omega * t ) ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x1": 0.7541324239380746,
+          "omega": 0.5599029565432627,
+          "alpha": 0.5310140626067991,
+          "distr_1": 0.5288591166692188,
+          "distr_0": 0.5128740005228135,
+          "t": 0.47724996691531285,
+          "distr_6": 0.461628255290907,
+          "distr_3": 0.4546876345976472,
+          "distr_8": 0.39189918613436103,
+          "distr_5": 0.3907132821028428,
+          "distr_4": 0.3843069964458741,
+          "distr_7": 0.3535423312948117,
+          "distr_9": 0.33115330308423263,
+          "distr_2": 0.3148361649598455
+        },
+        "op_probabilities": {
+          "+": 0.9199302259071012,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.4742463438852322,
+          "^": 0.7383674225078191,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2140397592089389
+        }
+      },
+      "learned_variables": {
+        "expression": "exp(v0 - 1.7165629)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1"
+        ],
+        "score": {
+          "mse": 3.2985497773666257,
+          "nmse": 1.0152218329400577,
+          "r2": -0.015221832940057745
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.370561599731445,
+        "columns": [
+          "x1",
+          "omega"
+        ],
+        "column_count": 2,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "x1",
+          "omega",
+          "t",
+          "alpha"
+        ],
+        "support_recall": 0.5,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 46,
+      "law_id": "pmlb_feynman_I_6_2",
+      "method": "pysr",
+      "formula": "f = exp(-(theta/sigma)**2/2)/(sqrt(2*pi)*sigma)",
+      "truth_surface": "f - ( exp ( - ( theta / sigma ) ^ 2 / 2 ) / ( sqrt ( 2 * pi ) * sigma ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "theta": 0.7102869605689196,
+          "distr_5": 0.654051107149021,
+          "distr_2": 0.6473785806599601,
+          "distr_6": 0.6407620849277774,
+          "distr_9": 0.639448786468848,
+          "distr_4": 0.6353708450732113,
+          "distr_0": 0.6224284113346472,
+          "sigma": 0.6214833944137074,
+          "distr_7": 0.6170674922125786,
+          "distr_1": 0.6119938909890533,
+          "distr_3": 0.5638961184038109,
+          "distr_8": 0.5151942931867763
+        },
+        "op_probabilities": {
+          "+": 0.8935369055228879,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2265108996599999,
+          "^": 0.37869992275799774,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.49769971431496535
+        }
+      },
+      "learned_variables": {
+        "expression": "0.21001539/v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "score": {
+          "mse": 0.0005363564143822412,
+          "nmse": 0.27361058470731436,
+          "r2": 0.7263894152926856
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.352043390274048,
+        "columns": [
+          "theta",
+          "distr_5",
+          "distr_2",
+          "distr_6",
+          "distr_9",
+          "distr_4",
+          "distr_0",
+          "sigma"
+        ],
+        "column_count": 8,
+        "full_column_count": 12,
+        "oracle_columns": [
+          "sigma",
+          "theta"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.25,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 47,
+      "law_id": "pmlb_feynman_I_6_2a",
+      "method": "pysr",
+      "formula": "f = exp(-theta**2/2)/sqrt(2*pi)",
+      "truth_surface": "f - ( exp ( - theta ^ 2 / 2 ) / sqrt ( 2 * pi ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "theta": 0.7134378461372958,
+          "distr_9": 0.6867834978841124,
+          "distr_6": 0.625203111167642,
+          "distr_0": 0.6190415878015391,
+          "distr_4": 0.6167364042554001,
+          "distr_2": 0.5895954380328327,
+          "distr_5": 0.5865376560728126,
+          "distr_7": 0.586097511605605,
+          "distr_8": 0.5798395003199152,
+          "distr_1": 0.5784359781088332,
+          "distr_3": 0.5646708858926097
+        },
+        "op_probabilities": {
+          "+": 0.8738842253822576,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.49759193473384195,
+          "^": 0.5438473677693665,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.2962125592517349
+        }
+      },
+      "learned_variables": {
+        "expression": "-1*(-0.002100706) + exp(cos(-cos(v0*1.208913) - 0.6030584))/exp(v0 + v0)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "score": {
+          "mse": 5.270200638668417e-06,
+          "nmse": 0.0012041692401542749,
+          "r2": 0.9987958307598457
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.509707927703857,
+        "columns": [
+          "theta",
+          "distr_9",
+          "distr_6",
+          "distr_0",
+          "distr_4",
+          "distr_2",
+          "distr_5",
+          "distr_7"
+        ],
+        "column_count": 8,
+        "full_column_count": 11,
+        "oracle_columns": [
+          "theta"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 0.125,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 48,
+      "law_id": "pmlb_feynman_I_6_2b",
+      "method": "pysr",
+      "formula": "f = exp(-((theta-theta1)/sigma)**2/2)/(sqrt(2*pi)*sigma)",
+      "truth_surface": "f - ( exp ( - ( ( theta - theta1 ) / sigma ) ^ 2 / 2 ) / ( sqrt ( 2 * pi ) * sigma ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "sigma": 0.7157679251613762,
+          "distr_5": 0.6918108342421689,
+          "distr_7": 0.6785978452880039,
+          "distr_8": 0.6711312779708302,
+          "distr_9": 0.6698155908756473,
+          "distr_6": 0.6659018475158568,
+          "theta": 0.6419777756330558,
+          "distr_0": 0.6386311229376695,
+          "distr_3": 0.6385379239374345,
+          "distr_2": 0.6180067575496786,
+          "distr_1": 0.6153811920064853,
+          "theta1": 0.6109142172131018,
+          "distr_4": 0.6028521907616516
+        },
+        "op_probabilities": {
+          "+": 0.8779607732240527,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.2685816290172938,
+          "^": 0.544499352618933,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.5102975071249356
+        }
+      },
+      "learned_variables": {
+        "expression": "0.36332285/v0",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3",
+          "v4",
+          "v5",
+          "v6",
+          "v7"
+        ],
+        "score": {
+          "mse": 0.0014318111276550348,
+          "nmse": 0.4704939529390114,
+          "r2": 0.5295060470609886
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.280953407287598,
+        "columns": [
+          "sigma",
+          "distr_5",
+          "distr_7",
+          "distr_8",
+          "distr_9",
+          "distr_6",
+          "theta",
+          "distr_0"
+        ],
+        "column_count": 8,
+        "full_column_count": 13,
+        "oracle_columns": [
+          "sigma",
+          "theta",
+          "theta1"
+        ],
+        "support_recall": 0.6666666666666666,
+        "support_precision": 0.25,
+        "predicted_ops": null
+      }
+    },
+    {
+      "idx": 49,
+      "law_id": "pmlb_feynman_I_8_14",
+      "method": "pysr",
+      "formula": "d = sqrt((x2-x1)**2+(y2-y1)**2)",
+      "truth_surface": "d - ( sqrt ( ( x2 - x1 ) ^ 2 + ( y2 - y1 ) ^ 2 ) ) = 0",
+      "q": 50,
+      "distractors": 10,
+      "timeout_seconds": 10,
+      "ok": true,
+      "learned_prior_meta": {
+        "support_probabilities": {
+          "x1": 0.6717767441567059,
+          "x2": 0.6430640883555822,
+          "y2": 0.6301899720340886,
+          "y1": 0.6246905482246408,
+          "distr_4": 0.5215194767191114,
+          "distr_0": 0.4598398832014109,
+          "distr_3": 0.4188182718104136,
+          "distr_2": 0.4163335600036379,
+          "distr_9": 0.4016465705312116,
+          "distr_6": 0.4000433608009166,
+          "distr_8": 0.3937754731043867,
+          "distr_7": 0.39013420018368805,
+          "distr_1": 0.34838981804289115,
+          "distr_5": 0.24963061136653436
+        },
+        "op_probabilities": {
+          "+": 0.7898920848474383,
+          "-": 1.0,
+          "*": 1.0,
+          "/": 0.48234591748965894,
+          "^": 0.6543789755912501,
+          "sin": 0.0,
+          "cos": 0.0,
+          "exp": 0.0,
+          "log": 0.0,
+          "sqrt": 0.23693096578566325
+        }
+      },
+      "learned_variables": {
+        "expression": "(1.4051203 + v0*(-0.09028032))**v1 - 1*(-0.2575625)",
+        "operators": {
+          "binary": [
+            "+",
+            "-",
+            "*",
+            "/",
+            "^"
+          ],
+          "unary": [
+            "sin",
+            "cos",
+            "exp",
+            "log",
+            "sqrt"
+          ]
+        },
+        "backend_columns": [
+          "v0",
+          "v1",
+          "v2",
+          "v3"
+        ],
+        "score": {
+          "mse": 1.2342467498752185,
+          "nmse": 1.1108940169574961,
+          "r2": -0.11089401695749612
+        },
+        "mode": "learned_variables",
+        "ok": true,
+        "elapsed_seconds": 10.283096075057983,
+        "columns": [
+          "x1",
+          "x2",
+          "y2",
+          "y1"
+        ],
+        "column_count": 4,
+        "full_column_count": 14,
+        "oracle_columns": [
+          "x1",
+          "x2",
+          "y1",
+          "y2"
+        ],
+        "support_recall": 1.0,
+        "support_precision": 1.0,
+        "predicted_ops": null
+      }
+    }
+  ]
+}

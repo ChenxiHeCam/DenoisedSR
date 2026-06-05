@@ -1,0 +1,315 @@
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+  Installing known registries into `~/.julia`
+       Added `General` registry to ~/.julia/registries
+    Updating registry at `~/.julia/registries/General.toml`
+   Resolving package versions...
+   Installed pixi_jll ──────────────────── v0.41.3+0
+   Installed ScientificTypesBase ───────── v3.1.0
+   Installed Scratch ───────────────────── v1.3.0
+   Installed IrrationalConstants ───────── v0.2.6
+   Installed MicroMamba ────────────────── v0.1.15
+   Installed DiffRules ─────────────────── v1.15.1
+   Installed Tricks ────────────────────── v0.1.13
+   Installed DynamicExpressions ────────── v1.10.4
+   Installed TableTraits ───────────────── v1.0.1
+   Installed PtrArrays ─────────────────── v1.4.0
+   Installed Adapt ─────────────────────── v4.5.2
+   Installed DiffResults ───────────────── v1.1.0
+   Installed MLJModelInterface ─────────── v1.11.1
+   Installed JSON ──────────────────────── v1.5.2
+   Installed Preferences ───────────────── v1.5.2
+   Installed PythonCall ────────────────── v0.9.26
+   Installed OpenSSL_jll ───────────────── v3.0.20+0
+   Installed StatisticalTraits ─────────── v3.5.0
+   Installed PositiveFactorizations ────── v0.2.4
+   Installed Tables ────────────────────── v1.12.1
+   Installed ADTypes ───────────────────── v1.22.0
+   Installed Optim ─────────────────────── v1.13.3
+   Installed Parsers ───────────────────── v2.8.4
+   Installed DynamicDiff ───────────────── v0.2.1
+   Installed SpecialFunctions ──────────── v2.7.2
+   Installed DataAPI ───────────────────── v1.16.0
+   Installed Pidfile ───────────────────── v1.3.0
+   Installed Setfield ──────────────────── v1.1.2
+   Installed micromamba_jll ────────────── v2.3.1+0
+   Installed JLLWrappers ───────────────── v1.7.1
+   Installed ProgressMeter ─────────────── v1.10.2
+   Installed StaticArraysCore ──────────── v1.4.4
+   Installed NaNMath ───────────────────── v1.1.3
+   Installed IteratorInterfaceExtensions ─ v1.0.0
+   Installed PrecompileTools ───────────── v1.2.1
+   Installed ConstructionBase ──────────── v1.6.0
+   Installed NLSolversBase ─────────────── v7.10.0
+   Installed DataValueInterfaces ───────── v1.0.0
+   Installed OrderedCollections ────────── v1.8.1
+   Installed TestItems ─────────────────── v1.0.0
+   Installed EnumX ─────────────────────── v1.0.7
+   Installed ArrayInterface ────────────── v7.24.0
+   Installed ForwardDiff ───────────────── v1.3.3
+   Installed Reexport ──────────────────── v1.2.2
+   Installed Statistics ────────────────── v1.11.1
+   Installed FillArrays ────────────────── v1.16.0
+   Installed LineSearches ──────────────── v7.5.1
+   Installed ChainRulesCore ────────────── v1.26.1
+   Installed UnsafePointers ────────────── v1.0.0
+   Installed StatsAPI ──────────────────── v1.8.0
+   Installed CommonSubexpressions ──────── v0.3.1
+   Installed LogExpFunctions ───────────── v0.3.29
+   Installed AliasTables ───────────────── v1.1.3
+   Installed Requires ──────────────────── v1.3.1
+   Installed MacroTools ────────────────── v0.5.16
+   Installed DataStructures ────────────── v0.19.4
+   Installed OpenSpecFun_jll ───────────── v0.5.6+0
+   Installed Compat ────────────────────── v4.18.1
+   Installed Interfaces ────────────────── v0.3.2
+   Installed DispatchDoctor ────────────── v0.4.28
+   Installed DynamicQuantities ─────────── v1.12.3
+   Installed CondaPkg ──────────────────── v0.2.34
+   Installed Missings ──────────────────── v1.2.0
+   Installed StatsBase ─────────────────── v0.34.10
+   Installed SymbolicRegression ────────── v1.11.3
+   Installed DifferentiationInterface ──── v0.7.17
+   Installed DocStringExtensions ───────── v0.9.5
+   Installed StructUtils ───────────────── v2.8.1
+   Installed LossFunctions ─────────────── v1.2.0
+   Installed FiniteDiff ────────────────── v2.31.0
+   Installed SortingAlgorithms ─────────── v1.2.2
+    Updating `~/.julia/environments/pyjuliapkg/Project.toml`
+⌅ [6099a3de] + PythonCall v0.9.26
+⌅ [8254be44] + SymbolicRegression v1.11.3
+⌅ [458c3c95] + OpenSSL_jll v3.0.20+0
+  [9e88b42a] ~ Serialization ⇒ v1.11.0
+    Updating `~/.julia/environments/pyjuliapkg/Manifest.toml`
+  [47edcb42] + ADTypes v1.22.0
+  [79e6a3ab] + Adapt v4.5.2
+  [66dad0bd] + AliasTables v1.1.3
+  [4fba245c] + ArrayInterface v7.24.0
+  [d360d2e6] + ChainRulesCore v1.26.1
+  [bbf7d656] + CommonSubexpressions v0.3.1
+  [34da2185] + Compat v4.18.1
+  [992eb4ea] + CondaPkg v0.2.34
+  [187b0558] + ConstructionBase v1.6.0
+  [9a962f9c] + DataAPI v1.16.0
+  [864edb3b] + DataStructures v0.19.4
+  [e2d170a0] + DataValueInterfaces v1.0.0
+  [163ba53b] + DiffResults v1.1.0
+  [b552c78f] + DiffRules v1.15.1
+  [a0c0ee7d] + DifferentiationInterface v0.7.17
+  [8d63f2c5] + DispatchDoctor v0.4.28
+  [ffbed154] + DocStringExtensions v0.9.5
+⌅ [7317a516] + DynamicDiff v0.2.1
+⌅ [a40a106e] + DynamicExpressions v1.10.4
+  [06fc5a27] + DynamicQuantities v1.12.3
+  [4e289a0a] + EnumX v1.0.7
+  [1a297f60] + FillArrays v1.16.0
+  [6a86dc24] + FiniteDiff v2.31.0
+  [f6369f11] + ForwardDiff v1.3.3
+  [85a1e053] + Interfaces v0.3.2
+  [92d709cd] + IrrationalConstants v0.2.6
+  [82899510] + IteratorInterfaceExtensions v1.0.0
+  [692b3bcd] + JLLWrappers v1.7.1
+  [682c06a0] + JSON v1.5.2
+⌃ [d3d80556] + LineSearches v7.5.1
+  [2ab3a3ac] + LogExpFunctions v0.3.29
+  [30fc2ffe] + LossFunctions v1.2.0
+⌅ [e80e1ace] + MLJModelInterface v1.11.1
+  [1914dd2f] + MacroTools v0.5.16
+  [0b3b1443] + MicroMamba v0.1.15
+  [e1d29d7a] + Missings v1.2.0
+⌅ [d41bc354] + NLSolversBase v7.10.0
+  [77ba4419] + NaNMath v1.1.3
+⌅ [429524aa] + Optim v1.13.3
+  [bac558e1] + OrderedCollections v1.8.1
+  [69de0a69] + Parsers v2.8.4
+  [fa939f87] + Pidfile v1.3.0
+  [85a6dd25] + PositiveFactorizations v0.2.4
+⌅ [aea7be01] + PrecompileTools v1.2.1
+  [21216c6a] + Preferences v1.5.2
+⌅ [92933f4c] + ProgressMeter v1.10.2
+  [43287f4e] + PtrArrays v1.4.0
+⌅ [6099a3de] + PythonCall v0.9.26
+  [189a3867] + Reexport v1.2.2
+  [ae029012] + Requires v1.3.1
+  [30f210dd] + ScientificTypesBase v3.1.0
+  [6c6a2e73] + Scratch v1.3.0
+  [efcf1570] + Setfield v1.1.2
+  [a2af1166] + SortingAlgorithms v1.2.2
+  [276daf66] + SpecialFunctions v2.7.2
+  [1e83bf80] + StaticArraysCore v1.4.4
+  [64bff920] + StatisticalTraits v3.5.0
+  [10745b16] + Statistics v1.11.1
+  [82ae8749] + StatsAPI v1.8.0
+  [2913bbd2] + StatsBase v0.34.10
+  [ec057cc2] + StructUtils v2.8.1
+⌅ [8254be44] + SymbolicRegression v1.11.3
+  [3783bdb8] + TableTraits v1.0.1
+  [bd369af6] + Tables v1.12.1
+  [1c621080] + TestItems v1.0.0
+  [410a4b4d] + Tricks v0.1.13
+  [e17b2a0c] + UnsafePointers v1.0.0
+⌅ [458c3c95] + OpenSSL_jll v3.0.20+0
+  [efe28fd5] + OpenSpecFun_jll v0.5.6+0
+  [f8abcde7] + micromamba_jll v2.3.1+0
+  [4d7b5844] + pixi_jll v0.41.3+0
+  [0dad84c5] + ArgTools v1.1.2
+  [56f22d72] + Artifacts v1.11.0
+  [2a0f44e3] + Base64 v1.11.0
+  [ade2ca70] + Dates v1.11.0
+  [8ba89e20] + Distributed v1.11.0
+  [f43a241f] + Downloads v1.6.0
+  [7b1f6079] + FileWatching v1.11.0
+  [9fa8497b] + Future v1.11.0
+  [b77e0a4c] + InteractiveUtils v1.11.0
+  [4af54fe1] + LazyArtifacts v1.11.0
+  [b27032c2] + LibCURL v0.6.4
+  [76f85450] + LibGit2 v1.11.0
+  [8f399da3] + Libdl v1.11.0
+  [37e2e46d] + LinearAlgebra v1.11.0
+  [56ddb016] + Logging v1.11.0
+  [d6f4376e] + Markdown v1.11.0
+  [ca575930] + NetworkOptions v1.2.0
+  [44cfe95a] + Pkg v1.11.0
+  [de0858da] + Printf v1.11.0
+  [3fa0cd96] + REPL v1.11.0
+  [9a3f8284] + Random v1.11.0
+  [ea8e919c] + SHA v0.7.0
+  [9e88b42a] + Serialization v1.11.0
+  [6462fe0b] + Sockets v1.11.0
+  [2f01184e] + SparseArrays v1.11.0
+  [f489334b] + StyledStrings v1.11.0
+  [fa267f1f] + TOML v1.0.3
+  [a4e569a6] + Tar v1.10.0
+  [8dfed614] + Test v1.11.0
+  [cf7118a7] + UUIDs v1.11.0
+  [4ec0a83e] + Unicode v1.11.0
+  [e66e0078] + CompilerSupportLibraries_jll v1.1.1+0
+  [deac9b47] + LibCURL_jll v8.6.0+0
+  [e37daf67] + LibGit2_jll v1.7.2+0
+  [29816b5a] + LibSSH2_jll v1.11.0+1
+  [c8ffd9c3] + MbedTLS_jll v2.28.6+0
+  [14a3606d] + MozillaCACerts_jll v2023.12.12
+  [4536629a] + OpenBLAS_jll v0.3.27+1
+  [05823500] + OpenLibm_jll v0.8.5+0
+  [bea87d4a] + SuiteSparse_jll v7.7.0+0
+  [83775a58] + Zlib_jll v1.2.13+1
+  [8e850b90] + libblastrampoline_jll v5.11.0+0
+  [8e850ede] + nghttp2_jll v1.59.0+0
+  [3f19e933] + p7zip_jll v17.4.0+2
+        Info Packages marked with ⌃ and ⌅ have new versions available. Those with ⌃ may be upgradable, but those with ⌅ are restricted by compatibility constraints from upgrading. To see why use `status --outdated -m`
+Precompiling project...
+    422.1 ms  ✓ DataValueInterfaces
+    416.0 ms  ✓ Reexport
+    475.6 ms  ✓ EnumX
+    396.2 ms  ✓ IteratorInterfaceExtensions
+    478.2 ms  ✓ DataAPI
+    494.6 ms  ✓ Tricks
+    591.6 ms  ✓ UnsafePointers
+    601.6 ms  ✓ PositiveFactorizations
+    532.8 ms  ✓ StatsAPI
+    595.3 ms  ✓ ConstructionBase
+    729.4 ms  ✓ Statistics
+    764.5 ms  ✓ DocStringExtensions
+    837.3 ms  ✓ OrderedCollections
+    448.8 ms  ✓ TestItems
+    477.0 ms  ✓ PtrArrays
+    564.0 ms  ✓ NaNMath
+    572.5 ms  ✓ StaticArraysCore
+    739.6 ms  ✓ Requires
+    871.6 ms  ✓ ADTypes
+   1371.5 ms  ✓ FillArrays
+    628.5 ms  ✓ Scratch
+    732.6 ms  ✓ ScientificTypesBase
+    791.5 ms  ✓ Interfaces
+    664.5 ms  ✓ Pidfile
+    500.5 ms  ✓ TableTraits
+   1464.7 ms  ✓ IrrationalConstants
+   1256.7 ms  ✓ ProgressMeter
+    894.1 ms  ✓ Compat
+    854.0 ms  ✓ Preferences
+    563.9 ms  ✓ Missings
+   1059.6 ms  ✓ StructUtils
+    702.0 ms  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
+    549.0 ms  ✓ FillArrays → FillArraysStatisticsExt
+    616.3 ms  ✓ Adapt
+    513.4 ms  ✓ ADTypes → ADTypesConstructionBaseExt
+    747.7 ms  ✓ Statistics → SparseArraysExt
+    675.5 ms  ✓ AliasTables
+    800.8 ms  ✓ FillArrays → FillArraysSparseArraysExt
+    470.0 ms  ✓ Compat → CompatLinearAlgebraExt
+    563.1 ms  ✓ DiffResults
+    608.4 ms  ✓ StatisticalTraits
+   1130.6 ms  ✓ LossFunctions
+    646.8 ms  ✓ PrecompileTools
+    563.9 ms  ✓ StructUtils → StructUtilsStaticArraysCoreExt
+    859.6 ms  ✓ LogExpFunctions
+    682.0 ms  ✓ JLLWrappers
+   2530.5 ms  ✓ MacroTools
+    720.5 ms  ✓ Adapt → AdaptSparseArraysExt
+    780.6 ms  ✓ ArrayInterface
+   1456.9 ms  ✓ DifferentiationInterface
+   1240.3 ms  ✓ Tables
+    601.3 ms  ✓ CommonSubexpressions
+    700.5 ms  ✓ OpenSpecFun_jll
+    471.4 ms  ✓ ArrayInterface → ArrayInterfaceStaticArraysCoreExt
+    748.9 ms  ✓ OpenSSL_jll
+    579.4 ms  ✓ ArrayInterface → ArrayInterfaceSparseArraysExt
+    513.8 ms  ✓ StructUtils → StructUtilsTablesExt
+    710.5 ms  ✓ DifferentiationInterface → DifferentiationInterfaceSparseArraysExt
+   1509.1 ms  ✓ MLJModelInterface
+   1272.7 ms  ✓ Setfield
+   1712.5 ms  ✓ ChainRulesCore
+   1393.4 ms  ✓ pixi_jll
+   1398.9 ms  ✓ micromamba_jll
+   2692.3 ms  ✓ DataStructures
+    528.5 ms  ✓ ArrayInterface → ArrayInterfaceChainRulesCoreExt
+    534.6 ms  ✓ ADTypes → ADTypesChainRulesCoreExt
+    564.2 ms  ✓ DifferentiationInterface → DifferentiationInterfaceChainRulesCoreExt
+   1935.8 ms  ✓ DispatchDoctor
+    737.6 ms  ✓ ChainRulesCore → ChainRulesCoreSparseArraysExt
+    649.2 ms  ✓ SortingAlgorithms
+    926.6 ms  ✓ FiniteDiff
+    692.7 ms  ✓ DispatchDoctor → DispatchDoctorChainRulesCoreExt
+    660.0 ms  ✓ DifferentiationInterface → DifferentiationInterfaceFiniteDiffExt
+    679.0 ms  ✓ FiniteDiff → FiniteDiffSparseArraysExt
+   1657.3 ms  ✓ LogExpFunctions → LogExpFunctionsChainRulesCoreExt
+   3242.9 ms  ✓ SpecialFunctions
+    731.5 ms  ✓ DiffRules
+   2855.1 ms  ✓ StatsBase
+   2175.7 ms  ✓ SpecialFunctions → SpecialFunctionsChainRulesCoreExt
+   5868.1 ms  ✓ DynamicQuantities
+   7141.2 ms  ✓ MicroMamba
+   1016.8 ms  ✓ DynamicQuantities → DynamicQuantitiesLinearAlgebraExt
+   4270.1 ms  ✓ ForwardDiff
+    931.9 ms  ✓ DifferentiationInterface → DifferentiationInterfaceForwardDiffExt
+  11009.0 ms  ✓ Parsers
+   1246.6 ms  ✓ NLSolversBase
+   1265.4 ms  ✓ LineSearches
+  11973.3 ms  ✓ DynamicExpressions
+   3850.5 ms  ✓ JSON
+   3742.3 ms  ✓ Optim
+   2164.3 ms  ✓ DynamicDiff
+   1400.2 ms  ✓ DynamicExpressions → DynamicExpressionsOptimExt
+  13358.1 ms  ✓ CondaPkg
+  13103.8 ms  ✓ PythonCall
+  59034.0 ms  ✓ SymbolicRegression
+  95 dependencies successfully precompiled in 79 seconds. 36 already precompiled.
+  2 dependencies had output during precompilation:
+┌ CondaPkg
+│  Downloading artifact: pixi
+└  
+┌ MicroMamba
+│  Downloading artifact: micromamba
+└  
+  No Changes to `~/.julia/environments/pyjuliapkg/Project.toml`
+  No Changes to `~/.julia/environments/pyjuliapkg/Manifest.toml`
+<lambdifygenerated-3658>:2: RuntimeWarning: divide by zero encountered in divide
+  return v1 - (-1.0596424) - 0.90254724*v1/v2
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+<lambdifygenerated-3686>:2: RuntimeWarning: invalid value encountered in log
+  return log(0.7502037**v0 - 0.014532186)

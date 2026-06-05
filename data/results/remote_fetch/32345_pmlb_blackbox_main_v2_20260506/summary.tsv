@@ -1,0 +1,6 @@
+pysr	q=50	d=0	t=5	full	n=6	mean_r2=0.5544	std=0.2872	cols=4.00
+pysr	q=50	d=0	t=5	learned_variables	n=6	mean_r2=0.5577	std=0.2807	cols=4.00
+pysr	q=50	d=0	t=5	random_variables	n=6	mean_r2=0.4055	std=0.3035	cols=4.00
+pysr	q=50	d=0	t=5	full	n=21	mean_r2=0.4375	std=0.1901	cols=4.67
+pysr	q=50	d=0	t=5	learned_variables	n=21	mean_r2=0.4682	std=0.2140	cols=4.67
+pysr	q=50	d=0	t=5	random_variables	n=21	mean_r2=0.4318	std=0.2166	cols=4.67

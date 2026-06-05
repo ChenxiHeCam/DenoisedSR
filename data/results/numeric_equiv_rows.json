@@ -1,0 +1,1411 @@
+[
+  {
+    "law_id": "pmlb_feynman_I_10_7",
+    "r2": 0.9999979319093942,
+    "numeric": true,
+    "reason": "ratio=0.9999",
+    "sel": [
+      "m_0",
+      "v",
+      "c"
+    ],
+    "expr": "x0*exp((x2/(2.2904959**(x2/x1))**x2 + 0.62189907)/(x2/x1)**2.1377692)",
+    "truth": "m = m_0/sqrt(1-v**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_1",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "mu",
+      "Nn"
+    ],
+    "expr": "x0*x1",
+    "truth": "F = mu*Nn"
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_11",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "Ef",
+      "B",
+      "v",
+      "theta"
+    ],
+    "expr": "x0*x1 + x0*x2*x3*sin(x4)",
+    "truth": "F = q*(Ef+B*v*sin(theta))"
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_2",
+    "r2": 0.9999999999999996,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q1",
+      "q2",
+      "epsilon",
+      "r"
+    ],
+    "expr": "x0*x1*0.07957747/(x3*x2*x3)",
+    "truth": "F = q1*q2*r/(4*pi*epsilon*r**3)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_4",
+    "r2": 0.9999999999999984,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q1",
+      "epsilon",
+      "r"
+    ],
+    "expr": "1.487079*0.053512607*x0/((x1*x2)*x2)",
+    "truth": "Ef = q1*r/(4*pi*epsilon*r**3)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_5",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q2",
+      "Ef"
+    ],
+    "expr": "1.0*sqrt(x0**2*x1**2)",
+    "truth": "F = q2*Ef"
+  },
+  {
+    "law_id": "pmlb_feynman_I_13_12",
+    "r2": 0.9924845137212606,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "m1",
+      "m2",
+      "r1",
+      "r2",
+      "G"
+    ],
+    "expr": "x1*log((x2/x3)**(x0**0.9432836*x4/(0.34266245*x2 + 0.34266245*x3 + 0.2896443)))",
+    "truth": "U = G*m1*m2*(1/r2-1/r1)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_13_4",
+    "r2": 0.9952457185278977,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "m",
+      "v",
+      "u",
+      "w"
+    ],
+    "expr": "x0*((x1/1.2714638)**2.091801 + (x2 + x3)**1.561654 + cos(x3) - 2.1432526)/1.3979292",
+    "truth": "K = 1/2*m*(v**2+u**2+w**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_14_3",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "m",
+      "g",
+      "z"
+    ],
+    "expr": "x0*x1*x2",
+    "truth": "U = m*g*z"
+  },
+  {
+    "law_id": "pmlb_feynman_I_14_4",
+    "r2": 0.9999999999999989,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "k_spring",
+      "x"
+    ],
+    "expr": "(-x1 - 1.6831018e-7)*x0*x1*(-0.49999997)",
+    "truth": "U = 1/2*k_spring*x**2"
+  },
+  {
+    "law_id": "pmlb_feynman_I_15_10",
+    "r2": 0.9999977909455163,
+    "numeric": true,
+    "reason": "ratio=0.9999",
+    "sel": [
+      "m_0",
+      "v",
+      "c"
+    ],
+    "expr": "x0*x1*(x1*(-0.2262215)/(x1 + x2) + 1.1090302)*(x1*0.2263537/(-x1 + x2 + 0.054822132) + 0.8967669)",
+    "truth": "p = m_0*v/sqrt(1-v**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_15_3t",
+    "r2": 0.9995614017762331,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "x",
+      "c",
+      "u",
+      "t"
+    ],
+    "expr": "x3 - 0.2935256*(x0 + x0/x3)*(x3**x2/(x1 + x2 + exp(x0)) - 0.27861893)/(x1*(x1*(-0.11644235)))",
+    "truth": "t1 = (t-u*x/c**2)/sqrt(1-u**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_15_3x",
+    "r2": 0.998687732326461,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "x",
+      "u",
+      "c",
+      "t"
+    ],
+    "expr": "x0 - x1*(x3 - 1/(x2 - log(0.58137083*(x0 - 1.9191451)*(x2 - x3 - sin(0.539548995311211*sqrt(x0) + x1))))**1.8804749 - 0.008632657)",
+    "truth": "x1 = (x-u*t)/sqrt(1-u**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_16_6",
+    "r2": 0.9975666306557993,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "c",
+      "v",
+      "u"
+    ],
+    "expr": "x0 + (x0 - x2)*(-x0 + x1)*x1**(0.77405256**x2)*0.23396921/x1",
+    "truth": "v1 = (u+v)/(1+u*v/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_18_12",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "r",
+      "F",
+      "theta"
+    ],
+    "expr": "x0*x1*sin(x2)",
+    "truth": "tau = r*F*sin(theta)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_18_14",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "m",
+      "r",
+      "v",
+      "theta"
+    ],
+    "expr": "x0*x1*x2*sin(x3)",
+    "truth": "L = m*r*v*sin(theta)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_18_4",
+    "r2": 0.9431342262656437,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "expr": "0.47535554*x2 - (x3*(-0.52813435) + sin(x2)/exp(x1))",
+    "truth": "r = (m1*r1+m2*r2)/(m1+m2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_24_6",
+    "r2": 0.9948481914239679,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "m",
+      "omega",
+      "omega_0",
+      "x"
+    ],
+    "expr": "x0*(x1*x3 + (2.77592222798627*x3)**log(0.26076764*x1*x3 + x2) + log(x3) - sin(x1/x2) - 1.8231702) - 0.5058912",
+    "truth": "E_n = 1/2*m*(omega**2+omega_0**2)*1/2*x**2"
+  },
+  {
+    "law_id": "pmlb_feynman_I_25_13",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "C"
+    ],
+    "expr": "x0/x1",
+    "truth": "Volt = q/C"
+  },
+  {
+    "law_id": "pmlb_feynman_I_26_2",
+    "r2": 0.999954269589828,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "n",
+      "theta2"
+    ],
+    "expr": "sin(sin(x0*sin(x1)/0.8226776))*0.83041817/cos(sin(x1)*x0*1.0699338)",
+    "truth": "theta1 = arcsin(n*sin(theta2))"
+  },
+  {
+    "law_id": "pmlb_feynman_I_27_6",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "d1",
+      "d2",
+      "n"
+    ],
+    "expr": "x1/(x2 + x1/x0)",
+    "truth": "foc = 1/(1/d1+n/d2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_29_16",
+    "r2": 0.9325930197602873,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "x1",
+      "x2",
+      "theta1",
+      "theta2"
+    ],
+    "expr": "x0**0.9493197 + (0.39904296*x1 + log(x0))*((x1/x0**2)**0.5857972 - sin(-x2 + x3 + 1.5688622))",
+    "truth": "x = sqrt(x1**2+x2**2-2*x1*x2*cos(theta1-theta2))"
+  },
+  {
+    "law_id": "pmlb_feynman_I_29_4",
+    "r2": 0.9999999999999973,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "omega",
+      "c"
+    ],
+    "expr": "x0/(x0**sin(x0 - 1.0782049)*(-1.0826844e-8) + x1)",
+    "truth": "k = omega/c"
+  },
+  {
+    "law_id": "pmlb_feynman_I_30_3",
+    "r2": 0.9833886994238749,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "Int_0",
+      "theta",
+      "n"
+    ],
+    "expr": "(cos(cos(x1*x2) - 1*(-1.5665504)) - 1*(-0.88439417))*x0*1.2183839*exp(cos(x1))/1.001419",
+    "truth": "Int = Int_0*sin(n*theta/2)**2/sin(theta/2)**2"
+  },
+  {
+    "law_id": "pmlb_feynman_I_30_5",
+    "r2": 0.9999597795337685,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "lambd",
+      "d",
+      "n"
+    ],
+    "expr": "x0/(0.9986156*x1*x2 + (-1.05266864396436*x0 + 0.277167545034514*log(x0))*exp(-1.66578796391401*sqrt(x1*x2/x0)))",
+    "truth": "theta = arcsin(lambd/(n*d))"
+  },
+  {
+    "law_id": "pmlb_feynman_I_32_5",
+    "r2": 0.9511634564553965,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "q",
+      "a",
+      "epsilon",
+      "c"
+    ],
+    "expr": "-0.06532794*x1*(-0.17106 - 0.7486523/x3)*(((x0 + 1.3880924)/x3)**(0.32360563*x0 + x1 + 4.5475426))**(1/4)/x2 - 0.010061567",
+    "truth": "Pwr = q**2*a**2/(6*pi*epsilon*c**3)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_34_1",
+    "r2": 0.9999999999999973,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "c",
+      "v",
+      "omega_0"
+    ],
+    "expr": "x1*x2/(x0 - x1 + 1.39357915372816e-7*sqrt(x2) - 1.4253989e-7) + x2",
+    "truth": "omega = omega_0/(1-v/c)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_34_14",
+    "r2": 0.9999938283728188,
+    "numeric": true,
+    "reason": "ratio=0.9999",
+    "sel": [
+      "c",
+      "v",
+      "omega_0"
+    ],
+    "expr": "x1*0.92773336*x2/(x0 + x1*(-0.719023)) + x2*1.0075715",
+    "truth": "omega = (1+v/c)/sqrt(1-v**2/c**2)*omega_0"
+  },
+  {
+    "law_id": "pmlb_feynman_I_34_27",
+    "r2": 0.9999999999999951,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "omega",
+      "h"
+    ],
+    "expr": "x1*x0*1.1621784/7.302182",
+    "truth": "E_n = (h/(2*pi))*omega"
+  },
+  {
+    "law_id": "pmlb_feynman_I_34_8",
+    "r2": 0.9999999999999974,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "v",
+      "B",
+      "p"
+    ],
+    "expr": "x0*x1*x2/(-1.4327342e-8*x0 + x3)",
+    "truth": "omega = q*v*B/p"
+  },
+  {
+    "law_id": "pmlb_feynman_I_37_4",
+    "r2": 0.9968016337111942,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "I1",
+      "I2",
+      "delta"
+    ],
+    "expr": "(1.0164367**exp(x0**cos(x1**0.80194306)) + cos(x2))*(x0 - (0.19117759 - x1))",
+    "truth": "Int = I1+I2+2*sqrt(I1*I2)*cos(delta)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_38_12",
+    "r2": 0.9999999999999406,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "m",
+      "q",
+      "h",
+      "epsilon"
+    ],
+    "expr": "0.90901536/(((x0/x3))*(1.6898984*x1/x2)**2.0)",
+    "truth": "r = 4*pi*epsilon*(h/(2*pi))**2/(m*q**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_39_1",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "pr",
+      "V"
+    ],
+    "expr": "(-(-1.1999226e-5)*x0 + x0)*x1*1.499982",
+    "truth": "E_n = 3/2*pr*V"
+  },
+  {
+    "law_id": "pmlb_feynman_I_39_11",
+    "r2": 0.9999999999999954,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "gamma",
+      "pr",
+      "V"
+    ],
+    "expr": "x1*x2/(x0 - 1*0.99999994)",
+    "truth": "E_n = 1/(gamma-1)*pr*V"
+  },
+  {
+    "law_id": "pmlb_feynman_I_39_22",
+    "r2": 0.9999999999998972,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "n",
+      "T",
+      "V",
+      "kb"
+    ],
+    "expr": "x0*x1/(x2/x3 - (-1)*5.927874e-9/cos(x1**x0))",
+    "truth": "pr = n*kb*T/V"
+  },
+  {
+    "law_id": "pmlb_feynman_I_41_16",
+    "r2": 0.98411423250778,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "omega",
+      "T",
+      "h",
+      "kb",
+      "c"
+    ],
+    "expr": "x1*(1.35526**x0 - 1.305754)/(x4 + 1.46050840463176*sqrt(exp(-2.2034154*x3 + 2.2034154*x4)) - 0.7618126)",
+    "truth": "L_rad = h/(2*pi)*omega**3/(pi**2*c**2*(exp((h/(2*pi))*omega/(kb*T))-1))"
+  },
+  {
+    "law_id": "pmlb_feynman_I_43_16",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "mu_drift",
+      "q",
+      "Volt",
+      "d"
+    ],
+    "expr": "x0*x1*x2/x3",
+    "truth": "v = mu_drift*q*Volt/d"
+  },
+  {
+    "law_id": "pmlb_feynman_I_43_31",
+    "r2": 0.9999999997447397,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "mob",
+      "T",
+      "kb"
+    ],
+    "expr": "x1*x2*(x0 + x1*2.1999833e-10*(-x1/(-x0 + x1) + exp(x2)))",
+    "truth": "D = mob*kb*T"
+  },
+  {
+    "law_id": "pmlb_feynman_I_43_43",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "gamma",
+      "kb",
+      "A",
+      "v"
+    ],
+    "expr": "x1*x3/(x0*x2 - x2)",
+    "truth": "kappa = 1/(gamma-1)*kb*v/A"
+  },
+  {
+    "law_id": "pmlb_feynman_I_44_4",
+    "r2": 0.9991584713681522,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "n",
+      "kb",
+      "T",
+      "V1",
+      "V2"
+    ],
+    "expr": "x1*(-x3 + x4)*(x0*(x2 + 0.111826494)/sqrt(x3 + 0.21095696) - 0.21930088)/sqrt(x4)",
+    "truth": "E_n = n*kb*T*ln(V2/V1)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_47_23",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "gamma",
+      "pr",
+      "rho"
+    ],
+    "expr": "sqrt(x2)*sqrt(x0*x1/x2**2)",
+    "truth": "c = sqrt(gamma*pr/rho)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_48_2",
+    "r2": 0.9999992702254561,
+    "numeric": true,
+    "reason": "offset=0.03159",
+    "sel": [
+      "m",
+      "v",
+      "c"
+    ],
+    "expr": "x0*(0.0047015045**(-1.4745628*x1 + x2) + 0.8538176*x1**2 + x2*(x2 + 0.07638402) - log((x2**x1)**0.44928288))",
+    "truth": "E_n = m*c**2/sqrt(1-v**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_50_26",
+    "r2": 0.9720160126938647,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "x1",
+      "omega",
+      "t",
+      "alpha"
+    ],
+    "expr": "(x0 + (log(x2 + 1.5160109)/x3)**log(x3 + 2.4230597))**1.3869635*(sin(0.793502736116459*x3*cos(x1*x2) - 1.12794327026759) + 0.92880845)",
+    "truth": "x = x1*(cos(omega*t)+alpha*cos(omega*t)**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_6_2",
+    "r2": 0.9975803987092474,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "sigma",
+      "theta"
+    ],
+    "expr": "sin(((0.18311544**(0.73966473**cos(x0/((x1*0.692154)) - 0.82461584)/x0))**x1 - 0.0241789)/x0)",
+    "truth": "f = exp(-(theta/sigma)**2/2)/(sqrt(2*pi)*sigma)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_6_2b",
+    "r2": 0.9803821074411354,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "sigma",
+      "theta",
+      "theta1"
+    ],
+    "expr": "sin(0.40663856**exp(sin(sin(exp(0.79248565**log(0.53053993*exp(x0 - cos(0.54527175 - 2.70323552996451*exp(-cos(x1 - x2))))))))))",
+    "truth": "f = exp(-((theta-theta1)/sigma)**2/2)/(sqrt(2*pi)*sigma)"
+  },
+  {
+    "law_id": "pmlb_feynman_I_8_14",
+    "r2": 0.5342903327634534,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "expr": "sin(-x2 + x3 - 1.6246713) - 1*(-2.2901623)",
+    "truth": "d = sqrt((x2-x1)**2+(y2-y1)**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_10_9",
+    "r2": 0.9999999999999992,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "sigma_den",
+      "epsilon",
+      "chi"
+    ],
+    "expr": "x0/((x1*(1.0000013**(cos(x2*1.1667855/(-0.36478874))*0.04933358) + x2)))",
+    "truth": "Ef = sigma_den/epsilon*1/(1+chi)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_11_20",
+    "r2": 0.9999999999999913,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "n_rho",
+      "p_d",
+      "Ef",
+      "kb",
+      "T"
+    ],
+    "expr": "(x1/((x3/x1)) - 1*5.1933375e-7)*0.33333337*x2/(x4/x0)",
+    "truth": "Pol = n_rho*p_d**2*Ef/(3*kb*T)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_11_27",
+    "r2": 0.9999999583069124,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "n",
+      "alpha",
+      "epsilon",
+      "Ef"
+    ],
+    "expr": "x0*x1*x2*x3/((cos((x0*x1)**0.49433744)**0.6601097/cos(cos((x0*(x1 + x1))**x2))**0.0011570678))",
+    "truth": "Pol = n*alpha/(1-(n*alpha/3))*epsilon*Ef"
+  },
+  {
+    "law_id": "pmlb_feynman_II_11_28",
+    "r2": 0.999992187873996,
+    "numeric": true,
+    "reason": "ratio=1",
+    "sel": [
+      "n",
+      "alpha"
+    ],
+    "expr": "exp(x0*x1**0.9583254/(1.0951532**((x0**x1)**cos(x1))))",
+    "truth": "theta = 1+n*alpha/(1-(n*alpha/3))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_11_3",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "Ef",
+      "m",
+      "omega_0",
+      "omega"
+    ],
+    "expr": "x0*x1/(x2*x3*(x3 - x4*x4/x3))",
+    "truth": "x = q*Ef/(m*(omega_0**2-omega**2))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_13_17",
+    "r2": 0.9999999999999994,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "epsilon",
+      "c",
+      "I",
+      "r"
+    ],
+    "expr": "0.15915494/(x1*((x0*x1*x3/x2)))",
+    "truth": "B = 1/(4*pi*epsilon*c**2)*2*I/r"
+  },
+  {
+    "law_id": "pmlb_feynman_II_13_23",
+    "r2": 0.999999995493339,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "rho_c_0",
+      "v",
+      "c"
+    ],
+    "expr": "x0/cos(x1/((x2*exp(x1*(-0.16613996)*x1/(x2*(-0.39761618*x1*x1/x2 + x2))))))",
+    "truth": "rho_c = rho_c_0/sqrt(1-v**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_13_34",
+    "r2": 0.9999840089596371,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "rho_c_0",
+      "v",
+      "c"
+    ],
+    "expr": "(x1 - 1*0.00042883912)*(x1**1.2730347*0.38445097*x0*x1/((x2 - 1*0.31022188)*(x2 - 0.7309943)) + x0)",
+    "truth": "j = rho_c_0*v/sqrt(1-v**2/c**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_15_4",
+    "r2": 0.9999999999999868,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "mom",
+      "B",
+      "theta"
+    ],
+    "expr": "x0*x1*sin(x2 - 1.5707964)",
+    "truth": "E_n = -mom*B*cos(theta)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_15_5",
+    "r2": 0.9999999999999991,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "p_d",
+      "Ef",
+      "theta"
+    ],
+    "expr": "x0*x1*(-cos(x2) - 1.4871756e-8)",
+    "truth": "E_n = -p_d*Ef*cos(theta)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_21_32",
+    "r2": 0.9935407377654689,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "q",
+      "epsilon",
+      "r",
+      "v",
+      "c"
+    ],
+    "expr": "((x3/x4 + (x2**x3/exp(x2))**x4 + 0.38925856)*0.18488827/((x2/x0)*x1))**1.0361995",
+    "truth": "Volt = q/(4*pi*epsilon*r*(1-v/c))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_24_17",
+    "r2": 0.9999890186576835,
+    "numeric": true,
+    "reason": "offset=-0.0003174",
+    "sel": [
+      "omega",
+      "c",
+      "d"
+    ],
+    "expr": "0.450467934309954*(x0/x1)**1.2377286 + log(x0/x1 + sin(log(x2 - 1.0024599)) - 0.75884604)",
+    "truth": "k = sqrt(omega**2/c**2-pi**2/d**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_27_16",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "epsilon",
+      "c",
+      "Ef"
+    ],
+    "expr": "x0*x0*x1*x2*x2/x0",
+    "truth": "flux = epsilon*c*Ef**2"
+  },
+  {
+    "law_id": "pmlb_feynman_II_27_18",
+    "r2": 0.9999999999999999,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "epsilon",
+      "Ef"
+    ],
+    "expr": "x0*x1*x1*2.2241528*0.4496094",
+    "truth": "E_den = epsilon*Ef**2"
+  },
+  {
+    "law_id": "pmlb_feynman_II_2_42",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "kappa",
+      "T1",
+      "T2",
+      "A",
+      "d"
+    ],
+    "expr": "x0*x3*(-x1 + x2 + x4 - (x4 - 1*6.269085e-8) - 1*6.269085e-8)/x4",
+    "truth": "Pwr = kappa*(T2-T1)*A/d"
+  },
+  {
+    "law_id": "pmlb_feynman_II_34_11",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "g_",
+      "q",
+      "B",
+      "m"
+    ],
+    "expr": "x2*x0*x1*0.5/x3",
+    "truth": "omega = g_*q*B/(2*m)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_34_2",
+    "r2": 0.9999999999999986,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "v",
+      "r"
+    ],
+    "expr": "1.1308323*x2*0.4421522*x0*x1",
+    "truth": "mom = q*v*r/2"
+  },
+  {
+    "law_id": "pmlb_feynman_II_34_29a",
+    "r2": 0.9999999999999991,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "h",
+      "m"
+    ],
+    "expr": "x1*0.07957747*x0/x2",
+    "truth": "mom = q*h/(4*pi*m)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_34_29b",
+    "r2": 0.9999999999999971,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "g_",
+      "h",
+      "Jz",
+      "mom",
+      "B"
+    ],
+    "expr": "x0*x4*x3*0.8768206*x2/(x1/7.165873)",
+    "truth": "E_n = g_*mom*B*Jz/(h/(2*pi))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_34_2a",
+    "r2": 0.9999999999999993,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "v",
+      "r"
+    ],
+    "expr": "x0*3.52382/(x2/((x1*0.045165457)))",
+    "truth": "I = q*v/(2*pi*r)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_35_18",
+    "r2": 0.9897709848683446,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "n_0",
+      "kb",
+      "T",
+      "mom",
+      "B"
+    ],
+    "expr": "log((x0/(4.872145/x1)**(0.41099122040555*x3*x4/x2))**(x0**(1/4)) + 0.8950761)",
+    "truth": "n = n_0/(exp(mom*B/(kb*T))+exp(-mom*B/(kb*T)))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_35_21",
+    "r2": 0.9834703660761467,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "n_rho",
+      "mom",
+      "B",
+      "kb",
+      "T"
+    ],
+    "expr": "(x0*x1 + x0*x3*x4/((-1.4921635)*x2*(1.5644554 + (1.1796241 + x3/x2)/x1)))*1.1262685 - 1*0.2694354",
+    "truth": "M = n_rho*mom*tanh(mom*B/(kb*T))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_37_1",
+    "r2": 0.9999999999999983,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "mom",
+      "B",
+      "chi"
+    ],
+    "expr": "x1*(x0 + x2*(sin(x1)*x0*8.427748e-8*cos(x1) + x0))",
+    "truth": "E_n = mom*(1+chi)*B"
+  },
+  {
+    "law_id": "pmlb_feynman_II_38_14",
+    "r2": 0.999999999999999,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "Y",
+      "sigma"
+    ],
+    "expr": "x0*0.49999994/(x1 + (x1 + 0.624739)**(-3.6145903e-7))",
+    "truth": "mu_S = Y/(2*(1+sigma))"
+  },
+  {
+    "law_id": "pmlb_feynman_II_38_3",
+    "r2": 0.9999999999999502,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "Y",
+      "A",
+      "d",
+      "x"
+    ],
+    "expr": "x0*x1*(x3 + 1.4105083e-8*x3/(x2*sin(x1)))/x2",
+    "truth": "F = Y*A*x/d"
+  },
+  {
+    "law_id": "pmlb_feynman_II_3_24",
+    "r2": 0.999999999999997,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "Pwr",
+      "r"
+    ],
+    "expr": "x0*(cos(x0)*2.5527245e-9 + 0.079577476/x1)/x1",
+    "truth": "flux = Pwr/(4*pi*r**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_4_23",
+    "r2": 0.999999999999999,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "epsilon",
+      "r"
+    ],
+    "expr": "x0*0.07957747/(x1*x2)",
+    "truth": "Volt = q/(4*pi*epsilon*r)"
+  },
+  {
+    "law_id": "pmlb_feynman_II_6_11",
+    "r2": 0.9999999999999996,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "epsilon",
+      "p_d",
+      "theta",
+      "r"
+    ],
+    "expr": "x1*0.07957747*cos(x2)/(x3*x3*x0)",
+    "truth": "Volt = 1/(4*pi*epsilon)*p_d*cos(theta)/r**2"
+  },
+  {
+    "law_id": "pmlb_feynman_II_6_15b",
+    "r2": 0.9999999999999999,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "epsilon",
+      "p_d",
+      "theta",
+      "r"
+    ],
+    "expr": "0.119366206*x1*sin(x2 + x2)/(x3*((x0*x3*x3)))",
+    "truth": "Ef = p_d/(4*pi*epsilon)*3*cos(theta)*sin(theta)/r**3"
+  },
+  {
+    "law_id": "pmlb_feynman_II_8_31",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "epsilon",
+      "Ef"
+    ],
+    "expr": "x0*0.5*x1*x1",
+    "truth": "E_den = epsilon*Ef**2/2"
+  },
+  {
+    "law_id": "pmlb_feynman_II_8_7",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "q",
+      "epsilon",
+      "d"
+    ],
+    "expr": "x0*x0*0.047746483/(x2*x1)",
+    "truth": "E_n = 3/5*q**2/(4*pi*epsilon*d)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_10_19",
+    "r2": 0.9963831592940894,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "mom",
+      "Bx",
+      "By",
+      "Bz"
+    ],
+    "expr": "x0*(0.95794250074908*x3 - 9.264178*(x1 + x2)*(0.0194545708728266*log(x3) - 0.0809013271558067) - 0.8276568)",
+    "truth": "E_n = mom*sqrt(Bx**2+By**2+Bz**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_12_43",
+    "r2": 0.9999999999999986,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "n",
+      "h"
+    ],
+    "expr": "x1*(x0*0.0009898008 + x0)*0.15899757",
+    "truth": "L = n*(h/(2*pi))"
+  },
+  {
+    "law_id": "pmlb_feynman_III_13_18",
+    "r2": 0.9999999999999954,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "E_n",
+      "d",
+      "k",
+      "h"
+    ],
+    "expr": "12.56637*x0*x1*x1*x2/x3",
+    "truth": "v = 2*E_n*d**2*k/(h/(2*pi))"
+  },
+  {
+    "law_id": "pmlb_feynman_III_14_14",
+    "r2": 0.9827854370179399,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "I_0",
+      "q",
+      "Volt",
+      "kb",
+      "T"
+    ],
+    "expr": "(-1*0.45496872 + 1.800785/(x4 - (x1 - x3)))*(x0*x2*x2 - x2 + x3 - cos(x2 - exp(x1)))",
+    "truth": "I = I_0*(exp(q*Volt/(kb*T))-1)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_15_12",
+    "r2": 0.9999999999999946,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "U",
+      "k",
+      "d"
+    ],
+    "expr": "(0.99999994 - cos(x1*x2))*(x0 + x0)",
+    "truth": "E_n = 2*U*(1-cos(k*d))"
+  },
+  {
+    "law_id": "pmlb_feynman_III_15_14",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "h",
+      "E_n",
+      "d"
+    ],
+    "expr": "0.012665148*x0/(x1*x2*((x2/x0)))",
+    "truth": "m = (h/(2*pi))**2/(2*E_n*d**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_15_27",
+    "r2": 0.9999999999999962,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "alpha",
+      "n",
+      "d"
+    ],
+    "expr": "x0*4.290087*1.4645822/(x2*x1)",
+    "truth": "k = 2*pi*alpha/(n*d)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_17_37",
+    "r2": 1.0,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "beta",
+      "alpha",
+      "theta"
+    ],
+    "expr": "x0*x1*cos(x2) + x0",
+    "truth": "f = beta*(1+alpha*cos(theta))"
+  },
+  {
+    "law_id": "pmlb_feynman_III_19_51",
+    "r2": -3.3562258193399765,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "m",
+      "q",
+      "h",
+      "n",
+      "epsilon"
+    ],
+    "expr": "-1.1669348/x3**2 + 1.76756767839884*(1.102071 + 3.06123298627931*(0.9195555 - x1)/(x2*x4))/(x2*x4*log(x3))",
+    "truth": "E_n = -m*q**4/(2*(4*pi*epsilon)**2*(h/(2*pi))**2)*(1/n**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_21_20",
+    "r2": 0.9999999999999974,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "rho_c_0",
+      "q",
+      "A_vec",
+      "m"
+    ],
+    "expr": "(-x1 + x1*3.475271e-8)*(x0 - 1*0.32980978 + 0.32980978)/((x3/x2))",
+    "truth": "j = -rho_c_0*q*A_vec/m"
+  },
+  {
+    "law_id": "pmlb_feynman_III_4_32",
+    "r2": NaN,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "h",
+      "omega",
+      "kb",
+      "T"
+    ],
+    "expr": "(-0.17747234 + x2*x3*2.4711761/(x0*x1))**1.0023791*2.5238185",
+    "truth": "n = 1/(exp((h/(2*pi))*omega/(kb*T))-1)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_4_33",
+    "r2": 0.999994630795204,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "h",
+      "omega",
+      "kb",
+      "T"
+    ],
+    "expr": "(-x2*((x2*x3)**0.1135515*x0*0.05746512*x1/x2 - x3) - 0.0532552)**1.0013397",
+    "truth": "E_n = (h/(2*pi))*omega/(exp((h/(2*pi))*omega/(kb*T))-1)"
+  },
+  {
+    "law_id": "pmlb_feynman_III_7_38",
+    "r2": 0.9999999999999865,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "mom",
+      "B",
+      "h"
+    ],
+    "expr": "x1*15.80613*x0*0.7950314/x2",
+    "truth": "omega = 2*mom*B/(h/(2*pi))"
+  },
+  {
+    "law_id": "pmlb_feynman_III_8_54",
+    "r2": -0.11247224231798092,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "E_n",
+      "t",
+      "h"
+    ],
+    "expr": "sin(cos((cos(exp(6.65526220934473*x1)) + 1.3243048)**(1/4)))",
+    "truth": "prob = sin(E_n*t/(h/(2*pi)))**2"
+  },
+  {
+    "law_id": "pmlb_feynman_test_10",
+    "r2": 0.9883844473622917,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "c",
+      "v",
+      "theta2"
+    ],
+    "expr": "log(-x0/x2 + sqrt(x1) + x1 + 0.842622598360839*exp(x2) + 3.2390654)",
+    "truth": "theta1 = arccos((cos(theta2)-v/c)/(1-v/c*cos(theta2)))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_11",
+    "r2": 0.7402218039552892,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "I_0",
+      "alpha",
+      "delta",
+      "n"
+    ],
+    "expr": "sqrt(x0*(x0**x3*x3)**sin(x2 - cos(x1) + 0.43288732))",
+    "truth": "I = I_0*(sin(alpha/2)*sin(n*delta/2)/(alpha/2*sin(delta/2)))**2"
+  },
+  {
+    "law_id": "pmlb_feynman_test_12",
+    "r2": 0.99999970715302,
+    "numeric": true,
+    "reason": "offset=0.002527",
+    "sel": [
+      "q",
+      "y",
+      "Volt",
+      "d",
+      "epsilon"
+    ],
+    "expr": "-0.0334998521651524*x0*x2*(exp(sqrt(x4)*(x1 - x3)) - 29.847147*x3/x1**2)",
+    "truth": "F = q/(4*pi*epsilon*y**2)*(4*pi*epsilon*Volt*d-q*d*y**3/(y**2-d**2)**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_test_13",
+    "r2": 0.8808837663810143,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "q",
+      "r",
+      "d",
+      "alpha",
+      "epsilon"
+    ],
+    "expr": "x0*(1.0354453 - 0.9893318**cos(x3))/(sqrt(x2)*x4)",
+    "truth": "Volt = 1/(4*pi*epsilon)*q/sqrt(r**2+d**2-2*r*d*cos(alpha))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_14",
+    "r2": 0.9682559424132425,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "Ef",
+      "theta",
+      "r",
+      "d",
+      "alpha"
+    ],
+    "expr": "(x4*((x3/x2)**1.6583467 - 1.1564678) - 4.240138/x4)*cos(x1)/(0.7321342**x0)",
+    "truth": "Volt = Ef*cos(theta)*(-r+d**3/r**2*(alpha-1)/(alpha+2))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_15",
+    "r2": 0.9949315593218143,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "c",
+      "v",
+      "omega",
+      "theta"
+    ],
+    "expr": "x2 + 0.8915185*(-cos(log(x0 + exp(0.6930958**cos(x2)) + cos(x3))) - 1.1840636)*log(x2**x1)*cos(x3)",
+    "truth": "omega_0 = sqrt(1-v**2/c**2)*omega/(1+v/c*cos(theta))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_18",
+    "r2": 0.8553901291048706,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "G",
+      "k_f",
+      "r",
+      "H_G",
+      "c"
+    ],
+    "expr": "0.26215822*x3*sqrt((2*x4)**(sqrt(x1/x2)))/x0",
+    "truth": "rho_0 = 3/(8*pi*G)*(c**2*k_f/r**2+H_G**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_test_3",
+    "r2": 0.9915237141018078,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "d",
+      "alpha",
+      "theta1",
+      "theta2"
+    ],
+    "expr": "x0 - x1*(x0 - 1*0.05348189) - exp(cos(-x2/(x1 - x2 + x2) + (x1 - 0.3997199)*(x2 - x3 - 1*0.6048158))) + 0.18333428",
+    "truth": "r = d*(1-alpha**2)/(1+alpha*cos(theta1-theta2))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_4",
+    "r2": 0.9833148651237702,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "m",
+      "E_n",
+      "U",
+      "L",
+      "r"
+    ],
+    "expr": "0.9101942**(x2*x3/((x4**2.7702258)**(x1/exp(x2)))) + x1**(0.7576231 + 0.07676148/x2)/(x0 + 1.0229287) - 0.24971142",
+    "truth": "v = sqrt(2/m*(E_n-U-L**2/(2*m*r**2)))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_5",
+    "r2": 0.992964382437414,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "d",
+      "G",
+      "m1",
+      "m2"
+    ],
+    "expr": "2*x0 + 1.61230518156528*x0*(x0 - 0.83703053 + 2.4738808/x2)/(x1*sqrt(x3)) - 0.6201241",
+    "truth": "t = 2*pi*d**(3/2)/sqrt(G*(m1+m2))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_7",
+    "r2": 0.9999999999999726,
+    "numeric": true,
+    "reason": "exact",
+    "sel": [
+      "G",
+      "rho",
+      "alpha",
+      "c",
+      "d"
+    ],
+    "expr": "sqrt(8.377581*x0*x1 - x2*x3**2/x4**2)",
+    "truth": "H_G = sqrt(8*pi*G*rho/3-alpha*c**2/d**2)"
+  },
+  {
+    "law_id": "pmlb_feynman_test_8",
+    "r2": 0.9594834518648171,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "E_n",
+      "m",
+      "c",
+      "theta"
+    ],
+    "expr": "0.8341568**(x3/x1)*x0**(x3**log(log(x2)))",
+    "truth": "K = E_n/(1+E_n/(m*c**2)*(1-cos(theta)))"
+  },
+  {
+    "law_id": "pmlb_feynman_test_9",
+    "r2": 0.9077372700588863,
+    "numeric": false,
+    "reason": "not equiv",
+    "sel": [
+      "G",
+      "c",
+      "m1",
+      "m2",
+      "r"
+    ],
+    "expr": "-12264.9035382936*x3*exp(2*x0 - sqrt(x2) + x2 - exp(x4))/(x1**(x1 + 6.995698) + 20.593897)",
+    "truth": "Pwr = -32/5*G**4/c**5*(m1*m2)**2*(m1+m2)/r**5"
+  }
+]

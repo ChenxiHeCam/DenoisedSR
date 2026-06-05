@@ -1,0 +1,19 @@
+{
+  "input_manifest": "D:\\Physics Fundation model\\artifacts\\sr_frontend_prior\\pmlb_physics_formula_manifest_20260506.json",
+  "output_jsonl": "D:\\Physics Fundation model\\artifacts\\sr_frontend_prior\\pmlb_feynman_open_formula_tasks_20260506.jsonl",
+  "tasks": 119,
+  "source_group": "feynman",
+  "all_have_ranges": true,
+  "sample_law_ids": [
+    "pmlb_feynman_I_10_7",
+    "pmlb_feynman_I_11_19",
+    "pmlb_feynman_I_12_1",
+    "pmlb_feynman_I_12_11",
+    "pmlb_feynman_I_12_2",
+    "pmlb_feynman_I_12_4",
+    "pmlb_feynman_I_12_5",
+    "pmlb_feynman_I_13_12",
+    "pmlb_feynman_I_13_4",
+    "pmlb_feynman_I_14_3"
+  ]
+}

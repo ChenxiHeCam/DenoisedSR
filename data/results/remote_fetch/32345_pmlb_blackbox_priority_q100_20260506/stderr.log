@@ -1,0 +1,18 @@
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+<lambdifygenerated-3658>:2: RuntimeWarning: divide by zero encountered in divide
+  return v1 - (-1.0596424) - 0.90254724*v1/v2
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+/root/miniconda3/lib/python3.12/site-packages/juliacall/__init__.py:61: UserWarning: torch was imported before juliacall. This may cause a segfault. To avoid this, import juliacall before importing torch. For updates, see https://github.com/pytorch/pytorch/issues/78829.
+  warnings.warn(
+<lambdifygenerated-3656>:2: RuntimeWarning: invalid value encountered in sqrt
+  return sqrt(v3 - 2.7980373) + sin(v2 + 1.3788214) + 3.232405
+<lambdifygenerated-3658>:2: RuntimeWarning: divide by zero encountered in power
+  return 2.2413943/(v2**(-1.0124547) - (-1)*1.3230813/v0)

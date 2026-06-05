@@ -1,0 +1,10 @@
+[start] Wed May  6 20:33:45 CST 2026
+[env]
+pysr True
+sklearn True
+sympy True
+numpy True
+pandas True
+[baseline] n=50 q=50 d=10 t=10 seed=20260506
+[prior] n=50 q=50 d=10 t=10 thr=0.55 op=0.28 seed=20260506 modes=learned_variables
+[baseline] n=50 q=100 d=10 t=10 seed=20260506
