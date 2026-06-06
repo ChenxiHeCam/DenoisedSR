@@ -31,21 +31,19 @@
 
 \begin{abstract}
 \noindent
-Symbolic regression recovers closed-form, interpretable physical laws from data,
-but its cost grows steeply with the number of candidate variables and operators,
-most of which never appear in the governing equation. Here we show that a learned
-front-end---DenoisedSR---that predicts which variables are relevant (a support
-prior) improves and accelerates symbolic regression without changing the backend
-solver. The front-end couples a graph-attention network with a statistical-feature
-model, and recovers the true variables with recall above
-$0.99$ (perfect recall on $99$--$100\%$ of tasks) across three physics suites, so
-it essentially never discards a real variable. Supplied to the evolutionary
-backend PySR under a fixed time budget, the prior doubles exact-law recovery (from
-$30\%$ to $60\%$), shrinks the candidate-column set by $86\%$, and accelerates
-time-to-solution by up to $6\times$; on black-box tabular data it improves accuracy
-while a same-size random-support control degrades it, isolating learned guidance
-from dimensionality reduction. The approach is solver-agnostic, adds $\sim$40~ms
-per task, and keeps final law selection with a verifiable symbolic backend.
+Symbolic regression recovers interpretable physical laws from data, but its cost
+grows steeply with the number of candidate variables and operators, most of which
+never appear in the equation. Here we show that a learned front-end---DenoisedSR---
+that predicts which variables are relevant (a support prior) improves and
+accelerates symbolic regression without changing the backend solver. The front-end
+couples a graph-attention network with a statistical-feature model and recovers the
+true variables with recall above $0.99$ across three physics suites, rarely
+discarding a true one. Supplied to the evolutionary backend PySR under a fixed
+budget, the prior doubles exact-law recovery (from $30\%$ to $60\%$), shrinks the
+candidate-column set by $86\%$, and speeds time-to-solution by up to $6\times$; on
+black-box data a same-size random-support control degrades accuracy, isolating
+learned guidance from dimensionality reduction. It is solver-agnostic, adds
+$\sim$40~ms per task, and leaves final law selection to a verifiable backend.
 \end{abstract}
 
 \section{Introduction}
