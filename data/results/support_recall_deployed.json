@@ -1,0 +1,15 @@
+{
+  "_note": "Variable-support quality at the deployed config (RF+GAT ensemble, threshold 0.10). Reproduce with frontend/eval/eval_feynman_suite.py, eval_v5_suite.py, eval_support_predictor.py.",
+  "suites": [
+    {"suite": "AI-Feynman", "n": 118, "precision": 1.000, "recall": 1.000, "perfect_recall": 118, "config": "RF+GAT>=0.10"},
+    {"suite": "OOD test set", "n": 91, "precision": 0.942, "recall": 0.996, "perfect_recall": 90, "config": "RF>=0.10 (ensemble >=)"},
+    {"suite": "extended", "n": 1085, "precision": 0.999, "recall": 0.999, "perfect_recall": 1082, "config": "RF+GAT>=0.10"}
+  ],
+  "ablation_feynman118": [
+    {"model": "GAT only", "recall": 0.995, "perfect_recall": 115},
+    {"model": "RF only", "recall": 1.000, "perfect_recall": 118},
+    {"model": "RF+GAT ensemble", "recall": 1.000, "perfect_recall": 118}
+  ],
+  "distractor_robustness_feynman118_ensemble": {"1-2": 1.000, "4-30": 1.000, "10-30": 1.000},
+  "old_baseline_64records": {"suite": "OOD test set", "recall": 0.483, "perfect_recall": 28}
+}
