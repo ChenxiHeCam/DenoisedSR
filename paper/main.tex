@@ -162,13 +162,18 @@ variable prior raises exact-law recovery (held-out $R^2\ge0.999$) from $9/30$
 the average column count from $23.2$ to $3.2$ (an $86\%$ reduction) and halves the
 effective search vocabulary from $40$ to $20$ (Fig.~\ref{fig:recovery}).
 
-The mechanism is concrete. Over many irrelevant columns, an unguided solver can
-reach a deceptively high $R^2$ with a physically meaningless formula built from
-distractor variables (Table~\ref{tab:cases}); for the Boltzmann relation
-$S=k_{\mathrm B}\ln W$, for example, full search returns
-$1.31\,e^{\cos(\cdots)}$ at $R^2=0.996$. By removing the distractor columns,
-DenoisedSR makes such spurious overfits unreachable, so a far larger fraction of
-budget-limited runs land on the true law.
+The mechanism is concrete and visible in the recovered expressions
+(Table~\ref{tab:cases}). Over many irrelevant columns an unguided solver reaches a
+high $R^2$ with a physically meaningless formula built from \emph{exotic operators}
+acting on \emph{distractor variables}: for the cyclotron frequency
+$\omega=qvB/p$ it returns $|q\,(v{+}B{-}p{+}\cos(\cdots)^2)|$ at $R^2=0.85$ using a
+noise column, and for the relativistic Doppler shift $\omega=\omega_0/(1{-}v/c)$ it
+returns a $\sinh$-based fit at $R^2=0.9996$ that is not the law. Given the predicted
+variable support, DenoisedSR recovers $qvB/p$ and $\omega_0/(1{-}v/c)$ \emph{exactly}
+($R^2=1.000$), and restricting operators yields the cleanest closed form. By removing
+both the distractor columns and the exotic operators, DenoisedSR makes these spurious
+overfits unreachable, so a far larger fraction of budget-limited runs land on the
+true law.
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.95\linewidth]{figures/fig3_recovery.png}
@@ -182,20 +187,27 @@ prior cuts the vocabulary further but does not improve exact recovery.}
 \end{figure}
 
 \begin{table}[t]\centering
-\caption{\textbf{Unguided search overfits to distractor variables.} On laws padded
-with random distractor columns, full PySR can reach a high held-out $R^2$ with a
-physically meaningless expression that uses the wrong variables. DenoisedSR predicts
-the correct variable support (essentially perfect recall, Fig.~\ref{fig:recall}), so
-these spurious fits are removed from the search space.}
+\caption{\textbf{Unguided search overfits with exotic operators on distractor
+variables; DenoisedSR recovers the law.} For three Feynman laws padded with $20$
+random distractor columns, full PySR reaches a high (or diverged) held-out $R^2$ with
+a physically meaningless expression, whereas DenoisedSR---given the predicted
+variable support---recovers the exact law. Formulas are the actual PySR outputs; $x_i$
+denote the (distractor-padded) input columns.}
 \label{tab:cases}
 \small
-\begin{tabular}{lccc}
+\begin{tabular}{p{2.5cm}p{4.7cm}cp{3.2cm}c}
 \toprule
-Physical law & True form & Full-PySR $R^2$ & Recovers law? \\
+Physical law & Full PySR (all columns/operators) & $R^2$ & DenoisedSR & $R^2$ \\
 \midrule
-Boltzmann entropy & $S=k_{\mathrm B}\ln W$ & $0.996$ & \ding{55}\ spurious \\
-Chirp mass & $M_c=(m_1 m_2)^{3/5}/(m_1{+}m_2)^{1/5}$ & $0.9999$ & \ding{55}\ spurious \\
-Nernst equation & $E=\tfrac{RT}{zF}\ln(c_\mathrm{out}/c_\mathrm{in})$ & $-6.5\times10^{3}$ & \ding{55}\ diverged \\
+Cyclotron freq.\ $\omega=qvB/p$ &
+$\bigl|x_0(x_1{+}x_2{-}x_3{+}\cos(\cdots)^2)\bigr|$ (uses noise col) & $0.85$ &
+$qvB/p$ \ding{51} & $1.000$ \\[2pt]
+Doppler shift $\omega=\omega_0/(1{-}v/c)$ &
+$x_2(\sinh(\cdots){+}0.79)\,1.40$ (not the law) & $0.9996$ &
+$\omega_0/(1{-}v/c)$ \ding{51} & $1.000$ \\[2pt]
+Larmor power $P=\tfrac{q^2a^2}{6\pi\epsilon c^3}$ &
+$\bigl|0.48^{x_3}{+}(x_8^3/x_3^3{-}\cdots/x_{18})^3\bigr|$ (diverged) & $-2{\times}10^{19}$ &
+correct support $\{a,c,\epsilon,q\}$ & $0.99$ \\
 \bottomrule
 \end{tabular}
 \end{table}
