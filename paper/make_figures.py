@@ -94,7 +94,11 @@ def fig_recovery():
     d = J('data/results/pysr_frontend_3way.json'); n = len(d)
     def cnt(k): return sum(1 for r in d if r.get(k))
     def mr2(k):
-        v = [r[k] for r in d if r.get(k) is not None and math.isfinite(r[k])]; return sum(v)/len(v)
+        # consistent over ALL n tasks: a non-finite / failed fit is floored at -1
+        # (so full search's diverged row is not silently dropped)
+        v = [max(r[k], -1.0) if (r.get(k) is not None and math.isfinite(r[k])) else -1.0
+             for r in d]
+        return sum(v) / len(v)
     ex = [cnt('full_exact')/n*100, cnt('var_exact')/n*100, cnt('varop_exact')/n*100]
     r2 = [mr2('full_r2'), mr2('var_r2'), mr2('varop_r2')]
     vocab = [np.mean([r['full_vocab'] for r in d]), np.mean([r['var_vocab'] for r in d]),
@@ -165,12 +169,13 @@ def fig_pmlb():
     ax.bar(x + w, learn, w, label='DenoisedSR', color=OURS)
     ax.axhline(0, lw=0.8, color='k')
     for xi, g in zip(x, groups):
-        ax.text(xi + w, H[(g, 'learned_variables')] + 0.02,
-                f"{Hc[(g,'learned_variables')]/Hc[(g,'full')]*100:.0f}% cols",
+        ax.text(xi + w, H[(g, 'learned_variables')] + 0.03,
+                f"{Hc[(g,'learned_variables')]/Hc[(g,'full')]*100:.0f}%\ncols",
                 ha='center', va='bottom', fontsize=6, color=OURS)
     ax.set_xticks(x); ax.set_xticklabels([f'{g} distractors' for g in groups])
-    ax.set_ylabel('Mean held-out $R^2$'); ax.set_ylim(-0.3, 0.68)
-    ax.legend(loc='upper left', fontsize=7, ncol=1)
+    ax.set_ylabel('Mean held-out $R^2$'); ax.set_ylim(-0.32, 0.74)
+    ax.legend(loc='upper center', fontsize=6.8, ncol=3, bbox_to_anchor=(0.5, 1.16),
+              columnspacing=1.0, handletextpad=0.4)
     save(fig, 'fig5_pmlb')
 
 
@@ -210,5 +215,5 @@ def fig_operator():
 
 
 if __name__ == '__main__':
-    fig_recall(); fig_ablation(); fig_recovery(); fig_qscaling(); fig_pmlb(); fig_speed(); fig_operator()
+    fig_recall(); fig_ablation(); fig_recovery(); fig_qscaling(); fig_pmlb(); fig_speed()
     print('figures ->', os.path.abspath(A.out))

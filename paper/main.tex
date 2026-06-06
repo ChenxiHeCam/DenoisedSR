@@ -41,8 +41,8 @@ model, and recovers the true variables with recall above
 $0.99$ (perfect recall on $99$--$100\%$ of tasks) across three physics suites, so
 it essentially never discards a real variable. Supplied to the evolutionary
 backend PySR under a fixed time budget, the prior doubles exact-law recovery (from
-$30\%$ to $60\%$), reduces the search space by $86\%$, and accelerates
-time-to-solution by $3$--$6\times$; on black-box tabular data it improves accuracy
+$30\%$ to $60\%$), shrinks the candidate-column set by $86\%$, and accelerates
+time-to-solution by up to $6\times$; on black-box tabular data it improves accuracy
 while a same-size random-support control degrades it, isolating learned guidance
 from dimensionality reduction. The approach is solver-agnostic, adds $\sim$40~ms
 per task, and keeps final law selection with a verifiable symbolic backend.
@@ -157,9 +157,10 @@ $\sim$20 distractor columns: (A) full PySR over all columns and the full
 $17$-operator library; (B) the variable prior, restricting the columns to the
 predicted support; and (C) additionally restricting the operator library. The
 variable prior raises exact-law recovery (held-out $R^2\ge0.999$) from $9/30$
-($30\%$) to $18/30$ ($60\%$), lifts mean held-out $R^2$ from $0.919$ to $0.967$,
-reduces the average column count from $23.2$ to $3.2$ (an $86\%$ reduction) and
-halves the effective search vocabulary from $40$ to $20$ (Fig.~\ref{fig:recovery}).
+($30\%$) to $18/30$ ($60\%$), lifts mean held-out $R^2$ from $0.855$ to $0.967$
+(averaged over all $30$ tasks, with non-finite failures floored at $-1$), reduces
+the average column count from $23.2$ to $3.2$ (an $86\%$ reduction) and halves the
+effective search vocabulary from $40$ to $20$ (Fig.~\ref{fig:recovery}).
 
 The mechanism is concrete. Over many irrelevant columns, an unguided solver can
 reach a deceptively high $R^2$ with a physically meaningless formula built from
@@ -175,7 +176,7 @@ budget-limited runs land on the true law.
 versus the DenoisedSR variable prior versus the additional operator prior on a
 $30$-equation Feynman subset ($10$~s budget, $\sim$20 distractors). The variable
 prior doubles exact recovery ($30\%$ to $60\%$), raises mean held-out $R^2$
-($0.919$ to $0.967$) and halves the search vocabulary ($40$ to $20$); the operator
+($0.855$ to $0.967$) and halves the search vocabulary ($40$ to $20$); the operator
 prior cuts the vocabulary further but does not improve exact recovery.}
 \label{fig:recovery}
 \end{figure}
@@ -246,10 +247,12 @@ random support degrades far below it.}
 Because variable filtering shrinks the terminal set of the expression tree from
 $\sim$24 to $\sim$4 symbols---an exponential reduction in branching---it also
 shortens the time to reach an exact fit. Measuring time-to-solution with early
-stopping on exact recovery, DenoisedSR yields $3$--$6\times$ speedups on typical
-physics formulas (Fig.~\ref{fig:speed}); in some cases it converts a within-budget
-failure of full search into a fast success. The exception is deep-tree formulas
-whose bottleneck is expression depth rather than variable count. Front-end inference
+stopping on exact recovery, DenoisedSR yields speedups of up to $6\times$ on
+non-trivial physics formulas (Fig.~\ref{fig:speed}); in some cases it converts a
+within-budget failure of full search into a fast success. The overall median speedup
+is $\sim$1.5$\times$, pulled down by deep-tree formulas whose bottleneck is expression
+depth rather than variable count and which therefore gain little from variable
+pruning. Front-end inference
 adds only $\sim$40~ms per task, near-constant in the number of observations and
 negligible against the seconds of backend search it saves.
 
@@ -257,34 +260,23 @@ negligible against the seconds of backend search it saves.
 \includegraphics[width=0.55\linewidth]{figures/fig6_speed.png}
 \caption{\textbf{Pruning accelerates time-to-solution.} Per-formula speedup
 (full-search time divided by DenoisedSR time) with early stopping on exact recovery.
-Typical physics formulas solve $3$--$6\times$ faster; deep-tree formulas (depth-, not
-variable-limited) show little gain.}
+Non-trivial physics formulas solve up to $6\times$ faster (median $\sim$1.5$\times$);
+deep-tree formulas (depth-, not variable-limited) show little gain.}
 \label{fig:speed}
 \end{figure}
 
-\subsection*{Operator priors are net-neutral but a useful safeguard}
-Restricting the operator library in addition to variables (condition~C) does not
-improve mean exact recovery (it is slightly lower, $14/30$), because operators are
-intrinsically harder to infer from small, noisy domains and a mis-removed operator
-is fatal. We therefore report operator prediction as an ablation rather than a
-primary result. It nonetheless has a clear conditional value: when full-operator
-search returns a pathological high-$R^2$ fit built from exotic operators,
-restricting the library to the predicted operators reliably recovers a sane solution
-(Fig.~\ref{fig:operator}; e.g.\ held-out $R^2$ improving from $0.19$ to $0.92$). The
-triggering signatures---an exotic low-probability operator, anomalous complexity, or
-$R^2$ stuck just below~$1$---are visible at inference without the ground truth, so an
-adaptive ``re-run with operator restriction when the fit looks pathological'' policy
-is deployable in practice.
-
-\begin{figure}[t]\centering
-\includegraphics[width=0.5\linewidth]{figures/fig7_operator.png}
-\caption{\textbf{Operator restriction rescues pathological fits.} For cases where
-full-operator search returns a spurious high-$R^2$ solution built from exotic
-operators, restricting the library to the predicted operators recovers a sane fit
-(held-out $R^2$ before versus after restriction). Operator priors are net-neutral on
-average but valuable as an adaptive safeguard.}
-\label{fig:operator}
-\end{figure}
+\subsection*{An operator prior helps less than a variable prior}
+Restricting the operator library in addition to variables (condition~C) recovers
+$14/30$ ($47\%$) exact---below the variable prior ($60\%$) but still above full
+search ($30\%$), with the same mean held-out $R^2$ as the variable prior
+($0.968$; Fig.~\ref{fig:recovery}). Operators are intrinsically harder to infer from
+small, noisy domains, and a mis-removed operator is fatal, so we report the operator
+prior as an ablation rather than a primary result. Its most plausible use is as a
+safeguard: when full-operator search returns a pathological fit built from exotic
+operators, restricting the library to the predicted operators should steer the search
+back toward a sane solution; quantifying this rescue at the level of individual
+recovered expressions requires a backend run that logs the before-and-after formulas,
+which we leave to future work.
 
 \section{Discussion}
 These results support a simple thesis: for symbolic regression of physical laws, a
