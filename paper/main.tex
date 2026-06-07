@@ -465,42 +465,6 @@ Even short of that goal, DenoisedSR is immediately useful: it makes existing
 physical-law solvers both more successful and several times faster, with a
 provably safe failure mode.
 
-\subsection*{Limitations}
-We list the most consequential limitations explicitly, so that downstream users
-can calibrate their reliance on each headline number.
-
-\emph{Sample size of the headline comparison.}
-The headline PySR experiment uses $30$ Feynman equations at three seeds. The
-``$60{\pm}0\%$ seed-stable'' framing is striking but the absolute statistical
-power at this sample size is modest---the $99\%$ Wilson interval on $60\%$ from
-$n=90$ trials is roughly $[46\%,72\%]$. The $80$-equation single-seed
-scale-up (Supplementary Table~\ref{tab:n80}) is consistent with the headline
-($66\%$ exact recovery, mean $R^2=0.981$) but a full multi-seed Feynman-$119$
-study at this fixed budget remains future work.
-
-\emph{Single-seed grid points.}
-The distractor sweep is multi-seed at $d\in\{5,20,30\}$ ($3$ seeds) and $d=10$
-($2$ seeds), but the observation-count sweep $q\in\{50,100\}$ uses a single
-seed at a higher operating threshold than the deployed one, so it should be
-read as a qualitative trend (full search worsens with $q$, DenoisedSR
-improves) rather than a quantitatively bounded measurement.
-
-\emph{The front-end narrows search; it does not generate equations.}
-DenoisedSR is a search-space reducer, not a discovery engine. It cannot
-reliably assign variables and operators to the correct positions in the
-expression---that is precisely why we leave final term assignment to a
-symbolic, verifiable backend. Closing the assignment gap is the central open
-problem and is not addressed in this work.
-
-\emph{Precision on SRSD reflects an aggressive recall-first threshold.}
-On the external SRSD-Feynman suite we report recall $0.967$ but precision
-$0.587$: at $\tau=0.10$ the front-end retains, on average, every dummy column
-SRSD adds, because SRSD's dummies are sampled to look physically plausible.
-A more conservative threshold would raise precision but risks dropping true
-variables, which is unrecoverable downstream; SRSD-tuning $\tau$ per-suite
-would close part of this gap at the cost of the deployed-threshold
-universality we currently report.
-
 \section{Methods}
 
 \noindent\textbf{Problem setup.} Each task provides
