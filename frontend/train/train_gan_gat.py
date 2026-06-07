@@ -13,9 +13,6 @@ Generator: MLP, two modes
 """
 import sys, json, re, time, os
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
 from torch_geometric.nn import GATConv
 from torch_geometric.data import Data, Batch

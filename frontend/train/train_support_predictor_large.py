@@ -5,9 +5,6 @@ Saves the trained classifiers to models/support_predictor_large.joblib
 import sys, json, warnings, time
 warnings.filterwarnings('ignore')
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import argparse, numpy as np
 from pathlib import Path
 from joblib import dump

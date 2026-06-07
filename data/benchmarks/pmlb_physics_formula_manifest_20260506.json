@@ -13,7 +13,7 @@
     {
       "dataset": "feynman_I_10_7",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_10_7\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_10_7/metadata.yaml",
       "target": "m",
       "features": [
         "m_0",
@@ -43,7 +43,7 @@
     {
       "dataset": "feynman_I_11_19",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_11_19\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_11_19/metadata.yaml",
       "target": "A",
       "features": [
         "x1",
@@ -88,7 +88,7 @@
     {
       "dataset": "feynman_I_12_1",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_12_1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_12_1/metadata.yaml",
       "target": "F",
       "features": [
         "mu",
@@ -113,7 +113,7 @@
     {
       "dataset": "feynman_I_12_11",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_12_11\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_12_11/metadata.yaml",
       "target": "F",
       "features": [
         "q",
@@ -153,7 +153,7 @@
     {
       "dataset": "feynman_I_12_2",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_12_2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_12_2/metadata.yaml",
       "target": "F",
       "features": [
         "q1",
@@ -188,7 +188,7 @@
     {
       "dataset": "feynman_I_12_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_12_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_12_4/metadata.yaml",
       "target": "Ef",
       "features": [
         "q1",
@@ -218,7 +218,7 @@
     {
       "dataset": "feynman_I_12_5",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_12_5\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_12_5/metadata.yaml",
       "target": "F",
       "features": [
         "q2",
@@ -243,7 +243,7 @@
     {
       "dataset": "feynman_I_13_12",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_13_12\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_13_12/metadata.yaml",
       "target": "U",
       "features": [
         "m1",
@@ -283,7 +283,7 @@
     {
       "dataset": "feynman_I_13_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_13_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_13_4/metadata.yaml",
       "target": "K",
       "features": [
         "m",
@@ -318,7 +318,7 @@
     {
       "dataset": "feynman_I_14_3",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_14_3\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_14_3/metadata.yaml",
       "target": "U",
       "features": [
         "m",
@@ -348,7 +348,7 @@
     {
       "dataset": "feynman_I_14_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_14_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_14_4/metadata.yaml",
       "target": "U",
       "features": [
         "k_spring",
@@ -373,7 +373,7 @@
     {
       "dataset": "feynman_I_15_10",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_15_10\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_15_10/metadata.yaml",
       "target": "p",
       "features": [
         "m_0",
@@ -403,7 +403,7 @@
     {
       "dataset": "feynman_I_15_3t",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_15_3t\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_15_3t/metadata.yaml",
       "target": "t1",
       "features": [
         "x",
@@ -438,7 +438,7 @@
     {
       "dataset": "feynman_I_15_3x",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_15_3x\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_15_3x/metadata.yaml",
       "target": "x1",
       "features": [
         "x",
@@ -473,7 +473,7 @@
     {
       "dataset": "feynman_I_16_6",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_16_6\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_16_6/metadata.yaml",
       "target": "v1",
       "features": [
         "c",
@@ -503,7 +503,7 @@
     {
       "dataset": "feynman_I_18_12",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_18_12\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_18_12/metadata.yaml",
       "target": "tau",
       "features": [
         "r",
@@ -533,7 +533,7 @@
     {
       "dataset": "feynman_I_18_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_18_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_18_14/metadata.yaml",
       "target": "L",
       "features": [
         "m",
@@ -568,7 +568,7 @@
     {
       "dataset": "feynman_I_18_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_18_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_18_4/metadata.yaml",
       "target": "r",
       "features": [
         "m1",
@@ -603,7 +603,7 @@
     {
       "dataset": "feynman_I_24_6",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_24_6\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_24_6/metadata.yaml",
       "target": "E_n",
       "features": [
         "m",
@@ -638,7 +638,7 @@
     {
       "dataset": "feynman_I_25_13",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_25_13\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_25_13/metadata.yaml",
       "target": "Volt",
       "features": [
         "q",
@@ -663,7 +663,7 @@
     {
       "dataset": "feynman_I_26_2",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_26_2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_26_2/metadata.yaml",
       "target": "theta1",
       "features": [
         "n",
@@ -688,7 +688,7 @@
     {
       "dataset": "feynman_I_27_6",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_27_6\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_27_6/metadata.yaml",
       "target": "foc",
       "features": [
         "d1",
@@ -718,7 +718,7 @@
     {
       "dataset": "feynman_I_29_16",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_29_16\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_29_16/metadata.yaml",
       "target": "x",
       "features": [
         "x1",
@@ -753,7 +753,7 @@
     {
       "dataset": "feynman_I_29_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_29_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_29_4/metadata.yaml",
       "target": "k",
       "features": [
         "omega",
@@ -778,7 +778,7 @@
     {
       "dataset": "feynman_I_30_3",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_30_3\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_30_3/metadata.yaml",
       "target": "Int",
       "features": [
         "Int_0",
@@ -808,7 +808,7 @@
     {
       "dataset": "feynman_I_30_5",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_30_5\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_30_5/metadata.yaml",
       "target": "theta",
       "features": [
         "lambd",
@@ -838,7 +838,7 @@
     {
       "dataset": "feynman_I_32_17",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_32_17\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_32_17/metadata.yaml",
       "target": "Pwr",
       "features": [
         "epsilon",
@@ -883,7 +883,7 @@
     {
       "dataset": "feynman_I_32_5",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_32_5\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_32_5/metadata.yaml",
       "target": "Pwr",
       "features": [
         "q",
@@ -918,7 +918,7 @@
     {
       "dataset": "feynman_I_34_1",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_34_1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_34_1/metadata.yaml",
       "target": "omega",
       "features": [
         "c",
@@ -948,7 +948,7 @@
     {
       "dataset": "feynman_I_34_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_34_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_34_14/metadata.yaml",
       "target": "omega",
       "features": [
         "c",
@@ -978,7 +978,7 @@
     {
       "dataset": "feynman_I_34_27",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_34_27\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_34_27/metadata.yaml",
       "target": "E_n",
       "features": [
         "omega",
@@ -1003,7 +1003,7 @@
     {
       "dataset": "feynman_I_34_8",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_34_8\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_34_8/metadata.yaml",
       "target": "omega",
       "features": [
         "q",
@@ -1038,7 +1038,7 @@
     {
       "dataset": "feynman_I_37_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_37_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_37_4/metadata.yaml",
       "target": "Int",
       "features": [
         "I1",
@@ -1068,7 +1068,7 @@
     {
       "dataset": "feynman_I_38_12",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_38_12\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_38_12/metadata.yaml",
       "target": "r",
       "features": [
         "m",
@@ -1103,7 +1103,7 @@
     {
       "dataset": "feynman_I_39_1",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_39_1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_39_1/metadata.yaml",
       "target": "E_n",
       "features": [
         "pr",
@@ -1128,7 +1128,7 @@
     {
       "dataset": "feynman_I_39_11",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_39_11\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_39_11/metadata.yaml",
       "target": "E_n",
       "features": [
         "gamma",
@@ -1158,7 +1158,7 @@
     {
       "dataset": "feynman_I_39_22",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_39_22\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_39_22/metadata.yaml",
       "target": "pr",
       "features": [
         "n",
@@ -1193,7 +1193,7 @@
     {
       "dataset": "feynman_I_40_1",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_40_1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_40_1/metadata.yaml",
       "target": "n",
       "features": [
         "n_0",
@@ -1238,7 +1238,7 @@
     {
       "dataset": "feynman_I_41_16",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_41_16\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_41_16/metadata.yaml",
       "target": "L_rad",
       "features": [
         "omega",
@@ -1278,7 +1278,7 @@
     {
       "dataset": "feynman_I_43_16",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_43_16\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_43_16/metadata.yaml",
       "target": "v",
       "features": [
         "mu_drift",
@@ -1313,7 +1313,7 @@
     {
       "dataset": "feynman_I_43_31",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_43_31\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_43_31/metadata.yaml",
       "target": "D",
       "features": [
         "mob",
@@ -1343,7 +1343,7 @@
     {
       "dataset": "feynman_I_43_43",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_43_43\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_43_43/metadata.yaml",
       "target": "kappa",
       "features": [
         "gamma",
@@ -1378,7 +1378,7 @@
     {
       "dataset": "feynman_I_44_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_44_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_44_4/metadata.yaml",
       "target": "E_n",
       "features": [
         "n",
@@ -1418,7 +1418,7 @@
     {
       "dataset": "feynman_I_47_23",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_47_23\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_47_23/metadata.yaml",
       "target": "c",
       "features": [
         "gamma",
@@ -1448,7 +1448,7 @@
     {
       "dataset": "feynman_I_48_2",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_48_2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_48_2/metadata.yaml",
       "target": "E_n",
       "features": [
         "m",
@@ -1478,7 +1478,7 @@
     {
       "dataset": "feynman_I_50_26",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_50_26\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_50_26/metadata.yaml",
       "target": "x",
       "features": [
         "x1",
@@ -1513,7 +1513,7 @@
     {
       "dataset": "feynman_I_6_2",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_6_2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_6_2/metadata.yaml",
       "target": "f",
       "features": [
         "sigma",
@@ -1538,7 +1538,7 @@
     {
       "dataset": "feynman_I_6_2a",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_6_2a\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_6_2a/metadata.yaml",
       "target": "f",
       "features": [
         "theta"
@@ -1558,7 +1558,7 @@
     {
       "dataset": "feynman_I_6_2b",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_6_2b\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_6_2b/metadata.yaml",
       "target": "f",
       "features": [
         "sigma",
@@ -1588,7 +1588,7 @@
     {
       "dataset": "feynman_I_8_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_8_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_8_14/metadata.yaml",
       "target": "d",
       "features": [
         "x1",
@@ -1623,7 +1623,7 @@
     {
       "dataset": "feynman_I_9_18",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_I_9_18\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_I_9_18/metadata.yaml",
       "target": "F",
       "features": [
         "m1",
@@ -1683,7 +1683,7 @@
     {
       "dataset": "feynman_II_10_9",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_10_9\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_10_9/metadata.yaml",
       "target": "Ef",
       "features": [
         "sigma_den",
@@ -1713,7 +1713,7 @@
     {
       "dataset": "feynman_II_11_20",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_11_20\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_11_20/metadata.yaml",
       "target": "Pol",
       "features": [
         "n_rho",
@@ -1753,7 +1753,7 @@
     {
       "dataset": "feynman_II_11_27",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_11_27\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_11_27/metadata.yaml",
       "target": "Pol",
       "features": [
         "n",
@@ -1788,7 +1788,7 @@
     {
       "dataset": "feynman_II_11_28",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_11_28\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_11_28/metadata.yaml",
       "target": "theta",
       "features": [
         "n",
@@ -1813,7 +1813,7 @@
     {
       "dataset": "feynman_II_11_3",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_11_3\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_11_3/metadata.yaml",
       "target": "x",
       "features": [
         "q",
@@ -1853,7 +1853,7 @@
     {
       "dataset": "feynman_II_13_17",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_13_17\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_13_17/metadata.yaml",
       "target": "B",
       "features": [
         "epsilon",
@@ -1888,7 +1888,7 @@
     {
       "dataset": "feynman_II_13_23",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_13_23\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_13_23/metadata.yaml",
       "target": "rho_c",
       "features": [
         "rho_c_0",
@@ -1918,7 +1918,7 @@
     {
       "dataset": "feynman_II_13_34",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_13_34\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_13_34/metadata.yaml",
       "target": "j",
       "features": [
         "rho_c_0",
@@ -1948,7 +1948,7 @@
     {
       "dataset": "feynman_II_15_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_15_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_15_4/metadata.yaml",
       "target": "E_n",
       "features": [
         "mom",
@@ -1978,7 +1978,7 @@
     {
       "dataset": "feynman_II_15_5",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_15_5\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_15_5/metadata.yaml",
       "target": "E_n",
       "features": [
         "p_d",
@@ -2008,7 +2008,7 @@
     {
       "dataset": "feynman_II_21_32",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_21_32\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_21_32/metadata.yaml",
       "target": "Volt",
       "features": [
         "q",
@@ -2048,7 +2048,7 @@
     {
       "dataset": "feynman_II_24_17",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_24_17\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_24_17/metadata.yaml",
       "target": "k",
       "features": [
         "omega",
@@ -2078,7 +2078,7 @@
     {
       "dataset": "feynman_II_27_16",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_27_16\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_27_16/metadata.yaml",
       "target": "flux",
       "features": [
         "epsilon",
@@ -2108,7 +2108,7 @@
     {
       "dataset": "feynman_II_27_18",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_27_18\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_27_18/metadata.yaml",
       "target": "E_den",
       "features": [
         "epsilon",
@@ -2133,7 +2133,7 @@
     {
       "dataset": "feynman_II_2_42",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_2_42\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_2_42/metadata.yaml",
       "target": "Pwr",
       "features": [
         "kappa",
@@ -2173,7 +2173,7 @@
     {
       "dataset": "feynman_II_34_11",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_34_11\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_34_11/metadata.yaml",
       "target": "omega",
       "features": [
         "g_",
@@ -2208,7 +2208,7 @@
     {
       "dataset": "feynman_II_34_2",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_34_2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_34_2/metadata.yaml",
       "target": "mom",
       "features": [
         "q",
@@ -2238,7 +2238,7 @@
     {
       "dataset": "feynman_II_34_29a",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_34_29a\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_34_29a/metadata.yaml",
       "target": "mom",
       "features": [
         "q",
@@ -2268,7 +2268,7 @@
     {
       "dataset": "feynman_II_34_29b",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_34_29b\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_34_29b/metadata.yaml",
       "target": "E_n",
       "features": [
         "g_",
@@ -2308,7 +2308,7 @@
     {
       "dataset": "feynman_II_34_2a",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_34_2a\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_34_2a/metadata.yaml",
       "target": "I",
       "features": [
         "q",
@@ -2338,7 +2338,7 @@
     {
       "dataset": "feynman_II_35_18",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_35_18\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_35_18/metadata.yaml",
       "target": "n",
       "features": [
         "n_0",
@@ -2378,7 +2378,7 @@
     {
       "dataset": "feynman_II_35_21",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_35_21\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_35_21/metadata.yaml",
       "target": "M",
       "features": [
         "n_rho",
@@ -2418,7 +2418,7 @@
     {
       "dataset": "feynman_II_36_38",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_36_38\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_36_38/metadata.yaml",
       "target": "f",
       "features": [
         "mom",
@@ -2473,7 +2473,7 @@
     {
       "dataset": "feynman_II_37_1",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_37_1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_37_1/metadata.yaml",
       "target": "E_n",
       "features": [
         "mom",
@@ -2503,7 +2503,7 @@
     {
       "dataset": "feynman_II_38_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_38_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_38_14/metadata.yaml",
       "target": "mu_S",
       "features": [
         "Y",
@@ -2528,7 +2528,7 @@
     {
       "dataset": "feynman_II_38_3",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_38_3\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_38_3/metadata.yaml",
       "target": "F",
       "features": [
         "Y",
@@ -2563,7 +2563,7 @@
     {
       "dataset": "feynman_II_3_24",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_3_24\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_3_24/metadata.yaml",
       "target": "flux",
       "features": [
         "Pwr",
@@ -2588,7 +2588,7 @@
     {
       "dataset": "feynman_II_4_23",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_4_23\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_4_23/metadata.yaml",
       "target": "Volt",
       "features": [
         "q",
@@ -2618,7 +2618,7 @@
     {
       "dataset": "feynman_II_6_11",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_6_11\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_6_11/metadata.yaml",
       "target": "Volt",
       "features": [
         "epsilon",
@@ -2653,7 +2653,7 @@
     {
       "dataset": "feynman_II_6_15a",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_6_15a\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_6_15a/metadata.yaml",
       "target": "Ef",
       "features": [
         "epsilon",
@@ -2698,7 +2698,7 @@
     {
       "dataset": "feynman_II_6_15b",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_6_15b\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_6_15b/metadata.yaml",
       "target": "Ef",
       "features": [
         "epsilon",
@@ -2733,7 +2733,7 @@
     {
       "dataset": "feynman_II_8_31",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_8_31\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_8_31/metadata.yaml",
       "target": "E_den",
       "features": [
         "epsilon",
@@ -2758,7 +2758,7 @@
     {
       "dataset": "feynman_II_8_7",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_II_8_7\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_II_8_7/metadata.yaml",
       "target": "E_n",
       "features": [
         "q",
@@ -2788,7 +2788,7 @@
     {
       "dataset": "feynman_III_10_19",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_10_19\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_10_19/metadata.yaml",
       "target": "E_n",
       "features": [
         "mom",
@@ -2823,7 +2823,7 @@
     {
       "dataset": "feynman_III_12_43",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_12_43\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_12_43/metadata.yaml",
       "target": "L",
       "features": [
         "n",
@@ -2848,7 +2848,7 @@
     {
       "dataset": "feynman_III_13_18",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_13_18\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_13_18/metadata.yaml",
       "target": "v",
       "features": [
         "E_n",
@@ -2883,7 +2883,7 @@
     {
       "dataset": "feynman_III_14_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_14_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_14_14/metadata.yaml",
       "target": "I",
       "features": [
         "I_0",
@@ -2923,7 +2923,7 @@
     {
       "dataset": "feynman_III_15_12",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_15_12\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_15_12/metadata.yaml",
       "target": "E_n",
       "features": [
         "U",
@@ -2953,7 +2953,7 @@
     {
       "dataset": "feynman_III_15_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_15_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_15_14/metadata.yaml",
       "target": "m",
       "features": [
         "h",
@@ -2983,7 +2983,7 @@
     {
       "dataset": "feynman_III_15_27",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_15_27\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_15_27/metadata.yaml",
       "target": "k",
       "features": [
         "alpha",
@@ -3013,7 +3013,7 @@
     {
       "dataset": "feynman_III_17_37",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_17_37\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_17_37/metadata.yaml",
       "target": "f",
       "features": [
         "beta",
@@ -3043,7 +3043,7 @@
     {
       "dataset": "feynman_III_19_51",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_19_51\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_19_51/metadata.yaml",
       "target": "E_n",
       "features": [
         "m",
@@ -3083,7 +3083,7 @@
     {
       "dataset": "feynman_III_21_20",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_21_20\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_21_20/metadata.yaml",
       "target": "j",
       "features": [
         "rho_c_0",
@@ -3118,7 +3118,7 @@
     {
       "dataset": "feynman_III_4_32",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_4_32\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_4_32/metadata.yaml",
       "target": "n",
       "features": [
         "h",
@@ -3153,7 +3153,7 @@
     {
       "dataset": "feynman_III_4_33",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_4_33\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_4_33/metadata.yaml",
       "target": "E_n",
       "features": [
         "h",
@@ -3188,7 +3188,7 @@
     {
       "dataset": "feynman_III_7_38",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_7_38\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_7_38/metadata.yaml",
       "target": "omega",
       "features": [
         "mom",
@@ -3218,7 +3218,7 @@
     {
       "dataset": "feynman_III_8_54",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_8_54\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_8_54/metadata.yaml",
       "target": "prob",
       "features": [
         "E_n",
@@ -3248,7 +3248,7 @@
     {
       "dataset": "feynman_III_9_52",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_III_9_52\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_III_9_52/metadata.yaml",
       "target": "prob",
       "features": [
         "p_d",
@@ -3293,7 +3293,7 @@
     {
       "dataset": "feynman_test_1",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_1/metadata.yaml",
       "target": "A",
       "features": [
         "Z_1",
@@ -3343,7 +3343,7 @@
     {
       "dataset": "feynman_test_10",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_10\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_10/metadata.yaml",
       "target": "theta1",
       "features": [
         "c",
@@ -3373,7 +3373,7 @@
     {
       "dataset": "feynman_test_11",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_11\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_11/metadata.yaml",
       "target": "I",
       "features": [
         "I_0",
@@ -3408,7 +3408,7 @@
     {
       "dataset": "feynman_test_12",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_12\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_12/metadata.yaml",
       "target": "F",
       "features": [
         "q",
@@ -3448,7 +3448,7 @@
     {
       "dataset": "feynman_test_13",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_13\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_13/metadata.yaml",
       "target": "Volt",
       "features": [
         "q",
@@ -3488,7 +3488,7 @@
     {
       "dataset": "feynman_test_14",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_14\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_14/metadata.yaml",
       "target": "Volt",
       "features": [
         "Ef",
@@ -3528,7 +3528,7 @@
     {
       "dataset": "feynman_test_15",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_15\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_15/metadata.yaml",
       "target": "omega_0",
       "features": [
         "c",
@@ -3563,7 +3563,7 @@
     {
       "dataset": "feynman_test_16",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_16\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_16/metadata.yaml",
       "target": "E_n",
       "features": [
         "m",
@@ -3608,7 +3608,7 @@
     {
       "dataset": "feynman_test_17",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_17\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_17/metadata.yaml",
       "target": "E_n",
       "features": [
         "m",
@@ -3653,7 +3653,7 @@
     {
       "dataset": "feynman_test_18",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_18\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_18/metadata.yaml",
       "target": "rho_0",
       "features": [
         "G",
@@ -3693,7 +3693,7 @@
     {
       "dataset": "feynman_test_19",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_19\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_19/metadata.yaml",
       "target": "pr",
       "features": [
         "G",
@@ -3738,7 +3738,7 @@
     {
       "dataset": "feynman_test_2",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_2/metadata.yaml",
       "target": "k",
       "features": [
         "m",
@@ -3783,7 +3783,7 @@
     {
       "dataset": "feynman_test_20",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_20\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_20/metadata.yaml",
       "target": "A",
       "features": [
         "omega",
@@ -3833,7 +3833,7 @@
     {
       "dataset": "feynman_test_3",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_3\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_3/metadata.yaml",
       "target": "r",
       "features": [
         "d",
@@ -3868,7 +3868,7 @@
     {
       "dataset": "feynman_test_4",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_4\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_4/metadata.yaml",
       "target": "v",
       "features": [
         "m",
@@ -3908,7 +3908,7 @@
     {
       "dataset": "feynman_test_5",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_5\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_5/metadata.yaml",
       "target": "t",
       "features": [
         "d",
@@ -3943,7 +3943,7 @@
     {
       "dataset": "feynman_test_6",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_6\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_6/metadata.yaml",
       "target": "alpha",
       "features": [
         "epsilon",
@@ -3993,7 +3993,7 @@
     {
       "dataset": "feynman_test_7",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_7\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_7/metadata.yaml",
       "target": "H_G",
       "features": [
         "G",
@@ -4033,7 +4033,7 @@
     {
       "dataset": "feynman_test_8",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_8\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_8/metadata.yaml",
       "target": "K",
       "features": [
         "E_n",
@@ -4068,7 +4068,7 @@
     {
       "dataset": "feynman_test_9",
       "group": "feynman",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\feynman_test_9\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/feynman_test_9/metadata.yaml",
       "target": "Pwr",
       "features": [
         "G",
@@ -4108,7 +4108,7 @@
     {
       "dataset": "first_principles_absorption",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_absorption\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_absorption/metadata.yaml",
       "target": "Absorption",
       "features": [
         "Xaxis0"
@@ -4123,7 +4123,7 @@
     {
       "dataset": "first_principles_bode",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_bode\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_bode/metadata.yaml",
       "target": "a",
       "features": [
         "n"
@@ -4138,7 +4138,7 @@
     {
       "dataset": "first_principles_hubble",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_hubble\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_hubble/metadata.yaml",
       "target": "velocity",
       "features": [
         "D"
@@ -4153,7 +4153,7 @@
     {
       "dataset": "first_principles_ideal_gas",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_ideal_gas\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_ideal_gas/metadata.yaml",
       "target": "pressure",
       "features": [
         "n",
@@ -4170,7 +4170,7 @@
     {
       "dataset": "first_principles_kepler",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_kepler\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_kepler/metadata.yaml",
       "target": "Period in days",
       "features": [
         "a"
@@ -4185,7 +4185,7 @@
     {
       "dataset": "first_principles_leavitt",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_leavitt\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_leavitt/metadata.yaml",
       "target": "Magnitude",
       "features": [
         "logP"
@@ -4200,7 +4200,7 @@
     {
       "dataset": "first_principles_newton",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_newton\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_newton/metadata.yaml",
       "target": "x-component of force",
       "features": [
         "r",
@@ -4217,7 +4217,7 @@
     {
       "dataset": "first_principles_planck",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_planck\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_planck/metadata.yaml",
       "target": "spectral radiance",
       "features": [
         "nu",
@@ -4233,7 +4233,7 @@
     {
       "dataset": "first_principles_rydberg",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_rydberg\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_rydberg/metadata.yaml",
       "target": "wavelength",
       "features": [
         "n_1",
@@ -4249,7 +4249,7 @@
     {
       "dataset": "first_principles_schechter",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_schechter\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_schechter/metadata.yaml",
       "target": "number density",
       "features": [
         "L"
@@ -4264,7 +4264,7 @@
     {
       "dataset": "first_principles_supernovae_zg",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_supernovae_zg\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_supernovae_zg/metadata.yaml",
       "target": "Normalized radiation flux over time",
       "features": [
         "Xaxis0"
@@ -4279,7 +4279,7 @@
     {
       "dataset": "first_principles_supernovae_zr",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_supernovae_zr\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_supernovae_zr/metadata.yaml",
       "target": "Normalized radiation flux over time",
       "features": [
         "Xaxis0"
@@ -4294,7 +4294,7 @@
     {
       "dataset": "first_principles_tully_fisher",
       "group": "first_principles",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\first_principles_tully_fisher\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/first_principles_tully_fisher/metadata.yaml",
       "target": "luminosity",
       "features": [
         "DV"
@@ -4309,7 +4309,7 @@
     {
       "dataset": "strogatz_bacres1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_bacres1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_bacres1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4325,7 +4325,7 @@
     {
       "dataset": "strogatz_bacres2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_bacres2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_bacres2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",
@@ -4341,7 +4341,7 @@
     {
       "dataset": "strogatz_barmag1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_barmag1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_barmag1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4357,7 +4357,7 @@
     {
       "dataset": "strogatz_barmag2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_barmag2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_barmag2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",
@@ -4373,7 +4373,7 @@
     {
       "dataset": "strogatz_glider1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_glider1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_glider1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4389,7 +4389,7 @@
     {
       "dataset": "strogatz_glider2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_glider2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_glider2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",
@@ -4405,7 +4405,7 @@
     {
       "dataset": "strogatz_lv1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_lv1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_lv1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4421,7 +4421,7 @@
     {
       "dataset": "strogatz_lv2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_lv2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_lv2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",
@@ -4437,7 +4437,7 @@
     {
       "dataset": "strogatz_predprey1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_predprey1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_predprey1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4453,7 +4453,7 @@
     {
       "dataset": "strogatz_predprey2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_predprey2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_predprey2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",
@@ -4469,7 +4469,7 @@
     {
       "dataset": "strogatz_shearflow1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_shearflow1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_shearflow1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4485,7 +4485,7 @@
     {
       "dataset": "strogatz_shearflow2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_shearflow2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_shearflow2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",
@@ -4501,7 +4501,7 @@
     {
       "dataset": "strogatz_vdp1",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_vdp1\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_vdp1/metadata.yaml",
       "target": "x'",
       "features": [
         "x",
@@ -4517,7 +4517,7 @@
     {
       "dataset": "strogatz_vdp2",
       "group": "strogatz",
-      "metadata_path": "D:\\Physics Fundation model\\references\\external_repos\\pmlb\\datasets\\strogatz_vdp2\\metadata.yaml",
+      "metadata_path": "${PMLB_ROOT}/pmlb/datasets/strogatz_vdp2/metadata.yaml",
       "target": "y'",
       "features": [
         "x",

@@ -6,9 +6,6 @@ range, then fits additional trees (warm_start) to the existing forest.
 import sys, json, warnings, re, time
 warnings.filterwarnings('ignore')
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import numpy as np
 from pathlib import Path
 from joblib import load as joblib_load, dump as joblib_dump

@@ -11,9 +11,6 @@ nodes (high support score), ignoring noise nodes, so operator signatures
 """
 import sys, re, time, os
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
 from torch_geometric.nn import GATConv, global_mean_pool, global_max_pool
 from torch_geometric.data import Data, Batch

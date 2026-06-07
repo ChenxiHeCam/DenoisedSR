@@ -15,9 +15,6 @@ Full operator vocabulary:
 """
 import sys, re, time, os
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import numpy as np
 from pathlib import Path
 from joblib import load as jload, dump as jdump

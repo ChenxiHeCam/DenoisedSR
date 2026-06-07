@@ -6,7 +6,8 @@ Ensemble RF + GAT — test three voting strategies:
 """
 import sys, json, re, warnings
 warnings.filterwarnings("ignore")
-sys.path.insert(0,"src"); sys.path.insert(0,"D:/Physics Fundation model/src"); sys.path.insert(0,"D:/Physics Fundation model/scripts")
+_R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))));
+sys.path.insert(0, os.path.join(_R, "src")); sys.path.insert(0, os.path.join(_R, "frontend", "train")); sys.path.insert(0, os.path.join(_R, "src", "physics_fm")) if os.path.isdir(os.path.join(_R, "src", "physics_fm")) else None
 import numpy as np, torch, torch.nn as nn, torch.nn.functional as F
 from torch_geometric.nn import GATConv
 from torch_geometric.utils import add_self_loops

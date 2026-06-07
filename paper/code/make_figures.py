@@ -344,7 +344,7 @@ def fig_distractor():
         fe   = [multi[str(x)]['full_exact_pct_std']  for x in ds]
         ve   = [multi[str(x)]['var_exact_pct_std']   for x in ds]
         ns   = [multi[str(x)]['n_seeds']             for x in ds]
-        ttl = f'Robust to distractor count (mean$\\pm$s.d., $n_{{seeds}}\\le {max(ns)}$)'
+        ttl = f'Robust to distractor count (mean$\\pm$s.d., $n_{{seeds}}\\leq {max(ns)}$)'
     else:
         d = agg['distractor_sweep_seed42']
         ds = sorted(int(k) for k in d)

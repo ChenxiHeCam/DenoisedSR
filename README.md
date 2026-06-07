@@ -18,18 +18,22 @@ The neural model proposes **where** to look; the symbolic backend decides
 
 | Result | Number |
 |---|---|
-| Variable-support **recall** (AI-Feynman / real591 / extended set) | **1.000 / 1.000 / 0.999** (≈100% perfect-recall) |
-| PySR exact-law recovery, fixed 10 s budget (30 Feynman, ~20 distractors) | **30% → 60%** (+30 pp) |
-| Mean held-out R² | 0.919 → 0.967 |
-| Column-space reduction | **86%** (23.2 → 3.2 cols) |
+| Variable-support **recall** (AI-Feynman 118 / OOD 91 / extended 1085 / **SRSD 120**) | **1.000 / 0.996 / 0.999 / 0.967** (≥92% perfect-recall per suite) |
+| PySR exact-law recovery, fixed 10 s budget (30 Feynman, ~20 distractors, **3 seeds**) | **42 ± 13% → 60 ± 0%** (seed-stable) |
+| Mean held-out R² (3 seeds) | 0.906 ± 0.045 → 0.980 ± 0.011 |
+| Column-space reduction | **85%** (23.2 → 3.4 cols) |
 | Search-vocabulary reduction | 40 → 20 (variables), → 13 (+operators) |
-| Time-to-solution speedup (typical formulas) | **3–6×** |
+| Speedup vs. full PySR (single seed, 10 formulas) | **up to 6×** (median ~1.5×) |
 | Front-end inference overhead | ~40 ms / task |
+| Second backend (gplearn, 3 seeds) | full 3.3 ± 3.3% → DenoisedSR 17.8 ± 1.9% exact |
+| Classical-selector baselines (Lasso CV with oracle k, Feynman 118) | 0.905 recall (DenoisedSR: 1.000) |
 
 A **same-size random-support** control performs far worse, showing the gain is
-search guidance, not dimensionality reduction. Operator restriction is net-neutral
-on average but a useful **adaptive safeguard** that rescues pathological high-R²
-fits (e.g. R² 0.19 → 0.92).
+search guidance, not dimensionality reduction. Five **classical feature
+selectors** (Pearson / Spearman / mutual info / RF importance / Lasso CV at oracle
+*k*) reach 0.63–0.91 recall on Feynman; DenoisedSR is 1.000 on all 118. **SRSD-Feynman**
+(Matsubara 2024) provides an external benchmark the model never saw during training,
+and gplearn provides a second backend confirming the gain is solver-agnostic.
 
 All numbers are computed by the scripts in `frontend/eval/` from the recorded
 artifacts in `data/results/`.
@@ -43,20 +47,32 @@ artifacts in `data/results/`.
 ├── paper/                     manuscript (Communications Physics)
 │   ├── main.tex / main.pdf
 │   ├── references.bib
-│   ├── make_figures.py        regenerates all figures from data/results/
-│   └── figures/               fig1_concept … fig5_operator_safeguard (PDF+PNG)
+│   ├── code/make_figures.py   regenerates every figure from data/results/
+│   └── figures/               12 figures (PDF+PNG, 300 dpi)
+├── src/                       shared helpers (vendored from the training tree)
+│   ├── run_pysr_pmlb_feynman_learned_prior.py
+│   └── evaluate_stage8g_open_generation.py
 ├── frontend/                  front-end code
-│   ├── data_prep/             formula-pool construction (knowledge graph → tasks)
+│   ├── data_prep/             formula-pool construction (training only)
 │   ├── train/                 train_gat.py, train_support_predictor_v2.py, …
-│   ├── eval/                  evaluation + benchmarks (support, PySR, speed, ops)
-│   └── analysis/              diagnostics, ablations, case studies
-├── models/                    small, ship-ready model weights (see "Models")
+│   ├── eval/                  reproduction scripts for paper figures + tables
+│   │     eval_pysr_frontend.py         PySR 3-way + Table 1 case studies
+│   │     eval_baselines_feynman.py     5 classical selectors vs. DenoisedSR
+│   │     eval_srsd_recall.py           external SRSD-Feynman 120 suite
+│   │     eval_noise_sweep.py           noise robustness η ∈ {0,0.01,0.05,0.10}
+│   │     eval_gplearn_backend.py       second-backend (gplearn) test
+│   │     eval_feynman_suite.py         AI-Feynman 118 recall
+│   │     aggregate_sweep.py            multi-seed aggregation
+│   │     fetch_srsd.py                 download SRSD-Feynman dummy from HF
+│   └── analysis/              diagnostics, ablations (some training-only)
+├── models/                    trained weights (see "Models")
 │   ├── gat_best.pt            GAT variable-support predictor (PRIMARY)
 │   ├── gat_operator.pt        GAT operator predictor (ablation)
 │   └── cooc_graph.joblib      variable co-occurrence graph (GAT edges)
+│   (support_predictor_v2_40k.joblib — RF partner — fetched separately, see Models)
 ├── data/
-│   ├── benchmarks/            task manifests (AI-Feynman, PMLB/SRBench)
-│   └── results/               recorded result JSONs (tables + figures derive from these)
+│   ├── benchmarks/            task manifests (AI-Feynman, PMLB, SRSD)
+│   └── results/               every figure/table's backing JSON
 ├── requirements.txt
 └── LICENSE
 ```
@@ -72,8 +88,34 @@ PySR additionally installs a Julia backend on first use (`python -c "import pysr
 ## Reproduce the figures
 
 ```bash
-cd paper
-python make_figures.py            # reads ../data/results/*.json, writes figures/
+cd paper/code
+python make_figures.py            # reads ../../data/results/*.json, writes ../figures/
+```
+
+## Reproduce the headline numbers
+
+The five core paper experiments. Each reads model weights + benchmark data from
+this repo and writes a JSON under `data/results/`. From the repo root:
+
+```bash
+# 1. Variable-support recall on AI-Feynman 118 (DenoisedSR vs. 5 classical selectors)
+python frontend/eval/eval_baselines_feynman.py
+
+# 2. External SRSD-Feynman 120 (first run fetches the SRSD-dummy txt files)
+python frontend/eval/fetch_srsd.py        # ~30 MB download
+python frontend/eval/eval_srsd_recall.py
+
+# 3. Label-noise robustness sweep (η ∈ {0, 0.01, 0.05, 0.10})
+python frontend/eval/eval_noise_sweep.py
+
+# 4. PySR 3-way comparison (full | +var prior | +var+op prior). One seed ≈ 15 min on CPU.
+SEED=42 N_DIST=20 N_TASKS=30 TIMEOUT=10 OUT_PATH=data/results/pysr_frontend_3way.json \
+  python frontend/eval/eval_pysr_frontend.py
+# For multi-seed variance: repeat with SEED=43, 44 and aggregate:
+python frontend/eval/aggregate_sweep.py
+
+# 5. Second backend: gplearn
+SEED=42 python frontend/eval/eval_gplearn_backend.py
 ```
 
 ## Use the front-end (variable support → PySR)

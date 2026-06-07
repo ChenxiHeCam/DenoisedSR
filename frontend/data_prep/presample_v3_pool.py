@@ -4,9 +4,6 @@ Saves incrementally every 2000 formulas.
 """
 import sys, json, re, time
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import numpy as np
 from pathlib import Path
 from joblib import load, dump

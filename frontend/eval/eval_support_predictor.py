@@ -7,9 +7,6 @@ Compare old (64-record) model vs new large model.
 import sys, json, warnings, re
 warnings.filterwarnings('ignore')
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import argparse, numpy as np
 from pathlib import Path
 from joblib import load as joblib_load

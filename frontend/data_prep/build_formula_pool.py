@@ -5,9 +5,6 @@ or simple try/except skip (Windows). CPU limited to ~60%.
 import sys, json, warnings, re, time, os
 warnings.filterwarnings('ignore')
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import numpy as np
 from pathlib import Path
 from joblib import dump

@@ -2,8 +2,6 @@ import sys, os
 # Skip cooc build for smoke test
 os.environ['SKIP_COOC'] = '1'
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
 import train_gan_gat as m
 print('Import OK')
 print(f'D params: {sum(p.numel() for p in m.D.parameters()):,}')

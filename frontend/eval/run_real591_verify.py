@@ -1,9 +1,6 @@
 import sys, json, warnings, re
 warnings.filterwarnings('ignore')
 sys.path.insert(0, 'src')
-sys.path.insert(0, 'D:/Physics Fundation model/src')
-sys.path.insert(0, 'D:/Physics Fundation model/scripts')
-
 import argparse, numpy as np, pysr
 from pathlib import Path
 from run_pysr_pmlb_feynman_learned_prior import build_frontend_training, predict_prior, read_jsonl
