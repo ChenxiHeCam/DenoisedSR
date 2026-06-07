@@ -165,10 +165,14 @@ the best case (Lasso); the learned ensemble reaches $1.000$ on all $118$
 (Fig.~\ref{fig:baselines}). The same gap reappears on the external SRSD-Feynman
 suite (DenoisedSR $0.967$ vs.\ Lasso $0.723$). Classical selectors miss true
 variables that participate non-linearly or multiplicatively with others---exactly
-the regime in which physical laws live. We further verified that the recall holds
-under increasing label noise: at relative Gaussian noise $\eta=0.10$ on $y$,
-DenoisedSR retains recall $1.000$ across all $118$ Feynman tasks, whereas Lasso
-(oracle $k$) degrades from $0.905$ to $0.886$ (Fig.~\ref{fig:noise}).
+the regime in which physical laws live. We further verified that the recall holds under heavy label noise: across
+$\eta\in\{0,0.01,0.05,0.10,0.20,0.30\}$ relative Gaussian noise on $y$,
+DenoisedSR retains recall $1.000$ and perfect recall on all $118$ Feynman tasks
+at every noise level. Of the five classical baselines (run at oracle top-$k$),
+Lasso degrades from $0.905$ at $\eta{=}0$ to $0.868$ at $\eta{=}0.30$, mutual
+information drops from $0.634$ to $0.605$, and random-forest importance from
+$0.812$ to $0.799$; none of them approach DenoisedSR at any noise level
+(Fig.~\ref{fig:noise}).
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.55\linewidth]{figures/fig2_recall.png}\hfill
@@ -197,10 +201,12 @@ every one of the $118$ tasks.}
 \begin{figure}[t]\centering
 \includegraphics[width=0.55\linewidth]{figures/fig_noise.png}
 \caption{\textbf{Recall is robust to label noise.} Mean variable-support recall on
-AI-Feynman ($118$ laws) as Gaussian noise of relative magnitude $\eta$ is added to
-the target $y$. DenoisedSR retains $\mathrm{recall}=1.000$ up to $\eta=0.10$
-(perfect recall on all $118$ tasks); the best classical baseline (Lasso with
-oracle top-$k$ budget) degrades from $0.905$ to $0.886$.}
+AI-Feynman ($118$ laws) as Gaussian noise of relative magnitude $\eta$ is added
+to the target $y$. DenoisedSR retains $\mathrm{recall}=1.000$ (perfect recall on
+all $118$ tasks) up to $\eta=0.30$ ($30\%$ relative noise). Five classical
+selectors (each at oracle top-$k$ budget): Lasso degrades from $0.905$ to
+$0.868$, random-forest importance stays near $0.81$, Pearson and Spearman near
+$0.77$, mutual information drops from $0.634$ to $0.605$.}
 \label{fig:noise}
 \end{figure}
 
@@ -562,19 +568,19 @@ relative Gaussian label noise $\eta$; entries marked --- were not part of the
 noise sweep.}
 \label{tab:selector-summary}
 \footnotesize
-\begin{tabular}{lcccccc}
+\begin{tabular}{lcccccccc}
 \toprule
-& \multicolumn{2}{c}{AI-Feynman ($118$)} & \multicolumn{1}{c}{SRSD-Feynman ($120$)} & \multicolumn{3}{c}{AI-Feynman noise ($\eta$)} \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-7}
-Selector & recall & perfect \% & recall & $\eta{=}0.01$ & $\eta{=}0.05$ & $\eta{=}0.10$ \\
+& \multicolumn{2}{c}{AI-Feynman ($118$)} & SRSD ($120$) & \multicolumn{5}{c}{AI-Feynman recall under noise $\eta$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-9}
+Selector & recall & perfect \% & recall & $0.01$ & $0.05$ & $0.10$ & $0.20$ & $0.30$ \\
 \midrule
-Pearson $|\rho|$           & 0.768 & 45.8 & ---   & --- & --- & ---   \\
-Spearman $|\rho|$          & 0.776 & 45.8 & ---   & --- & --- & ---   \\
-mutual information         & 0.634 & 20.3 & ---   & --- & --- & ---   \\
-random-forest importance   & 0.812 & 44.9 & ---   & --- & --- & ---   \\
-Lasso (CV) \emph{oracle $k$} & 0.905 & 71.2 & 0.723 & 0.904 & 0.904 & 0.886 \\
+Pearson $|\rho|$           & 0.768 & 45.8 & ---   & 0.772 & 0.769 & 0.771 & 0.763 & 0.768 \\
+Spearman $|\rho|$          & 0.776 & 45.8 & ---   & 0.773 & 0.770 & 0.770 & 0.757 & 0.754 \\
+mutual information         & 0.634 & 20.3 & ---   & 0.633 & 0.636 & 0.644 & 0.608 & 0.605 \\
+random-forest importance   & 0.812 & 44.9 & ---   & 0.815 & 0.822 & 0.815 & 0.807 & 0.799 \\
+Lasso (CV) \emph{oracle $k$} & 0.905 & 71.2 & 0.723 & 0.904 & 0.904 & 0.886 & 0.881 & 0.868 \\
 \midrule
-DenoisedSR (ours, $\tau{=}0.10$) & \textbf{1.000} & \textbf{100.0} & \textbf{0.967} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
+DenoisedSR (ours, $\tau{=}0.10$) & \textbf{1.000} & \textbf{100.0} & \textbf{0.967} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
 \bottomrule
 \end{tabular}
 \end{table}

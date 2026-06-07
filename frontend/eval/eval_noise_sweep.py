@@ -6,8 +6,7 @@ eta in {0, 0.01, 0.05, 0.10}.
 """
 import sys, json, os, warnings, time
 warnings.filterwarnings("ignore")
-_R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))));
-sys.path.insert(0, os.path.join(_R, "src")); sys.path.insert(0, os.path.join(_R, "frontend", "train")); sys.path.insert(0, os.path.join(_R, "src", "physics_fm")) if os.path.isdir(os.path.join(_R, "src", "physics_fm")) else None
+sys.path.insert(0,"src"); sys.path.insert(0,"D:/Physics Fundation model/src"); sys.path.insert(0,"D:/Physics Fundation model/scripts")
 
 import numpy as np, sympy as sp, torch, torch.nn as nn, torch.nn.functional as F
 from torch_geometric.nn import GATConv
@@ -88,6 +87,10 @@ def denoisedsr_select(aug, target):
         gat_s = torch.sigmoid(gat(torch.tensor(feats),ei)).numpy()
     return {c for c,rs,gs in zip(cols,rf_s,gat_s) if rs+gs>=0.10 and not c.startswith("__d")}, cols
 
+def _topk(scores, k):
+    if k>=len(scores): return set(range(len(scores)))
+    return set(np.argsort(-scores)[:k].tolist())
+
 def lasso_select_topk(X, y, k):
     try:
         Xs = (X - X.mean(0)) / (X.std(0)+1e-12)
@@ -96,11 +99,48 @@ def lasso_select_topk(X, y, k):
         sc = np.abs(m.coef_)
     except:
         sc = np.zeros(X.shape[1])
-    if k>=len(sc): return set(range(len(sc)))
-    return set(np.argsort(-sc)[:k].tolist())
+    return _topk(sc, k)
 
-ETAS = [0.0, 0.01, 0.05, 0.10]
-results = {f"eta_{e}": {"denoisedsr": [], "lasso_oracle": []} for e in ETAS}
+def pearson_select_topk(X, y, k):
+    from numpy import corrcoef
+    s = np.zeros(X.shape[1])
+    for j in range(X.shape[1]):
+        if np.std(X[:,j])<1e-12: continue
+        s[j] = abs(corrcoef(X[:,j], y)[0,1])
+    return _topk(np.nan_to_num(s), k)
+
+def spearman_select_topk(X, y, k):
+    from scipy.stats import spearmanr
+    s = np.zeros(X.shape[1])
+    for j in range(X.shape[1]):
+        try: s[j] = abs(spearmanr(X[:,j], y).statistic)
+        except: pass
+    return _topk(np.nan_to_num(s), k)
+
+def mi_select_topk(X, y, k):
+    from sklearn.feature_selection import mutual_info_regression
+    try: s = mutual_info_regression(X, y, random_state=0)
+    except: s = np.zeros(X.shape[1])
+    return _topk(s, k)
+
+def rf_select_topk(X, y, k):
+    from sklearn.ensemble import RandomForestRegressor
+    try:
+        m = RandomForestRegressor(n_estimators=200, random_state=0, n_jobs=1).fit(X, y)
+        s = m.feature_importances_
+    except: s = np.zeros(X.shape[1])
+    return _topk(s, k)
+
+BASELINE_SELECTORS = {
+    "pearson":  pearson_select_topk,
+    "spearman": spearman_select_topk,
+    "mi":       mi_select_topk,
+    "rf":       rf_select_topk,
+    "lasso":    lasso_select_topk,
+}
+
+ETAS = [0.0, 0.01, 0.05, 0.10, 0.20, 0.30]
+results = {f"eta_{e}": {"denoisedsr": [], **{b: [] for b in BASELINE_SELECTORS}} for e in ETAS}
 t0 = time.time()
 for idx, task in enumerate(tasks_raw):
     features = task["features"]
@@ -119,42 +159,49 @@ for idx, task in enumerate(tasks_raw):
         aug = {k:v for k,v in aug0.items()}
         noise_rng = np.random.default_rng(SEED*1000 + idx + int(eta*10000))
         aug[target] = y_clean + eta * y_std * noise_rng.standard_normal(Q)
+        y_noisy = aug[target]
         # DenoisedSR
         try:
-            sel, cols = denoisedsr_select(aug, target)
+            sel, _cols = denoisedsr_select(aug, target)
             tp=len(sel&true_set); fn=len(true_set-sel)
             rec_d = tp/(tp+fn) if (tp+fn) else 0
-        except Exception as e:
-            rec_d = float('nan')
-        # Lasso oracle top-k
-        try:
-            y_noisy = aug[target]
-            sel_idx = lasso_select_topk(Xm, y_noisy, len(features))
-            sel_names = {cols_all[i] for i in sel_idx}
-            tp=len(sel_names&true_set); fn=len(true_set-sel_names)
-            rec_l = tp/(tp+fn) if (tp+fn) else 0
         except Exception:
-            rec_l = float('nan')
+            rec_d = float('nan')
         results[f"eta_{eta}"]["denoisedsr"].append(rec_d)
-        results[f"eta_{eta}"]["lasso_oracle"].append(rec_l)
+        # All 5 baselines (each at oracle top-k)
+        k = len(features)
+        for bname, bfn in BASELINE_SELECTORS.items():
+            try:
+                sel_idx = bfn(Xm, y_noisy, k)
+                sel_names = {cols_all[i] for i in sel_idx}
+                tp=len(sel_names&true_set); fn=len(true_set-sel_names)
+                rec_b = tp/(tp+fn) if (tp+fn) else 0
+            except Exception:
+                rec_b = float('nan')
+            results[f"eta_{eta}"][bname].append(rec_b)
     if (idx+1) % 30 == 0:
         print(f"  [{idx+1}/{len(tasks_raw)}] elapsed {time.time()-t0:.0f}s")
 
-print(f"\n{'noise eta':10s} | {'DenoisedSR recall':22s} | {'Lasso(oracle-k) recall':22s}")
-print("-"*60)
+def _stats(arr):
+    a = np.array([x for x in arr if not np.isnan(x)])
+    return {"mean": float(a.mean()), "perfect": float((a>=0.999).mean()), "n": int(len(a))}
+
+methods = ["denoisedsr"] + list(BASELINE_SELECTORS.keys())
+print(f"\n{'eta':>5} | " + " | ".join(f"{m[:10]:>10}" for m in methods))
+print("-" * (8 + 13*len(methods)))
 summary = {}
 for eta in ETAS:
-    d = np.array([x for x in results[f"eta_{eta}"]["denoisedsr"] if not np.isnan(x)])
-    l = np.array([x for x in results[f"eta_{eta}"]["lasso_oracle"] if not np.isnan(x)])
-    summary[f"eta_{eta}"] = {
-        "denoisedsr_recall": float(d.mean()),
-        "denoisedsr_perfect": float((d>=0.999).mean()),
-        "lasso_recall": float(l.mean()),
-        "lasso_perfect": float((l>=0.999).mean()),
-        "n_tasks": int(len(d))}
-    s=summary[f"eta_{eta}"]
-    print(f"{eta:<10.3f} | mean={s['denoisedsr_recall']:.3f} perfect={100*s['denoisedsr_perfect']:.0f}% | "
-          f"mean={s['lasso_recall']:.3f} perfect={100*s['lasso_perfect']:.0f}%")
+    row = {m: _stats(results[f"eta_{eta}"][m]) for m in methods}
+    summary[f"eta_{eta}"] = row
+    print(f"{eta:>5.3f} | " + " | ".join(f"{row[m]['mean']:>10.3f}" for m in methods))
+print(f"{'pft%':>5} | " + " | ".join(f"{100*row[m]['perfect']:>9.0f}%" for m in methods))
+
+# back-compat keys for existing fig_noise (reads denoisedsr_recall, lasso_recall, *_perfect)
+for eta in ETAS:
+    summary[f"eta_{eta}"]["denoisedsr_recall"] = summary[f"eta_{eta}"]["denoisedsr"]["mean"]
+    summary[f"eta_{eta}"]["denoisedsr_perfect"] = summary[f"eta_{eta}"]["denoisedsr"]["perfect"]
+    summary[f"eta_{eta}"]["lasso_recall"] = summary[f"eta_{eta}"]["lasso"]["mean"]
+    summary[f"eta_{eta}"]["lasso_perfect"] = summary[f"eta_{eta}"]["lasso"]["perfect"]
 
 Path(OUT_PATH).parent.mkdir(parents=True, exist_ok=True)
 Path(OUT_PATH).write_text(json.dumps({"config":{"seed":SEED,"q":Q,"n_dist":N_DIST,"etas":ETAS},
