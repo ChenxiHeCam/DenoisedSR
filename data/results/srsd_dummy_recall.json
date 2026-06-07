@@ -1,0 +1,3300 @@
+{
+  "config": {
+    "seed": 42,
+    "q": 100,
+    "benchmark": "SRSD-Feynman dummy"
+  },
+  "summary": {
+    "overall": {
+      "denoisedsr_rec": 0.9670138888888888,
+      "denoisedsr_prec": 0.586656746031746,
+      "denoisedsr_perfect": 0.925,
+      "lasso_rec": 0.7228373015873015,
+      "lasso_prec": 0.7228373015873015,
+      "lasso_perfect": 0.31666666666666665,
+      "n": 120
+    },
+    "easy": {
+      "denoisedsr_rec": 0.9833333333333333,
+      "denoisedsr_perfect": 0.9666666666666667,
+      "lasso_rec": 0.7655555555555555,
+      "lasso_perfect": 0.5,
+      "n": 30
+    },
+    "medium": {
+      "denoisedsr_rec": 0.95,
+      "denoisedsr_perfect": 0.9,
+      "lasso_rec": 0.7545833333333333,
+      "lasso_perfect": 0.4,
+      "n": 40
+    },
+    "hard": {
+      "denoisedsr_rec": 0.9708333333333333,
+      "denoisedsr_perfect": 0.92,
+      "lasso_rec": 0.6718095238095236,
+      "lasso_perfect": 0.14,
+      "n": 50
+    }
+  },
+  "per_task": [
+    {
+      "key": "feynman-ii.38.14",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.7.38",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 0.5,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.8.31",
+      "split": "easy",
+      "n_true": 1,
+      "n_dummy": 2,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.12.43",
+      "split": "easy",
+      "n_true": 1,
+      "n_dummy": 2,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.0,
+        "prec": 0.0,
+        "sel": [
+          "x0"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.27.18",
+      "split": "easy",
+      "n_true": 1,
+      "n_dummy": 2,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.34.29b",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.3333333333333333,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.26.2",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.13.17",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.47.23",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 1,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.30.5",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.12.4",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.34.11",
+      "split": "easy",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5714285714285714,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.3.24",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.43.16",
+      "split": "easy",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.2.42",
+      "split": "easy",
+      "n_true": 5,
+      "n_dummy": 3,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.625,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.10.9",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.15.27",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.18.12",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 1,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.27.6",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.14.3",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.18.16",
+      "split": "easy",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.27.16",
+      "split": "easy",
+      "n_true": 1,
+      "n_dummy": 3,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.25,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.4.23",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.12.5",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.38.3",
+      "split": "easy",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5714285714285714,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.14.4",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.25.13",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.15.5",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.15.4",
+      "split": "easy",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.12.1",
+      "split": "easy",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.11.19",
+      "split": "medium",
+      "n_true": 6,
+      "n_dummy": 2,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 0.5,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8333333333333334,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.15.12",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.43.43",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.3333333333333333,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.34.2a",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.3333333333333333,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.8.14",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 0.5,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.43.31",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.6.11",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.13.18",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x1",
+          "x2",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.17.37",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.24.6",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.21.32",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.12.2",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 1,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.13.4",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.12.11",
+      "split": "medium",
+      "n_true": 5,
+      "n_dummy": 2,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.7142857142857143,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.34.10",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.34.29a",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.10.7",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.38.12",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.34.8",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.16.6",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.14.14",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 1,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.18",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1",
+          "x2",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.13.12",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 1,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.18.4",
+      "split": "medium",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.37.1",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.3333333333333333,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.39.10",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.32.5",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.29.4",
+      "split": "medium",
+      "n_true": 1,
+      "n_dummy": 3,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.25,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.8",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.11.3",
+      "split": "medium",
+      "n_true": 5,
+      "n_dummy": 1,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.34.2",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 1,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.48.2",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.15.10",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.8.54",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.34.27",
+      "split": "medium",
+      "n_true": 1,
+      "n_dummy": 3,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.25,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.39.11",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.15.14",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.19.51",
+      "split": "medium",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x3",
+          "x4",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.4.32",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.8.7",
+      "split": "medium",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.34.14",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.10",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.24.17",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.4",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 3,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.625,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x7"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.6.15a",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 1,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.17",
+      "split": "hard",
+      "n_true": 6,
+      "n_dummy": 1,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8571428571428571,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8333333333333334,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.44.4",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x2",
+          "x3",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.50.26",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 0.75,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x3",
+          "x4",
+          "x6"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.4.33",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.36.38",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 3,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.7142857142857143,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6,
+        "prec": 0.6,
+        "sel": [
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.3",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x3",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.35.18",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.9.18",
+      "split": "hard",
+      "n_true": 8,
+      "n_dummy": 2,
+      "n_cols": 10,
+      "denoisedsr": {
+        "rec": 0.375,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x7",
+          "x8"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.9.52",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 2,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.7142857142857143,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.11.17",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 1,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.15.3x",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 1,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.15",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.13.23",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.21.20",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.6.15b",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.30.3",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 1,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.6.20b",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.12",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 1,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.11",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x4",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.35.21",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5714285714285714,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.39.22",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x1",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.29.16",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.11.20",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.16",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 1,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8333333333333334,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.11.28",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.41.16",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 3,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.0,
+        "prec": 0.0,
+        "sel": [
+          "x0",
+          "x1"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.19",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 0.75,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x5",
+          "x6"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.2",
+      "split": "hard",
+      "n_true": 6,
+      "n_dummy": 2,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x6",
+          "x7"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.6.20a",
+      "split": "hard",
+      "n_true": 1,
+      "n_dummy": 3,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.25,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.0,
+        "prec": 0.0,
+        "sel": [
+          "x0"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.14",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 3,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.625,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.1",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 1,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.8,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.13.34",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 1,
+      "n_cols": 3,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.37.4",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x2",
+          "x3",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.20",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x2",
+          "x5"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.40.1",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5714285714285714,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.75,
+        "prec": 0.75,
+        "sel": [
+          "x0",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      }
+    },
+    {
+      "key": "feynman-ii.11.27",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x1",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.32.17",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 3,
+      "n_cols": 7,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5714285714285714,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.6",
+      "split": "hard",
+      "n_true": 7,
+      "n_dummy": 1,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.875,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.8571428571428571,
+        "prec": 0.8571428571428571,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.15.3t",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.3333333333333333,
+        "prec": 0.3333333333333333,
+        "sel": [
+          "x0",
+          "x1",
+          "x2"
+        ]
+      }
+    },
+    {
+      "key": "feynman-i.6.20",
+      "split": "hard",
+      "n_true": 2,
+      "n_dummy": 2,
+      "n_cols": 4,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.5",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 3,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 1.0,
+        "prec": 1.0,
+        "sel": [
+          "x0",
+          "x2",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.13",
+      "split": "hard",
+      "n_true": 5,
+      "n_dummy": 3,
+      "n_cols": 8,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.625,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5",
+          "x6",
+          "x7"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.4,
+        "prec": 0.4,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      }
+    },
+    {
+      "key": "feynman-iii.10.19",
+      "split": "hard",
+      "n_true": 4,
+      "n_dummy": 2,
+      "n_cols": 6,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.5,
+        "prec": 0.5,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.9",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x0",
+          "x1",
+          "x3"
+        ]
+      }
+    },
+    {
+      "key": "feynman-bonus.7",
+      "split": "hard",
+      "n_true": 3,
+      "n_dummy": 2,
+      "n_cols": 5,
+      "denoisedsr": {
+        "rec": 1.0,
+        "prec": 0.6,
+        "sel": [
+          "x0",
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ]
+      },
+      "lasso_oracle": {
+        "rec": 0.6666666666666666,
+        "prec": 0.6666666666666666,
+        "sel": [
+          "x1",
+          "x2",
+          "x4"
+        ]
+      }
+    }
+  ]
+}

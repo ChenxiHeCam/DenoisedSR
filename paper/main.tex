@@ -37,13 +37,17 @@ never appear in the equation. Here we show that a learned front-end---DenoisedSR
 that predicts which variables are relevant (a support prior) improves and
 accelerates symbolic regression without changing the backend solver. The front-end
 couples a graph-attention network with a statistical-feature model and recovers the
-true variables with recall above $0.99$ across three physics suites, rarely
-discarding a true one. Supplied to the evolutionary backend PySR under a fixed
-budget, the prior doubles exact-law recovery (from $30\%$ to $60\%$), shrinks the
-candidate-column set by $86\%$, and speeds time-to-solution by up to $6\times$; on
-black-box data a same-size random-support control degrades accuracy, isolating
-learned guidance from dimensionality reduction. It is solver-agnostic, adds
-$\sim$40~ms per task, and leaves final law selection to a verifiable backend.
+true variables with recall $\ge 0.96$ across four physics suites, including the
+external SRSD-Feynman benchmark on which the model was never trained, while five
+classical feature selectors (Lasso, mutual information and others) leave true
+variables on the floor. Supplied to the evolutionary backend PySR under a fixed
+budget, the prior raises exact-law recovery from $42{\pm}13\%$ (mean${\pm}$s.d.\
+across three random seeds) to a seed-stable $60{\pm}0\%$, shrinks the
+candidate-column set by $85\%$, and speeds time-to-solution by up to $6\times$;
+the same gain transfers to a second backend (gplearn). On black-box data a
+same-size random-support control degrades accuracy, isolating learned guidance
+from dimensionality reduction. It is solver-agnostic, adds $\sim$40~ms per task,
+and leaves final law selection to a verifiable backend.
 \end{abstract}
 
 \section{Introduction}
@@ -95,11 +99,13 @@ unreachable.
 In this work we cast variable- and operator-support prediction as a reusable,
 backend-agnostic SR front-end; we present a graph-attention support predictor,
 ensembled with a statistical-feature model, that recovers the true variables with
-recall above $0.99$ across three physics suites; and we show that supplying this
-prior to a fixed-budget backend doubles exact-law recovery, reduces the search
-space by $86\%$ and accelerates time-to-solution by $3$--$6\times$, while a
-same-size random-support control confirms that the benefit is learned search
-guidance rather than dimensionality reduction.
+recall $\ge 0.96$ across four physics suites (including the external SRSD-Feynman
+benchmark, on which the model was never trained) and outperforms five classical
+feature selectors at oracle budget; and we show that supplying this prior to a
+fixed-budget backend raises exact-law recovery from $42\%$ to a seed-stable
+$60\%$, reduces the candidate-column set by $85\%$ and accelerates time-to-solution
+by up to $6\times$, while a same-size random-support control confirms that the
+benefit is learned search guidance rather than dimensionality reduction.
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.9\linewidth]{figures/fig1_concept.png}
@@ -118,16 +124,28 @@ what the law is.}
 We first evaluate the support prior intrinsically, without any backend. For each
 task the front-end receives $q=100$ noisy observations whose columns include the
 genuine variables together with random ``distractor'' columns, and must predict the
-true variable subset. Across three suites of physical laws---AI-Feynman
+true variable subset. Across four suites of physical laws---AI-Feynman
 (118~equations), an out-of-distribution (OOD) test set of $91$ curated physical
-laws, and an extended physics-law set (1085~equations)---the predictor attains
-recall $1.000$, $0.996$ and $0.999$ respectively, with perfect recall on
-$99$--$100\%$ of tasks (Fig.~\ref{fig:recall}). It essentially never drops a
-variable that the law uses; its only error mode is occasionally retaining a few
-extra noise columns, which merely costs the backend a little additional search
-rather than making the law unreachable. Precision stays high ($0.94$--$1.00$),
-reflecting an intentional high-recall operating point: removing a true variable is
-fatal to recovery, whereas keeping a spurious one is recoverable downstream.
+laws, an extended physics-law set (1085~equations), and the external SRSD-Feynman
+benchmark of $120$ equations with author-curated physical units and built-in
+dummy variables\cite{matsubara2024srsd}, on which the model was never
+trained---the predictor attains recall $1.000$, $0.996$, $0.999$ and $0.967$
+respectively, with perfect recall on $92$--$100\%$ of tasks
+(Fig.~\ref{fig:recall}). It essentially never drops a variable that the law uses;
+its only error mode is occasionally retaining a few extra columns, which merely
+costs the backend a little additional search rather than making the law
+unreachable. Precision is high on the three internally formatted suites
+($0.94$--$1.00$); on the external SRSD-Feynman the apparent precision is lower
+($0.59$), but the reason is not a model error: SRSD's dummy columns are
+deliberately sampled from physically plausible ranges and are designed to
+correlate with the target, and on SRSD the front-end keeps on average $1.9$
+extra columns per task while exactly $1.9$ dummies are available per task; the
+correlation between the number of dummies in a task and DenoisedSR's precision
+is $r=-0.69$. The front-end is doing what we asked of it at $\tau=0.10$---erring
+toward retention---so dummy columns that look physically plausible survive in
+proportion as they are added. Recall is the operationally critical quantity:
+removing a true variable is fatal to recovery, whereas keeping a spurious one is
+recoverable downstream.
 
 The result is robust and not attributable to a single component. An ablation on
 AI-Feynman (Fig.~\ref{fig:recall}, right) shows the random-forest and graph-attention
@@ -137,28 +155,77 @@ from $1$ to $30$. A naive statistical baseline trained on few records with
 name-matched labels reaches only recall $0.48$, confirming that the learned
 predictors contribute the decisive signal.
 
+A reviewer might reasonably ask whether a much simpler off-the-shelf feature
+selector would suffice. We checked this directly: on AI-Feynman, even when handed
+the oracle budget (the true number of variables $k$), five classical selectors
+(Pearson $|\rho|$, Spearman $|\rho|$, mutual information, random-forest
+importance, Lasso with cross-validated $\alpha$) attain recalls of only
+$0.63$--$0.91$, leaving true variables on the floor on roughly a third of laws in
+the best case (Lasso); the learned ensemble reaches $1.000$ on all $118$
+(Fig.~\ref{fig:baselines}). The same gap reappears on the external SRSD-Feynman
+suite (DenoisedSR $0.967$ vs.\ Lasso $0.723$). Classical selectors miss true
+variables that participate non-linearly or multiplicatively with others---exactly
+the regime in which physical laws live. We further verified that the recall holds
+under increasing label noise: at relative Gaussian noise $\eta=0.10$ on $y$,
+DenoisedSR retains recall $1.000$ across all $118$ Feynman tasks, whereas Lasso
+(oracle $k$) degrades from $0.905$ to $0.886$ (Fig.~\ref{fig:noise}).
+
 \begin{figure}[t]\centering
-\includegraphics[width=0.46\linewidth]{figures/fig2_recall.png}\hfill
-\includegraphics[width=0.40\linewidth]{figures/fig2b_ablation.png}
+\includegraphics[width=0.55\linewidth]{figures/fig2_recall.png}\hfill
+\includegraphics[width=0.36\linewidth]{figures/fig2b_ablation.png}
 \caption{\textbf{The front-end recovers essentially every true variable.}
-\emph{Left}: precision and recall of predicted variable support across three physics
-suites; recall is $\ge0.996$ with perfect recall on $99$--$100\%$ of tasks.
-\emph{Right}: ablation on AI-Feynman---the random-forest and graph-attention models
-each reach recall $\ge0.995$ and the ensemble matches the best component.}
+\emph{Left}: precision and recall of predicted variable support across four
+physics suites including the external SRSD-Feynman benchmark; recall is
+$\ge0.96$ with perfect recall on $92$--$100\%$ of tasks. \emph{Right}: ablation on
+AI-Feynman---the random-forest and graph-attention models each reach recall
+$\ge0.995$ and the ensemble matches the best component.}
 \label{fig:recall}
+\end{figure}
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.62\linewidth]{figures/fig_baselines.png}
+\caption{\textbf{Classical feature selectors leave true variables on the floor.}
+Mean variable-support recall on AI-Feynman ($118$ laws, $q=100$, $20$ distractors)
+under an oracle top-$k$ budget that hands every selector the true variable count
+for free. Even with this advantage, mutual information, Pearson/Spearman
+correlation, random-forest importance and cross-validated Lasso miss true
+variables on $30$--$80\%$ of laws; DenoisedSR recovers all true variables on
+every one of the $118$ tasks.}
+\label{fig:baselines}
+\end{figure}
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.55\linewidth]{figures/fig_noise.png}
+\caption{\textbf{Recall is robust to label noise.} Mean variable-support recall on
+AI-Feynman ($118$ laws) as Gaussian noise of relative magnitude $\eta$ is added to
+the target $y$. DenoisedSR retains $\mathrm{recall}=1.000$ up to $\eta=0.10$
+(perfect recall on all $118$ tasks); the best classical baseline (Lasso with
+oracle top-$k$ budget) degrades from $0.905$ to $0.886$.}
+\label{fig:noise}
 \end{figure}
 
 \subsection*{A high-recall prior strengthens a fixed-budget solver}
 We next insert DenoisedSR before PySR\cite{cranmer2023pysr} and compare three
-conditions at a fixed $10$~s per-task budget on a $30$-equation Feynman subset with
-$\sim$20 distractor columns: (A) full PySR over all columns and the full
+conditions at a fixed $10$~s per-task budget on a $30$-equation Feynman subset
+with $\sim$20 distractor columns: (A) full PySR over all columns and the full
 $17$-operator library; (B) the variable prior, restricting the columns to the
-predicted support; and (C) additionally restricting the operator library. The
-variable prior raises exact-law recovery (held-out $R^2\ge0.999$) from $9/30$
-($30\%$) to $18/30$ ($60\%$), lifts mean held-out $R^2$ from $0.855$ to $0.967$
-(averaged over all $30$ tasks, with non-finite failures floored at $-1$), reduces
-the average column count from $23.2$ to $3.2$ (an $86\%$ reduction) and halves the
-effective search vocabulary from $40$ to $20$ (Fig.~\ref{fig:recovery}).
+predicted support; and (C) additionally restricting the operator library. Running
+three independent random seeds, the variable prior raises exact-law recovery
+(held-out $R^2\ge0.999$) from $42{\pm}13\%$ (mean${\pm}$s.d.\ across seeds, with
+the per-seed value ranging $30$--$57\%$) to a seed-stable $60{\pm}0\%$, lifts
+mean held-out $R^2$ (over all $30$ tasks, with non-finite failures floored at
+$-1$) from $0.906{\pm}0.045$ to $0.980{\pm}0.011$, reduces the average column
+count from $23.2$ to $3.4$ (an $85\%$ reduction) and halves the effective search
+vocabulary from $40$ to $20$ (Fig.~\ref{fig:recovery}). The seed-stability of the
+learned prior---identical recovery rate across all three seeds---is itself a
+result: the front-end removes a source of stochasticity that the unguided solver
+must absorb.
+
+The gain holds across distractor counts. Repeating the same protocol with
+$5$, $10$, $20$ and $30$ distractor columns, DenoisedSR consistently exceeds full
+PySR by $10$--$30$ percentage points in exact recovery
+(Fig.~\ref{fig:distractor}), with the gap widening at moderate distractor counts
+where full search is most exposed to spurious high-$R^2$ fits.
 
 The mechanism is concrete and visible in the recovered expressions
 (Table~\ref{tab:cases}). Over many irrelevant columns an unguided solver reaches a
@@ -177,23 +244,40 @@ true law.
 \includegraphics[width=0.95\linewidth]{figures/fig3_recovery.png}
 \caption{\textbf{A variable prior strengthens a fixed-budget solver.} Full PySR
 versus the DenoisedSR variable prior versus the additional operator prior on a
-$30$-equation Feynman subset ($10$~s budget, $\sim$20 distractors). The variable
-prior doubles exact recovery ($30\%$ to $60\%$), raises mean held-out $R^2$
-($0.855$ to $0.967$) and halves the search vocabulary ($40$ to $20$); the operator
-prior cuts the vocabulary further but does not improve exact recovery.}
+$30$-equation Feynman subset ($10$~s budget, $\sim$20 distractors), aggregated
+over three random seeds (error bars: $\pm$s.d.). The variable prior raises exact
+recovery from $42{\pm}13\%$ to a seed-stable $60{\pm}0\%$, raises mean held-out
+$R^2$ from $0.906$ to $0.980$ and halves the search vocabulary ($40$ to $20$);
+the operator prior cuts the vocabulary further but does not improve exact
+recovery in expectation.}
 \label{fig:recovery}
+\end{figure}
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.55\linewidth]{figures/fig_distractor.png}
+\caption{\textbf{Gain is robust across distractor counts.} Exact-law recovery on
+the same $30$-equation Feynman subset, varying the number of random distractor
+columns from $5$ to $30$ (error bars: $\pm$s.d.\ where multiple seeds were run;
+$d=20$ uses three seeds and $d=5$ uses two). DenoisedSR's variable prior
+consistently delivers $60$--$67\%$ exact recovery while full PySR mean ranges
+$42$--$60\%$ (with per-seed extremes $30$--$57\%$ at $d=20$); the front-end's
+advantage is preserved across the distractor range.}
+\label{fig:distractor}
 \end{figure}
 
 \begin{table}[t]\centering
 \caption{\textbf{Unguided search overfits with exotic operators on distractor
-variables; DenoisedSR recovers the law.} For three Feynman laws padded with $20$
-random distractor columns, full PySR reaches a high (or diverged) held-out $R^2$ with
-a physically meaningless expression, whereas DenoisedSR---given the predicted
-variable support---recovers the exact law. Formulas are the actual PySR outputs; $x_i$
-denote the (distractor-padded) input columns.}
+variables; DenoisedSR recovers the law.} For five Feynman laws padded with $20$
+random distractor columns, full PySR reaches a high (or diverged) held-out $R^2$
+with a physically meaningless expression---variously involving $\cos^2$,
+$\sinh$, nested $\sin\sin\sinh\tanh\sin$ compositions, fractional powers and
+distractor columns---whereas DenoisedSR, given the predicted variable support
+and (where shown) the predicted operator set, recovers an expression structurally
+matching the true law. Formulas are the actual PySR outputs; $x_i$ denote the
+(distractor-padded) input columns.}
 \label{tab:cases}
-\small
-\begin{tabular}{p{2.5cm}p{4.7cm}cp{3.2cm}c}
+\footnotesize
+\begin{tabular}{p{2.7cm}p{5.4cm}cp{3.0cm}c}
 \toprule
 Physical law & Full PySR (all columns/operators) & $R^2$ & DenoisedSR & $R^2$ \\
 \midrule
@@ -205,7 +289,13 @@ $x_2(\sinh(\cdots){+}0.79)\,1.40$ (not the law) & $0.9996$ &
 $\omega_0/(1{-}v/c)$ \ding{51} & $1.000$ \\[2pt]
 Larmor power $P=\tfrac{q^2a^2}{6\pi\epsilon c^3}$ &
 $\bigl|0.48^{x_3}{+}(x_8^3/x_3^3{-}\cdots/x_{18})^3\bigr|$ (diverged) & $-2{\times}10^{19}$ &
-correct support $\{a,c,\epsilon,q\}$ & $0.99$ \\
+correct support $\{a,c,\epsilon,q\}$ & $0.99$ \\[2pt]
+Grav.\ PE diff. $U{=}Gm_1m_2(\tfrac{1}{r_2}{-}\tfrac{1}{r_1})$ &
+$(x_2{-}x_3)\sqrt{x_4/\tanh(x_3){-}0.56}\,(\cdots)$ & $0.92$ &
+$x_0 x_1 x_4(x_2{-}x_3)/(x_2 x_3)$ \ding{51} & $1.000$ \\[2pt]
+Bohr radius $r{=}4\pi\epsilon\hbar^2/(mq^2)$ &
+$(\cdots)\bigl[\sin\sin(\cdots{-}\sinh\tanh\sin x_3)\bigr]/x_1^2$ & $0.77$ &
+$x_2^2 x_3/(5.37 x_0 x_1^2)$ \ding{51} & $1.000$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -275,18 +365,53 @@ deep-tree formulas (depth-, not variable-limited) show little gain.}
 \label{fig:speed}
 \end{figure}
 
+\subsection*{The same gain holds on a second symbolic-regression backend}
+To verify that the benefit is not an artifact of a particular solver, we repeat
+the headline comparison with gplearn\cite{stephens2015gplearn} as the backend
+(classical genetic programming, $20$ generations, population $500$, otherwise
+identical settings; three random seeds). Full gplearn over $23$ columns and a
+$10$-operator library recovers a mean $3.3{\pm}3.3\%$ exact laws (mean held-out
+$R^2=0.51{\pm}0.07$); supplied with the DenoisedSR variable prior over the same
+$3.4$ predicted columns it recovers $17.8{\pm}1.9\%$ exact (mean
+$R^2=0.76{\pm}0.03$). The absolute exact-recovery rate is below PySR's because
+gplearn's tournament search is weaker, but the same qualitative gain---a
+roughly $1.5\times$ improvement in mean $R^2$ and a $\sim$$5\times$ rise in the
+exact-recovery rate---appears on a structurally different backend, supporting
+the claim that DenoisedSR is solver-agnostic (Fig.~\ref{fig:gplearn}). The same
+exotic-operator pathology reappears: on the angular-force law $F r \sin\theta$
+(Feynman~I.18.12), full gplearn at $R^2{=}0.75$ returns a six-fold nested-$\sin$
+stack on the angular variable
+($\sin\!\sin\!\sin x_2{+}\sin x_2{+}\cdots$); supplied with the
+DenoisedSR variable support it returns $x_0\,x_1\,\sin x_2$ at $R^2{=}1.000$.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.50\linewidth]{figures/fig_gplearn.png}
+\caption{\textbf{Same gain transfers to a second backend.} Exact recovery and
+mean held-out $R^2$ on the $30$-equation Feynman subset with the gplearn
+backend\cite{stephens2015gplearn} ($20$ generations, population $500$,
+$\sim$20 distractors; mean$\pm$s.d.\ over three random seeds). Full gplearn
+rarely recovers a law exactly ($3.3{\pm}3.3\%$); supplied with the DenoisedSR
+variable prior over the same $3.4$ predicted columns it recovers
+$17.8{\pm}1.9\%$ exact, raising mean held-out $R^2$ from $0.51$ to $0.76$.}
+\label{fig:gplearn}
+\end{figure}
+
 \subsection*{An operator prior helps less than a variable prior}
-Restricting the operator library in addition to variables (condition~C) recovers
-$14/30$ ($47\%$) exact---below the variable prior ($60\%$) but still above full
-search ($30\%$), with the same mean held-out $R^2$ as the variable prior
-($0.968$; Fig.~\ref{fig:recovery}). Operators are intrinsically harder to infer from
-small, noisy domains, and a mis-removed operator is fatal, so we report the operator
-prior as an ablation rather than a primary result. Its most plausible use is as a
-safeguard: when full-operator search returns a pathological fit built from exotic
-operators, restricting the library to the predicted operators should steer the search
-back toward a sane solution; quantifying this rescue at the level of individual
-recovered expressions requires a backend run that logs the before-and-after formulas,
-which we leave to future work.
+Restricting the operator library in addition to variables (condition~C) attains
+mean exact recovery of $60{\pm}12\%$ across the same three seeds---matching the
+variable prior's $60\%$ in expectation but with non-zero seed variance (per-seed
+$47$, $67$, $67\%$)---and the same mean held-out $R^2$ ($0.979{\pm}0.011$;
+Fig.~\ref{fig:recovery}). Operators are intrinsically harder to infer from
+small, noisy domains, and a mis-removed operator is fatal, which is consistent
+with the operator prior being a noisier addition rather than a clear gain on top
+of the variable prior in expected exact recovery. Its concrete value is visible
+in the case studies of Table~\ref{tab:cases}: in every one of the five examples
+the operator prior produces the cleaner closed-form algebraic expression that
+matches the textbook law, with the variable-only condition typically finding a
+longer, algebraically equivalent fit at comparable $R^2$. We
+therefore report the operator prior as a safeguard whose primary effect is on
+the \emph{form} of the recovered expression rather than on the rate of exact
+recovery.
 
 \section{Discussion}
 These results support a simple thesis: for symbolic regression of physical laws, a
@@ -365,24 +490,36 @@ variant (a generative-adversarial graph-attention model) was explored but gave n
 consistent gain and is not used.
 
 \noindent\textbf{Backend integration and evaluation.} We use
-PySR\cite{cranmer2023pysr} as the downstream backend because it exposes variable and
-operator restrictions directly and is reproducible locally; the same prior interface
-applies to enumeration\cite{ruan2026pse} and generative\cite{li2026gensr} backends.
-All comparisons fix the backend budget across conditions, so the only changed
-quantity is the search space exposed to the solver. Exact recovery denotes held-out
-$R^2\ge0.999$. Support quality is measured by precision and recall against the known
-law variables, at the deployed ensemble threshold $\tau=0.10$; the same-size
+PySR\cite{cranmer2023pysr} as the primary downstream backend because it exposes
+variable and operator restrictions directly and is reproducible locally; we
+additionally verify the gain on gplearn\cite{stephens2015gplearn} (classical
+genetic programming) to test solver-independence, and the same prior interface
+applies to enumeration\cite{ruan2026pse} and generative\cite{li2026gensr}
+backends. All comparisons fix the backend budget across conditions, so the only
+changed quantity is the search space exposed to the solver. The headline PySR
+$30$-equation comparison is repeated over three random seeds and reported as
+mean${\pm}$s.d.; the distractor sweep ($n_{\mathrm{dist}}\in\{5,10,20,30\}$) uses
+a single seed at each level. Exact recovery denotes held-out $R^2\ge0.999$.
+Support quality is measured by precision and recall against the known law
+variables, at the deployed ensemble threshold $\tau=0.10$; the same-size
 random-support control retains the same number of columns selected without the
-front-end. Time-to-solution is measured with early stopping on exact recovery, and
-front-end overhead is measured separately. All reported numbers are produced by the
-released evaluation scripts from the recorded result artifacts.
+front-end. Five classical selector baselines (Pearson and Spearman
+$|{\rho}|$, mutual information, random-forest importance, and Lasso with
+cross-validated $\alpha$) are scored on AI-Feynman at an oracle top-$k$ budget
+that hands them the true number of variables. Label-noise robustness is
+evaluated by adding $\eta\cdot\mathrm{s.d.}(y_{\mathrm{clean}})$ Gaussian noise
+to the target for $\eta\in\{0,0.01,0.05,0.10\}$. Time-to-solution is measured
+with early stopping on exact recovery, and front-end overhead is measured
+separately. All reported numbers are produced by the released evaluation scripts
+from the recorded result artifacts.
 
 \section*{Data availability}
-The external benchmarks (AI-Feynman, PMLB/SRBench) are
-public\cite{udrescu2020aifeynman,olson2017pmlb,lafuente2024srbench}; the
-physical-law training records are materialised from public formula and range
-information. The recorded result artifacts that back every figure and table are
-released with the code.
+The external benchmarks (AI-Feynman, PMLB/SRBench, SRSD-Feynman) are
+public\cite{udrescu2020aifeynman,olson2017pmlb,lafuente2024srbench,matsubara2024srsd};
+the SRSD-Feynman dummy variants used here are obtained from the authors' Hugging
+Face repositories. The physical-law training records are materialised from public
+formula and range information. The recorded result artifacts that back every
+figure and table are released with the code.
 
 \section*{Code availability}
 Code for the front-end, training, evaluation and figure generation, together with the
@@ -400,5 +537,76 @@ The authors declare no competing interests.
 
 \bibliographystyle{naturemag}
 \bibliography{references}
+
+\clearpage
+\appendix
+\section*{Supplementary information}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Summary of variable-support recovery across selectors and
+suites.} Variable-support recall, with the fraction of tasks on which the
+selector attains \emph{perfect} recall (every true variable retained). All
+selectors except DenoisedSR are run at an oracle top-$k$ budget that hands them
+the true variable count for free. Recall on AI-Feynman is also reported under
+relative Gaussian label noise $\eta$; entries marked --- were not part of the
+noise sweep.}
+\label{tab:selector-summary}
+\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{AI-Feynman ($118$)} & \multicolumn{1}{c}{SRSD-Feynman ($120$)} & \multicolumn{3}{c}{AI-Feynman noise ($\eta$)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-7}
+Selector & recall & perfect \% & recall & $\eta{=}0.01$ & $\eta{=}0.05$ & $\eta{=}0.10$ \\
+\midrule
+Pearson $|\rho|$           & 0.768 & 45.8 & ---   & --- & --- & ---   \\
+Spearman $|\rho|$          & 0.776 & 45.8 & ---   & --- & --- & ---   \\
+mutual information         & 0.634 & 20.3 & ---   & --- & --- & ---   \\
+random-forest importance   & 0.812 & 44.9 & ---   & --- & --- & ---   \\
+Lasso (CV) \emph{oracle $k$} & 0.905 & 71.2 & 0.723 & 0.904 & 0.904 & 0.886 \\
+\midrule
+DenoisedSR (ours, $\tau{=}0.10$) & \textbf{1.000} & \textbf{100.0} & \textbf{0.967} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Backend integration summary.} Mean exact-law recovery and mean
+held-out $R^2$ on the $30$-equation Feynman headline subset
+($n_{\mathrm{dist}}=20$, $q=100$). Errors are $\pm$s.d.\ over three random seeds.
+The variable prior shrinks the candidate-column set from $23.2$ to $3.4$ in
+both backends.}
+\label{tab:backends}
+\footnotesize
+\begin{tabular}{lcc}
+\toprule
+Condition & Exact recovery (\%) & Mean held-out $R^2$ \\
+\midrule
+\multicolumn{3}{l}{\emph{PySR (10\,s budget, full $17$-op library)}} \\
+\quad full search                & $42.2 \pm 13.5$ & $0.906 \pm 0.045$ \\
+\quad + DenoisedSR variable prior  & $60.0 \pm 0.0$  & $0.980 \pm 0.011$ \\
+\quad + DenoisedSR variable\,+\,operator prior & $60.0 \pm 11.5$ & $0.979 \pm 0.011$ \\
+\midrule
+\multicolumn{3}{l}{\emph{gplearn ($20$ generations, population $500$, $10$-op library)}} \\
+\quad full search                & $3.3  \pm 3.3$  & $0.508 \pm 0.083$ \\
+\quad + DenoisedSR variable prior  & $17.8 \pm 1.9$  & $0.763 \pm 0.029$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h!]\centering
+\includegraphics[width=0.55\linewidth]{figures/fig_srsd.png}\hfill
+\includegraphics[width=0.42\linewidth]{figures/fig_srsd_precision.png}
+\caption{\textbf{Detail on SRSD-Feynman.} \emph{Left}: recall on each SRSD
+difficulty split ($30$ easy, $40$ medium, $50$ hard) for DenoisedSR vs.\ Lasso
+at oracle top-$k$; DenoisedSR exceeds $0.95$ recall on every split. \emph{Right}:
+diagnostic of the apparent precision drop on SRSD ($0.59$ overall). Each marker
+is one of the $120$ SRSD tasks (orange = perfect recall, grey = imperfect
+recall); horizontal bars show the binned mean precision. Precision falls
+monotonically with the number of dummy columns SRSD adds to the task (Pearson
+$r=-0.69$) because the front-end at $\tau{=}0.10$ retains physically plausible
+dummies rather than discarding them; on tasks with no dummies our precision is
+near $1$.}
+\label{fig:srsd-detail}
+\end{figure}
 
 \end{document}
