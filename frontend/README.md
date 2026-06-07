@@ -1,69 +1,96 @@
 # Neural SR Front-End — Code
 
 Graph-attention variable-support front-end for symbolic regression.
-Companion code for the results in `../RESULTS_SUMMARY.md`.
+Companion code for the paper in `../paper/main.pdf`. See `../README.md` for
+top-level overview and reproduction commands.
 
-## Layout
+## Two kinds of scripts in this directory
+
+Scripts here fall into **two categories**:
+
+- **paper-reproducing**: self-contained, run from the release with the shipped
+  benchmarks + models, write outputs into `../data/results/`. These are the
+  only scripts a reviewer needs to verify any number in the paper.
+- **training-only**: reproduce the training pipeline that *produced* the
+  shipped models. They reference internal training data
+  (`_FOUNDATION_TRAINING_DATASET_20260522/`,
+  `stage9_opensidr_expert_route_expansion_manifest_*`,
+  `stage8g_real_for_sure_*`) that is **not** included in this release because
+  of size; those files still contain hard-coded `D:/Physics Fundation model/...`
+  paths from the authors' tree. They are kept for transparency about how the
+  models were trained but cannot be run from a fresh clone without recreating
+  the training corpus.
+
+## Paper-reproducing scripts
+
+In `eval/` (each writes a JSON under `../data/results/` that the corresponding
+figure consumes):
+
+| Script | Reproduces | Output JSON |
+|---|---|---|
+| `eval_pysr_frontend.py`       | PySR 3-way + Table 1 cases | `pysr_frontend_3way.json` (+ `_formulas.json`) |
+| `eval_baselines_feynman.py`   | Fig fig_baselines: 5 classical selectors | `baselines_feynman_recall.json` |
+| `eval_srsd_recall.py`         | SRSD-Feynman external suite | `srsd_dummy_recall.json` |
+| `eval_noise_sweep.py`         | Fig fig_noise: η ∈ {0,0.01,0.05,0.10} | `noise_sweep.json` |
+| `eval_gplearn_backend.py`     | Fig fig_gplearn: second backend | `gplearn_backend_3way.json` |
+| `eval_feynman_suite.py`       | AI-Feynman 118 recall + ablation | (stdout summary) |
+| `aggregate_sweep.py`          | multi-seed PySR + distractor + gplearn aggregate | `multiseed_distractor_aggregate.json` |
+| `fetch_srsd.py`               | one-off: pull SRSD-Feynman dummy files from Hugging Face | `../data/benchmarks/srsd/` |
+
+In `eval/` other:
+
+| Script | Purpose |
+|---|---|
+| `eval_speed_vars.py`          | per-formula time-to-solution (Fig fig6_speed) |
+| `measure_frontend_overhead.py`| front-end inference time (~40 ms / task) |
+| `eval_gat_operator.py`        | operator-predictor recall (ablation) |
+| `eval_numeric_equiv.py`       | numeric-equivalence judging vs sympy |
+
+## Training-only (NOT runnable from a fresh clone)
+
+These all import / read data paths from the authors' training tree:
 
 ```
-frontend/
-├── models/          trained models (ship these)
-│   ├── gat_best.pt                    GAT variable-support predictor (PRIMARY)
-│   ├── support_predictor_v2_40k.joblib  RF variable-support (ensemble partner)
-│   ├── gat_operator.pt                GAT operator predictor (ablation)
-│   ├── operator_predictor_full.joblib   RF operator predictor (ablation baseline)
-│   └── cooc_graph.joblib              variable co-occurrence graph (GAT edges)
-├── train/           model training
-├── eval/            evaluation + benchmarks
-├── data_prep/       formula-pool construction
-└── analysis/        diagnostics, ablations, case studies
+analysis/analyze_recall_failures.py
+analysis/eval_noise_comparison.py
+analysis/eval_pretrain.py
+analysis/score_dist.py
+analysis/verify_experiment.py
+data_prep/build_formula_pool.py
+eval/eval_ensemble.py
+eval/eval_final_ensemble.py
+eval/eval_support_predictor.py
+eval/eval_v5_suite.py
+eval/run_real591_fullvars.py
+eval/run_real591_verify.py
+train/train_support_predictor_v2.py
+train/train_support_predictor_large.py
+train/finetune_support_predictor.py
+train/train_gan_gat.py        (abandoned experiment, kept for transparency)
 ```
 
-## Pipeline
+To re-run any of these you would have to recreate the training corpus
+(`_FOUNDATION_TRAINING_DATASET_20260522/nodes_full.jsonl` etc.) and the
+intermediate stage8g / stage9 manifests. The shipped models are the artifacts
+of these scripts; the artifacts in `data/results/` are what consume the models.
 
-### 1. Data prep (`data_prep/`)
-- `build_formula_pool.py`   — sample observation data for ~8k formulas (pre-sampled pool)
-- `build_v3_pool.py`        — select 32k formulas from the v3 knowledge graph
-- `presample_v3_pool.py`    — pre-sample v3 formulas (lazy → eager)
+## Key models for inference
 
-### 2. Training (`train/`)
-- `train_support_predictor_v2.py`  — RF variable-support (statistical + unit features)
-- `train_gat.py`                   — **GAT variable-support (the main model)**
-- `train_gat_operator.py`          — GAT operator predictor (graph + behavioral features)
-- `train_operator_predictor.py`    — RF operator predictor (behavioral features, baseline)
-- `finetune_support_predictor.py`  — RF finetune on 10–30 distractor range
-- `train_gan_gat.py`               — GAN-GAT experiment (abandoned: adversarial gave no gain)
-
-### 3. Evaluation (`eval/`)
-- `eval_support_predictor.py`  — precision/recall of variable support (real591)
-- `eval_v5_suite.py`           — variable support on v5 physics65 (1085 formulas)
-- `eval_feynman_suite.py`      — variable support on AI-Feynman (118)
-- `eval_pysr_frontend.py`      — **3-way: Full PySR vs Ours-vars vs Ours-vars+ops**
-- `eval_final_ensemble.py`     — RF+GAT ensemble voting strategies
-- `eval_speed_vars.py`         — time-to-solution A (all cols) vs B (selected)
-- `eval_numeric_equiv.py`      — numeric-equivalence judging (vs sympy)
-- `eval_gat_operator.py`       — operator-predictor recall/precision
-- `measure_frontend_overhead.py` — front-end inference time (40 ms)
-
-### 4. Analysis (`analysis/`)
-- `inspect_highr2.py`          — show spurious high-R² formulas PySR finds
-- `compare_op_on_spurious.py`  — does operator restriction rescue spurious fits?
-- `show_nonexact.py`           — list all high-R²-non-exact cases for human judging
-- `analyze_recall_failures.py` — which variables get missed + prediction variance
-
-## Key models to ship
-
-For inference you need just three files:
 ```
-models/gat_best.pt
-models/support_predictor_v2_40k.joblib
-models/cooc_graph.joblib
+models/gat_best.pt                          1.6 MB   GAT variable-support
+models/gat_operator.pt                      0.7 MB   GAT operator-support
+models/cooc_graph.joblib                    0.4 MB   variable co-occurrence
+models/support_predictor_v2_40k.joblib    ~213 MB    RF variable-support partner (fetch separately)
+models/operator_predictor_full.joblib     ~358 MB    RF operator partner (fetch separately, ablation only)
 ```
-Select variables with: `score = RF(col) + sigmoid(GAT(col)); keep if score >= 0.10`.
 
-## Headline results (see ../RESULTS_SUMMARY.md)
+The first three ship in this repo. The two RF partners are too large for Git
+and must be downloaded (see `../scripts/fetch_weights.sh`). The deployed
+ensemble combines RF and GAT: `score = RF(col) + sigmoid(GAT(col))`; keep
+column iff `score >= 0.10`. A GAT-only fallback at the same threshold reaches
+recall >= 0.995 on AI-Feynman (see `support_recall_deployed.json::ablation_feynman118`).
 
-- Variable recall = **1.000** on real591 / v5 / AI-Feynman (perfect-recall 100%).
-- PySR exact recovery **+13pp (q=100) → +28pp (q=500)**, 84% column reduction.
-- Time-to-solution **3–6× faster** on typical formulas; front-end overhead ~40 ms.
-- Operator prediction: net-neutral overall; useful only as an adaptive safeguard.
+## Headline results (paper figures)
+
+See `../README.md` for the headline table; numbers are computed by the
+paper-reproducing scripts above from the artifacts in `../data/results/`.

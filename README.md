@@ -69,7 +69,8 @@ artifacts in `data/results/`.
 │   ├── gat_best.pt            GAT variable-support predictor (PRIMARY)
 │   ├── gat_operator.pt        GAT operator predictor (ablation)
 │   └── cooc_graph.joblib      variable co-occurrence graph (GAT edges)
-│   (support_predictor_v2_40k.joblib — RF partner — fetched separately, see Models)
+│   (support_predictor_v2_40k.joblib + operator_predictor_full.joblib — RF
+│    partners, ~213 MB and ~358 MB — fetched separately via scripts/fetch_weights.sh)
 ├── data/
 │   ├── benchmarks/            task manifests (AI-Feynman, PMLB, SRSD)
 │   └── results/               every figure/table's backing JSON
