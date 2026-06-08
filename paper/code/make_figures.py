@@ -126,35 +126,33 @@ def fig_recovery():
     save(fig, 'fig3_recovery')
 
 
-# ------------------------------------------------------------ fig4: q-scaling (NEW)
+# ------------------------------------------------------------ fig4: q-scaling at deployed tau=0.10 (multi-seed)
 def fig_qscaling():
-    base = 'data/results/remote_fetch/32345_feynman_s50_qcurve_fixed_20260506/'
-    def ld(f): return J(base + f)['summary']
-    bq50 = ld('pysr_pmlb_feynman_baseline_s50_q50_d10_t10_seed20260506.json')
-    bq100 = ld('pysr_pmlb_feynman_baseline_s50_q100_d10_t10_seed20260506.json')
-    pq50 = ld('pysr_pmlb_feynman_prior_s50_q50_d10_t10_thr055_op028_seed20260506.json')
-    pq100 = ld('pysr_pmlb_feynman_prior_s50_q100_d10_t10_thr055_op028_seed20260506.json')
-    N = 50; q = [50, 100]
-    ex_full = [bq50['full_success_r2_0999']/N*100, bq100['full_success_r2_0999']/N*100]
-    ex_ours = [pq50['learned_variables_success_r2_0999']/N*100, pq100['learned_variables_success_r2_0999']/N*100]
-    ex_orac = [bq50['oracle_support_success_r2_0999']/N*100, bq100['oracle_support_success_r2_0999']/N*100]
-    r2_full = [bq50['full_mean_r2'], bq100['full_mean_r2']]
-    r2_ours = [pq50['learned_variables_mean_r2'], pq100['learned_variables_mean_r2']]
-    r2_orac = [bq50['oracle_support_mean_r2'], bq100['oracle_support_mean_r2']]
-    fig, axs = plt.subplots(1, 2, figsize=(6.2, 2.6))
-    for ax, yf, yo, yc, ylab in [
-        (axs[0], ex_full, ex_ours, ex_orac, 'Exact law recovery (%)'),
-        (axs[1], r2_full, r2_ours, r2_orac, 'Mean held-out $R^2$')]:
-        ax.plot(q, yc, '--o', color=ORAC, lw=1.3, ms=5, label='oracle support')
-        ax.plot(q, yo, '-o', color=OURS, lw=1.6, ms=6, label='DenoisedSR')
-        ax.plot(q, yf, '-o', color=FULL, lw=1.6, ms=6, label='full PySR')
-        ax.set_xticks(q); ax.set_xlabel('observations $q$'); ax.set_ylabel(ylab)
-        ax.margins(x=0.18, y=0.18)
-    axs[0].annotate('full search\ndegrades', (100, ex_full[1]), (72, ex_full[1]-9),
-                    fontsize=6.5, color=FULL, ha='center',
-                    arrowprops=dict(arrowstyle='->', color=FULL, lw=0.6))
-    axs[0].legend(loc='center left', fontsize=7)
-    fig.suptitle('More data helps DenoisedSR but hurts unguided search', fontsize=9, y=1.02)
+    agg = J('data/results/qscaling_tau010_aggregate.json')
+    qs = sorted(int(k) for k in agg)
+    ex_full = [agg[str(q)]['full_exact_pct_mean'] for q in qs]
+    ex_ours = [agg[str(q)]['var_exact_pct_mean']  for q in qs]
+    fe_std  = [agg[str(q)]['full_exact_pct_std']  for q in qs]
+    ve_std  = [agg[str(q)]['var_exact_pct_std']   for q in qs]
+    r2_full = [agg[str(q)]['full_r2_mean'] for q in qs]
+    r2_ours = [agg[str(q)]['var_r2_mean']  for q in qs]
+    n_seeds = [agg[str(q)]['n_seeds'] for q in qs]
+    fig, axs = plt.subplots(1, 2, figsize=(6.2, 2.7))
+    axs[0].errorbar(qs, ex_full, yerr=fe_std, fmt='-o', color=FULL, lw=1.6, ms=6, capsize=3, label='full PySR')
+    axs[0].errorbar(qs, ex_ours, yerr=ve_std, fmt='-o', color=OURS, lw=1.6, ms=6, capsize=3, label='DenoisedSR')
+    axs[0].set_xticks(qs); axs[0].set_xlabel('observations $q$')
+    axs[0].set_ylabel('Exact law recovery (%)')
+    axs[0].set_ylim(30, 75); axs[0].legend(loc='lower right', fontsize=7)
+    for x, y in zip(qs, ex_full): axs[0].text(x, y-3, f'{y:.0f}', ha='center', fontsize=6.5, color=FULL)
+    for x, y in zip(qs, ex_ours): axs[0].text(x, y+1.5, f'{y:.0f}', ha='center', fontsize=6.5, color=OURS)
+    axs[1].plot(qs, r2_full, '-o', color=FULL, lw=1.6, ms=6, label='full PySR')
+    axs[1].plot(qs, r2_ours, '-o', color=OURS, lw=1.6, ms=6, label='DenoisedSR')
+    axs[1].set_xticks(qs); axs[1].set_xlabel('observations $q$')
+    axs[1].set_ylabel('Mean held-out $R^2$')
+    for x, y in zip(qs, r2_full): axs[1].text(x, y-0.02, f'{y:.2f}', ha='center', fontsize=6.5, color=FULL)
+    for x, y in zip(qs, r2_ours): axs[1].text(x, y+0.01, f'{y:.2f}', ha='center', fontsize=6.5, color=OURS)
+    axs[1].set_ylim(0.7, 1.02)
+    fig.suptitle(f'DenoisedSR consistently outperforms full PySR across observation counts ($\\tau{{=}}0.10$, multi-seed)', fontsize=8.5, y=1.02)
     fig.tight_layout()
     save(fig, 'fig4_qscaling')
 

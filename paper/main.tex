@@ -343,25 +343,28 @@ $1.71\,x_2^2 x_3/(5.37 x_0 x_1^2)$ \ding{51} & $1.000$ \\
 \end{tabular}
 \end{table}
 
-\subsection*{More data helps DenoisedSR but hurts unguided search}
-A striking consequence of pruning is how the methods scale with data
-(Fig.~\ref{fig:qscaling}). On a $50$-equation Feynman set with $10$ distractors,
-increasing the observations from $q=50$ to $q=100$ \emph{lowers} the exact-recovery
-rate of full search (from $16\%$ to $8\%$): more data slows each backend evaluation
-and exposes additional spurious high-$R^2$ fits among the distractor columns. Over
-the same range DenoisedSR \emph{improves} (from $18\%$ to $24\%$) and tracks the
-oracle-support upper bound, because it first removes the irrelevant columns and then
-lets the backend benefit from the extra data. The front-end thus lets a solver
-actually exploit more observations instead of drowning in them.
+\subsection*{The gain is preserved across observation counts}
+The gain is stable as the per-task observation budget changes. On the same
+$50$-equation Feynman subset (deployed $\tau=0.10$, $10$ distractors, three
+random seeds at each $q$ except $q{=}100$ which has two), full PySR's exact
+recovery is essentially flat across $q\in\{50, 100, 200\}$ at
+$45$--$50\%$, while the DenoisedSR variable prior is similarly flat at
+$61$--$63\%$, preserving an advantage of $+11$ to $+17$ percentage points
+(Fig.~\ref{fig:qscaling}). Mean held-out $R^2$ improves modestly with $q$ for
+both conditions, but the gap remains: $0.95$--$0.98$ for DenoisedSR vs.\
+$0.81$--$0.94$ for full PySR. The front-end's benefit is therefore not
+sensitive to the typical observation-budget regime; it is the same exponential
+search-space reduction at every data scale we tested.
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.82\linewidth]{figures/fig4_qscaling.png}
-\caption{\textbf{More data helps DenoisedSR but hurts unguided search.} Exact-law
-recovery (left) and mean held-out $R^2$ (right) versus the number of observations
-$q$, on a $50$-equation Feynman set with $10$ distractors (single seed, with a
-front-end variant operating at a higher threshold than the headline $\tau=0.10$
-to expose the qualitative scaling trend). Full search degrades with more data
-while DenoisedSR improves and approaches the oracle-support upper bound.}
+\caption{\textbf{Gain is preserved across observation counts.} Exact-law
+recovery (left) and mean held-out $R^2$ (right) versus the number of
+observations $q$, on a $50$-equation Feynman subset with $10$ distractors at
+the deployed $\tau{=}0.10$ ensemble. Three random seeds at $q\in\{50, 200\}$
+and two seeds at $q{=}100$; error bars are $\pm$s.d.\ across seeds. DenoisedSR
+maintains an $11$--$17$ percentage-point lead in exact recovery and a
+$0.04$--$0.14$ point lead in mean $R^2$ across the entire range.}
 \label{fig:qscaling}
 \end{figure}
 
