@@ -31,23 +31,21 @@
 
 \begin{abstract}
 \noindent
-Symbolic regression recovers interpretable physical laws from data, but its cost
-grows steeply with the number of candidate variables and operators, most of which
-never appear in the equation. Here we show that a learned front-end---DenoisedSR---
-that predicts which variables are relevant (a support prior) improves and
-accelerates symbolic regression without changing the backend solver. The front-end
-couples a graph-attention network with a statistical-feature model and recovers the
-true variables with recall $\ge 0.96$ across four physics suites, including the
-external SRSD-Feynman benchmark on which the model was never trained, while five
-classical feature selectors (Lasso, mutual information and others) leave true
-variables on the floor. Supplied to the evolutionary backend PySR under a fixed
-budget, the prior raises exact-law recovery from $42{\pm}13\%$ (mean${\pm}$s.d.\
-across three random seeds) to a seed-stable $60{\pm}0\%$, shrinks the
-candidate-column set by $85\%$, and speeds time-to-solution by up to $6\times$;
-the same gain transfers to a second backend (gplearn). On black-box data a
-same-size random-support control degrades accuracy, isolating learned guidance
-from dimensionality reduction. It is solver-agnostic, adds $\sim$40~ms per task,
-and leaves final law selection to a verifiable backend.
+Symbolic regression recovers interpretable physical laws but scales poorly
+with candidate variable and operator counts. We show that a learned
+front-end---DenoisedSR---predicting which variables are relevant (a support
+prior) improves any backend solver without modifying it. A graph-attention
+network and a statistical-feature model recover true variables with recall
+$\ge 0.96$ on four external physics benchmarks (including SRSD-Feynman, never
+seen during training), where five classical feature selectors fail. Supplied
+to PySR under fixed budget, the prior raises exact-law recovery from
+$42{\pm}13\%$ to a seed-stable $60{\pm}0\%$ over three seeds, shrinks the
+candidate-column set by $85\%$, and speeds time-to-solution up to $6\times$.
+The gain reproduces on two structurally different backends (classical genetic
+programming and GPU parallel enumeration). A same-size random-support control
+degrades on black-box data, isolating learned guidance from dimensionality
+reduction. DenoisedSR is solver-agnostic, adds $\sim$40~ms per task, and
+leaves final law selection to a verifiable backend.
 \end{abstract}
 
 \section{Introduction}
@@ -556,8 +554,9 @@ representations aligned\cite{meidani2024snip,rogers2025whatwedontc}---is, in our
 view, the central open problem in moving from a front-end prior toward reliable
 end-to-end neural discovery\cite{voigt2024ood,shojaee2025llmsr,hallin2024universal}.
 Even short of that goal, DenoisedSR is immediately useful: it makes existing
-physical-law solvers both more successful and several times faster, with a
-provably safe failure mode.
+physical-law solvers both more successful and several times faster, with an
+empirically safe failure mode (recall $\ge 0.96$ across every external suite we
+tested, and $1.000$ on AI-Feynman across all $12$ hard-scenario settings).
 
 \section{Methods}
 
@@ -593,29 +592,65 @@ front-end is robust to the number of irrelevant columns at test time. An adversa
 variant (a generative-adversarial graph-attention model) was explored but gave no
 consistent gain and is not used.
 
-\noindent\textbf{Backend integration and evaluation.} We use
-PySR\cite{cranmer2023pysr} as the primary downstream backend because it exposes
-variable and operator restrictions directly and is reproducible locally; we
-additionally verify the gain on gplearn\cite{stephens2015gplearn} (classical
-genetic programming) to test solver-independence, and the same prior interface
-applies to enumeration\cite{ruan2026pse} and generative\cite{li2026gensr}
-backends. All comparisons fix the backend budget across conditions, so the only
-changed quantity is the search space exposed to the solver. The headline PySR
-$30$-equation comparison is repeated over three random seeds and reported as
-mean${\pm}$s.d.; the distractor sweep ($n_{\mathrm{dist}}\in\{5,10,20,30\}$) uses
-a single seed at each level. Exact recovery denotes held-out $R^2\ge0.999$.
-Support quality is measured by precision and recall against the known law
-variables, at the deployed ensemble threshold $\tau=0.10$; the same-size
-random-support control retains the same number of columns selected without the
-front-end. Five classical selector baselines (Pearson and Spearman
-$|{\rho}|$, mutual information, random-forest importance, and Lasso with
-cross-validated $\alpha$) are scored on AI-Feynman at an oracle top-$k$ budget
-that hands them the true number of variables. Label-noise robustness is
-evaluated by adding $\eta\cdot\mathrm{s.d.}(y_{\mathrm{clean}})$ Gaussian noise
-to the target for $\eta\in\{0,0.01,0.05,0.10\}$. Time-to-solution is measured
-with early stopping on exact recovery, and front-end overhead is measured
-separately. All reported numbers are produced by the released evaluation scripts
-from the recorded result artifacts.
+\noindent\textbf{Backends and evaluation protocol.} The prior is verified
+against three backends from structurally different families. (a)
+PySR\cite{cranmer2023pysr} (evolutionary genetic programming) is the primary
+backend because it exposes variable and operator restrictions directly and is
+reproducible locally. The headline $30$-equation PySR comparison runs at a
+$10$\,s per-task budget, the full $17$-operator library, with $20$ random
+distractor columns at $q=100$, repeated over three random seeds (a fourth seed
+crashed mid-run; mean${\pm}$s.d.\ are reported over the three completed seeds).
+The distractor sweep $n_{\mathrm{dist}}\in\{5,10,20,30\}$ uses three seeds at
+$d\in\{5,20,30\}$ and two at $d{=}10$. The observation-count sweep
+$q\in\{50,100,200\}$ uses three seeds at $q\in\{50,200\}$ and two at $q{=}100$,
+all at the deployed $\tau{=}0.10$. (b) gplearn\cite{stephens2015gplearn}
+(classical genetic programming, $20$ generations, population $500$,
+$10$-operator library): three random seeds, identical other settings. (c)
+PSE\cite{ruan2026pse} (parallel symbolic enumeration on GPU, the 2026 Nature
+Computational Science cover algorithm): three symbol layers, four
+$n_{\mathrm{psrn\_inputs}}$ per round, nine-operator library, $30$\,s budget,
+single seed, run on an RTX 5080 GPU (the published default configuration of
+five inputs requires more VRAM than available). The same prior interface
+applies to enumeration and generative\cite{li2026gensr} backends not directly
+tested here.
+
+\noindent\textbf{Variable-support evaluation.} Exact recovery denotes held-out
+$R^2\ge0.999$. Variable support quality is measured by recall against the known
+true-variable set at the deployed ensemble threshold $\tau=0.10$, and by the
+\emph{distractor filter rate}: the fraction of distractor columns the model
+correctly removes (zero would mean keeping all distractors; one would mean
+keeping none). Recall is the operationally critical quantity because dropping a
+true variable is fatal to downstream recovery. Five classical selector baselines
+(Pearson and Spearman $|{\rho}|$, mutual information, random-forest importance,
+and Lasso with cross-validated $\alpha$) are scored on AI-Feynman at an oracle
+top-$k$ budget that hands them the true number of variables. A controlled
+name-ablation that renames variables to $x_0,x_1,\dots$ while keeping the data
+unchanged measures the marginal contribution of the physical-name prior in $12$
+hard scenarios spanning $q\in\{20,50,100\}$, noise $\eta\in[0,1.0]$, distractor
+counts up to $100$, and operating thresholds $\tau\in\{0.10,0.50,1.0\}$.
+
+\noindent\textbf{Operator-support evaluation.} The operator predictor is a
+graph-attention model with graph-level pooling that outputs a multi-label
+probability over a $17$-operator library; an operator is included if its
+probability exceeds $\tau_{\mathrm{op}}=0.30$ (deployed). Threshold sensitivity
+is reported over $\tau_{\mathrm{op}}\in[0.03,0.70]$ alongside the same
+name-ablation as for variables.
+
+\noindent\textbf{Robustness sweeps.} Label-noise robustness is evaluated by
+adding $\eta\cdot\mathrm{s.d.}(y_{\mathrm{clean}})$ Gaussian noise to $y$ for
+$\eta\in\{0,0.01,0.05,0.10,0.20,0.30\}$ (up to $30\%$ relative noise) and
+re-scoring all five baselines alongside DenoisedSR. The PMLB/SRBench black-box
+comparison uses $24$ tasks at $q=100$ with $5$\,s PySR budget, three random
+seeds, $10$ and $20$ distractor levels; the same-size random-support control
+retains the same number of columns selected without using the observations.
+Time-to-solution is measured with early stopping on exact recovery; front-end
+inference overhead is measured separately.
+
+\noindent\textbf{Reproducibility.} All reported numbers are produced by the
+released evaluation scripts from the recorded result artifacts. The complete
+release (code, model weights, all backing JSON artifacts, paper TeX and
+figures) is archived on Zenodo at
+\href{https://doi.org/10.5281/zenodo.20584889}{\nolinkurl{10.5281/zenodo.20584889}}.
 
 \section*{Data availability}
 The external benchmarks (AI-Feynman, PMLB/SRBench, SRSD-Feynman) are
@@ -623,12 +658,17 @@ public\cite{udrescu2020aifeynman,olson2017pmlb,lafuente2024srbench,matsubara2024
 the SRSD-Feynman dummy variants used here are obtained from the authors' Hugging
 Face repositories. The physical-law training records are materialised from public
 formula and range information. The recorded result artifacts that back every
-figure and table are released with the code.
+figure and table are released with the code (Zenodo archive,
+\href{https://doi.org/10.5281/zenodo.20584889}{\nolinkurl{10.5281/zenodo.20584889}}).
 
 \section*{Code availability}
-Code for the front-end, training, evaluation and figure generation, together with the
-result artifacts and the trained graph-attention weights, is released at
-\url{https://github.com/chenxi-he/sr-frontend} under the MIT License.
+Code for the front-end, training, evaluation and figure generation, together
+with the result artifacts and the trained graph-attention weights, is released
+at \url{https://github.com/ChenxiHeCam/DenoisedSR} under the MIT License, and
+archived on Zenodo at
+\href{https://doi.org/10.5281/zenodo.20584889}{\nolinkurl{10.5281/zenodo.20584889}}.
+The two large random-forest partner weights ($\sim$213\,MB and $\sim$341\,MB),
+which exceed GitHub's per-file limit, are bundled with the Zenodo archive.
 
 \section*{Author contributions}
 C.H. conceived the study, designed and implemented the front-end and the evaluation
