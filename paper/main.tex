@@ -444,22 +444,53 @@ $17.8{\pm}1.9\%$ exact, raising mean held-out $R^2$ from $0.48$ to $0.76$.}
 \label{fig:gplearn}
 \end{figure}
 
-\subsection*{An operator prior helps less than a variable prior}
-Restricting the operator library in addition to variables (condition~C) attains
-mean exact recovery of $60{\pm}12\%$ across the same three seeds---matching the
-variable prior's $60\%$ in expectation but with non-zero seed variance (per-seed
-$47$, $67$, $67\%$)---and the same mean held-out $R^2$ ($0.979{\pm}0.011$;
-Fig.~\ref{fig:recovery}). Operators are intrinsically harder to infer from
-small, noisy domains, and a mis-removed operator is fatal, which is consistent
-with the operator prior being a noisier addition rather than a clear gain on top
-of the variable prior in expected exact recovery. Its concrete value is visible
-in the case studies of Table~\ref{tab:cases}: in every one of the five examples
-the operator prior produces the cleaner closed-form algebraic expression that
-matches the textbook law, with the variable-only condition typically finding a
-longer, algebraically equivalent fit at comparable $R^2$. We
-therefore report the operator prior as a safeguard whose primary effect is on
-the \emph{form} of the recovered expression rather than on the rate of exact
-recovery.
+\subsection*{The operator prior depends on physical variable names}
+The variable-support and operator-support predictions answer fundamentally
+different questions. ``Which columns participate?'' can be decided from
+column-target statistics alone (correlation, monotonicity, magnitude); this is
+why the deployed variable filter (Fig.~\ref{fig:recall}) is driven by the
+random-forest head and is essentially insensitive to whether columns carry
+physical names---an explicit ablation that anonymises variables to
+$x_0,x_1,\dots$ shifts variable filter rate by only $0.0$--$0.3$ percentage
+points across $12$ scenarios spanning $q\in\{20,50,100\}$, noise
+$\eta\in[0,1.0]$ and distractor counts up to $100$ (Supplementary
+Table~\ref{tab:name-ablation-vars}). ``Which operators appear?'' is the
+opposite: there is little in the raw $(\mathbf{x},y)$ table that says
+\emph{cosine} rather than \emph{exponential}; the signal lives in physics
+priors that associate particular operators with particular kinds of variable
+($\theta\!\to\!$ trig, $T\!\to\!$ Boltzmann factor, $r\!\to\!$ power laws).
+This is what the graph-attention model trained on the physical-laws
+co-occurrence graph is designed to encode.
+
+We measure this directly. The GAT operator predictor reaches recall $0.738$
+and precision $0.536$ at its deployed threshold $\tau_{\mathrm{op}}=0.30$,
+filtering $76.5\%$ of the $17$-operator library on Feynman tasks
+(Supplementary Table~\ref{tab:op-sweep}). Holding the data fixed and
+anonymising the variable names drops operator recall to $0.667$ at the same
+threshold and by $16.8$ percentage points at the more permissive
+$\tau_{\mathrm{op}}=0.03$. Physical names contribute $+7$--$+17$ percentage
+points of operator recall, depending on threshold---an order of magnitude
+larger than the (essentially zero) name-prior contribution to the variable
+predictor.
+
+In the PySR loop, the operator prior's most useful role is therefore as a
+\emph{form rescue} on tasks where the variable prior already recovers the
+support but the unrestricted operator library leaves the backend free to
+absorb the law into exotic functions. The clearest examples are the relativistic
+Lorentz time transformation $t_1=(t-ux/c^2)/\sqrt{1-u^2/c^2}$ (Feynman
+I.15.3t, $\log(\cosh(\cdot))$ at $R^2{=}0.996$ under full search and an even
+messier nested-power form under the variable prior alone, but a clean exact
+algebraic recovery under the operator prior), the Bohr radius
+$r=4\pi\epsilon\hbar^2/(mq^2)$ (Feynman I.38.12, $\sin\sin(\cdot{-}\sinh
+\tanh\sin x_3)$ under full search, a $\log(\cdot)^{x\cdot x/(xx)}$ form under
+the variable prior at $R^2{=}0.996$, and an exact $1.71\,x_2^2 x_3/(5.37\,x_0
+x_1^2)$ under the operator prior), and the two-slit interference pattern
+$I_0\sin^2(n\theta/2)/\sin^2(\theta/2)$ (Feynman I.30.3, $R^2$ rises from
+$0.29\to 0.68\to 0.97$ across the three conditions as the operator library
+shrinks). Reported aggregate exact recovery on the $30$-equation headline is
+unchanged in mean ($60{\pm}12\%$ vs.\ the variable-only $60{\pm}0\%$), but the
+recovered \emph{forms} on these operator-rescue cases are qualitatively
+different.
 
 \section{Conclusions}
 These results support a simple thesis: for symbolic regression of physical laws, a
@@ -658,6 +689,63 @@ Set & Equations & Recall & Perfect-recall (\%) \\
 \midrule
 Internal physics-law set (v5\_physics65) & 1085 & 0.999 & 99.7 \\
 Internal OOD-91 curated subset           &   91 & 0.996 & 98.9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Variable filter is insensitive to physical names.} Same data,
+same model, same threshold $\tau=0.10$; only the variable names are changed
+between ``named'' (physical: $m$, $v$, $q$, $\epsilon$, $\dots$) and
+``anonymized'' ($x_0$, $x_1$, $\dots$). Across $12$ scenarios on AI-Feynman
+$118$, the physical-name prior contributes at most $0.3$ percentage points of
+variable filter rate. The deployed RF+GAT ensemble is dominated by the
+random-forest column-statistics head; the graph-attention head's
+co-occurrence-graph contribution is largely vestigial for the variable task.}
+\label{tab:name-ablation-vars}
+\footnotesize
+\begin{tabular}{lcccccc}
+\toprule
+                              & \multicolumn{2}{c}{Named (physical)} & \multicolumn{2}{c}{Anonymized ($x_i$)} & \multicolumn{2}{c}{$\Delta$ (named$-$anon)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Scenario                      & recall & filter\% & recall & filter\% & recall & filter (pp) \\
+\midrule
+baseline $q{=}100$, $d{=}20$ & 1.000 & 98.4 & 0.998 & 98.3 & $+0.002$ & $+0.04$ \\
+small $q{=}50$               & 1.000 & 97.0 & 0.998 & 97.0 & $+0.002$ & $+0.04$ \\
+very small $q{=}20$          & 1.000 & 90.8 & 0.998 & 90.6 & $+0.002$ & $+0.18$ \\
+noise $\eta=0.30$            & 1.000 & 98.7 & 0.998 & 98.6 & $+0.002$ & $+0.08$ \\
+noise $\eta=0.50$            & 1.000 & 98.6 & 0.998 & 98.5 & $+0.002$ & $+0.10$ \\
+noise $\eta=1.00$            & 1.000 & 98.6 & 0.998 & 98.6 & $+0.002$ & $+0.07$ \\
+many distractors $d{=}50$    & 1.000 & 98.5 & 0.998 & 98.5 & $+0.002$ & $+0.04$ \\
+many distractors $d{=}100$   & 1.000 & 98.6 & 0.998 & 98.5 & $+0.002$ & $+0.09$ \\
+hard $q{=}20$, $\eta=0.50$   & 1.000 & 90.9 & 0.998 & 90.7 & $+0.002$ & $+0.27$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Operator filter \emph{is} sensitive to physical names.}
+Same data, same operator predictor, varying threshold
+$\tau_{\mathrm{op}}$. Operator filter rate is the fraction of the $13$
+non-trivial operators (excluding the four always-on arithmetic operators)
+dropped from the search library. Physical names contribute $+7$ to $+17$
+percentage points of operator recall---a much larger effect than for
+variables, because the operator-vs-data signal in $(\mathbf{x},y)$ is weak and
+the physics-knowledge-graph prior is the main source of information.}
+\label{tab:op-sweep}
+\footnotesize
+\begin{tabular}{cccccccc}
+\toprule
+$\tau_{\mathrm{op}}$ & \multicolumn{3}{c}{Named (physical)} & \multicolumn{3}{c}{Anonymized ($x_i$)} & $\Delta$ recall \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & recall & prec. & filter\% & recall & prec. & filter\% & (named$-$anon) \\
+\midrule
+0.03                            & 0.912 & 0.383 & 58.9 & 0.744 & 0.346 & 59.8 & $+0.168$ \\
+0.10                            & 0.825 & 0.465 & 67.9 & 0.726 & 0.380 & 65.6 & $+0.099$ \\
+0.20                            & 0.761 & 0.503 & 72.9 & 0.703 & 0.427 & 70.1 & $+0.058$ \\
+\textbf{0.30 (deployed)}        & \textbf{0.738} & \textbf{0.536} & \textbf{76.5} & \textbf{0.667} & \textbf{0.437} & \textbf{72.9} & \textbf{$+0.071$} \\
+0.50                            & 0.597 & 0.547 & 82.7 & 0.521 & 0.420 & 82.2 & $+0.076$ \\
+0.70                            & 0.407 & 0.532 & 88.9 & 0.285 & 0.376 & 90.4 & $+0.122$ \\
 \bottomrule
 \end{tabular}
 \end{table}

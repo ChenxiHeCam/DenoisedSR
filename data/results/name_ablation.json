@@ -1,0 +1,1689 @@
+{
+  "config": {
+    "seed": 42,
+    "q": 100,
+    "n_dist": 20,
+    "n_tasks": 118
+  },
+  "summary": {
+    "named": {
+      "recall": 1.0,
+      "precision": 0.9379203658864673,
+      "filter_rate": 0.9838983050847461,
+      "perfect_frac": 1.0,
+      "mean_kept": 4.228813559322034,
+      "gat_fired": 91
+    },
+    "anonymized": {
+      "recall": 1.0,
+      "precision": 0.9358017218186707,
+      "filter_rate": 0.983474576271187,
+      "perfect_frac": 1.0,
+      "mean_kept": 4.237288135593221,
+      "gat_fired": 103
+    },
+    "delta": {
+      "filter_rate_pp": 0.042372881355912106,
+      "precision": 0.0021186440677966045,
+      "perfect_pp": 0.0
+    }
+  },
+  "per_task": {
+    "named": [
+      {
+        "law": "pmlb_feynman_I_10_7",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_11_19",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.85,
+        "kept": 9
+      },
+      {
+        "law": "pmlb_feynman_I_12_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_12_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_12_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_12_4",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_12_5",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_13_12",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_13_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_14_3",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_14_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_15_10",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_15_3t",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_15_3x",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_16_6",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_18_12",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_18_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_18_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_24_6",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_25_13",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_26_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_27_6",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_29_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_29_4",
+        "recall": 1.0,
+        "precision": 0.5,
+        "filter_rate": 0.9,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_30_3",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_30_5",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_32_17",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_I_32_5",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_34_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_34_14",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_34_27",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_34_8",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_37_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_38_12",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_39_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_39_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_39_22",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_40_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_I_41_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_43_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_43_31",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_43_43",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_44_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_47_23",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_48_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_50_26",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_6_2",
+        "recall": 1.0,
+        "precision": 0.5,
+        "filter_rate": 0.9,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_6_2b",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_8_14",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_9_18",
+        "recall": 1.0,
+        "precision": 0.9,
+        "filter_rate": 0.95,
+        "kept": 10
+      },
+      {
+        "law": "pmlb_feynman_II_10_9",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_11_20",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_II_11_27",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_11_28",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.95,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_11_3",
+        "recall": 1.0,
+        "precision": 0.7142857142857143,
+        "filter_rate": 0.9,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_II_13_17",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_13_23",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_13_34",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_15_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_15_5",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_21_32",
+        "recall": 1.0,
+        "precision": 0.625,
+        "filter_rate": 0.85,
+        "kept": 8
+      },
+      {
+        "law": "pmlb_feynman_II_24_17",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_27_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_27_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_II_2_42",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_34_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_34_2",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_34_29a",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_34_29b",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_34_2a",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_35_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_35_21",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_36_38",
+        "recall": 1.0,
+        "precision": 0.8888888888888888,
+        "filter_rate": 0.95,
+        "kept": 9
+      },
+      {
+        "law": "pmlb_feynman_II_37_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_38_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_II_38_3",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_3_24",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.95,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_4_23",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_6_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_6_15a",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_II_6_15b",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_8_31",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_II_8_7",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_10_19",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_12_43",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_III_13_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_14_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_III_15_12",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_15_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_15_27",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_17_37",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_19_51",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_III_21_20",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_4_32",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_4_33",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_7_38",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_8_54",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_9_52",
+        "recall": 1.0,
+        "precision": 0.8571428571428571,
+        "filter_rate": 0.95,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_test_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_test_10",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_12",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_13",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_15",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_17",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_19",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_20",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_test_3",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_5",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_6",
+        "recall": 1.0,
+        "precision": 0.875,
+        "filter_rate": 0.95,
+        "kept": 8
+      },
+      {
+        "law": "pmlb_feynman_test_7",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_8",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_9",
+        "recall": 1.0,
+        "precision": 0.7142857142857143,
+        "filter_rate": 0.9,
+        "kept": 7
+      }
+    ],
+    "anonymized": [
+      {
+        "law": "pmlb_feynman_I_10_7",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_11_19",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.85,
+        "kept": 9
+      },
+      {
+        "law": "pmlb_feynman_I_12_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_12_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_12_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_12_4",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_12_5",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_13_12",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_13_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_14_3",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_14_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_15_10",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_15_3t",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_15_3x",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_16_6",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_18_12",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_18_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_18_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_24_6",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_25_13",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_26_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_27_6",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_29_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_29_4",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.95,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_30_3",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_30_5",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_32_17",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_I_32_5",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_34_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_34_14",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_34_27",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_34_8",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_37_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_38_12",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_39_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_I_39_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_39_22",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_40_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_I_41_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_43_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_43_31",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_43_43",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_44_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_47_23",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_48_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_I_50_26",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_6_2",
+        "recall": 1.0,
+        "precision": 0.5,
+        "filter_rate": 0.9,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_6_2b",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_I_8_14",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_I_9_18",
+        "recall": 1.0,
+        "precision": 0.9,
+        "filter_rate": 0.95,
+        "kept": 10
+      },
+      {
+        "law": "pmlb_feynman_II_10_9",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_11_20",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_II_11_27",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_11_28",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.95,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_11_3",
+        "recall": 1.0,
+        "precision": 0.7142857142857143,
+        "filter_rate": 0.9,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_II_13_17",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_13_23",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_13_34",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_15_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_15_5",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_21_32",
+        "recall": 1.0,
+        "precision": 0.625,
+        "filter_rate": 0.85,
+        "kept": 8
+      },
+      {
+        "law": "pmlb_feynman_II_24_17",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_27_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_27_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_II_2_42",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_34_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_34_2",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_34_29a",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_34_29b",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_34_2a",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_35_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_35_21",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_II_36_38",
+        "recall": 1.0,
+        "precision": 0.8888888888888888,
+        "filter_rate": 0.95,
+        "kept": 9
+      },
+      {
+        "law": "pmlb_feynman_II_37_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_38_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_II_38_3",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_II_3_24",
+        "recall": 1.0,
+        "precision": 0.6666666666666666,
+        "filter_rate": 0.95,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_4_23",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_II_6_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_6_15a",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_II_6_15b",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_II_8_31",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_II_8_7",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_10_19",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_12_43",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 2
+      },
+      {
+        "law": "pmlb_feynman_III_13_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_14_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_III_15_12",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_15_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_15_27",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_17_37",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_19_51",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_III_21_20",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_4_32",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_4_33",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_III_7_38",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_8_54",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 3
+      },
+      {
+        "law": "pmlb_feynman_III_9_52",
+        "recall": 1.0,
+        "precision": 0.8571428571428571,
+        "filter_rate": 0.95,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_test_1",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_test_10",
+        "recall": 1.0,
+        "precision": 0.75,
+        "filter_rate": 0.95,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_11",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_12",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_13",
+        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "filter_rate": 0.95,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_14",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_15",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_16",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_17",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_18",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_19",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_2",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 6
+      },
+      {
+        "law": "pmlb_feynman_test_20",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 7
+      },
+      {
+        "law": "pmlb_feynman_test_3",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_4",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_5",
+        "recall": 1.0,
+        "precision": 0.8,
+        "filter_rate": 0.95,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_6",
+        "recall": 1.0,
+        "precision": 0.875,
+        "filter_rate": 0.95,
+        "kept": 8
+      },
+      {
+        "law": "pmlb_feynman_test_7",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 5
+      },
+      {
+        "law": "pmlb_feynman_test_8",
+        "recall": 1.0,
+        "precision": 1.0,
+        "filter_rate": 1.0,
+        "kept": 4
+      },
+      {
+        "law": "pmlb_feynman_test_9",
+        "recall": 1.0,
+        "precision": 0.7142857142857143,
+        "filter_rate": 0.9,
+        "kept": 7
+      }
+    ]
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "scenarios": [
+    {
+      "label": "baseline_q100",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 20,
+      "eta": 0.0,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9851694915254238,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9838983050847457,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9834745762711865,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "small_q50",
+      "n_tasks": 118,
+      "q": 50,
+      "n_dist": 20,
+      "eta": 0.0,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9741525423728813,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9703389830508475,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9699152542372882,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "very_small_q20",
+      "n_tasks": 118,
+      "q": 20,
+      "n_dist": 20,
+      "eta": 0.0,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9220338983050848,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9076271186440679,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9055084745762713,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "noise_eta0.30",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 20,
+      "eta": 0.3,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9881355932203391,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9868644067796611,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9860169491525425,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "noise_eta0.50",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 20,
+      "eta": 0.5,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9881355932203391,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9860169491525423,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9851694915254238,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "noise_eta1.00",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 20,
+      "eta": 1.0,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9889830508474576,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9864406779661018,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9855932203389831,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "many_distract_50",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 50,
+      "eta": 0.0,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9857627118644067,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9847457627118644,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9845762711864406,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "many_distract_100",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 100,
+      "eta": 0.0,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9869491525423728,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9856779661016949,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9850847457627118,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "bump_tau0.50",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 20,
+      "eta": 0.0,
+      "tau": 0.5,
+      "RF": {
+        "recall": 0.9926553672316385,
+        "filter_rate": 0.9995762711864407,
+        "perfect": 0.9661016949152542
+      },
+      "NM": {
+        "recall": 0.996186440677966,
+        "filter_rate": 0.9966101694915255,
+        "perfect": 0.9830508474576272
+      },
+      "AN": {
+        "recall": 0.9931396287328491,
+        "filter_rate": 0.9966101694915255,
+        "perfect": 0.9661016949152542
+      }
+    },
+    {
+      "label": "bump_tau1.00",
+      "n_tasks": 118,
+      "q": 100,
+      "n_dist": 20,
+      "eta": 0.0,
+      "tau": 1.0,
+      "RF": {
+        "recall": 0.0,
+        "filter_rate": 1.0,
+        "perfect": 0.0
+      },
+      "NM": {
+        "recall": 0.7298022598870058,
+        "filter_rate": 1.0,
+        "perfect": 0.635593220338983
+      },
+      "AN": {
+        "recall": 0.7918482647296206,
+        "filter_rate": 1.0,
+        "perfect": 0.5677966101694916
+      }
+    },
+    {
+      "label": "hard_q50_eta0.30",
+      "n_tasks": 118,
+      "q": 50,
+      "n_dist": 20,
+      "eta": 0.3,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.972457627118644,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9694915254237289,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9694915254237289,
+        "perfect": 0.9915254237288136
+      }
+    },
+    {
+      "label": "hard_q20_eta0.50",
+      "n_tasks": 118,
+      "q": 20,
+      "n_dist": 20,
+      "eta": 0.5,
+      "tau": 0.1,
+      "RF": {
+        "recall": 1.0,
+        "filter_rate": 0.9233050847457628,
+        "perfect": 1.0
+      },
+      "NM": {
+        "recall": 1.0,
+        "filter_rate": 0.9093220338983051,
+        "perfect": 1.0
+      },
+      "AN": {
+        "recall": 0.9978813559322034,
+        "filter_rate": 0.9067796610169493,
+        "perfect": 0.9915254237288136
+      }
+    }
+  ]
+}

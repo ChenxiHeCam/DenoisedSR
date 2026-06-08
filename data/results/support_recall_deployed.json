@@ -4,35 +4,36 @@
     {
       "suite": "AI-Feynman",
       "n": 118,
-      "precision": 0.749,
+      "precision": 0.938,
       "recall": 1.0,
       "perfect_recall": 118,
       "group": "external_OOD",
       "config": "RF+GAT>=0.10, 20 random distractors, q=100",
       "source": "Udrescu & Tegmark 2020 (AI-Feynman); held out from training",
-      "distractor_filter_rate": 0.757
+      "distractor_filter_rate": 0.984,
+      "avg_kept_cols": 4.23
     },
     {
       "suite": "Strogatz",
       "n": 15,
-      "precision": 0.088,
+      "precision": 0.911,
       "recall": 1.0,
       "perfect_recall": 15,
       "group": "external_OOD",
       "config": "RF+GAT>=0.10, 20 random distractors, q=100",
       "source": "SRBench Strogatz set; 15 ODE-derived dynamics, held out",
-      "distractor_filter_rate": 0.0
+      "distractor_filter_rate": 0.987
     },
     {
       "suite": "Nguyen",
       "n": 12,
-      "precision": 0.062,
+      "precision": 0.861,
       "recall": 1.0,
       "perfect_recall": 12,
       "group": "external_OOD",
       "config": "RF+GAT>=0.10, 20 random distractors, q=100",
       "source": "Uy et al. 2011 classical SR benchmarks; held out",
-      "distractor_filter_rate": 0.0
+      "distractor_filter_rate": 0.979
     },
     {
       "suite": "SRSD-Feynman",
