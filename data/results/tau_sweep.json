@@ -1,0 +1,101 @@
+{
+  "config": {
+    "seed": 42,
+    "q": 100,
+    "n_dist": 20,
+    "taus": [
+      0.05,
+      0.08,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "summary": {
+    "tau_0.05": {
+      "tau": 0.05,
+      "recall": 1.0,
+      "precision": 0.7048179048086932,
+      "f1": 0.8268541788624135,
+      "perfect_recall_frac": 1.0,
+      "mean_kept_cols": 9.033898305084746,
+      "n_tasks": 118
+    },
+    "tau_0.08": {
+      "tau": 0.08,
+      "recall": 1.0,
+      "precision": 0.7398394275420803,
+      "f1": 0.8504686299264269,
+      "perfect_recall_frac": 1.0,
+      "mean_kept_cols": 8.813559322033898,
+      "n_tasks": 118
+    },
+    "tau_0.1": {
+      "tau": 0.1,
+      "recall": 1.0,
+      "precision": 0.7485258682200465,
+      "f1": 0.8561793467247203,
+      "perfect_recall_frac": 1.0,
+      "mean_kept_cols": 8.76271186440678,
+      "n_tasks": 118
+    },
+    "tau_0.15": {
+      "tau": 0.15,
+      "recall": 1.0,
+      "precision": 0.7664435437648406,
+      "f1": 0.8677815331673949,
+      "perfect_recall_frac": 1.0,
+      "mean_kept_cols": 8.669491525423728,
+      "n_tasks": 118
+    },
+    "tau_0.2": {
+      "tau": 0.2,
+      "recall": 1.0,
+      "precision": 0.7692684025219028,
+      "f1": 0.8695892618560286,
+      "perfect_recall_frac": 1.0,
+      "mean_kept_cols": 8.661016949152541,
+      "n_tasks": 118
+    },
+    "tau_0.3": {
+      "tau": 0.3,
+      "recall": 1.0,
+      "precision": 0.7800230433612895,
+      "f1": 0.8764190394413444,
+      "perfect_recall_frac": 1.0,
+      "mean_kept_cols": 8.601694915254237,
+      "n_tasks": 118
+    },
+    "tau_0.5": {
+      "tau": 0.5,
+      "recall": 0.9978813559322034,
+      "precision": 0.8727287223591788,
+      "f1": 0.9311183880273545,
+      "perfect_recall_frac": 0.9915254237288136,
+      "mean_kept_cols": 6.305084745762712,
+      "n_tasks": 118
+    },
+    "tau_0.75": {
+      "tau": 0.75,
+      "recall": 0.9814971751412429,
+      "precision": 0.9912429378531072,
+      "f1": 0.9863459829096551,
+      "perfect_recall_frac": 0.9322033898305084,
+      "mean_kept_cols": 3.8728813559322033,
+      "n_tasks": 118
+    },
+    "tau_1.0": {
+      "tau": 1.0,
+      "recall": 0.9586158192090396,
+      "precision": 1.0,
+      "f1": 0.9788706997237755,
+      "perfect_recall_frac": 0.864406779661017,
+      "mean_kept_cols": 3.7203389830508473,
+      "n_tasks": 118
+    }
+  }
+}
