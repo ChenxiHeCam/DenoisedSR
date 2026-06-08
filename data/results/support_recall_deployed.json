@@ -4,26 +4,35 @@
     {
       "suite": "AI-Feynman",
       "n": 118,
-      "precision": 1.0,
+      "precision": 0.749,
       "recall": 1.0,
       "perfect_recall": 118,
-      "config": "RF+GAT>=0.10"
+      "group": "external_OOD",
+      "config": "RF+GAT>=0.10, 20 random distractors, q=100",
+      "source": "Udrescu & Tegmark 2020 (AI-Feynman); held out from training",
+      "distractor_filter_rate": 0.757
     },
     {
-      "suite": "OOD test set",
-      "n": 91,
-      "precision": 0.942,
-      "recall": 0.996,
-      "perfect_recall": 90,
-      "config": "RF>=0.10 (ensemble >=)"
+      "suite": "Strogatz",
+      "n": 15,
+      "precision": 0.088,
+      "recall": 1.0,
+      "perfect_recall": 15,
+      "group": "external_OOD",
+      "config": "RF+GAT>=0.10, 20 random distractors, q=100",
+      "source": "SRBench Strogatz set; 15 ODE-derived dynamics, held out",
+      "distractor_filter_rate": 0.0
     },
     {
-      "suite": "extended",
-      "n": 1085,
-      "precision": 0.999,
-      "recall": 0.999,
-      "perfect_recall": 1082,
-      "config": "RF+GAT>=0.10"
+      "suite": "Nguyen",
+      "n": 12,
+      "precision": 0.062,
+      "recall": 1.0,
+      "perfect_recall": 12,
+      "group": "external_OOD",
+      "config": "RF+GAT>=0.10, 20 random distractors, q=100",
+      "source": "Uy et al. 2011 classical SR benchmarks; held out",
+      "distractor_filter_rate": 0.0
     },
     {
       "suite": "SRSD-Feynman",
@@ -31,7 +40,30 @@
       "precision": 0.587,
       "recall": 0.967,
       "perfect_recall": 111,
-      "config": "RF+GAT>=0.10 (external, never trained)"
+      "group": "external_OOD",
+      "config": "RF+GAT>=0.10, SRSD-supplied dummy variables, q=100",
+      "source": "Matsubara et al. 2024 SRSD-Feynman_dummy; held out",
+      "distractor_filter_rate": 0.025
+    },
+    {
+      "suite": "OOD-91",
+      "n": 91,
+      "precision": 0.942,
+      "recall": 0.996,
+      "perfect_recall": 90,
+      "group": "internal_validation",
+      "config": "RF+GAT>=0.10, internal protocol (limited distractors)",
+      "source": "Internally curated 91-law subset"
+    },
+    {
+      "suite": "Internal-1085",
+      "n": 1085,
+      "precision": 0.999,
+      "recall": 0.999,
+      "perfect_recall": 1082,
+      "group": "internal_validation",
+      "config": "RF+GAT>=0.10, pre-sampled observations, NO distractor",
+      "source": "v5_physics65 internal physics-law corpus (training-adjacent)"
     }
   ],
   "ablation_feynman118": [

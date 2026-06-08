@@ -52,24 +52,29 @@ def save(fig, name):
 
 # ------------------------------------------------------------ fig2: support recall
 def fig_recall():
-    s = J('data/results/support_recall_deployed.json')['suites']
-    names = {'AI-Feynman': 'AI-Feynman', 'OOD test set': 'OOD test set',
-             'extended': 'extended set', 'SRSD-Feynman': 'SRSD-Feynman'}
-    suites = [f"{names[r['suite']]}\n({r['n']} laws)" for r in s]
-    prec = [r['precision'] for r in s]; rec = [r['recall'] for r in s]
+    all_suites = J('data/results/support_recall_deployed.json')['suites']
+    # main figure: 4 external/OOD suites (same protocol: 20 random distractors, q=100, deployed tau=0.10)
+    s = [r for r in all_suites if r.get('group') == 'external_OOD']
+    name_map = {'AI-Feynman':'AI-Feynman','Strogatz':'Strogatz','Nguyen':'Nguyen','SRSD-Feynman':'SRSD-Feynman'}
+    suites = [f"{name_map.get(r['suite'], r['suite'])}\n({r['n']} laws)" for r in s]
+    rec = [r['recall'] for r in s]
+    fr  = [r.get('distractor_filter_rate', 0) for r in s]
     perf = [100*r['perfect_recall']/r['n'] for r in s]
     x = np.arange(len(suites)); w = 0.36
-    fig, ax = plt.subplots(figsize=(4.6, 2.6))
-    ax.bar(x - w/2, prec, w, label='Precision', color=FULL)
-    ax.bar(x + w/2, rec, w, label='Recall', color=OURS)
+    fig, ax = plt.subplots(figsize=(5.2, 3.0))
+    ax.bar(x - w/2, rec, w, label='Recall (true vars kept)', color=OURS)
+    ax.bar(x + w/2, fr,  w, label='Distractor filter rate (distractors dropped)', color=FULL)
     ax.axhline(1.0, ls=':', lw=0.8, color='k', alpha=0.45)
-    for xi, r, p in zip(x, rec, perf):
-        ax.text(xi + w/2, r + 0.012, f'{r:.3f}', ha='center', va='bottom', fontsize=6.4, color=OURS)
-        ax.text(xi, 0.43, f'{p:.0f}%\nperfect', ha='center', va='bottom', fontsize=6, color=ORAC)
-    ax.set_ylim(0.4, 1.07); ax.set_yticks([0.4, 0.6, 0.8, 1.0])
-    ax.set_ylabel('Variable support')
-    ax.set_xticks(x); ax.set_xticklabels(suites)
-    ax.legend(loc='lower center', ncol=2, fontsize=7.5, bbox_to_anchor=(0.5, -0.46))
+    for xi, r_, f_, p in zip(x, rec, fr, perf):
+        ax.text(xi - w/2, r_ + 0.012, f'{r_:.3f}', ha='center', va='bottom', fontsize=6.5, color=OURS)
+        ax.text(xi + w/2, max(f_,0) + 0.012, f'{f_:.3f}', ha='center', va='bottom', fontsize=6.5, color=FULL)
+        ax.annotate(f'{p:.0f}% perfect-\nrecall tasks', xy=(xi, 0), xytext=(0, -36),
+                    xycoords='data', textcoords='offset points',
+                    ha='center', va='top', fontsize=6, color=ORAC, annotation_clip=False)
+    ax.set_ylim(-0.04, 1.12); ax.set_yticks([0, 0.25, 0.5, 0.75, 1.0])
+    ax.set_ylabel('Rate')
+    ax.set_xticks(x); ax.set_xticklabels(suites, fontsize=7)
+    ax.legend(loc='lower center', ncol=1, fontsize=7, bbox_to_anchor=(0.5, -0.55))
     save(fig, 'fig2_recall')
 
 
@@ -235,13 +240,14 @@ def fig_baselines():
     # last bar: ours
     rec.append(1.0); perf.append(100.0); labs.append('Denoised\nSR')
     cols = [RAND]*5 + [OURS]
-    fig, ax = plt.subplots(figsize=(4.4, 2.6))
+    fig, ax = plt.subplots(figsize=(4.6, 2.8))
     b = ax.bar(x, rec, w, color=cols)
     for bi, v, p in zip(b, rec, perf):
         ax.text(bi.get_x()+bi.get_width()/2, v + 0.012, f'{v:.3f}',
                 ha='center', va='bottom', fontsize=7)
-        ax.text(bi.get_x()+bi.get_width()/2, 0.05, f'{p:.0f}%\nperfect',
-                ha='center', va='bottom', fontsize=6, color='white' if v>0.7 else 'k')
+        ax.annotate(f'{p:.0f}% perfect', xy=(bi.get_x()+bi.get_width()/2, 0),
+                    xytext=(0, -28), xycoords='data', textcoords='offset points',
+                    ha='center', va='top', fontsize=6.2, color=ORAC, annotation_clip=False)
     ax.axhline(1.0, ls=':', lw=0.7, color='k', alpha=0.5)
     ax.set_ylim(0, 1.10); ax.set_ylabel('Recall (AI-Feynman 118, oracle top-$k$)')
     ax.set_xticks(x); ax.set_xticklabels(labs, fontsize=7)
@@ -258,12 +264,14 @@ def fig_srsd():
     perf_o = [100*s[k]['denoisedsr_perfect'] for k in splits]
     n = [s[k]['n'] for k in splits]
     x = np.arange(len(splits)); w = 0.36
-    fig, ax = plt.subplots(figsize=(3.6, 2.6))
+    fig, ax = plt.subplots(figsize=(3.8, 2.8))
     ax.bar(x - w/2, lass, w, color=RAND, label='Lasso CV (oracle $k$)')
     ax.bar(x + w/2, ours, w, color=OURS, label='DenoisedSR')
     for xi, v, p in zip(x, ours, perf_o):
         ax.text(xi + w/2, v + 0.012, f'{v:.3f}', ha='center', va='bottom', fontsize=6.5, color=OURS)
-        ax.text(xi + w/2, 0.05, f'{p:.0f}%\nperfect', ha='center', va='bottom', fontsize=6, color='w')
+        ax.annotate(f'{p:.0f}% perfect', xy=(xi, 0), xytext=(0, -28),
+                    xycoords='data', textcoords='offset points',
+                    ha='center', va='top', fontsize=6.2, color=ORAC, annotation_clip=False)
     ax.axhline(1.0, ls=':', lw=0.7, color='k', alpha=0.5)
     ax.set_ylim(0, 1.08); ax.set_ylabel('Recall')
     ax.set_xticks(x); ax.set_xticklabels([f'{lab}\n(n={ni})' for lab, ni in zip(splits, n)])
@@ -272,27 +280,41 @@ def fig_srsd():
     save(fig, 'fig_srsd')
 
 
-# fig_noise: noise robustness curves
+# fig_noise: noise robustness curves — DenoisedSR vs all 5 classical baselines
 def fig_noise():
     s = J('data/results/noise_sweep.json')['summary']
     etas = sorted([float(k.split('_')[1]) for k in s])
-    ours = [s[f'eta_{e}']['denoisedsr_recall'] for e in etas]
-    lass = [s[f'eta_{e}']['lasso_recall']      for e in etas]
-    perf_o = [100*s[f'eta_{e}']['denoisedsr_perfect'] for e in etas]
-    perf_l = [100*s[f'eta_{e}']['lasso_perfect']      for e in etas]
-    fig, ax = plt.subplots(figsize=(3.6, 2.6))
-    ax.plot(etas, ours, '-o', color=OURS, lw=1.6, ms=6, label='DenoisedSR')
-    ax.plot(etas, lass, '-o', color=RAND, lw=1.4, ms=5, label='Lasso CV (oracle $k$)')
-    for e, v in zip(etas, ours):
-        ax.text(e, v + 0.012, f'{v:.3f}', ha='center', va='bottom', fontsize=6.5, color=OURS)
-    for e, v in zip(etas, lass):
-        ax.text(e, v - 0.018, f'{v:.3f}', ha='center', va='top', fontsize=6.5, color='gray')
+    # Support both new schema (per-method dict) and legacy keys
+    def val(eta, m):
+        e = s[f'eta_{eta}']
+        if m == 'denoisedsr':
+            return e.get('denoisedsr', {}).get('mean', e.get('denoisedsr_recall'))
+        if m in e:
+            return e[m]['mean']
+        return e.get(f'{m}_recall')
+    methods = [
+        ('denoisedsr', 'DenoisedSR (ours)', OURS, '-', 'o', 1.8, 6),
+        ('lasso',     'Lasso CV',            FULL, '-', 's', 1.3, 4.5),
+        ('rf',        'RF importance',       ORAC, '-', '^', 1.3, 4.5),
+        ('spearman',  'Spearman $|\\rho|$',  ACC,  '-', 'D', 1.0, 3.8),
+        ('pearson',   'Pearson $|\\rho|$',   '#A9A9A9', '-', 'v', 1.0, 3.8),
+        ('mi',        'mutual information',  RAND, '-', 'x', 1.0, 4.0),
+    ]
+    fig, ax = plt.subplots(figsize=(4.2, 2.8))
+    for m, lab, col, ls, mk, lw, ms in methods:
+        ys = [val(e, m) for e in etas]
+        ax.plot(etas, ys, ls=ls, marker=mk, color=col, lw=lw, ms=ms, label=lab)
+    # annotate endpoints for ours and lasso
+    ax.text(etas[-1]+0.005, val(etas[-1], 'denoisedsr')-0.005, '1.000',
+            color=OURS, fontsize=6.5, va='top')
+    ax.text(etas[-1]+0.005, val(etas[-1], 'lasso'), f"{val(etas[-1], 'lasso'):.3f}",
+            color=FULL, fontsize=6.5, va='center')
     ax.set_xlabel(r'relative Gaussian noise $\eta$ on $y$')
     ax.set_ylabel('Recall (AI-Feynman 118)')
     ax.set_xticks(etas)
-    ax.set_ylim(0.5, 1.06)
-    ax.legend(loc='lower left', fontsize=7)
-    ax.set_title('Robust to label noise', fontsize=8)
+    ax.set_ylim(0.55, 1.04)
+    ax.legend(loc='center right', fontsize=6.5, ncol=1)
+    ax.set_title('DenoisedSR retains perfect recall up to $\\eta=0.30$', fontsize=8)
     save(fig, 'fig_noise')
 
 

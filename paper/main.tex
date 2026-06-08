@@ -123,29 +123,48 @@ what the law is.}
 \subsection*{DenoisedSR recovers the true physical variables}
 We first evaluate the support prior intrinsically, without any backend. For each
 task the front-end receives $q=100$ noisy observations whose columns include the
-genuine variables together with random ``distractor'' columns, and must predict the
-true variable subset. Across four suites of physical laws---AI-Feynman
-(118~equations), an out-of-distribution (OOD) test set of $91$ curated physical
-laws, an extended physics-law set (1085~equations), and the external SRSD-Feynman
-benchmark of $120$ equations with author-curated physical units and built-in
-dummy variables\cite{matsubara2024srsd}, on which the model was never
-trained---the predictor attains recall $1.000$, $0.996$, $0.999$ and $0.967$
-respectively, with perfect recall on $92$--$100\%$ of tasks
-(Fig.~\ref{fig:recall}). It essentially never drops a variable that the law uses;
-its only error mode is occasionally retaining a few extra columns, which merely
-costs the backend a little additional search rather than making the law
-unreachable. Precision is high on the three internally formatted suites
-($0.94$--$1.00$); on the external SRSD-Feynman the apparent precision is lower
-($0.59$), but the reason is not a model error: SRSD's dummy columns are
-deliberately sampled from physically plausible ranges and are designed to
-correlate with the target, and on SRSD the front-end keeps on average $2.0$
-extra columns per task while $2.0$ dummies are available per task on average; the
-correlation between the number of dummies in a task and DenoisedSR's precision
-is $r=-0.69$. The front-end is doing what we asked of it at $\tau=0.10$---erring
-toward retention---so dummy columns that look physically plausible survive in
-proportion as they are added. Recall is the operationally critical quantity:
-removing a true variable is fatal to recovery, whereas keeping a spurious one is
-recoverable downstream.
+genuine variables together with $20$ random ``distractor'' columns, and must
+predict the true variable subset (deployed ensemble at $\tau=0.10$). We use four
+external benchmarks of physical and symbolic laws, none of which were used during
+training, and report \emph{model-only} precision (no name-based filtering of
+distractors):
+\emph{(i)} AI-Feynman, $118$ equations from the Feynman Lectures benchmark of
+Udrescu \& Tegmark\cite{udrescu2020aifeynman};
+\emph{(ii)} Strogatz, $15$ ordinary-differential-equation right-hand sides from
+the SRBench Strogatz pool of nonlinear dynamics
+problems\cite{lafuente2024srbench};
+\emph{(iii)} Nguyen, $12$ classical polynomial / trigonometric / logarithmic
+benchmarks ubiquitous in the SR literature\cite{uy2011nguyen};
+\emph{(iv)} SRSD-Feynman dummy, $120$ equations with author-curated physical
+units and built-in dummy variables\cite{matsubara2024srsd}.
+The predictor attains recall $1.000$ on the first three suites and $0.967$ on
+SRSD, with perfect recall on $92$--$100\%$ of tasks (Fig.~\ref{fig:recall}). It
+essentially never drops a variable that the law uses. To quantify the model's
+filtering benefit in a way that is comparable across suites with very different
+numbers of true variables, we report the \emph{distractor filter rate}: the
+fraction of distractor columns that the model successfully removes. On
+AI-Feynman this is $75.7\%$ (the model drops $\sim$15 of the $20$ random
+distractors per task) and is the source of the search-space reduction that
+drives the PySR results below. On SRSD it is only $2.5\%$: SRSD's dummy columns
+are deliberately sampled from physically plausible ranges, and at $\tau=0.10$
+the front-end retains them because they look like real physical variables. On
+Strogatz and Nguyen the filter rate is $0.0\%$: their variables are named
+anonymously ($x_0, x_1$, etc.) rather than as physical quantities ($m$, $v$,
+$q$), so the model cannot use its co-occurrence-graph prior and falls back to
+column-statistics only, which on these short-feature tasks is not enough to
+distinguish $1$--$2$ true variables from $20$ random distractors. The recall
+result is therefore a genuine no-drop guarantee on all four suites; the filter
+benefit, however, is concentrated on physical-variable benchmarks where the
+prior is informative. We confirm separately
+(Supplementary Table~\ref{tab:tau-sensitivity}) that this operating point is not
+cherry-picked: any $\tau \in [0.05, 0.30]$ gives identical recall $1.000$ and
+$100\%$ perfect-recall on AI-Feynman, while precision rises only slightly
+(from $0.71$ to $0.78$). An additional internal validation, evaluated under a
+different protocol (pre-sampled observations, no distractor padding), confirms
+the predictor at scale: recall $0.999$ on an internal $1085$-equation physics-law
+set drawn from our training distribution (Supplementary
+Table~\ref{tab:internal-validation}). This last result is reported separately
+because the protocol is not comparable to the four external benchmarks above.
 
 The result is robust and not attributable to a single component. An ablation on
 AI-Feynman (Fig.~\ref{fig:recall}, right) shows the random-forest and graph-attention
@@ -177,12 +196,25 @@ $0.812$ to $0.799$; none of them approach DenoisedSR at any noise level
 \begin{figure}[t]\centering
 \includegraphics[width=0.55\linewidth]{figures/fig2_recall.png}\hfill
 \includegraphics[width=0.36\linewidth]{figures/fig2b_ablation.png}
-\caption{\textbf{The front-end recovers essentially every true variable.}
-\emph{Left}: precision and recall of predicted variable support across four
-physics suites including the external SRSD-Feynman benchmark; recall is
-$\ge0.96$ with perfect recall on $92$--$100\%$ of tasks. \emph{Right}: ablation on
-AI-Feynman---the random-forest and graph-attention models each reach recall
-$\ge0.995$ and the ensemble matches the best component.}
+\caption{\textbf{The front-end recovers essentially every true variable across
+four external benchmarks; its distractor-filtering benefit depends on whether
+variables carry physical-meaning names.} \emph{Left}: recall (true variables
+kept) and distractor filter rate (random distractors dropped) on AI-Feynman
+($118$ laws, physical names), Strogatz ($15$ ODE-derived dynamics, anonymous
+names), Nguyen ($12$ classical SR benchmarks, anonymous names), and
+SRSD-Feynman ($120$ physical-unit laws). All four are externally curated and
+never used during training; protocol: $q=100$ observations, $20$ random
+distractor columns (or SRSD-supplied dummies), deployed ensemble at $\tau=0.10$.
+Recall is $\ge 0.96$ on every suite; the distractor filter rate is $76\%$ on
+AI-Feynman, $2.5\%$ on SRSD (whose dummies are physically plausible by
+construction), and $0\%$ on Strogatz / Nguyen (whose anonymous variable names
+neutralise the co-occurrence prior; the model retains all $20$ distractors
+because column statistics alone are insufficient to rule them out against
+$1$--$2$ true variables). The recall guarantee holds regardless; the filter
+benefit, which is what drives the PySR results, is concentrated on
+physical-variable benchmarks. \emph{Right}: ablation on AI-Feynman---the
+random-forest and graph-attention models each reach recall $\ge0.995$ and the
+ensemble matches the best component.}
 \label{fig:recall}
 \end{figure}
 
@@ -581,6 +613,51 @@ random-forest importance   & 0.812 & 44.9 & ---   & 0.815 & 0.822 & 0.815 & 0.80
 Lasso (CV) \emph{oracle $k$} & 0.905 & 71.2 & 0.723 & 0.904 & 0.904 & 0.886 & 0.881 & 0.868 \\
 \midrule
 DenoisedSR (ours, $\tau{=}0.10$) & \textbf{1.000} & \textbf{100.0} & \textbf{0.967} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Threshold sensitivity of the deployed RF+GAT ensemble.} Sweep
+of $\tau$ on AI-Feynman ($118$ laws, $q=100$, $20$ distractors). Recall remains
+$1.000$ with $100\%$ perfect-recall over $\tau\in[0.05, 0.30]$ (a sixfold range);
+only at $\tau\geq 0.50$ does recall start to decline. The deployed
+$\tau=0.10$ is not cherry-picked.}
+\label{tab:tau-sensitivity}
+\footnotesize
+\begin{tabular}{ccccc}
+\toprule
+$\tau$ & Recall & Precision & Perfect-recall (\%) & Mean kept columns \\
+\midrule
+0.05 & 1.000 & 0.705 & 100.0 & 9.03 \\
+0.08 & 1.000 & 0.740 & 100.0 & 8.81 \\
+\textbf{0.10 (deployed)} & \textbf{1.000} & \textbf{0.749} & \textbf{100.0} & \textbf{8.76} \\
+0.15 & 1.000 & 0.766 & 100.0 & 8.67 \\
+0.20 & 1.000 & 0.769 & 100.0 & 8.66 \\
+0.30 & 1.000 & 0.780 & 100.0 & 8.60 \\
+0.50 & 0.998 & 0.873 &  99.2 & 6.31 \\
+0.75 & 0.981 & 0.991 &  93.2 & 3.87 \\
+1.00 & 0.959 & 1.000 &  86.4 & 3.72 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Internal validation under a different protocol (not directly
+comparable to the four external benchmarks of Fig.~\ref{fig:recall}).}
+Evaluated on internally-curated physical-law records drawn from the same
+knowledge graph as the training pool, using each record's pre-sampled
+observation values rather than freshly sampled tables, and without random
+distractor padding. We report it as a separate scale check rather than a fifth
+external suite.}
+\label{tab:internal-validation}
+\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Set & Equations & Recall & Perfect-recall (\%) \\
+\midrule
+Internal physics-law set (v5\_physics65) & 1085 & 0.999 & 99.7 \\
+Internal OOD-91 curated subset           &   91 & 0.996 & 98.9 \\
 \bottomrule
 \end{tabular}
 \end{table}

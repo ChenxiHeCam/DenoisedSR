@@ -5,8 +5,7 @@ threshold tau is varied. Reviewer answer: tau=0.10 is not cherry-picked.
 """
 import sys, json, os, warnings, time
 warnings.filterwarnings("ignore")
-_R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))));
-sys.path.insert(0, os.path.join(_R, "src")); sys.path.insert(0, os.path.join(_R, "frontend", "train"))
+sys.path.insert(0,"src"); sys.path.insert(0,"D:/Physics Fundation model/src"); sys.path.insert(0,"D:/Physics Fundation model/scripts")
 
 import numpy as np, sympy as sp, torch, torch.nn as nn, torch.nn.functional as F
 from torch_geometric.nn import GATConv
