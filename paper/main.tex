@@ -455,6 +455,25 @@ parallel GPU enumeration (PSE) — three structurally different search
 paradigms. DenoisedSR yields a meaningful improvement on all three, supporting
 the claim that it is solver-agnostic (Table~\ref{tab:backends-3way}).
 
+\paragraph{When the prior is neutral: SRSD-Feynman.}
+The gain depends on the distractor-to-true-variable ratio. SRSD-Feynman
+supplies on average $\sim$$2$ physically plausible dummy columns per task, an
+order of magnitude fewer than the $20$ random distractors used elsewhere, and
+the dummies are designed to be statistically indistinguishable from real
+physical variables. Running PySR end-to-end on all $120$ SRSD-Feynman tasks at
+the same $10$\,s budget, full PySR already recovers $65/120$ ($54\%$) laws
+exactly. Adding the DenoisedSR variable prior yields $60/120$ ($50\%$, a
+$-4$\,pp drift attributable to the $\sim$$3\%$ of tasks where the front-end's
+recall falls below $1$ and a critical variable is dropped); adding the operator
+prior on top yields $65/120$ ($54\%$, matching full search in count but
+recovering a structurally different subset: $11$ form rescues offset by $11$
+losses to dropped variables). This is the regime where the variable prior is
+essentially neutral---the underlying search space is small enough that PySR
+does not benefit from further pruning, and the operator prior trades
+exact-recovery slots rather than adding them on net. The recall-first design
+ensures the prior fails safely here: it does not catastrophically hurt PySR,
+it simply does not help.
+
 \begin{figure}[t]\centering
 \includegraphics[width=0.50\linewidth]{figures/fig_gplearn.png}
 \caption{\textbf{Same gain transfers to a second backend.} Exact recovery and
