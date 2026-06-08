@@ -278,11 +278,11 @@ def fig_srsd():
     save(fig, 'fig_srsd')
 
 
-# fig_noise: noise robustness curves — DenoisedSR vs all 5 classical baselines
+# fig_noise: noise robustness curves — DenoisedSR vs 5 classical baselines.
+# Plotted on ordinal x positions (eta values labeled) so that 0, 0.01, 0.05, 0.10, 0.20, 0.30 are visually spread out.
 def fig_noise():
     s = J('data/results/noise_sweep.json')['summary']
     etas = sorted([float(k.split('_')[1]) for k in s])
-    # Support both new schema (per-method dict) and legacy keys
     def val(eta, m):
         e = s[f'eta_{eta}']
         if m == 'denoisedsr':
@@ -290,29 +290,47 @@ def fig_noise():
         if m in e:
             return e[m]['mean']
         return e.get(f'{m}_recall')
+    # ordinal x positions so unevenly-spaced eta values display clearly
+    xs = np.arange(len(etas))
     methods = [
-        ('denoisedsr', 'DenoisedSR (ours)', OURS, '-', 'o', 1.8, 6),
-        ('lasso',     'Lasso CV',            FULL, '-', 's', 1.3, 4.5),
-        ('rf',        'RF importance',       ORAC, '-', '^', 1.3, 4.5),
-        ('spearman',  'Spearman $|\\rho|$',  ACC,  '-', 'D', 1.0, 3.8),
-        ('pearson',   'Pearson $|\\rho|$',   '#A9A9A9', '-', 'v', 1.0, 3.8),
-        ('mi',        'mutual information',  RAND, '-', 'x', 1.0, 4.0),
+        ('denoisedsr', 'DenoisedSR (ours)',   OURS,   '-',  'o', 2.2, 7.0, 10),
+        ('lasso',      'Lasso CV',            FULL,   '-',  's', 1.4, 5.0, 4),
+        ('rf',         'RF importance',       ORAC,   '-',  '^', 1.4, 5.0, 4),
+        ('spearman',   r'Spearman $|\rho|$',  ACC,    '--', 'D', 1.1, 4.0, 3),
+        ('pearson',    r'Pearson $|\rho|$',   '#777777', '--', 'v', 1.1, 4.0, 3),
+        ('mi',         'mutual information',  '#B07AA1', ':',  'x', 1.1, 4.5, 3),
     ]
-    fig, ax = plt.subplots(figsize=(4.2, 2.8))
-    for m, lab, col, ls, mk, lw, ms in methods:
+    fig, ax = plt.subplots(figsize=(5.0, 3.0))
+    # subtle background: above 0.99 = perfect region
+    ax.axhspan(0.99, 1.04, color=OURS, alpha=0.08, zorder=0)
+    ax.text(len(etas)-0.5, 1.01, 'perfect recall', color=OURS, fontsize=6.0,
+            ha='right', va='center', alpha=0.65, zorder=1)
+    for m, lab, col, ls, mk, lw, ms, z in methods:
         ys = [val(e, m) for e in etas]
-        ax.plot(etas, ys, ls=ls, marker=mk, color=col, lw=lw, ms=ms, label=lab)
-    # annotate endpoints for ours and lasso
-    ax.text(etas[-1]+0.005, val(etas[-1], 'denoisedsr')-0.005, '1.000',
-            color=OURS, fontsize=6.5, va='top')
-    ax.text(etas[-1]+0.005, val(etas[-1], 'lasso'), f"{val(etas[-1], 'lasso'):.3f}",
-            color=FULL, fontsize=6.5, va='center')
+        ax.plot(xs, ys, ls=ls, marker=mk, color=col, lw=lw, ms=ms, label=lab,
+                zorder=z, markerfacecolor=col, markeredgecolor='white' if m=='denoisedsr' else col,
+                markeredgewidth=0.8 if m=='denoisedsr' else 0)
+    # endpoint value annotations for the three most important lines, offset to right
+    end = xs[-1]
+    ax.annotate(f'1.000', xy=(end, val(etas[-1], 'denoisedsr')),
+                xytext=(6, 0), textcoords='offset points',
+                color=OURS, fontsize=7, fontweight='bold', va='center')
+    ax.annotate(f"{val(etas[-1], 'lasso'):.3f}", xy=(end, val(etas[-1], 'lasso')),
+                xytext=(6, 0), textcoords='offset points',
+                color=FULL, fontsize=6.5, va='center')
+    ax.annotate(f"{val(etas[-1], 'mi'):.3f}", xy=(end, val(etas[-1], 'mi')),
+                xytext=(6, 0), textcoords='offset points',
+                color='#B07AA1', fontsize=6.5, va='center')
     ax.set_xlabel(r'relative Gaussian noise $\eta$ on $y$')
-    ax.set_ylabel('Recall (AI-Feynman 118)')
-    ax.set_xticks(etas)
+    ax.set_ylabel('Variable-support recall (AI-Feynman 118)')
+    ax.set_xticks(xs)
+    ax.set_xticklabels([f'${e:g}$' for e in etas], fontsize=8)
+    ax.set_xlim(-0.3, len(etas) + 0.4)
     ax.set_ylim(0.55, 1.04)
-    ax.legend(loc='center right', fontsize=6.5, ncol=1)
-    ax.set_title('DenoisedSR retains perfect recall up to $\\eta=0.30$', fontsize=8)
+    ax.set_yticks([0.6, 0.7, 0.8, 0.9, 1.0])
+    ax.grid(axis='y', alpha=0.25, lw=0.6)
+    ax.legend(loc='lower center', bbox_to_anchor=(0.5, -0.42), fontsize=7,
+              ncol=3, frameon=False, columnspacing=1.2, handletextpad=0.4)
     save(fig, 'fig_noise')
 
 
