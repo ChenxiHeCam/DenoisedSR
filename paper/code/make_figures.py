@@ -428,20 +428,29 @@ def fig_recovery_seedband():
     labs = ['full\nPySR', 'DenoisedSR\n(variables)', 'DenoisedSR\n(+operators)']
     cols = [FULL, OURS, ACC]
     fig, axs = plt.subplots(1, 3, figsize=(6.8, 2.6))
-    panels = [(axs[0], ex_means, ex_stds, f'Exact recovery (n={n}, 3 seeds)', '{:.0f}%', 92, True),
-              (axs[1], r2_means, r2_stds, 'Mean held-out $R^2$',              '{:.3f}', None, True),
-              (axs[2], vocab,    [0]*3,  'Search vocabulary',                 '{:.0f}', None, False)]
-    for ax, vals, errs, ttl, fmt, ymax, show_err in panels:
+    # Each panel: (ax, vals, errs, title, fmt, ylim, yticks, show_err, broken_axis)
+    panels = [(axs[0], ex_means, ex_stds, f'Exact recovery (n={n}, 3 seeds)', '{:.0f}%', (0, 92), None, True, False),
+              (axs[1], r2_means, r2_stds, 'Mean held-out $R^2$',              '{:.3f}', (0.80, 1.02), [0.80, 0.85, 0.90, 0.95, 1.00], True, True),
+              (axs[2], vocab,    [0]*3,  'Search vocabulary',                 '{:.0f}', None, None, False, False)]
+    for ax, vals, errs, ttl, fmt, ylim, yticks, show_err, broken in panels:
         bars = ax.bar(range(3), vals, color=cols, width=0.62,
                       yerr=errs if show_err else None,
                       error_kw=dict(ecolor='k', lw=0.9, capsize=3))
         ax.set_title(ttl, fontsize=8.5); ax.set_xticks(range(3))
         ax.set_xticklabels(labs, fontsize=6.8)
         for bi, v, e in zip(bars, vals, errs):
-            yoff = (v + e + 0.6) if (show_err and ymax is None) else v
-            ax.text(bi.get_x()+bi.get_width()/2, yoff, fmt.format(v), ha='center', va='bottom', fontsize=7)
-        ax.margins(y=0.18)
-        if ymax: ax.set_ylim(0, ymax)
+            ax.text(bi.get_x()+bi.get_width()/2, v + e + (0.005 if broken else 0.6),
+                    fmt.format(v), ha='center', va='bottom', fontsize=7)
+        if ylim is not None:
+            ax.set_ylim(*ylim)
+        else:
+            ax.margins(y=0.18)
+        if yticks is not None:
+            ax.set_yticks(yticks)
+        if broken:
+            # signal the truncated y-axis with a small zigzag near the bottom
+            ax.text(-0.02, ylim[0]-0.002, '$\\sim\\sim$', transform=ax.transData,
+                    ha='right', va='top', fontsize=8, color='k')
     fig.tight_layout(w_pad=1.4)
     save(fig, 'fig3_recovery')
 
