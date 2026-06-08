@@ -411,26 +411,48 @@ variable-limited) show little gain.}
 \label{fig:speed}
 \end{figure}
 
-\subsection*{The same gain holds on a second symbolic-regression backend}
+\subsection*{The same gain holds on two structurally different backends}
 To verify that the benefit is not an artifact of a particular solver, we repeat
-the headline comparison with gplearn\cite{stephens2015gplearn} as the backend
-(classical genetic programming, $20$ generations, population $500$, otherwise
-identical settings; three random seeds). Full gplearn over $23$ columns and a
-$10$-operator library recovers a mean $3.3{\pm}3.3\%$ exact laws (mean held-out
-$R^2=0.475{\pm}0.083$, with non-finite fits floored at $-1$); supplied with the
-DenoisedSR variable prior over the same
-$3.4$ predicted columns it recovers $17.8{\pm}1.9\%$ exact (mean
-$R^2=0.76{\pm}0.03$). The absolute exact-recovery rate is below PySR's because
-gplearn's tournament search is weaker, but the same qualitative gain---a
-roughly $1.5\times$ improvement in mean $R^2$ and a $\sim$$5\times$ rise in the
-exact-recovery rate---appears on a structurally different backend, supporting
-the claim that DenoisedSR is solver-agnostic (Fig.~\ref{fig:gplearn}). The same
-exotic-operator pathology reappears: on the angular-force law $F r \sin\theta$
-(Feynman~I.18.12), full gplearn at $R^2{=}0.74$ returns an eight-term
-$\sin$-only sum on the angular variable (nesting depth up to $3$:
-$\sin x_2{+}\sin\!\sin x_2{+}\sin\!\sin\!\sin x_2{+}\cdots$), reaching a
-plausible but mis-structured fit; supplied with the DenoisedSR variable
-support it returns $x_0 x_1 \sin x_2$ at $R^2{=}1.000$.
+the headline comparison with two backends from very different families.
+
+\emph{(i) gplearn\cite{stephens2015gplearn}}---classical genetic programming
+($20$ generations, population $500$; three random seeds). Full gplearn over $23$
+columns and a $10$-operator library recovers a mean $3.3{\pm}3.3\%$ exact laws
+(mean held-out $R^2=0.475{\pm}0.083$, with non-finite fits floored at $-1$);
+supplied with the DenoisedSR variable prior over the same $3.4$ predicted
+columns it recovers $17.8{\pm}1.9\%$ exact (mean $R^2=0.76{\pm}0.03$). The
+absolute rate is below PySR's because gplearn's tournament search is weaker,
+but the same qualitative gain---a $\sim$$5\times$ rise in exact recovery, a
+$\sim$$1.5\times$ improvement in mean $R^2$---reproduces. On the angular-force
+law $F r \sin\theta$ (Feynman I.18.12) full gplearn at $R^2{=}0.74$ returns an
+eight-term nested-$\sin$ stack on the angular variable ($\sin x_2{+}\sin\sin
+x_2{+}\sin\sin\sin x_2{+}\cdots$); supplied with the DenoisedSR variable
+support it returns $x_0 x_1 \sin x_2$ at $R^2{=}1.000$ (Fig.~\ref{fig:gplearn}).
+
+\emph{(ii) PSE\cite{ruan2026pse}}---parallel symbolic enumeration on GPU, the
+2026 Nature Computational Science cover algorithm. Architecturally PSE is the
+opposite of PySR/gplearn: rather than evolving a population, it instantiates a
+large symbolic-tree network on GPU and evaluates millions of candidate trees
+in parallel from a sampled subset of $n_{\mathrm{psrn\_inputs}}{=}4$ input
+columns. When the true variables are buried in $23$ columns, the sampler
+rarely draws the correct $4$-subset and PSE fails at exact recovery within the
+budget: $0/30$ exact, mean held-out $R^2=0.18$. Supplied with the DenoisedSR
+variable prior, the $\sim$$3.8$ kept columns are essentially all true, every
+sampled subset is informative, and PSE recovers $12/30$ ($40\%$) laws exactly
+with mean $R^2=0.90$. The clean recoveries include
+$x_0 x_1^2/2$ for the spring energy $\frac12 k x^2$,
+$x_0 x_1 \sin x_2$ for the torque $F r \sin\theta$,
+$x_0 x_1 x_2 \sin x_3$ for the angular momentum $m v r \sin\theta$,
+$x_0/x_1$ for both $q/C$ and $\omega/c$, and the relativistic Doppler shift
+$\omega_0 c/(c{-}v)$. PSE's wall-clock time per task increases ($73$\,s
+$\to$ $134$\,s) because under the prior PSE actually approaches a fit and
+spends its budget refining constants, whereas without the prior it returns
+high-error random subsets and quits within budget.
+
+The three backends span evolutionary (PySR), classical GP (gplearn), and
+parallel GPU enumeration (PSE) — three structurally different search
+paradigms. DenoisedSR yields a meaningful improvement on all three, supporting
+the claim that it is solver-agnostic (Table~\ref{tab:backends-3way}).
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.50\linewidth]{figures/fig_gplearn.png}
@@ -770,6 +792,31 @@ Condition & Exact recovery (\%) & Mean held-out $R^2$ \\
 \multicolumn{3}{l}{\emph{gplearn ($20$ generations, population $500$, $10$-op library)}} \\
 \quad full search                & $3.3  \pm 3.3$  & $0.475 \pm 0.083$ \\
 \quad + DenoisedSR variable prior  & $17.8 \pm 1.9$  & $0.763 \pm 0.029$ \\
+\midrule
+\multicolumn{3}{l}{\emph{PSE (parallel GPU enumeration, $30$\,s budget, $9$-op library, single seed)}} \\
+\quad full search                & $0$  & $0.184$ \\
+\quad + DenoisedSR variable prior  & $40$ & $0.895$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]\centering
+\caption{\textbf{Three structurally different backends, same prior, same
+$30$-equation Feynman subset.} Each row is full backend (no prior) vs.\
+backend with the DenoisedSR variable prior. The prior delivers a meaningful
+improvement on all three: an evolutionary GP search (PySR), a classical GP
+(gplearn) and a parallel enumeration on GPU (PSE).}
+\label{tab:backends-3way}
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+Backend & Family & \multicolumn{2}{c}{Exact recovery (\%)} & \multicolumn{2}{c}{Mean held-out $R^2$} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+        &        & full & + prior & full & + prior \\
+\midrule
+PySR\cite{cranmer2023pysr}        & evolutionary GP        & $42.2 \pm 13.5$ & $\mathbf{60.0 \pm 0.0}$ & $0.906 \pm 0.045$ & $\mathbf{0.980 \pm 0.011}$ \\
+gplearn\cite{stephens2015gplearn} & classical GP           & $3.3 \pm 3.3$   & $\mathbf{17.8 \pm 1.9}$ & $0.475 \pm 0.083$ & $\mathbf{0.763 \pm 0.029}$ \\
+PSE\cite{ruan2026pse}             & GPU parallel enum.     & $0$             & $\mathbf{40.0}$         & $0.184$           & $\mathbf{0.895}$           \\
 \bottomrule
 \end{tabular}
 \end{table}

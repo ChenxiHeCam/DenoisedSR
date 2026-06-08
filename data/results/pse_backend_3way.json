@@ -1,0 +1,789 @@
+[
+  {
+    "law_id": "pmlb_feynman_I_10_7",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 0.9832141241107983,
+    "var_r2": 0.9996558540659202,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 80.59468269348145,
+    "var_t": 125.01442646980286,
+    "true_vars": [
+      "m_0",
+      "v",
+      "c"
+    ],
+    "sel_vars": [
+      "__d1",
+      "c",
+      "m_0",
+      "v"
+    ],
+    "full_expr": "x0 + log(x0)/(2*x0)",
+    "var_expr": "x0/cos(x1/x2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_11_19",
+    "nvars": 6,
+    "full_cols": 26,
+    "sel_cols": 9,
+    "full_r2": -0.14437744232613015,
+    "var_r2": 0.39672249570658,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 100.73365664482117,
+    "var_t": 128.63649034500122,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "y1",
+      "y2",
+      "y3"
+    ],
+    "sel_vars": [
+      "__d2",
+      "__d8",
+      "__d9",
+      "x1",
+      "x2",
+      "x3",
+      "y1",
+      "y2",
+      "y3"
+    ],
+    "full_expr": "E*(-x12 + 3*x5)",
+    "var_expr": "(x3 + x4/x3)*(x0 + x4 + sin(x4))",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_1",
+    "nvars": 2,
+    "full_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.3844453526957332,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 91.4607081413269,
+    "var_t": 125.45061039924622,
+    "true_vars": [
+      "mu",
+      "Nn"
+    ],
+    "sel_vars": [
+      "Nn",
+      "mu"
+    ],
+    "full_expr": "x16**2 + 2*x8 + cos(x8)/(x21 + x5)",
+    "var_expr": "x0*x1",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_11",
+    "nvars": 5,
+    "full_cols": 25,
+    "sel_cols": 5,
+    "full_r2": 0.16336777456729523,
+    "var_r2": 0.7302339972618853,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 97.34558510780334,
+    "var_t": 137.50644874572754,
+    "true_vars": [
+      "q",
+      "Ef",
+      "B",
+      "v",
+      "theta"
+    ],
+    "sel_vars": [
+      "B",
+      "Ef",
+      "q",
+      "theta",
+      "v"
+    ],
+    "full_expr": "exp(x0 - x4 - x8)",
+    "var_expr": "(-x0*x3 + x4/x1)*(-x0 - x1 + 2*x4)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_2",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.05216128334233905,
+    "var_r2": 0.9796951021997351,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 84.33613681793213,
+    "var_t": 140.8406524658203,
+    "true_vars": [
+      "q1",
+      "q2",
+      "epsilon",
+      "r"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "q1",
+      "q2",
+      "r"
+    ],
+    "full_expr": "-1/2 + cos(1)",
+    "var_expr": "x1*log(x0)/(4*x2*x3**2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_4",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 0.005415767246708336,
+    "var_r2": 0.9724399045540787,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 92.01182866096497,
+    "var_t": 141.27025318145752,
+    "true_vars": [
+      "q1",
+      "epsilon",
+      "r"
+    ],
+    "sel_vars": [
+      "__d9",
+      "epsilon",
+      "q1",
+      "r"
+    ],
+    "full_expr": "(1 - sin(x0))/(4*x0**2)",
+    "var_expr": "log(x0)/(4*x1*x2**2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_12_5",
+    "nvars": 2,
+    "full_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.015308546596554784,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 79.19424295425415,
+    "var_t": 136.51845359802246,
+    "true_vars": [
+      "q2",
+      "Ef"
+    ],
+    "sel_vars": [
+      "Ef",
+      "q2"
+    ],
+    "full_expr": "4*x4**2/(1 - cos(x4))",
+    "var_expr": "x0*x1",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_13_12",
+    "nvars": 5,
+    "full_cols": 25,
+    "sel_cols": 5,
+    "full_r2": 0.28279113279571366,
+    "var_r2": 0.33329764626614844,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 89.75059604644775,
+    "var_t": 139.79548048973083,
+    "true_vars": [
+      "m1",
+      "m2",
+      "r1",
+      "r2",
+      "G"
+    ],
+    "sel_vars": [
+      "G",
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "full_expr": "(x0*x2 - 2*x0)*exp(-x11)/x2**2",
+    "var_expr": "x1*(1 - log(x3))*(x0 + x1)/x3",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_13_4",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.42529586790327345,
+    "var_r2": 0.961789531447558,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 81.96638703346252,
+    "var_t": 141.55264544487,
+    "true_vars": [
+      "m",
+      "v",
+      "u",
+      "w"
+    ],
+    "sel_vars": [
+      "m",
+      "u",
+      "v",
+      "w"
+    ],
+    "full_expr": "2*exp(x0 + sin(x0))",
+    "var_expr": "(x1 + x2 - log(x2))*(x0*x3 + x2 - x3)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_14_3",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.9305388082952033,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 34.50526022911072,
+    "var_t": 140.906898021698,
+    "true_vars": [
+      "m",
+      "g",
+      "z"
+    ],
+    "sel_vars": [
+      "g",
+      "m",
+      "z"
+    ],
+    "full_expr": "(x18 + x22)*exp(-x22)/(-x13 + x18 + cos(x22))",
+    "var_expr": "x0*x1*x2",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_14_4",
+    "nvars": 2,
+    "full_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -4.627453976775505,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 96.0119936466217,
+    "var_t": 134.0636270046234,
+    "true_vars": [
+      "k_spring",
+      "x"
+    ],
+    "sel_vars": [
+      "k_spring",
+      "x"
+    ],
+    "full_expr": "(-x11*x2 + x2)*(x11 + 2*x2 - x5)",
+    "var_expr": "x0*x1**2/2",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_15_10",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.9911636044218827,
+    "var_r2": 0.9998644501793555,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 95.58569574356079,
+    "var_t": 143.03982043266296,
+    "true_vars": [
+      "m_0",
+      "v",
+      "c"
+    ],
+    "sel_vars": [
+      "c",
+      "m_0",
+      "v"
+    ],
+    "full_expr": "x0*(x1 - x18 + x18/x1)*sin(x18)/x18",
+    "var_expr": "x0*x1/cos(x1/x2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_15_3t",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.5708732995968975,
+    "var_r2": 0.9976362363381065,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 34.30714654922485,
+    "var_t": 135.92327785491943,
+    "true_vars": [
+      "x",
+      "c",
+      "u",
+      "t"
+    ],
+    "sel_vars": [
+      "c",
+      "t",
+      "u",
+      "x"
+    ],
+    "full_expr": "-x12*sin(x21) + x3 + sin(x7)",
+    "var_expr": "x3 + (-x0 + x3)/x1**2",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_15_3x",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.0034520314407175956,
+    "var_r2": 0.9998738305569796,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 42.40337371826172,
+    "var_t": 120.08793759346008,
+    "true_vars": [
+      "x",
+      "u",
+      "c",
+      "t"
+    ],
+    "sel_vars": [
+      "c",
+      "t",
+      "u",
+      "x"
+    ],
+    "full_expr": "2*E",
+    "var_expr": "(x0 - x1*x3)/cos(x1/x2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_16_6",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.02149052563856424,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 42.42115378379822,
+    "var_t": 129.1401710510254,
+    "true_vars": [
+      "c",
+      "v",
+      "u"
+    ],
+    "sel_vars": [
+      "c",
+      "u",
+      "v"
+    ],
+    "full_expr": "E + sin(x11)/(2*x11)",
+    "var_expr": "x0*(x1 + x2)/(x2*(x0/x2 + x1/x0))",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_18_12",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.837970813439372,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 97.47193932533264,
+    "var_t": 139.46577620506287,
+    "true_vars": [
+      "r",
+      "F",
+      "theta"
+    ],
+    "sel_vars": [
+      "F",
+      "r",
+      "theta"
+    ],
+    "full_expr": "2*x1*sin(x2) + x1 - x2 + sin(x2)",
+    "var_expr": "x0*x1*sin(x2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_18_14",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.013372597118336826,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 81.29427218437195,
+    "var_t": 132.27018022537231,
+    "true_vars": [
+      "m",
+      "r",
+      "v",
+      "theta"
+    ],
+    "sel_vars": [
+      "m",
+      "r",
+      "theta",
+      "v"
+    ],
+    "full_expr": "exp(x12*x5/x3 + x21)",
+    "var_expr": "x0*x1*x2*sin(x3)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_18_4",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.4487969918329878,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 96.90897297859192,
+    "var_t": 155.67713165283203,
+    "true_vars": [
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "sel_vars": [
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "full_expr": "-x14 + x3 + sin(x3)",
+    "var_expr": "x0*x2/(x0 + x1) + x1*x3/(x0 + x1)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_24_6",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.49238018385747195,
+    "var_r2": 0.9852048072212254,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 106.27568578720093,
+    "var_t": 145.9419846534729,
+    "true_vars": [
+      "m",
+      "omega",
+      "omega_0",
+      "x"
+    ],
+    "sel_vars": [
+      "m",
+      "omega",
+      "omega_0",
+      "x"
+    ],
+    "full_expr": "x2 + x3*exp(x1)",
+    "var_expr": "x0*x1*x2*x3**2/2",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_25_13",
+    "nvars": 2,
+    "full_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.06178899096761836,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 38.44389748573303,
+    "var_t": 124.95024299621582,
+    "true_vars": [
+      "q",
+      "C"
+    ],
+    "sel_vars": [
+      "C",
+      "q"
+    ],
+    "full_expr": "(x16**2 + x17**2)/(x17**2 + cos(x17))",
+    "var_expr": "x0/x1",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_26_2",
+    "nvars": 2,
+    "full_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.146410192009769,
+    "var_r2": 0.9982481119683096,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 82.27192068099976,
+    "var_t": 137.40959215164185,
+    "true_vars": [
+      "n",
+      "theta2"
+    ],
+    "sel_vars": [
+      "n",
+      "theta2"
+    ],
+    "full_expr": "x0*(sin(x12*x7) + cos(x1 - x21))",
+    "var_expr": "sin(x0)**2*sin(x1)/(x0*cos(x0))",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_27_6",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 0.351392393975289,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 96.11919116973877,
+    "var_t": 134.25178289413452,
+    "true_vars": [
+      "d1",
+      "d2",
+      "n"
+    ],
+    "sel_vars": [
+      "__d7",
+      "d1",
+      "d2",
+      "n"
+    ],
+    "full_expr": "(2*x1 - 1)/(2*x1 + sin(x1))",
+    "var_expr": "x1/(x2 + x1/x0)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_29_16",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.034044726296369676,
+    "var_r2": 0.5696099261636458,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 87.19503664970398,
+    "var_t": 128.94063234329224,
+    "true_vars": [
+      "x1",
+      "x2",
+      "theta1",
+      "theta2"
+    ],
+    "sel_vars": [
+      "theta1",
+      "theta2",
+      "x1",
+      "x2"
+    ],
+    "full_expr": "x0 + x9",
+    "var_expr": "(x2 - x3)*sin(x3) + exp(x1)/x1**2",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_29_4",
+    "nvars": 2,
+    "full_cols": 22,
+    "sel_cols": 4,
+    "full_r2": 0.437764241415852,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 94.99163055419922,
+    "var_t": 135.32860732078552,
+    "true_vars": [
+      "omega",
+      "c"
+    ],
+    "sel_vars": [
+      "__d15",
+      "__d19",
+      "c",
+      "omega"
+    ],
+    "full_expr": "(3*x1 + x7)/(x1**2 - sin(x16))",
+    "var_expr": "x0/x1",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_30_3",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.08608338825494966,
+    "var_r2": 0.48795573236518375,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 38.032217264175415,
+    "var_t": 130.63053584098816,
+    "true_vars": [
+      "Int_0",
+      "theta",
+      "n"
+    ],
+    "sel_vars": [
+      "Int_0",
+      "n",
+      "theta"
+    ],
+    "full_expr": "-x22 + exp(x22) + cos(x22)",
+    "var_expr": "x0 + cos(x1) - cos(x1*x2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_30_5",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 0.07908720568457983,
+    "var_r2": 0.994407434151158,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 34.428343057632446,
+    "var_t": 121.92862701416016,
+    "true_vars": [
+      "lambd",
+      "d",
+      "n"
+    ],
+    "sel_vars": [
+      "__d8",
+      "d",
+      "lambd",
+      "n"
+    ],
+    "full_expr": "x0*log(x0)/(exp(x0) - exp(x21))",
+    "var_expr": "(x0 + x2)/(x1*x2*(sin(x0) + x2/x0))",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_32_17",
+    "nvars": 6,
+    "full_cols": 26,
+    "sel_cols": 6,
+    "full_r2": 0.16855980485133992,
+    "var_r2": 0.8416743644930491,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 78.52679014205933,
+    "var_t": 138.10254883766174,
+    "true_vars": [
+      "epsilon",
+      "c",
+      "Ef",
+      "r",
+      "omega",
+      "omega_0"
+    ],
+    "sel_vars": [
+      "Ef",
+      "c",
+      "epsilon",
+      "omega",
+      "omega_0",
+      "r"
+    ],
+    "full_expr": "(x2**2 + sin(x5))/(log(x5) + cos(x17))",
+    "var_expr": "x4**2*exp(x3)/(-x4 + x5)**2",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_32_5",
+    "nvars": 4,
+    "full_cols": 24,
+    "sel_cols": 5,
+    "full_r2": 0.7804009893500344,
+    "var_r2": 0.598397794749526,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 39.10596966743469,
+    "var_t": 124.12956166267395,
+    "true_vars": [
+      "q",
+      "a",
+      "epsilon",
+      "c"
+    ],
+    "sel_vars": [
+      "__d8",
+      "a",
+      "c",
+      "epsilon",
+      "q"
+    ],
+    "full_expr": "exp(-x0)*cos(x18)/(-x0/x10 + x10)",
+    "var_expr": "x0*exp(-x3 - sin(x1))/x3",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_34_1",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.8907391552589374,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 40.11291551589966,
+    "var_t": 136.78613233566284,
+    "true_vars": [
+      "c",
+      "v",
+      "omega_0"
+    ],
+    "sel_vars": [
+      "c",
+      "omega_0",
+      "v"
+    ],
+    "full_expr": "(x0*x2 + 2*x2)/x0",
+    "var_expr": "x0*x2**2/(x0*x2 - x1*x2)",
+    "recall": 1.0
+  },
+  {
+    "law_id": "pmlb_feynman_I_34_14",
+    "nvars": 3,
+    "full_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 0.18784762000435207,
+    "var_r2": 0.9998172258166368,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 37.38414263725281,
+    "var_t": 130.76864981651306,
+    "true_vars": [
+      "c",
+      "v",
+      "omega_0"
+    ],
+    "sel_vars": [
+      "__d10",
+      "c",
+      "omega_0",
+      "v"
+    ],
+    "full_expr": "x2 - sin(x2 - 2*x22 + x9)",
+    "var_expr": "x2*(x0 + x1)/(x0*cos(x1/x0))",
+    "recall": 1.0
+  }
+]
