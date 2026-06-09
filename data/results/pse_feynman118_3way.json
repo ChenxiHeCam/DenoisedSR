@@ -1,0 +1,3204 @@
+[
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_10_7",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": 0.9912682681528293,
+    "var_r2": 0.9995651067776239,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.360875844955444,
+    "var_t": 30.98229455947876,
+    "full_expr": "(x0*x2 + x0/x2)/x2",
+    "var_expr": "x0/cos(x1/x2)",
+    "true_vars": [
+      "c",
+      "m_0",
+      "v"
+    ],
+    "sel_vars": [
+      "__d1",
+      "c",
+      "m_0",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_11_19",
+    "nvars": 6,
+    "sel_cols": 9,
+    "full_r2": 0.6485731585595542,
+    "var_r2": 0.6282850161636911,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.01079773902893,
+    "var_t": 31.82700490951538,
+    "full_expr": "x0*x1 + 4*x2 + 2*x5",
+    "var_expr": "x0*x3 + 3*x1 + 3*x2",
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "y1",
+      "y2",
+      "y3"
+    ],
+    "sel_vars": [
+      "__d2",
+      "__d8",
+      "__d9",
+      "x1",
+      "x2",
+      "x3",
+      "y1",
+      "y2",
+      "y3"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_12_1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 8.181884050369263,
+    "var_t": 1.5611281394958496,
+    "full_expr": "x0*x1",
+    "var_expr": "x0*x1",
+    "true_vars": [
+      "Nn",
+      "mu"
+    ],
+    "sel_vars": [
+      "Nn",
+      "mu"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_12_11",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.0536609611770148,
+    "var_r2": 0.9261361776015579,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.11093258857727,
+    "var_t": 30.608813524246216,
+    "full_expr": "exp(x4)*sin(x4) + exp(x4)/log(x4)",
+    "var_expr": "x0*x3*(x2 + sin(x4))*sin(x4)",
+    "true_vars": [
+      "B",
+      "Ef",
+      "q",
+      "theta",
+      "v"
+    ],
+    "sel_vars": [
+      "B",
+      "Ef",
+      "q",
+      "theta",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_12_2",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -0.7870413438554495,
+    "var_r2": 0.9801291676951954,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.49347949028015,
+    "var_t": 30.730520725250244,
+    "full_expr": "(x15 + x18)*exp(-x3)/(x15 + x18 + x18/x3)",
+    "var_expr": "x1*log(x0)/(4*x2*x3**2)",
+    "true_vars": [
+      "epsilon",
+      "q1",
+      "q2",
+      "r"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "q1",
+      "q2",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_12_4",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": -0.08919188286843527,
+    "var_r2": 0.9685410873115319,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.790799617767334,
+    "var_t": 31.31618571281433,
+    "full_expr": "x2*exp(-x2)/(x19 + x2 + exp(x2))",
+    "var_expr": "log(x0)/(4*x1*x2**2)",
+    "true_vars": [
+      "epsilon",
+      "q1",
+      "r"
+    ],
+    "sel_vars": [
+      "__d9",
+      "epsilon",
+      "q1",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_12_5",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 17.425530910491943,
+    "var_t": 1.600081443786621,
+    "full_expr": "x0*x1",
+    "var_expr": "x0*x1",
+    "true_vars": [
+      "Ef",
+      "q2"
+    ],
+    "sel_vars": [
+      "Ef",
+      "q2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_13_12",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -22.53408873831991,
+    "var_r2": 0.8713863012304083,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.270314931869507,
+    "var_t": 31.101454973220825,
+    "full_expr": "2*x0**2*(x2 - x3)/(x2*(x3 + x9))",
+    "var_expr": "3*x0*(x1/x3 - x1/x2)",
+    "true_vars": [
+      "G",
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "sel_vars": [
+      "G",
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_13_4",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.6733592508534243,
+    "var_r2": 0.9387178240747367,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.40488886833191,
+    "var_t": 30.45671248435974,
+    "full_expr": "(2*x0 + x4/x2)*(x0/x2 + 2*x2)",
+    "var_expr": "(x1 + x2 - log(x2))*(x0*x3 + x2 - x3)",
+    "true_vars": [
+      "m",
+      "u",
+      "v",
+      "w"
+    ],
+    "sel_vars": [
+      "m",
+      "u",
+      "v",
+      "w"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_14_3",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -1019.4484107726787,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.88400363922119,
+    "var_t": 1.7302284240722656,
+    "full_expr": "8*x1*x16/sin(x16)",
+    "var_expr": "x0*x1*x2",
+    "true_vars": [
+      "g",
+      "m",
+      "z"
+    ],
+    "sel_vars": [
+      "g",
+      "m",
+      "z"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_14_4",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.8459225783561646,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.936139583587646,
+    "var_t": 1.5587241649627686,
+    "full_expr": "x0*x1 + x1**2 - x15 + x9",
+    "var_expr": "-x0*x1**2*(x0 + 2)/(-2*x0 - 4)",
+    "true_vars": [
+      "k_spring",
+      "x"
+    ],
+    "sel_vars": [
+      "k_spring",
+      "x"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_15_10",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.8477040299536942,
+    "var_r2": 0.999999876122346,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.50389051437378,
+    "var_t": 30.52851700782776,
+    "full_expr": "x0*x1 + cos(x18) - sin(1)",
+    "var_expr": "x0*x2*cos(x1/x2)/(-sin(x1/x2) + x2/x1)",
+    "true_vars": [
+      "c",
+      "m_0",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "m_0",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_15_3t",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -2.2752288794216446,
+    "var_r2": 0.9962708893881894,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.636260271072388,
+    "var_t": 30.907198190689087,
+    "full_expr": "x3 - exp(-x3 + x6)",
+    "var_expr": "x3 + (-x0 + x3)/x1**2",
+    "true_vars": [
+      "c",
+      "t",
+      "u",
+      "x"
+    ],
+    "sel_vars": [
+      "c",
+      "t",
+      "u",
+      "x"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_15_3x",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.9446128025810114,
+    "var_r2": 0.9999353034068128,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.03264355659485,
+    "var_t": 31.517967700958252,
+    "full_expr": "x0 - x1 - log(x3)",
+    "var_expr": "(x0 - x1*x3)/cos(x1/x2)",
+    "true_vars": [
+      "c",
+      "t",
+      "u",
+      "x"
+    ],
+    "sel_vars": [
+      "c",
+      "t",
+      "u",
+      "x"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_16_6",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -0.9344106333766575,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.786284923553467,
+    "var_t": 1.8058013916015625,
+    "full_expr": "x0*sin(x11)/x11 - cos(x11) + 1",
+    "var_expr": "x0**2*(x1 + x2)/(x0**2 + x1*x2)",
+    "true_vars": [
+      "c",
+      "u",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "u",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_18_12",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.8755835004194893,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.4077730178833,
+    "var_t": 1.973266839981079,
+    "full_expr": "(4*x1 - 2*log(x1))*sin(x2)",
+    "var_expr": "x0*x1*sin(x2)",
+    "true_vars": [
+      "F",
+      "r",
+      "theta"
+    ],
+    "sel_vars": [
+      "F",
+      "r",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_18_14",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.8596121419698213,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.14421510696411,
+    "var_t": 1.5326781272888184,
+    "full_expr": "2*x0*(2*x1 - log(x1))*sin(x3)",
+    "var_expr": "x0*x1*x2*sin(x3)",
+    "true_vars": [
+      "m",
+      "r",
+      "theta",
+      "v"
+    ],
+    "sel_vars": [
+      "m",
+      "r",
+      "theta",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_18_4",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.8995467182861608,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.96773099899292,
+    "var_t": 1.6081557273864746,
+    "full_expr": "x2/2 + x3/2",
+    "var_expr": "(x0*x2 + x1*x3)/(x0 + x1)",
+    "true_vars": [
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "sel_vars": [
+      "m1",
+      "m2",
+      "r1",
+      "r2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_24_6",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.3432235974016332,
+    "var_r2": 0.9577325743992035,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.788982629776,
+    "var_t": 30.733787059783936,
+    "full_expr": "-x3*(-exp(x1) + cos(x23)) + cos(x21)",
+    "var_expr": "x0*x1*x2*x3**2/2",
+    "true_vars": [
+      "m",
+      "omega",
+      "omega_0",
+      "x"
+    ],
+    "sel_vars": [
+      "m",
+      "omega",
+      "omega_0",
+      "x"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_25_13",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.1269590854644775,
+    "var_t": 1.732752799987793,
+    "full_expr": "x0/x1",
+    "var_expr": "x0/x1",
+    "true_vars": [
+      "C",
+      "q"
+    ],
+    "sel_vars": [
+      "C",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_26_2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.697323993444102,
+    "var_r2": 0.9996524920735117,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.078240156173706,
+    "var_t": 31.368804931640625,
+    "full_expr": "(x1 - x17 + sin(x17))*sin(x1)/(2*x1)",
+    "var_expr": "x0*(x0**4*sin(x1)/pi + x0*sin(x1))*sin(x1)/sin(x0**4*sin(x1)/pi + x0*sin(x1))",
+    "true_vars": [
+      "n",
+      "theta2"
+    ],
+    "sel_vars": [
+      "n",
+      "theta2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_27_6",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": -25159.596100405193,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.638123273849487,
+    "var_t": 1.6263182163238525,
+    "full_expr": "(x1 + exp(-x14 + x5))/(2*x2)",
+    "var_expr": "x1/(x2 + x1/x0)",
+    "true_vars": [
+      "d1",
+      "d2",
+      "n"
+    ],
+    "sel_vars": [
+      "__d7",
+      "d1",
+      "d2",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_29_16",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.4641900865904247,
+    "var_r2": 0.562009676838563,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.41100001335144,
+    "var_t": 30.931119680404663,
+    "full_expr": "x0 - (-x2 + x3)*sin(x3) + sin(x0)",
+    "var_expr": "x0/x1 + x1 - cos(x2 - x3)",
+    "true_vars": [
+      "theta1",
+      "theta2",
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "theta1",
+      "theta2",
+      "x1",
+      "x2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_29_4",
+    "nvars": 2,
+    "sel_cols": 4,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 11.996582269668579,
+    "var_t": 1.5963702201843262,
+    "full_expr": "x0/x1",
+    "var_expr": "x0/x1",
+    "true_vars": [
+      "c",
+      "omega"
+    ],
+    "sel_vars": [
+      "__d15",
+      "__d19",
+      "c",
+      "omega"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_30_3",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -12.492301340338484,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.59858012199402,
+    "var_t": 14.766542434692383,
+    "full_expr": "(x13 + x7 + exp(x7))/(x1*x7 - sin(x7))",
+    "var_expr": "(-x0*cos(x1*x2) + x0)/(1 - cos(x1))",
+    "true_vars": [
+      "Int_0",
+      "n",
+      "theta"
+    ],
+    "sel_vars": [
+      "Int_0",
+      "n",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_30_5",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": 0.9973796685269711,
+    "var_r2": 0.9984199715276415,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.524616241455078,
+    "var_t": 31.286385536193848,
+    "full_expr": "x0/(x1*x2)",
+    "var_expr": "x0/(x2*log(-x0*log(x0) + exp(x1)))",
+    "true_vars": [
+      "d",
+      "lambd",
+      "n"
+    ],
+    "sel_vars": [
+      "__d8",
+      "d",
+      "lambd",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_32_17",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": -8.900206990892647,
+    "var_r2": 0.7599180284290026,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.4256374835968,
+    "var_t": 31.453195810317993,
+    "full_expr": "(exp(x4) + exp(x9))*log(x4)/x9",
+    "var_expr": "x2*x3*x4/(-x4 + x5 - sin(x4))",
+    "true_vars": [
+      "Ef",
+      "c",
+      "epsilon",
+      "omega",
+      "omega_0",
+      "r"
+    ],
+    "sel_vars": [
+      "Ef",
+      "c",
+      "epsilon",
+      "omega",
+      "omega_0",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_32_5",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": -91.39019590630265,
+    "var_r2": -48.40107367612853,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.496796131134033,
+    "var_t": 31.196869134902954,
+    "full_expr": "log(x1)/((x13 + x3)*(-x13/x3 + x3**2))",
+    "var_expr": "(x3 - sin(x1))/(-x0 + x3 + exp(x3))",
+    "true_vars": [
+      "a",
+      "c",
+      "epsilon",
+      "q"
+    ],
+    "sel_vars": [
+      "__d8",
+      "a",
+      "c",
+      "epsilon",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_34_1",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.7591207449311008,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.899319410324097,
+    "var_t": 1.7603719234466553,
+    "full_expr": "x2 + log(x1*x2)",
+    "var_expr": "x1*x2/(x0 - x1) + x2",
+    "true_vars": [
+      "c",
+      "omega_0",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "omega_0",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_34_14",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": 0.9759093318818625,
+    "var_r2": 0.9998573391112036,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.494301319122314,
+    "var_t": 31.09259271621704,
+    "full_expr": "x2 + sin(x2/x0) + x2/x0",
+    "var_expr": "x2*(x0 + x1)/(x0*cos(x1/x0))",
+    "true_vars": [
+      "c",
+      "omega_0",
+      "v"
+    ],
+    "sel_vars": [
+      "__d10",
+      "c",
+      "omega_0",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_34_27",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.4293573868636611,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.2900390625,
+    "var_t": 24.37305212020874,
+    "full_expr": "(x0**2 + exp(x13))/(2*x0 + exp(x13))",
+    "var_expr": "x0*x1/(2*pi)",
+    "true_vars": [
+      "h",
+      "omega"
+    ],
+    "sel_vars": [
+      "h",
+      "omega"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_34_8",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": 0.5279713544011371,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.19910717010498,
+    "var_t": 3.5881876945495605,
+    "full_expr": "x0*x2 - x15 - sin(x1)",
+    "var_expr": "x0*x1*x2/x3",
+    "true_vars": [
+      "B",
+      "p",
+      "q",
+      "v"
+    ],
+    "sel_vars": [
+      "B",
+      "__d6",
+      "p",
+      "q",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_37_4",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.8952501102801793,
+    "var_r2": 0.9964721316836557,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.672261714935303,
+    "var_t": 30.939805030822754,
+    "full_expr": "(2*x1 + sin(x1))*(cos(x2) + 1)",
+    "var_expr": "x0 + x1 + (x0 + x1)*cos(x2) - sin(cos(x2)/(2*x1))",
+    "true_vars": [
+      "I1",
+      "I2",
+      "delta"
+    ],
+    "sel_vars": [
+      "I1",
+      "I2",
+      "delta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_38_12",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": 0.8821317473952562,
+    "var_r2": 0.995282118205536,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.792264938354492,
+    "var_t": 30.53616976737976,
+    "full_expr": "exp(x2)/(x1**2*(x0*x2 - cos(x17)))",
+    "var_expr": "x2*x3*log(x2)/(x0*x1**2)",
+    "true_vars": [
+      "epsilon",
+      "h",
+      "m",
+      "q"
+    ],
+    "sel_vars": [
+      "__d3",
+      "epsilon",
+      "h",
+      "m",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_39_1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.074175834655762,
+    "var_t": 1.6830477714538574,
+    "full_expr": "3*x0*x1/2",
+    "var_expr": "3*x0*x1/2",
+    "true_vars": [
+      "V",
+      "pr"
+    ],
+    "sel_vars": [
+      "V",
+      "pr"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_39_11",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.5680256124666399,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.244986534118652,
+    "var_t": 1.8773088455200195,
+    "full_expr": "2*x2/log(x0)**2",
+    "var_expr": "x1*x2/(x0 - 1)",
+    "true_vars": [
+      "V",
+      "gamma",
+      "pr"
+    ],
+    "sel_vars": [
+      "V",
+      "gamma",
+      "pr"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_39_22",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -0.8929218000589341,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.75915265083313,
+    "var_t": 2.333590269088745,
+    "full_expr": "x0*x3 + exp(x14)*cos(x14)",
+    "var_expr": "x0*x1*x3/x2",
+    "true_vars": [
+      "T",
+      "V",
+      "kb",
+      "n"
+    ],
+    "sel_vars": [
+      "T",
+      "V",
+      "kb",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_40_1",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": -50.42027067678025,
+    "var_r2": 0.4520012461050934,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 32.271737575531006,
+    "var_t": 31.20854663848877,
+    "full_expr": "x0*x7/(x1**2*(-x11 + x7 + x7/x0))",
+    "var_expr": "x3*log(x5)/(x2*(x1 - cos(x1)))",
+    "true_vars": [
+      "T",
+      "g",
+      "kb",
+      "m",
+      "n_0",
+      "x"
+    ],
+    "sel_vars": [
+      "T",
+      "g",
+      "kb",
+      "m",
+      "n_0",
+      "x"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_41_16",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.30925871519901815,
+    "var_r2": 0.8974775480670629,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.00191593170166,
+    "var_t": 31.376479148864746,
+    "full_expr": "(x1*x3 + x10)/(x10 + 3*x4)",
+    "var_expr": "(x1*x3 - x3/x0)*log(x0)/x4**2",
+    "true_vars": [
+      "T",
+      "c",
+      "h",
+      "kb",
+      "omega"
+    ],
+    "sel_vars": [
+      "T",
+      "c",
+      "h",
+      "kb",
+      "omega"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_43_16",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -0.04588103626359752,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.50913095474243,
+    "var_t": 1.676940679550171,
+    "full_expr": "(x0 + x6/x1)*(x1 + x13 + cos(x6))",
+    "var_expr": "x0*x1*x2/x3",
+    "true_vars": [
+      "Volt",
+      "d",
+      "mu_drift",
+      "q"
+    ],
+    "sel_vars": [
+      "Volt",
+      "d",
+      "mu_drift",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_43_31",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 19.07886528968811,
+    "var_t": 1.9287219047546387,
+    "full_expr": "x0*x1*x2",
+    "var_expr": "x0*x1*x2",
+    "true_vars": [
+      "T",
+      "kb",
+      "mob"
+    ],
+    "sel_vars": [
+      "T",
+      "kb",
+      "mob"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_43_43",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -5150.716736359911,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.53582191467285,
+    "var_t": 1.6345839500427246,
+    "full_expr": "(x1 + x12 - cos(x1))/(-x12**2 + x12 + x2)",
+    "var_expr": "-x1*x3/(-x0*x2 + x2)",
+    "true_vars": [
+      "A",
+      "gamma",
+      "kb",
+      "v"
+    ],
+    "sel_vars": [
+      "A",
+      "gamma",
+      "kb",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_44_4",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -2.5637021427916635,
+    "var_r2": 0.801021385581024,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.28092622756958,
+    "var_t": 31.290170192718506,
+    "full_expr": "x20*(-x3 + x4)*exp(x18)",
+    "var_expr": "x1*x2*(x1 + x2)*(-x3 + x4)/(x1 + x4)",
+    "true_vars": [
+      "T",
+      "V1",
+      "V2",
+      "kb",
+      "n"
+    ],
+    "sel_vars": [
+      "T",
+      "V1",
+      "V2",
+      "kb",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_47_23",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -7298.562995610843,
+    "var_r2": 0.9970407279340762,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.495518445968628,
+    "var_t": 30.246039628982544,
+    "full_expr": "(x0 + x19 + x2)/(x19 + x2)",
+    "var_expr": "x1*(x0/x2 + (x0 + x1)*log(2*x0)/(x0 + x2))/(x1 + (x0 + x1)*log(2*x0)/(x0 + x2))",
+    "true_vars": [
+      "gamma",
+      "pr",
+      "rho"
+    ],
+    "sel_vars": [
+      "gamma",
+      "pr",
+      "rho"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_48_2",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -Infinity,
+    "var_r2": 0.9999987484839983,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.824896812438965,
+    "var_t": 31.176021337509155,
+    "full_expr": "x0*x2**2 + log(x0**2*x2 + x0*x2 + x2*x8)",
+    "var_expr": "x0*(x1/x2**2 + x2**2)/cos(x1/x2)",
+    "true_vars": [
+      "c",
+      "m",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "m",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_50_26",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -2.2810489236261495,
+    "var_r2": 0.18678479535104497,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.53503179550171,
+    "var_t": 30.512754440307617,
+    "full_expr": "x12**2*(x2 + x21) + x12 + x3 - x3/x2",
+    "var_expr": "(x1*x2 - 2*x3)*cos(x1*x2)",
+    "true_vars": [
+      "alpha",
+      "omega",
+      "t",
+      "x1"
+    ],
+    "sel_vars": [
+      "alpha",
+      "omega",
+      "t",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_6_2",
+    "nvars": 2,
+    "sel_cols": 4,
+    "full_r2": 0.7209937040028382,
+    "var_r2": 0.9651529998949253,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.57657027244568,
+    "var_t": 30.548871755599976,
+    "full_expr": "x1**2*exp(-x1)/(2*x1 + log(x1))",
+    "var_expr": "(x0 - log(x1))/(x0 + x1 + exp(x0))",
+    "true_vars": [
+      "sigma",
+      "theta"
+    ],
+    "sel_vars": [
+      "__d18",
+      "__d3",
+      "sigma",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_6_2b",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.45123255388189676,
+    "var_r2": 0.8906001980481211,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.723110914230347,
+    "var_t": 30.41009521484375,
+    "full_expr": "(log(x1) + sin(x1))/(x0*x1 + 2*x0)",
+    "var_expr": "(2*x0 + x1**2/x2**2)/((2*x0 + x1**2/x2**2 + x2)*(2*x0 + x1**2/x2**2 - x1 + log(x2)))",
+    "true_vars": [
+      "sigma",
+      "theta",
+      "theta1"
+    ],
+    "sel_vars": [
+      "sigma",
+      "theta",
+      "theta1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_8_14",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": 0.25168824797581446,
+    "var_r2": 0.841372902174757,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.97203302383423,
+    "var_t": 30.683772563934326,
+    "full_expr": "x0/x1 + x1**2/(x0 + x1) + cos(x3)",
+    "var_expr": "x0/x1 - cos(x2 - x3) + x1/x0",
+    "true_vars": [
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "sel_vars": [
+      "__d17",
+      "x1",
+      "x2",
+      "y1",
+      "y2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_I_9_18",
+    "nvars": 9,
+    "sel_cols": 10,
+    "full_r2": 0.4053846687808995,
+    "var_r2": 0.5645472660083034,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.44515895843506,
+    "var_t": 30.996102809906006,
+    "full_expr": "(x0*x2/x3 + x6/x3)/x5",
+    "var_expr": "x8*(2*x0 + x2 - x3/x1)/(x3*x5)",
+    "true_vars": [
+      "G",
+      "m1",
+      "m2",
+      "x1",
+      "x2",
+      "y1",
+      "y2",
+      "z1",
+      "z2"
+    ],
+    "sel_vars": [
+      "G",
+      "__d12",
+      "m1",
+      "m2",
+      "x1",
+      "x2",
+      "y1",
+      "y2",
+      "z1",
+      "z2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_10_9",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.5141955128578335,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.520524978637695,
+    "var_t": 1.809356689453125,
+    "full_expr": "(x1 + x2 - log(x2))/(x1**2*x2)",
+    "var_expr": "x0/(x1*x2 + x1)",
+    "true_vars": [
+      "chi",
+      "epsilon",
+      "sigma_den"
+    ],
+    "sel_vars": [
+      "chi",
+      "epsilon",
+      "sigma_den"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_11_20",
+    "nvars": 5,
+    "sel_cols": 6,
+    "full_r2": 0.001965265857857834,
+    "var_r2": 0.7125232908292877,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.118712186813354,
+    "var_t": 30.456669092178345,
+    "full_expr": "-x1*(-x1 + x10)/x4 + x10/x4 - cos(x23)",
+    "var_expr": "x0*exp(x1)/(x3*(x1*x4 + sin(x1)))",
+    "true_vars": [
+      "Ef",
+      "T",
+      "kb",
+      "n_rho",
+      "p_d"
+    ],
+    "sel_vars": [
+      "Ef",
+      "T",
+      "__d6",
+      "kb",
+      "n_rho",
+      "p_d"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_11_27",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.98486620430833,
+    "var_r2": 0.9954593742194393,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.0583713054657,
+    "var_t": 31.315715789794922,
+    "full_expr": "x0*(x0*x1 + x1*x2*x3)",
+    "var_expr": "x2*x3*(x0 + x1)*sin(x0)*sin(x1)",
+    "true_vars": [
+      "Ef",
+      "alpha",
+      "epsilon",
+      "n"
+    ],
+    "sel_vars": [
+      "Ef",
+      "alpha",
+      "epsilon",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_11_28",
+    "nvars": 2,
+    "sel_cols": 3,
+    "full_r2": 0.8510588181035103,
+    "var_r2": 0.9997253016206441,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.615103483200073,
+    "var_t": 31.471545934677124,
+    "full_expr": "sin(x0*x1) + 1",
+    "var_expr": "-x0*x1**2/sin(x0) + x1**2 + exp(x0*x1)",
+    "true_vars": [
+      "alpha",
+      "n"
+    ],
+    "sel_vars": [
+      "__d6",
+      "alpha",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_11_3",
+    "nvars": 5,
+    "sel_cols": 7,
+    "full_r2": 0.43687456798438706,
+    "var_r2": 0.9403744910080877,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.774858236312866,
+    "var_t": 31.162201166152954,
+    "full_expr": "x0/(x3*(x3 - log(x0)))",
+    "var_expr": "x0*x1/(x3**2*(log(x3) - cos(x2)))",
+    "true_vars": [
+      "Ef",
+      "m",
+      "omega",
+      "omega_0",
+      "q"
+    ],
+    "sel_vars": [
+      "Ef",
+      "__d3",
+      "__d7",
+      "m",
+      "omega",
+      "omega_0",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_13_17",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": 0.12706549455699723,
+    "var_r2": 0.9900208341426561,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.065582752227783,
+    "var_t": 31.510689735412598,
+    "full_expr": "log(x1)/(x1**2*(x0 - x22 + exp(x1)))",
+    "var_expr": "x2/(2*x0*x3*(x1**2 + exp(x1)))",
+    "true_vars": [
+      "I",
+      "c",
+      "epsilon",
+      "r"
+    ],
+    "sel_vars": [
+      "I",
+      "__d9",
+      "c",
+      "epsilon",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_13_23",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.9820800923314875,
+    "var_r2": 0.9999996019180979,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.501977682113647,
+    "var_t": 30.66769027709961,
+    "full_expr": "x0 + exp(-x0)*log(x0)",
+    "var_expr": "x0*x2*cos(x1/x2)/(x1*(-sin(x1/x2) + x2/x1))",
+    "true_vars": [
+      "c",
+      "rho_c_0",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "rho_c_0",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_13_34",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.973880693370449,
+    "var_r2": 0.9999993838309863,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.34549570083618,
+    "var_t": 30.19176936149597,
+    "full_expr": "x0*x1 + log(x1)",
+    "var_expr": "x0*x2*cos(x1/x2)/(-sin(x1/x2) + x2/x1)",
+    "true_vars": [
+      "c",
+      "rho_c_0",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "rho_c_0",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_15_4",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.7781783418302433,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.07788920402527,
+    "var_t": 1.7923824787139893,
+    "full_expr": "(-4*x1 + 2*x1/x2)*cos(x2)",
+    "var_expr": "x0*x1*(-x0 + x2)*cos(x2)/(x0 - x2)",
+    "true_vars": [
+      "B",
+      "mom",
+      "theta"
+    ],
+    "sel_vars": [
+      "B",
+      "mom",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_15_5",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.83500599861145,
+    "var_t": 1.793194055557251,
+    "full_expr": "x0*x1*(x1 - x3)*cos(x2)/(-x1 + x3)",
+    "var_expr": "x0*x1*(x2 - 1/x1)*cos(x2)/(-x2 + 1/x1)",
+    "true_vars": [
+      "Ef",
+      "p_d",
+      "theta"
+    ],
+    "sel_vars": [
+      "Ef",
+      "p_d",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_21_32",
+    "nvars": 5,
+    "sel_cols": 8,
+    "full_r2": 0.3345137811129234,
+    "var_r2": 0.6450487575811986,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.8787682056427,
+    "var_t": 31.135451078414917,
+    "full_expr": "(x0 - 1)/(x0 + x2)**2",
+    "var_expr": "x2/(x1*exp(x2) + x4/log(x0))",
+    "true_vars": [
+      "c",
+      "epsilon",
+      "q",
+      "r",
+      "v"
+    ],
+    "sel_vars": [
+      "__d1",
+      "__d12",
+      "__d5",
+      "c",
+      "epsilon",
+      "q",
+      "r",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_24_17",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.7498950792610224,
+    "var_r2": 0.9999438772361231,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.933561086654663,
+    "var_t": 30.807613134384155,
+    "full_expr": "(exp(x1) + cos(x1))/(-2*x1 + exp(x1))",
+    "var_expr": "x0/x1 + cos(2*x1/(x0*x2)) - (x2 + 2*x1/(x0*x2))/(x2 - 2*x1/(x0*x2))",
+    "true_vars": [
+      "c",
+      "d",
+      "omega"
+    ],
+    "sel_vars": [
+      "c",
+      "d",
+      "omega"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_27_16",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.745110198158579,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.651735544204712,
+    "var_t": 11.327153444290161,
+    "full_expr": "2*x2*(x0 + x1*x2) - x4",
+    "var_expr": "x1*x2**2*(x0**2 + x0*x1)/(x0 + x1)",
+    "true_vars": [
+      "Ef",
+      "c",
+      "epsilon"
+    ],
+    "sel_vars": [
+      "Ef",
+      "c",
+      "epsilon"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_27_18",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 15.352909564971924,
+    "var_t": 1.7569177150726318,
+    "full_expr": "x0*x1**2",
+    "var_expr": "x0*x1**2",
+    "true_vars": [
+      "Ef",
+      "epsilon"
+    ],
+    "sel_vars": [
+      "Ef",
+      "epsilon"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_2_42",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -3.6327823358300027,
+    "var_r2": 0.8838116700000566,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.631904363632202,
+    "var_t": 31.384896278381348,
+    "full_expr": "(-x2 + x22)*(x14/x2 - sin(x14))/log(x4)",
+    "var_expr": "(-x1 + x2)*(x3 + x4)/(log(x4) + x4/x3)",
+    "true_vars": [
+      "A",
+      "T1",
+      "T2",
+      "d",
+      "kappa"
+    ],
+    "sel_vars": [
+      "A",
+      "T1",
+      "T2",
+      "d",
+      "kappa"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_34_11",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.09706322906511267,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.281821966171265,
+    "var_t": 2.0148494243621826,
+    "full_expr": "(-x14 + x2**2 + cos(x3))/x3",
+    "var_expr": "x0*x1*x2/(2*x3)",
+    "true_vars": [
+      "B",
+      "g_",
+      "m",
+      "q"
+    ],
+    "sel_vars": [
+      "B",
+      "g_",
+      "m",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_34_2",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": 0.2614673831718174,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.192219495773315,
+    "var_t": 1.7715394496917725,
+    "full_expr": "x0*(x1 + x19)*log(x2) + x7",
+    "var_expr": "x0*x1*x2/2",
+    "true_vars": [
+      "q",
+      "r",
+      "v"
+    ],
+    "sel_vars": [
+      "__d17",
+      "q",
+      "r",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_34_29a",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -77.652258899307,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.07032823562622,
+    "var_t": 14.724871397018433,
+    "full_expr": "(x2 + x9)/(2*x2*(x2 + x9 + sin(x0)))",
+    "var_expr": "x0*x1/(4*pi*x2)",
+    "true_vars": [
+      "h",
+      "m",
+      "q"
+    ],
+    "sel_vars": [
+      "h",
+      "m",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_34_29b",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.00455145430985926,
+    "var_r2": 0.7288707529054301,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.60470938682556,
+    "var_t": 30.70743989944458,
+    "full_expr": "x3*x4*(-x18 + x3)*(-x18**2 + x3 + x4)",
+    "var_expr": "x0*x3*x4*(2*x2 + sin(x1))",
+    "true_vars": [
+      "B",
+      "Jz",
+      "g_",
+      "h",
+      "mom"
+    ],
+    "sel_vars": [
+      "B",
+      "Jz",
+      "g_",
+      "h",
+      "mom"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_34_2a",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.49388382256280106,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.765336990356445,
+    "var_t": 22.623857498168945,
+    "full_expr": "(x1/x2 + log(x2))/(2*x2 + sin(x7))",
+    "var_expr": "x0*x1/(2*pi*x2)",
+    "true_vars": [
+      "q",
+      "r",
+      "v"
+    ],
+    "sel_vars": [
+      "q",
+      "r",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_35_18",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -0.7524937654645911,
+    "var_r2": 0.7361506313519273,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.170119762420654,
+    "var_t": 30.625152587890625,
+    "full_expr": "(exp(x13) + log(x0))*exp(-exp(x13))",
+    "var_expr": "(x0*x1 - log(x1))/(x1 + x3*x4)",
+    "true_vars": [
+      "B",
+      "T",
+      "kb",
+      "mom",
+      "n_0"
+    ],
+    "sel_vars": [
+      "B",
+      "T",
+      "kb",
+      "mom",
+      "n_0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_35_21",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.7720159378872744,
+    "var_r2": 0.8958797599072903,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.55538845062256,
+    "var_t": 30.975858449935913,
+    "full_expr": "x0*x1 - x0/x1 + log(x0)*cos(x1)",
+    "var_expr": "x0*x1*(x1 + x2 - x4/x2)/(x1 + x2)",
+    "true_vars": [
+      "B",
+      "T",
+      "kb",
+      "mom",
+      "n_rho"
+    ],
+    "sel_vars": [
+      "B",
+      "T",
+      "kb",
+      "mom",
+      "n_rho"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_36_38",
+    "nvars": 8,
+    "sel_cols": 9,
+    "full_r2": -0.1018527567515044,
+    "var_r2": 0.5850381996101961,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.216670274734497,
+    "var_t": 31.03251814842224,
+    "full_expr": "(x0**2 - x0*x13)*exp(-x6)/sin(x6)",
+    "var_expr": "x0*x1/(2*x3*sin(x1/x7))",
+    "true_vars": [
+      "H",
+      "M",
+      "T",
+      "alpha",
+      "c",
+      "epsilon",
+      "kb",
+      "mom"
+    ],
+    "sel_vars": [
+      "H",
+      "M",
+      "T",
+      "__d7",
+      "alpha",
+      "c",
+      "epsilon",
+      "kb",
+      "mom"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_37_1",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 9.280624628067017,
+    "var_t": 1.9166276454925537,
+    "full_expr": "x0*x1*x2 + x0*x1",
+    "var_expr": "x1*(x0*x2 + x0)",
+    "true_vars": [
+      "B",
+      "chi",
+      "mom"
+    ],
+    "sel_vars": [
+      "B",
+      "chi",
+      "mom"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_38_14",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.6841412838812491,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.583717107772827,
+    "var_t": 1.7738580703735352,
+    "full_expr": "sin(x0*x1/(-x10 + exp(x1)))",
+    "var_expr": "x0/(2*x1 + 2)",
+    "true_vars": [
+      "Y",
+      "sigma"
+    ],
+    "sel_vars": [
+      "Y",
+      "sigma"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_38_3",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": 0.36052729929173766,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.727056980133057,
+    "var_t": 3.778301239013672,
+    "full_expr": "x0*x1 + exp(x17)",
+    "var_expr": "x0*x1*x3/x2",
+    "true_vars": [
+      "A",
+      "Y",
+      "d",
+      "x"
+    ],
+    "sel_vars": [
+      "A",
+      "Y",
+      "__d18",
+      "d",
+      "x"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_3_24",
+    "nvars": 2,
+    "sel_cols": 3,
+    "full_r2": 0.9834226821124731,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.367313146591187,
+    "var_t": 5.849852561950684,
+    "full_expr": "log(x0)/(2*x1*(2*x1 + x1/x0))",
+    "var_expr": "x0/(4*pi*x1**2)",
+    "true_vars": [
+      "Pwr",
+      "r"
+    ],
+    "sel_vars": [
+      "Pwr",
+      "__d6",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_4_23",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.19306431129129897,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.390015602111816,
+    "var_t": 7.054531574249268,
+    "full_expr": "log(x2)/(2*x1*(x2**2 - cos(x14)))",
+    "var_expr": "x0/(4*pi*x1*x2)",
+    "true_vars": [
+      "epsilon",
+      "q",
+      "r"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "q",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_6_11",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.704130280984848,
+    "var_r2": 0.8813911091851278,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.387592315673828,
+    "var_t": 30.815540313720703,
+    "full_expr": "cos(x2)/(2*x3*(2*x2 + exp(x3)))",
+    "var_expr": "x1*exp(-x0)*cos(x2)/(x3*(x3*sin(x1) + exp(x3)))",
+    "true_vars": [
+      "epsilon",
+      "p_d",
+      "r",
+      "theta"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "p_d",
+      "r",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_6_15a",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": 0.7119665821846555,
+    "var_r2": 0.7805116273841213,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.30819320678711,
+    "var_t": 31.347176551818848,
+    "full_expr": "x0*exp(-x2)/(x2*(x0*x2 - 1))",
+    "var_expr": "(x1 + x5)/(2*x0*x2**4)",
+    "true_vars": [
+      "epsilon",
+      "p_d",
+      "r",
+      "x",
+      "y",
+      "z"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "p_d",
+      "r",
+      "x",
+      "y",
+      "z"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_6_15b",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.5600816527862785,
+    "var_r2": 0.8790478392868769,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.301060438156128,
+    "var_t": 31.501365900039673,
+    "full_expr": "cos(x2)/(x0**2*x3**2*(x0 + x1) - x10)",
+    "var_expr": "exp(-x3)*sin(x2)*cos(x2)/(x0*x3)",
+    "true_vars": [
+      "epsilon",
+      "p_d",
+      "r",
+      "theta"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "p_d",
+      "r",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_8_31",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 29.00197172164917,
+    "var_t": 1.9212872982025146,
+    "full_expr": "x0*x1**2/2",
+    "var_expr": "x0*x1**2/2",
+    "true_vars": [
+      "Ef",
+      "epsilon"
+    ],
+    "sel_vars": [
+      "Ef",
+      "epsilon"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_II_8_7",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.5988907148962062,
+    "var_r2": 0.9999891290484217,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.826255083084106,
+    "var_t": 31.2327938079834,
+    "full_expr": "log(x0)**2/(x0 + x1**2 + x1)",
+    "var_expr": "x0**2/(21*x1*x2)",
+    "true_vars": [
+      "d",
+      "epsilon",
+      "q"
+    ],
+    "sel_vars": [
+      "d",
+      "epsilon",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_10_19",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.7972143507149676,
+    "var_r2": 0.9580091129034974,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.302908658981323,
+    "var_t": 30.885555744171143,
+    "full_expr": "x0**2 - x11 + x2 + x3",
+    "var_expr": "x0*x2 + (x1 + x3)*log(x0) + x3/x2",
+    "true_vars": [
+      "Bx",
+      "By",
+      "Bz",
+      "mom"
+    ],
+    "sel_vars": [
+      "Bx",
+      "By",
+      "Bz",
+      "mom"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_12_43",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.981025011574607,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.596983909606934,
+    "var_t": 3.5830938816070557,
+    "full_expr": "x0*x1*log(x1)/(2*x1 - cos(x1))",
+    "var_expr": "x0*x1/(2*pi)",
+    "true_vars": [
+      "h",
+      "n"
+    ],
+    "sel_vars": [
+      "h",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_13_18",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.38136664796377906,
+    "var_r2": 0.9510607099741845,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.584100484848022,
+    "var_t": 31.24127960205078,
+    "full_expr": "12*x0*x1**2",
+    "var_expr": "2*x0*x1**2*x2*(x1 + x3)/x3",
+    "true_vars": [
+      "E_n",
+      "d",
+      "h",
+      "k"
+    ],
+    "sel_vars": [
+      "E_n",
+      "d",
+      "h",
+      "k"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_14_14",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.5203342431509127,
+    "var_r2": 0.5323015875239921,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.558817625045776,
+    "var_t": 31.612080097198486,
+    "full_expr": "2*x0*x1**2*sin(x4)/x4**2",
+    "var_expr": "x2**2*exp(x1)/(-x1 + x3*x4 + x4)",
+    "true_vars": [
+      "I_0",
+      "T",
+      "Volt",
+      "kb",
+      "q"
+    ],
+    "sel_vars": [
+      "I_0",
+      "T",
+      "Volt",
+      "kb",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_15_12",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.229861557123347,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.081727743148804,
+    "var_t": 14.45712924003601,
+    "full_expr": "x0/cos(1)",
+    "var_expr": "-2*x0*(x2 - x2/cos(x1*x2))*cos(x1*x2)/x2",
+    "true_vars": [
+      "U",
+      "d",
+      "k"
+    ],
+    "sel_vars": [
+      "U",
+      "d",
+      "k"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_15_14",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -0.01709801418272705,
+    "var_r2": 0.9957444960250478,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.754576206207275,
+    "var_t": 30.757076263427734,
+    "full_expr": "exp(-x2)*log(x2)/(exp(x2) - x22/x1)",
+    "var_expr": "(x0 - log(x0) - 1)/(x0*x1*x2*(2*x2 + cos(-x0 + log(x0) + 1)))",
+    "true_vars": [
+      "E_n",
+      "d",
+      "h"
+    ],
+    "sel_vars": [
+      "E_n",
+      "d",
+      "h"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_15_27",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -41.9316721576065,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.38959550857544,
+    "var_t": 10.520527124404907,
+    "full_expr": "(2*x2 + log(x1))/(x1*log(x2))",
+    "var_expr": "2*pi*x0/(x1*x2)",
+    "true_vars": [
+      "alpha",
+      "d",
+      "n"
+    ],
+    "sel_vars": [
+      "alpha",
+      "d",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_17_37",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": -10.996710651459031,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.88382911682129,
+    "var_t": 1.9519822597503662,
+    "full_expr": "x1*x2*cos(x2) + x2/log(x2)",
+    "var_expr": "x0*x1*cos(x2) + x0",
+    "true_vars": [
+      "alpha",
+      "beta",
+      "theta"
+    ],
+    "sel_vars": [
+      "__d9",
+      "alpha",
+      "beta",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_19_51",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -0.09347393196457676,
+    "var_r2": 0.4692383259605539,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.28019070625305,
+    "var_t": 31.625986337661743,
+    "full_expr": "sin(x5)/(x3*x5*(-2*x3 + x3/x20))",
+    "var_expr": "(-x1/x3 + sin(x1))/(x3*x4*log(x2))",
+    "true_vars": [
+      "epsilon",
+      "h",
+      "m",
+      "n",
+      "q"
+    ],
+    "sel_vars": [
+      "epsilon",
+      "h",
+      "m",
+      "n",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_21_20",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.5734643171902094,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.873450756072998,
+    "var_t": 1.9459834098815918,
+    "full_expr": "x1*x2**2/(1 - 2*x3)",
+    "var_expr": "x0*x1*x2*(-x1 + x2)/(x3*(x1 - x2))",
+    "true_vars": [
+      "A_vec",
+      "m",
+      "q",
+      "rho_c_0"
+    ],
+    "sel_vars": [
+      "A_vec",
+      "m",
+      "q",
+      "rho_c_0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_4_32",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -1.940054976975,
+    "var_r2": 0.998041229670759,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.4666531085968,
+    "var_t": 31.35438060760498,
+    "full_expr": "x2*x3 + x5 + log(x2)/(x2*x20)",
+    "var_expr": "6*x2*x3/(x0*x1)",
+    "true_vars": [
+      "T",
+      "h",
+      "kb",
+      "omega"
+    ],
+    "sel_vars": [
+      "T",
+      "h",
+      "kb",
+      "omega"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_4_33",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.9945469145391417,
+    "var_r2": 0.9991548393114659,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.09926152229309,
+    "var_t": 30.902154207229614,
+    "full_expr": "x2*x3 + x3**2*exp(-x3) - 1",
+    "var_expr": "x2*x3 - log(x0 + x1) + 1",
+    "true_vars": [
+      "T",
+      "h",
+      "kb",
+      "omega"
+    ],
+    "sel_vars": [
+      "T",
+      "h",
+      "kb",
+      "omega"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_7_38",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": 0.4441076776347346,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 31.38843846321106,
+    "var_t": 21.775053024291992,
+    "full_expr": "(x0 + x1)**2",
+    "var_expr": "4*pi*x0*x1/x2",
+    "true_vars": [
+      "B",
+      "h",
+      "mom"
+    ],
+    "sel_vars": [
+      "B",
+      "h",
+      "mom"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_8_54",
+    "nvars": 3,
+    "sel_cols": 3,
+    "full_r2": -10979.425553778286,
+    "var_r2": -0.02755405598534133,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.77781867980957,
+    "var_t": 30.718389749526978,
+    "full_expr": "(x5/x14 + x14/x1)/(2*x14 + x5/x14)",
+    "var_expr": "exp(x2)/(x1 + 2*exp(x2))",
+    "true_vars": [
+      "E_n",
+      "h",
+      "t"
+    ],
+    "sel_vars": [
+      "E_n",
+      "h",
+      "t"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_III_9_52",
+    "nvars": 6,
+    "sel_cols": 7,
+    "full_r2": -0.6095026930257343,
+    "var_r2": -0.09251495323337,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.575577974319458,
+    "var_t": 30.592037200927734,
+    "full_expr": "(x1 + x20)*(x1**2 + 2*x3)*sin(x3)",
+    "var_expr": "x1**2*(x0 + x6)*sin(x0/x3)",
+    "true_vars": [
+      "Ef",
+      "h",
+      "omega",
+      "omega_0",
+      "p_d",
+      "t"
+    ],
+    "sel_vars": [
+      "Ef",
+      "__d7",
+      "h",
+      "omega",
+      "omega_0",
+      "p_d",
+      "t"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_1",
+    "nvars": 7,
+    "sel_cols": 7,
+    "full_r2": -0.364384340409577,
+    "var_r2": 0.5947949614453995,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.511821269989014,
+    "var_t": 31.459954738616943,
+    "full_expr": "(x17 + x17/x3 + x19)/(x19 + x20 + 1)",
+    "var_expr": "exp(exp(x0)/(x5*x6))",
+    "true_vars": [
+      "E_n",
+      "Z_1",
+      "Z_2",
+      "alpha",
+      "c",
+      "hbar",
+      "theta"
+    ],
+    "sel_vars": [
+      "E_n",
+      "Z_1",
+      "Z_2",
+      "alpha",
+      "c",
+      "hbar",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_10",
+    "nvars": 3,
+    "sel_cols": 4,
+    "full_r2": 0.9121437381178171,
+    "var_r2": 0.9928288973515675,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.379910945892334,
+    "var_t": 30.903646230697632,
+    "full_expr": "x2*(exp(x2) + 1)*exp(-x2)",
+    "var_expr": "x2 + x1*sin(x2)/x0",
+    "true_vars": [
+      "c",
+      "theta2",
+      "v"
+    ],
+    "sel_vars": [
+      "__d10",
+      "c",
+      "theta2",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_11",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": -0.029929510642367818,
+    "var_r2": 0.8839859930766474,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.796943426132202,
+    "var_t": 31.092650175094604,
+    "full_expr": "(3*x2 - x22)*sin(x1)/x2**2",
+    "var_expr": "2*x0*(x2 + x3 + cos(x1))*exp(-x2)",
+    "true_vars": [
+      "I_0",
+      "alpha",
+      "delta",
+      "n"
+    ],
+    "sel_vars": [
+      "I_0",
+      "alpha",
+      "delta",
+      "n"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_12",
+    "nvars": 5,
+    "sel_cols": 6,
+    "full_r2": 0.4974001591487909,
+    "var_r2": 0.9999990343124107,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 30.87390899658203,
+    "var_t": 31.7948796749115,
+    "full_expr": "2*x1*(-x17 + x2)/(x1 - sin(x1))",
+    "var_expr": "x0*x2*x3/x1**2",
+    "true_vars": [
+      "Volt",
+      "d",
+      "epsilon",
+      "q",
+      "y"
+    ],
+    "sel_vars": [
+      "Volt",
+      "__d11",
+      "d",
+      "epsilon",
+      "q",
+      "y"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_13",
+    "nvars": 5,
+    "sel_cols": 6,
+    "full_r2": -0.45175856246899837,
+    "var_r2": 0.820422907369218,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.364121675491333,
+    "var_t": 31.24003505706787,
+    "full_expr": "log(x4)/(x4**2*(x14 + x4 + exp(x4)))",
+    "var_expr": "x0/(x2*(x2 + x4)*(2*x4 - cos(x3)))",
+    "true_vars": [
+      "alpha",
+      "d",
+      "epsilon",
+      "q",
+      "r"
+    ],
+    "sel_vars": [
+      "__d6",
+      "alpha",
+      "d",
+      "epsilon",
+      "q",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_14",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -192.2100274769877,
+    "var_r2": -19.50736616613896,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.40241551399231,
+    "var_t": 30.894802570343018,
+    "full_expr": "(x14*x18 - x14 + x18)*sin(x8)/log(x2)",
+    "var_expr": "(x0 - x2**2 + x3)*cos(x1)/log(x2)",
+    "true_vars": [
+      "Ef",
+      "alpha",
+      "d",
+      "r",
+      "theta"
+    ],
+    "sel_vars": [
+      "Ef",
+      "alpha",
+      "d",
+      "r",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_15",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.904500511131011,
+    "var_r2": 0.9794150020996621,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.925162076950073,
+    "var_t": 31.692192316055298,
+    "full_expr": "x2 + cos(x1)*cos(x3)",
+    "var_expr": "x2*(-x0 + x1)/(-x0 + x1 - cos(x3))",
+    "true_vars": [
+      "c",
+      "omega",
+      "theta",
+      "v"
+    ],
+    "sel_vars": [
+      "c",
+      "omega",
+      "theta",
+      "v"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_16",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": 0.590816325974359,
+    "var_r2": 0.9218699346833811,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.014880418777466,
+    "var_t": 31.613195657730103,
+    "full_expr": "x0*(x1 + x4) + x1*x3*x5",
+    "var_expr": "x0*x1**2 + x3*(x1 + x4)",
+    "true_vars": [
+      "A_vec",
+      "Volt",
+      "c",
+      "m",
+      "p",
+      "q"
+    ],
+    "sel_vars": [
+      "A_vec",
+      "Volt",
+      "c",
+      "m",
+      "p",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_17",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": 0.5450336818108703,
+    "var_r2": 0.6860857911853138,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.468085527420044,
+    "var_t": 30.709165334701538,
+    "full_expr": "2*x0*x1*exp(x4)",
+    "var_expr": "x1*x4**3*(x1 + x5)*log(x0)",
+    "true_vars": [
+      "alpha",
+      "m",
+      "omega",
+      "p",
+      "x",
+      "y"
+    ],
+    "sel_vars": [
+      "alpha",
+      "m",
+      "omega",
+      "p",
+      "x",
+      "y"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_18",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": -6.342258120738813,
+    "var_r2": 0.7565138230655564,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.625715017318726,
+    "var_t": 31.770379066467285,
+    "full_expr": "sin(x8)*cos(x2) + (x6 - x8)/(x0*x2)",
+    "var_expr": "x3/(x0 + cos(x2 - x4) + x2/x1)",
+    "true_vars": [
+      "G",
+      "H_G",
+      "c",
+      "k_f",
+      "r"
+    ],
+    "sel_vars": [
+      "G",
+      "H_G",
+      "c",
+      "k_f",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_19",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": 0.10301136549995371,
+    "var_r2": 0.8876608365771286,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.042720556259155,
+    "var_t": 31.167229890823364,
+    "full_expr": "exp(x5)*log(x1)*log(x3)/(2*x1)",
+    "var_expr": "x3*x4*(x3*x5 - x3 - x5)/(2*x0)",
+    "true_vars": [
+      "G",
+      "H_G",
+      "alpha",
+      "c",
+      "k_f",
+      "r"
+    ],
+    "sel_vars": [
+      "G",
+      "H_G",
+      "alpha",
+      "c",
+      "k_f",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_2",
+    "nvars": 6,
+    "sel_cols": 6,
+    "full_r2": -5.558236092409413,
+    "var_r2": 0.3849867255239847,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.952362537384033,
+    "var_t": 31.366182565689087,
+    "full_expr": "x12*x15/((2*x15 - sin(x12))*sin(x12))",
+    "var_expr": "2*x0/(x2 + x5) + cos(x4 - x5)",
+    "true_vars": [
+      "E_n",
+      "L",
+      "k_G",
+      "m",
+      "theta1",
+      "theta2"
+    ],
+    "sel_vars": [
+      "E_n",
+      "L",
+      "k_G",
+      "m",
+      "theta1",
+      "theta2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_20",
+    "nvars": 7,
+    "sel_cols": 7,
+    "full_r2": -1265.6927909989563,
+    "var_r2": -24.525461584225713,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.48425006866455,
+    "var_t": 30.756970167160034,
+    "full_expr": "x13**2/(2*x0*(x0 + x22 + x22/x10))",
+    "var_expr": "x2/((x0*x5 - x2/x0)*log(x4))",
+    "true_vars": [
+      "alpha",
+      "beta",
+      "c",
+      "h",
+      "m",
+      "omega",
+      "omega_0"
+    ],
+    "sel_vars": [
+      "alpha",
+      "beta",
+      "c",
+      "h",
+      "m",
+      "omega",
+      "omega_0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_3",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.5311134095520824,
+    "var_r2": 0.9823160038094494,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.280673027038574,
+    "var_t": 31.88491725921631,
+    "full_expr": "-x0 + x1*sin(x2)",
+    "var_expr": "(-x0*x1 + x0)/cos(x2 - x3)",
+    "true_vars": [
+      "alpha",
+      "d",
+      "theta1",
+      "theta2"
+    ],
+    "sel_vars": [
+      "alpha",
+      "d",
+      "theta1",
+      "theta2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_4",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.7303606549424496,
+    "var_r2": 0.9327998908242061,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.921021461486816,
+    "var_t": 31.492892026901245,
+    "full_expr": "4*x19/(2*x19 - x19/x0)",
+    "var_expr": "(x1*x2 + x4)/(x0*x2 + 2*x2)",
+    "true_vars": [
+      "E_n",
+      "L",
+      "U",
+      "m",
+      "r"
+    ],
+    "sel_vars": [
+      "E_n",
+      "L",
+      "U",
+      "m",
+      "r"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_5",
+    "nvars": 4,
+    "sel_cols": 5,
+    "full_r2": 0.924053402166945,
+    "var_r2": 0.9495821033650292,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.978023052215576,
+    "var_t": 30.75167751312256,
+    "full_expr": "x0*(x0 + sin(x1 + log(x0))) + x0",
+    "var_expr": "(x0 + x3/x2)*(x0/x3 + x0/x1)",
+    "true_vars": [
+      "G",
+      "d",
+      "m1",
+      "m2"
+    ],
+    "sel_vars": [
+      "G",
+      "__d16",
+      "d",
+      "m1",
+      "m2"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_6",
+    "nvars": 7,
+    "sel_cols": 8,
+    "full_r2": 0.2859466712175368,
+    "var_r2": 0.4937878365219911,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.860408067703247,
+    "var_t": 32.04877591133118,
+    "full_expr": "exp(-x0)*sin(x0) + (x0 + x5)/(2*x5)",
+    "var_expr": "(exp(x5) + x6/x5)/(-x1 + x3 + exp(x5))",
+    "true_vars": [
+      "E_n",
+      "L",
+      "Z_1",
+      "Z_2",
+      "epsilon",
+      "m",
+      "q"
+    ],
+    "sel_vars": [
+      "E_n",
+      "L",
+      "Z_1",
+      "Z_2",
+      "__d7",
+      "epsilon",
+      "m",
+      "q"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_7",
+    "nvars": 5,
+    "sel_cols": 5,
+    "full_r2": 0.9079736405261487,
+    "var_r2": 0.978250345569695,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.630836009979248,
+    "var_t": 30.560611248016357,
+    "full_expr": "2*x1 + sin(x2) - 2*cos(x0)",
+    "var_expr": "x0*x1 - cos(x0 + x1) + 1",
+    "true_vars": [
+      "G",
+      "alpha",
+      "c",
+      "d",
+      "rho"
+    ],
+    "sel_vars": [
+      "G",
+      "alpha",
+      "c",
+      "d",
+      "rho"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_8",
+    "nvars": 4,
+    "sel_cols": 4,
+    "full_r2": 0.6984368949282207,
+    "var_r2": 0.9154705081155053,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 31.362618923187256,
+    "var_t": 31.416483163833618,
+    "full_expr": "log(x0) + 1 - sin(x2)/x2**2",
+    "var_expr": "(x0*x2 - cos(x2))/(x2 + x3/x1)",
+    "true_vars": [
+      "E_n",
+      "c",
+      "m",
+      "theta"
+    ],
+    "sel_vars": [
+      "E_n",
+      "c",
+      "m",
+      "theta"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "feynman118",
+    "id": "pmlb_feynman_test_9",
+    "nvars": 5,
+    "sel_cols": 7,
+    "full_r2": -0.09411632724160213,
+    "var_r2": -76.03365311173059,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 30.871767044067383,
+    "var_t": 30.880070447921753,
+    "full_expr": "x20**2/(x1*x19*(x20/x24 - cos(x20)))",
+    "var_expr": "x2**2*exp(x2)/(x0/x5 - x1**2)",
+    "true_vars": [
+      "G",
+      "c",
+      "m1",
+      "m2",
+      "r"
+    ],
+    "sel_vars": [
+      "G",
+      "__d13",
+      "__d18",
+      "c",
+      "m1",
+      "m2",
+      "r"
+    ],
+    "recall": 1.0
+  }
+]

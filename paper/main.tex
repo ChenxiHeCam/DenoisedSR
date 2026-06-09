@@ -880,22 +880,30 @@ Condition & Exact recovery (\%) & Mean held-out $R^2$ \\
 \end{table}
 
 \begin{table}[h!]\centering
-\caption{\textbf{Three structurally different backends, same prior, same
-$30$-equation Feynman subset.} Each row is full backend (no prior) vs.\
-backend with the DenoisedSR variable prior. The prior delivers a meaningful
-improvement on all three: an evolutionary GP search (PySR), a classical GP
-(gplearn) and a parallel enumeration on GPU (PSE).}
+\caption{\textbf{Master backend $\times$ benchmark matrix.} Exact-law recovery
+(\% with held-out $R^2 \ge 0.999$) on five physical-symbolic benchmarks for
+three structurally different SR backends, with and without the DenoisedSR
+variable prior. Cells show \emph{full backend} $\to$ \emph{+DenoisedSR}; gap in
+percentage points. Multi-seed entries are mean$\pm$s.d.; single-seed entries
+omit the standard deviation. PySR-Feynman118 is over three random seeds;
+gplearn entries on Feynman are over three seeds; remaining cells are single
+seed. PSE-SRSD is not evaluated because PSE's float32 tensor representation
+underflows on SRSD's $\sim 10^{60}$-magnitude physical-unit targets (a
+backend-data interaction, unrelated to the prior). Bold marks the larger of
+the two values in each row.}
 \label{tab:backends-3way}
-\footnotesize
-\begin{tabular}{lccccc}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccc}
 \toprule
-Backend & Family & \multicolumn{2}{c}{Exact recovery (\%)} & \multicolumn{2}{c}{Mean held-out $R^2$} \\
-\cmidrule(lr){3-4}\cmidrule(lr){5-6}
-        &        & full & + prior & full & + prior \\
+Benchmark & Distractors & PySR & gplearn & PSE \\
+          &             & \emph{full} $\to$ \emph{+prior} ($\Delta$) & \emph{full} $\to$ \emph{+prior} ($\Delta$) & \emph{full} $\to$ \emph{+prior} ($\Delta$) \\
 \midrule
-PySR\cite{cranmer2023pysr}        & evolutionary GP        & $42.2 \pm 13.5$ & $\mathbf{60.0 \pm 0.0}$ & $0.906 \pm 0.045$ & $\mathbf{0.980 \pm 0.011}$ \\
-gplearn\cite{stephens2015gplearn} & classical GP           & $3.3 \pm 3.3$   & $\mathbf{17.8 \pm 1.9}$ & $0.475 \pm 0.083$ & $\mathbf{0.763 \pm 0.029}$ \\
-PSE\cite{ruan2026pse}             & GPU parallel enum.     & $0$             & $\mathbf{40.0}$         & $0.184$           & $\mathbf{0.895}$           \\
+AI-Feynman 118 (3 seeds)  & 20 random      & $46.3{\pm}3.0 \to \mathbf{57.3{\pm}1.8}$ ($\!+\!11$) & $0.8 \to \mathbf{11.0}$ ($\!+\!10$) & $8.5 \to \mathbf{42.4}$ ($\!+\!34$) \\
+Strogatz 15                & 20 random      & $60.0 \to \mathbf{66.7}$ ($\!+\!7$)  & $0.0 \to 0.0$ ($0$)         & $6.7 \to \mathbf{53.3}$ ($\!+\!47$) \\
+Nguyen 12                  & 20 random      & $\mathbf{91.7} \to \mathbf{91.7}$ ($0$) & $8.3 \to 8.3$ ($0$) & $33.3 \to \mathbf{100.0}$ ($\!+\!67$) \\
+SRSD-Feynman 120           & ${\sim}2$ plausible & $\mathbf{54.2} \to 50.0$ ($\!-\!4$) & $30.0 \to 30.0$ ($0$) & --- \\
+SRSD-Feynman 120           & + 20 random    & $42.5 \to \mathbf{54.2}$ ($\!+\!12$) & $25.0 \to \mathbf{29.2}$ ($\!+\!4$) & --- \\
 \bottomrule
 \end{tabular}
 \end{table}

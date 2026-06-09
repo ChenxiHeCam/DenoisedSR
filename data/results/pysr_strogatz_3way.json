@@ -1,0 +1,347 @@
+[
+  {
+    "suite": "strogatz",
+    "id": "strogatz_bacres1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9900932630434609,
+    "var_r2": 0.9930596129165774,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 16.123388290405273,
+    "var_t": 6.324378967285156,
+    "full_expr": "-(x0*0.6556021 - 0.49999923*(-x1 - 1.1143153)) + 19.230684 + (0.39978772**x1 + 0.3630145/x0)/x0",
+    "var_expr": "11.497095 + 7.564562/sqrt(x0**(1/4)*cosh(0.30058488*x0 + 0.30058488*x1))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_bacres2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9972816477088474,
+    "var_r2": 0.999806094484976,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 10.239038228988647,
+    "var_t": 5.841403484344482,
+    "full_expr": "exp(1.5012577**sin(x0*sin(1.2530777**sin(x0))))*x1*(-0.1552358) + 9.992226",
+    "var_expr": "x1*((x0 - 1*1.1063912)*(sin(x0 - 1*0.15699732 - 2.8172233/x0)*0.016449347 + 0.15545861) - 0.9773161 - (-1)*0.3282697/x0) + 9.999728",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_barmag1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9992509081112732,
+    "var_r2": 1.0,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 6.83088231086731,
+    "var_t": 5.115636825561523,
+    "full_expr": "(0.75034195 - 0.41735178**(tanh(x0*x0*0.09302258) - 1*0.9357997))*sin(x1 - 0.4665967*sin(x0*0.77252084))",
+    "var_expr": "-sin(x1) + sin(-x0 + x1)*(-0.5)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_barmag2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.978736988600296,
+    "var_r2": 0.9999999999999993,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 5.461036682128906,
+    "var_t": 5.609103679656982,
+    "full_expr": "sinh(sinh(x1*0.19292578*sin(x0 - 1*1.5552374) + sin(x0*(-0.9795716) + x1*0.41594255)))",
+    "var_expr": "-sin(x0) + sin(-x0 + x1)*0.49999997",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_glider1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 0.9999999999999982,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.5535569190979,
+    "var_t": 5.341702699661255,
+    "full_expr": "x0*x0*(-0.05) - sin(x1)",
+    "var_expr": "x0*(-0.049999997)*x0 - sin(x1)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_glider2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 0.993527675918045,
+    "full_exact": true,
+    "var_exact": false,
+    "full_t": 5.952853679656982,
+    "var_t": 7.401123762130737,
+    "full_expr": "x0 - cos(x1)/x0",
+    "var_expr": "log(-x0 + exp(x0) + sinh(0.37332714*x0 + x1*tanh(x1) - 0.32231498) - 0.8652614) - 0.09613474",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_lv1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9999999999999699,
+    "var_r2": 0.9999999999999997,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.11872935295105,
+    "var_t": 5.235819101333618,
+    "full_expr": "x0*(-(x0 + x1*2.0 - 3.1728292) - 1*0.1728291 + cosh(x6)*cosh(x19)*3.992675e-10/x8)",
+    "var_expr": "x0*(0.28754616 - (x1 - (-x0 - x1 + 2.7124538)))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_lv2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9999999999999976,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.202939033508301,
+    "var_t": 5.077332019805908,
+    "full_expr": "x1*(-x0 - x1 + (2.2852795 - x10)*(-2.6475535e-8) + 0.39159772 + 1.6084024)",
+    "var_expr": "x1*(-x1 - (x0 - 1*1.5167881) + 0.4832119)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_predprey1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9940527795910626,
+    "var_r2": 0.9981053164807296,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 6.947641849517822,
+    "var_t": 10.361624002456665,
+    "full_expr": "(cos((-x1 - 0.6044216)/(0.21276212*Abs(x0 + 0.9059546) - 3.280321)) + sinh(sinh(sin(x0 - 0.34171838) - 0.57495195) - 1*(-0.35477015)))/0.50552577",
+    "var_expr": "-sqrt(x0*(2.6404994*x1 + 3.85285354161708)) + 7.1921263*sin(sin(0.650962796760106*x0)) + 0.8791886",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_predprey2",
+    "nvars": 2,
+    "sel_cols": 3,
+    "full_r2": 0.9766594356329545,
+    "var_r2": 0.9923756447054364,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 10.078697204589844,
+    "var_t": 8.103062391281128,
+    "full_expr": "sqrt(sinh(sinh(tan(tanh(x0)**3*tanh(x1**tanh(tanh(x0 + log(x0))))**3))))",
+    "var_expr": "(-0.32666937**(3.328166**x0) + x0/(x0 + x1))*(x1 - 0.2860239) + 0.15946943",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "__d3",
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_shearflow1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.999999999999985,
+    "var_r2": 0.9999999999999821,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.314906597137451,
+    "var_t": 6.332961320877075,
+    "full_expr": "cos(x0 - 1.1654833e-7)/tan(x1)",
+    "var_expr": "cos(x0)/(tan(x1) + cos(53.8895556721626*x0**2)*1.8752726e-8/(0.8420737/x1))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_shearflow2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9999436057289298,
+    "var_r2": 0.9999636878403549,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.825717449188232,
+    "var_t": 6.751378059387207,
+    "full_expr": "sin(x0)*tan(sinh(tanh(cos(tan(sin(x1)*(-0.8948281))))*1.047063)**2)",
+    "var_expr": "sin(x0)*sinh(sin(cos(sinh(sin(x1)*0.50627595)*2.7862065)))*1.0519592",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_vdp1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9999973399371791,
+    "var_r2": 0.999999999999998,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.603553056716919,
+    "var_t": 4.978818655014038,
+    "full_expr": "-x0 - (x1/1.2184751 + sin(sinh(0.43901938*x0)*(-3.3084247))*2.917036) + (x0 + x1 - sinh(x0))*10.823065",
+    "var_expr": "-x1 + x1*11.0 + (-x0**3 + x0 - 0.20875812)*3.3333335 + 0.695861",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_vdp2",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999999999999971,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 4.8313188552856445,
+    "var_t": 4.751259088516235,
+    "full_expr": "x0*0.7566444/(-7.5664444)",
+    "var_expr": "x0*(-0.1)",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_lorenz1",
+    "nvars": 2,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 4.766475439071655,
+    "var_t": 4.438637018203735,
+    "full_expr": "(-x0 + x1 - 0.046977133)*10.0 + 0.4697713",
+    "var_expr": "(-x0 + x1 + 0.022328312)*10.0 - 1*0.22328326",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "__d18",
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  }
+]

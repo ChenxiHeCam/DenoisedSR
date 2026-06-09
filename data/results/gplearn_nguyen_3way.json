@@ -1,0 +1,262 @@
+[
+  {
+    "suite": "nguyen",
+    "id": "nguyen_1",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.6553752515045508,
+    "var_r2": 0.9953427915423998,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.625304937362671,
+    "var_t": 1.6972954273223877,
+    "full_expr": "X0",
+    "var_expr": "add(mul(X0, X0), tan(sin(tan(sin(tan(X0))))))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_2",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9988080578517478,
+    "var_r2": 0.992816502101601,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.7584195137023926,
+    "var_t": 1.761897087097168,
+    "full_expr": "add(X0, abs(mul(mul(add(X0, sqrt(add(X0, sqrt(sin(mul(tan(sin(X0)), X0)))))), tan(sin(X0))), tan(sin(X0)))))",
+    "var_expr": "sub(mul(tan(add(X0, 0.371)), sin(X0)), mul(X0, -0.656))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_3",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.5251916462380564,
+    "var_r2": 0.9987778948747139,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.5347094535827637,
+    "var_t": 1.966966152191162,
+    "full_expr": "tan(X0)",
+    "var_expr": "mul(mul(abs(cos(log(sqrt(0.182)))), add(cos(-0.946), add(add(X0, abs(tan(X0))), abs(abs(sub(sqrt(cos(log(sqrt(0.182)))), mul(-0.891, X0))))))), tan(X0))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_4",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.18145376160324278,
+    "var_r2": 0.9964264701108383,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.637319564819336,
+    "var_t": 2.0460212230682373,
+    "full_expr": "sin(X0)",
+    "var_expr": "add(tan(X0), sqrt(mul(X0, mul(tan(mul(mul(add(X0, 0.424), cos(log(X0))), cos(mul(sqrt(tan(X0)), log(X0))))), mul(add(X0, tan(X0)), tan(X0))))))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_5",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": -0.031519288594161754,
+    "var_r2": 0.997745118356855,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.5972731113433838,
+    "var_t": 2.14180588722229,
+    "full_expr": "sin(log(-0.110))",
+    "var_expr": "sub(log(-0.659), add(mul(log(cos(X0)), add(cos(X0), log(cos(X0)))), add(cos(X0), log(-0.659))))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_6",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.8101885054416504,
+    "var_r2": 0.9931791955521665,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.5082030296325684,
+    "var_t": 1.982846736907959,
+    "full_expr": "add(X0, X0)",
+    "var_expr": "mul(sqrt(0.789), add(sin(sub(add(0.947, X0), div(X0, X0))), add(abs(sqrt(mul(sqrt(mul(0.161, X0)), X0))), sin(sub(add(0.947, X0), div(X0, X0))))))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_7",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.8212806680520541,
+    "var_r2": 0.9891539615595603,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.6077964305877686,
+    "var_t": 1.7295722961425781,
+    "full_expr": "tan(sqrt(sqrt(X0)))",
+    "var_expr": "mul(sub(abs(div(X0, -0.909)), -0.564), sin(X0))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_8",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.22032403945922852,
+    "var_t": 0.09383487701416016,
+    "full_expr": "abs(sqrt(X0))",
+    "var_expr": "abs(sqrt(X0))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_9",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.8112136466920036,
+    "var_r2": 0.9866863460498445,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.690704584121704,
+    "var_t": 1.6025364398956299,
+    "full_expr": "add(0.067, add(0.067, add(0.067, add(0.067, sin(X0)))))",
+    "var_expr": "add(X0, mul(abs(X1), abs(abs(sin(X1)))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_10",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9299794268934757,
+    "var_r2": 0.9666489580891217,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.4788496494293213,
+    "var_t": 1.6983928680419922,
+    "full_expr": "tan(X0)",
+    "var_expr": "mul(div(X0, mul(tan(X0), 0.542)), X0)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_11",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.7338854091893874,
+    "var_r2": 0.7338854091893874,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.6082873344421387,
+    "var_t": 1.5073268413543701,
+    "full_expr": "X0",
+    "var_expr": "X0",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_12",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -0.12681522641750043,
+    "var_r2": 0.7586061967981699,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.5822858810424805,
+    "var_t": 1.681311845779419,
+    "full_expr": "abs(abs(abs(X1)))",
+    "var_expr": "mul(-0.810, sub(add(X0, -0.437), tan(mul(X1, -0.998))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  }
+]

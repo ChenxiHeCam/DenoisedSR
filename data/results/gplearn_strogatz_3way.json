@@ -1,0 +1,347 @@
+[
+  {
+    "suite": "strogatz",
+    "id": "strogatz_bacres1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -28.992352395484232,
+    "var_r2": -8.08249468947292,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.1094391345977783,
+    "var_t": 2.586359977722168,
+    "full_expr": "add(add(sub(abs(add(add(add(X10, sqrt(add(abs(0.118), sub(add(abs(log(X8)), sub(add(X10, sqrt(sqrt(add(X17, X17)))), sin(X19))), sin(X19))))), abs(abs(X12))), sqrt(sub(abs(X6), add(X9, X12))))), sin(X19)), sqrt(X6)), add(X10, sqrt(sqrt(add(add(div(sub(abs(add(add(add(X10, X1), abs(abs(X12))), abs(X2))), sin(X19)), sqrt(X6)), add(X10, sqrt(X9))), X1)))))",
+    "var_expr": "add(add(add(X1, sqrt(tan(log(add(X0, X1))))), sqrt(add(sqrt(add(add(X1, X1), cos(-0.497))), add(add(add(X1, sqrt(tan(log(add(X1, add(sqrt(tan(add(X1, sqrt(tan(log(add(X0, X1))))))), abs(div(X0, 0.562)))))))), sqrt(X1)), sqrt(tan(log(sqrt(X1)))))))), add(sin(X1), add(X0, log(add(sqrt(add(X1, add(sqrt(tan(log(add(X0, X1)))), abs(div(X0, 0.562))))), add(add(add(X1, X1), sqrt(tan(log(add(X0, X1))))), add(sqrt(add(X1, add(sqrt(tan(log(add(X0, X1)))), abs(div(X0, tan(log(add(X0, X1)))))))), add(add(add(X1, X1), sqrt(tan(log(add(X0, X1))))), abs(div(X0, 0.562))))))))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_bacres2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -6.009081477340433,
+    "var_r2": -0.033252344865405625,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.0968356132507324,
+    "var_t": 1.8390138149261475,
+    "full_expr": "add(add(sqrt(X19), sqrt(add(sub(sub(sub(add(sqrt(add(sub(add(sub(sub(add(sub(sub(X0, X2), X7), abs(X17)), X7), X2), sub(X0, X2)), X7), abs(X17))), sqrt(add(add(sub(sub(sub(add(sub(X0, X2), abs(X17)), X7), X2), X2), abs(X17)), sub(X0, X2)))), X2), X7), X2), abs(X17)))), sqrt(add(add(add(sqrt(X19), sub(X0, X2)), sqrt(add(sub(sub(sub(X0, X2), X7), X7), abs(X17)))), sub(X0, X2))))",
+    "var_expr": "sqrt(tan(tan(div(X0, X0))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_barmag1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -0.3444206988059577,
+    "var_r2": 0.822183331872153,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.8454222679138184,
+    "var_t": 1.809446096420288,
+    "full_expr": "cos(sqrt(sub(sin(sub(sin(sin(sin(sin(X5)))), X18)), X18)))",
+    "var_expr": "cos(sub(cos(cos(cos(sqrt(sub(X0, -0.867))))), sub(-0.826, X1)))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_barmag2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -0.09854591737560936,
+    "var_r2": 0.8042187188886026,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.7719929218292236,
+    "var_t": 1.9357879161834717,
+    "full_expr": "sin(mul(sub(sub(sin(abs(X10)), sin(mul(mul(cos(abs(X10)), -0.304), -0.304))), sin(add(log(add(X3, X16)), div(X7, cos(abs(X10)))))), abs(-0.304)))",
+    "var_expr": "sin(mul(log(0.530), sub(X0, mul(log(log(0.530)), X0))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_glider1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -0.21241365470533635,
+    "var_r2": 0.9338730421239825,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.65279221534729,
+    "var_t": 2.0456674098968506,
+    "full_expr": "-0.106",
+    "var_expr": "sub(sub(add(sub(sin(mul(-0.952, X1)), 0.117), cos(sqrt(X0))), tan(0.117)), 0.117)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_glider2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.8817460172032803,
+    "var_r2": 0.8817460172032803,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.5975291728973389,
+    "var_t": 1.6017110347747803,
+    "full_expr": "X0",
+    "var_expr": "X0",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_lv1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.7857338673851171,
+    "var_r2": 0.9676321787455051,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.8098173141479492,
+    "var_t": 2.014894723892212,
+    "full_expr": "sub(sub(cos(sub(cos(X0), X1)), sub(abs(sub(sub(cos(sub(cos(X0), X1)), X1), sub(abs(sub(sub(cos(sub(cos(X0), X1)), X1), X0)), X1))), X0)), X0)",
+    "var_expr": "add(abs(X0), mul(mul(X1, mul(X0, X0)), sin(log(div(0.639, abs(add(X0, X1)))))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_lv2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.8994017235644062,
+    "var_r2": 0.9908846965664829,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.652475357055664,
+    "var_t": 1.8401963710784912,
+    "full_expr": "sub(mul(sub(sin(X1), X1), X0), X1)",
+    "var_expr": "mul(sub(cos(sub(0.209, X1)), X0), abs(sub(0.209, X1)))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_predprey1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.7061661030408287,
+    "var_r2": 0.9565134578932136,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.8436200618743896,
+    "var_t": 1.9677894115447998,
+    "full_expr": "tan(tan(sin(tan(sin(sin(tan(sin(X0))))))))",
+    "var_expr": "add(add(mul(sin(X0), X0), sin(add(0.540, X1))), sin(sin(sin(sin(sin(mul(sin(mul(0.681, X0)), X0)))))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_predprey2",
+    "nvars": 2,
+    "sel_cols": 3,
+    "full_r2": 0.8296294513756441,
+    "var_r2": 0.9182891196670208,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.113658905029297,
+    "var_t": 1.9036085605621338,
+    "full_expr": "sqrt(mul(sqrt(mul(mul(sqrt(mul(mul(log(X1), sqrt(X0)), log(add(mul(mul(sqrt(sqrt(X0)), sqrt(X0)), sqrt(log(log(X1)))), sqrt(X0))))), sqrt(add(abs(sqrt(mul(mul(log(X1), sqrt(X0)), sqrt(sqrt(sqrt(X0)))))), log(X1)))), log(add(mul(mul(log(X1), sqrt(X0)), sqrt(log(sqrt(sqrt(sqrt(X0)))))), sqrt(X0))))), sqrt(add(abs(sqrt(mul(mul(log(X1), sqrt(X0)), sqrt(sqrt(sqrt(X0)))))), log(X1)))))",
+    "var_expr": "mul(log(add(sqrt(X0), log(add(sqrt(X0), 0.696)))), log(add(add(X1, 0.271), sqrt(X1))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "__d3",
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_shearflow1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": -0.0019256887154681657,
+    "var_r2": 0.6675685193192038,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.7198920249938965,
+    "var_t": 1.809025526046753,
+    "full_expr": "sin(sub(X10, X10))",
+    "var_expr": "mul(cos(X0), tan(cos(X1)))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_shearflow2",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.692540364121554,
+    "var_r2": 0.9672972074614141,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.722883701324463,
+    "var_t": 1.7139153480529785,
+    "full_expr": "sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(X0)))))))))))",
+    "var_expr": "mul(mul(sin(X0), cos(sin(X1))), cos(sin(X1)))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_vdp1",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.6750588852135175,
+    "var_r2": 0.9576997589750795,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.123880386352539,
+    "var_t": 2.092982530593872,
+    "full_expr": "add(sub(sub(X1, add(add(sub(X6, add(sub(sub(X1, add(add(sub(X6, add(sub(X1, add(add(add(X5, X0), X0), add(sub(X6, add(sub(X1, add(X0, X0)), X1)), X0))), X1)), X0), X0)), add(add(sqrt(add(sub(X6, add(sub(X1, add(add(add(sub(X6, add(sub(sub(sub(X1, add(add(sub(X6, add(sub(X1, add(add(add(X5, X0), add(add(sub(X6, add(sub(X6, add(sub(X1, add(add(add(X5, X0), add(add(sub(X6, add(sub(X1, sub(sqrt(X21), X17)), X1)), X0), X0)), X0)), X1)), X1)), X0), X0)), X0)), X1)), X0), X0)), add(add(X5, X0), X0)), add(add(sqrt(add(add(X5, X0), X0)), X0), X0)), X1)), X0), X0), X0)), X1)), X0)), X0), add(X5, X0))), X1)), X0), X0)), add(sqrt(add(add(X5, X0), X0)), X0)), X1)",
+    "var_expr": "sub(sub(sub(sub(sub(add(-0.232, X1), X0), mul(mul(X0, X0), sub(X0, mul(X1, sqrt(0.276))))), sub(sub(sub(X0, X1), add(X1, X1)), add(X1, X1))), sub(X0, add(X1, X1))), mul(mul(X0, X0), sub(X0, mul(sqrt(0.276), sqrt(0.276)))))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_vdp2",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9965747586285014,
+    "var_r2": 0.9997137866782897,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.9211208820343018,
+    "var_t": 1.984243631362915,
+    "full_expr": "sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(sin(mul(-0.116, X0))))))))))))",
+    "var_expr": "mul(div(X0, 0.807), log(div(add(0.793, -0.329), sqrt(0.254))))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "strogatz",
+    "id": "strogatz_lorenz1",
+    "nvars": 2,
+    "sel_cols": 3,
+    "full_r2": 0.9997948541864518,
+    "var_r2": 0.8611208731459418,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.0078766345977783,
+    "var_t": 2.6014156341552734,
+    "full_expr": "sub(X1, sub(sub(X0, sub(sub(X1, X12), sub(sub(sub(sub(X0, sub(sub(X1, X0), X0)), X1), X1), sub(sub(X1, sub(sub(log(X6), sub(X1, X0)), sub(X1, X0))), X0)))), sub(X1, sub(sub(X0, sub(sub(X1, X0), sub(X1, X12))), sub(X1, X0)))))",
+    "var_expr": "mul(sub(sub(div(X0, -0.365), sub(X2, add(X1, sqrt(add(add(sub(sub(div(X0, -0.365), X1), sub(X2, X1)), sub(div(X0, -0.365), X1)), X1))))), sub(X2, X1)), sqrt(add(add(add(add(div(X0, -0.365), sin(sub(sub(add(sub(mul(X0, X2), sub(X2, X1)), sqrt(add(add(sub(sub(div(X0, -0.365), X1), sub(X2, X1)), div(X0, -0.365)), X1))), X1), sub(sub(sub(div(X0, -0.365), sub(X2, add(X1, sqrt(add(add(sub(sub(div(X0, -0.365), X1), sub(X2, X1)), sub(div(X0, -0.365), X1)), X1))))), sub(X2, X1)), X1)))), X1), X1), X0)))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "__d18",
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  }
+]

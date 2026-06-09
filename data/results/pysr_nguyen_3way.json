@@ -1,0 +1,262 @@
+[
+  {
+    "suite": "nguyen",
+    "id": "nguyen_1",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999999999999992,
+    "var_r2": 0.9999999999999997,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 15.169734477996826,
+    "var_t": 4.2331767082214355,
+    "full_expr": "x0*(0.99999994**x0 + x0**2 + x0)",
+    "var_expr": "x0**3 - 2.0460597e-8*x0*exp(x0) + x0*x0 + x0",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_2",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999041806196118,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.123147964477539,
+    "var_t": 4.308036804199219,
+    "full_expr": "(x0*tanh(tanh(x0*0.07170649 + 0.73014015)) + 0.5275298)*sinh(x0 + x0)",
+    "var_expr": "x0**4 + x0**3 + x0**2 + x0",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_3",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.999970745072275,
+    "var_r2": 0.999995758278595,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.8528807163238525,
+    "var_t": 5.0283424854278564,
+    "full_expr": "(exp(x0 - (-1.212142)*x0 - 0.08756558) + cosh((x0 - 0.081134535)**3))*0.51924723*x0",
+    "var_expr": "x0*(-x0*exp(x0 - 1*0.012697144) + ((x0 - 1*1.2653419)*x0**3*x0*0.19602744 - exp(x0))**2)",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_4",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999955221686294,
+    "var_r2": 0.9999980585485284,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.151310443878174,
+    "var_t": 6.344560623168945,
+    "full_expr": "x0*tanh(x0 - 0.56478447) + x0*1.4741102 + (x0*(x0 + 0.38999602) + 0.21524034)**3 - 1*0.008004946",
+    "var_expr": "(1.34068129922917*(x0 - 1*(-0.13565934))**2)**2.4742804 - cos(sin(-x0 - 0.007741199))**2 + tan(x0) + 0.9993381",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_5",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999985464625879,
+    "var_r2": 0.9999877842560929,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.482866048812866,
+    "var_t": 7.790820360183716,
+    "full_expr": "x0**2*sqrt(exp(0.024151241*cos(cosh(cosh(x0)**2)))) - cosh(1.009584857961*x0**2)",
+    "var_expr": "(tanh(-0.35613754**cosh(x0*cosh(x0*x0**2*cos(tanh(sin(x0**2))))/0.46603012) - 0.6821423) - 0.22280332)**3",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_6",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999909032333932,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 6.323871612548828,
+    "var_t": 4.980569839477539,
+    "full_expr": "x0*(x0*cos((x0*(-0.33639097) + exp(x0))*0.74489325)/0.74347353 + 2.0151918)",
+    "var_expr": "sin(x0) + sin(x0**2 + x0)",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_7",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 0.9999998829783019,
+    "var_r2": 0.9999994618457528,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.898043632507324,
+    "var_t": 10.266435146331787,
+    "full_expr": "tanh(0.8295446*Abs(Abs(Abs(x0))))*Abs(Abs(x0*0.8747504 + 1.1604337)) - 1*(-0.0017261757)",
+    "var_expr": "(x0 + 0.2542667)**(((x0 + 0.1661223)**(-0.14472818) - 1*(-0.19004042))**(2*sinh(Abs((x0 + (0.029316131**x0)**1.9153117)**0.036525957)**2)))",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_8",
+    "nvars": 1,
+    "sel_cols": 1,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 4.47048282623291,
+    "var_t": 4.553662300109863,
+    "full_expr": "sqrt(x0)",
+    "var_expr": "sqrt(x0)",
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "x0"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_9",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.472731351852417,
+    "var_t": 4.789375066757202,
+    "full_expr": "sin(x0) + sin(x1**2)",
+    "var_expr": "sin(x0) + sin(x1**2)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_10",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9999999984994647,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 5.746507406234741,
+    "var_t": 5.375613689422607,
+    "full_expr": "((-x0*(tanh(x0) + tanh(x0))**2 - 0.0012314275)*0.0007385417 + sinh(tanh(sinh(x0))) + tanh(x0))*cos(x1)",
+    "var_expr": "cos(x1)*2.0*sin(x0)",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_11",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9999999999999977,
+    "var_r2": 0.9999999999999979,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 10.243003845214844,
+    "var_t": 8.052749156951904,
+    "full_expr": "x0**(x1**((0.99999994**1.6396141)**sin(x19*x6 - 1*0.99999994)))",
+    "var_expr": "x0**(x1*tanh(Abs(cos(x0**3.656868342436)) + 8.446559))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  },
+  {
+    "suite": "nguyen",
+    "id": "nguyen_12",
+    "nvars": 2,
+    "sel_cols": 2,
+    "full_r2": 0.9981289131836104,
+    "var_r2": 0.998239922848556,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 7.777583360671997,
+    "var_t": 7.535210132598877,
+    "full_expr": "0.020198379**(x0 + 0.8081817) + 0.49045420920941*x1**2 - x1 - 1*0.065573074",
+    "var_expr": "0.018763488**(x0 + 0.81068194) - (-0.49662146)*x1*x1 - (x1 - 1*(-0.063615106))",
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "recall": 1.0
+  }
+]

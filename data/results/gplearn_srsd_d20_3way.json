@@ -1,0 +1,3060 @@
+[
+  {
+    "key": "feynman-ii.38.14",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 4,
+    "full_r2": 0.7493374508316304,
+    "var_r2": 0.9953633480494749,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.81978178024292,
+    "var_t": 2.296509265899658,
+    "true_vars": [
+      "x0",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d11",
+      "__d16",
+      "x0",
+      "x3"
+    ],
+    "full_expr": "sqrt(X0)",
+    "var_expr": "sqrt(mul(mul(cos(X1), mul(cos(X1), mul(cos(X1), mul(cos(X1), sqrt(mul(sqrt(mul(mul(cos(X1), sqrt(mul(mul(cos(X1), abs(X0)), abs(X0)))), mul(-0.295, abs(abs(X0))))), abs(X0))))))), mul(-0.295, abs(X0))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.7.38",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 4,
+    "full_r2": -0.0012075653849641377,
+    "var_r2": -0.0012075653849641377,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.776230812072754,
+    "var_t": 2.646754264831543,
+    "true_vars": [
+      "x0",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d13",
+      "__d17",
+      "x0",
+      "x3"
+    ],
+    "full_expr": "sub(sin(X1), mul(X12, cos(abs(mul(sqrt(log(-0.048)), sin(X11))))))",
+    "var_expr": "tan(cos(cos(cos(log(abs(cos(cos(sqrt(X0)))))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.8.31",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 2,
+    "full_r2": -0.2497166366877106,
+    "var_r2": -0.2497166366877106,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.4687840938568115,
+    "var_t": 2.4453859329223633,
+    "true_vars": [
+      "x1"
+    ],
+    "sel_vars": [
+      "__d3",
+      "x1"
+    ],
+    "full_expr": "sub(X5, X5)",
+    "var_expr": "sub(X1, X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.12.43",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 1,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.2466118335723877,
+    "var_t": 0.1367037296295166,
+    "true_vars": [
+      "x1"
+    ],
+    "sel_vars": [
+      "x1"
+    ],
+    "full_expr": "abs(sub(X9, X9))",
+    "var_expr": "div(sub(X0, X0), log(0.916))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.27.18",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 2,
+    "full_r2": 0.9999922852834159,
+    "var_r2": 0.9999922852834159,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13138294219970703,
+    "var_t": 0.136474609375,
+    "true_vars": [
+      "x0"
+    ],
+    "sel_vars": [
+      "__d4",
+      "x0"
+    ],
+    "full_expr": "sqrt(sub(X9, X9))",
+    "var_expr": "sin(sub(X0, X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.34.29b",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.9999999999998942,
+    "var_r2": 0.9999999999998942,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.12683868408203125,
+    "var_t": 0.13272523880004883,
+    "true_vars": [
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "mul(X3, log(mul(X2, X9)))",
+    "var_expr": "mul(mul(sub(add(mul(-0.952, X0), sub(X1, X1)), mul(tan(X0), log(0.308))), sin(log(div(X2, 0.009)))), cos(mul(mul(add(-0.258, X1), log(X2)), sin(sub(X1, X0)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.26.2",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.038292724769478204,
+    "var_r2": 0.991098538081464,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6362311840057373,
+    "var_t": 2.7745025157928467,
+    "true_vars": [
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3"
+    ],
+    "full_expr": "abs(abs(abs(abs(sub(log(X1), X0)))))",
+    "var_expr": "add(abs(div(X0, X1)), mul(sub(X0, X1), mul(-0.449, X0)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.13.17",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.0009662481083201335,
+    "var_r2": -0.0009662481083201335,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.4511232376098633,
+    "var_t": 2.600008726119995,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "sub(X7, X7)",
+    "var_expr": "sub(X1, X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.47.23",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.5012915765613288,
+    "var_r2": 0.5012915765613288,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.4820165634155273,
+    "var_t": 2.5064542293548584,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "full_expr": "sqrt(X1)",
+    "var_expr": "sqrt(X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.30.5",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.9999967622650864,
+    "var_r2": 0.9999972815007415,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13840913772583008,
+    "var_t": 0.14202666282653809,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "full_expr": "mul(sub(X12, X11), log(X0))",
+    "var_expr": "abs(div(X0, X1))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.12.4",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.0011197753922453924,
+    "var_r2": -0.0011197751004141665,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6745269298553467,
+    "var_t": 2.786858320236206,
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "full_expr": "tan(sqrt(abs(sqrt(sqrt(add(sin(X19), div(log(X12), X12)))))))",
+    "var_expr": "div(div(X0, X1), cos(tan(add(sin(X1), cos(cos(X0))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.34.11",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.012254748187555453,
+    "var_r2": -0.012254748187985776,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6886701583862305,
+    "var_t": 2.6328108310699463,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "abs(X8)",
+    "var_expr": "X2",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.3.24",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.011627584280631265,
+    "var_r2": 0.7344203024195937,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.589489698410034,
+    "var_t": 2.891545057296753,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "add(abs(div(abs(X10), sub(X0, X12))), sin(cos(X10)))",
+    "var_expr": "add(div(X0, abs(sin(X1))), add(div(X0, abs(sin(X1))), div(X0, abs(sin(X1)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.43.16",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -999999965947.82,
+    "var_r2": 0.9999999656576873,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 0.13025617599487305,
+    "var_t": 0.1359117031097412,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d17",
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "full_expr": "div(sin(log(X1)), div(sub(X9, X22), mul(X15, X18)))",
+    "var_expr": "log(tan(X0))",
+    "recall": 0.75
+  },
+  {
+    "key": "feynman-ii.2.42",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 7,
+    "full_r2": -0.0016365593159861636,
+    "var_r2": -0.0007807424321881751,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8039629459381104,
+    "var_t": 2.17826771736145,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "__d1",
+      "__d16",
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "abs(X16)",
+    "var_expr": "cos(X4)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.10.9",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.00031211908682515777,
+    "var_r2": -0.00031212047105166896,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.085336923599243,
+    "var_t": 2.187229633331299,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "log(X7)",
+    "var_expr": "abs(tan(X1))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.15.27",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 5,
+    "full_r2": -0.0024801906582212485,
+    "var_r2": -0.0024801871793567187,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.8983368873596191,
+    "var_t": 1.9801218509674072,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d19",
+      "__d2",
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "full_expr": "add(div(add(X13, sub(X12, X18)), sin(X13)), mul(add(mul(mul(X1, mul(X1, X9)), div(add(div(mul(X1, X6), mul(X1, log(X10))), X20), X10)), X21), 0.215))",
+    "var_expr": "mul(sin(X3), mul(X4, sub(X2, X0)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.18.12",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.07869164878889756,
+    "var_r2": 0.19010658956031679,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.692427158355713,
+    "var_t": 1.76576828956604,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "full_expr": "sin(X2)",
+    "var_expr": "mul(X1, tan(sin(tan(mul(sin(tan(sin(tan(mul(mul(tan(sin(sin(X2))), cos(cos(X0))), cos(mul(tan(sin(mul(sin(tan(sin(tan(sin(sin(X2)))))), cos(cos(X0))))), cos(cos(X0))))))))), cos(cos(X0)))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.27.6",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.08063238586551169,
+    "var_r2": -0.06190950876358792,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.691941738128662,
+    "var_t": 1.9546875953674316,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "mul(mul(X0, 0.358), 0.358)",
+    "var_expr": "mul(X2, 0.153)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.14.3",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.38175554260828504,
+    "var_r2": 0.9999467726143562,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 1.7695367336273193,
+    "var_t": 2.211550712585449,
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "full_expr": "tan(X1)",
+    "var_expr": "div(div(div(mul(sqrt(X0), div(mul(sqrt(X0), div(X1, 0.744)), sin(cos(sub(-0.217, 0.638))))), cos(sub(-0.217, 0.744))), sin(cos(sub(-0.217, 0.638)))), 0.638)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.18.16",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.010127344921979864,
+    "var_r2": -0.0010833572663602187,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.8291676044464111,
+    "var_t": 1.7215814590454102,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "sin(sin(mul(abs(abs(sin(X21))), sin(X21))))",
+    "var_expr": "sin(X3)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.27.16",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 2,
+    "full_r2": -0.17472645251781205,
+    "var_r2": -0.24871639729172967,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.6483967304229736,
+    "var_t": 1.6052429676055908,
+    "true_vars": [
+      "x2"
+    ],
+    "sel_vars": [
+      "__d3",
+      "x2"
+    ],
+    "full_expr": "abs(log(-0.996))",
+    "var_expr": "sub(X0, X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.4.23",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 3,
+    "full_r2": -0.02160000459150968,
+    "var_r2": -0.02160000373231452,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.6825931072235107,
+    "var_t": 1.9543516635894775,
+    "true_vars": [
+      "x1",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d1",
+      "x1",
+      "x4"
+    ],
+    "full_expr": "X16",
+    "var_expr": "add(mul(div(add(sqrt(0.387), abs(-0.126)), X1), sub(log(0.505), X1)), X2)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.12.5",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 3,
+    "full_r2": 0.999999999999998,
+    "var_r2": 0.999999999999998,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 1.661283254623413,
+    "var_t": 1.7247185707092285,
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "__d8",
+      "x0",
+      "x1"
+    ],
+    "full_expr": "mul(X1, X0)",
+    "var_expr": "mul(X0, X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.38.3",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": 0.024089542907483885,
+    "var_r2": 0.024089542907483885,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.5327513217926025,
+    "var_t": 1.5321261882781982,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "__d13",
+      "x1",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "X1",
+    "var_expr": "X1",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.14.4",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.11853668542016482,
+    "var_r2": -0.11752016052614556,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.716432809829712,
+    "var_t": 1.8162243366241455,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "sqrt(cos(log(X18)))",
+    "var_expr": "sqrt(abs(sub(abs(sqrt(tan(div(X1, sin(-0.516))))), abs(log(sub(sqrt(abs(add(tan(tan(X1)), tan(X0)))), abs(tan(tan(X0)))))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.25.13",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.01872828504427071,
+    "var_r2": 0.050172676116792214,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.05812668800354,
+    "var_t": 2.5222971439361572,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "mul(sqrt(X0), add(X0, sub(sin(tan(X0)), cos(sin(X0)))))",
+    "var_expr": "abs(log(sub(sub(sub(sub(sin(abs(log(mul(X0, sqrt(tan(X0)))))), log(X1)), tan(X0)), abs(X0)), sin(tan(X0)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.15.5",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.1327364444732666,
+    "var_t": 0.10804986953735352,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d2",
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "full_expr": "sin(abs(X0))",
+    "var_expr": "tan(abs(X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.15.4",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.09660458564758301,
+    "var_t": 0.08954048156738281,
+    "true_vars": [
+      "x0",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x4"
+    ],
+    "full_expr": "log(abs(X0))",
+    "var_expr": "mul(log(sin(X1)), tan(log(X0)))",
+    "recall": 0.6666666666666666
+  },
+  {
+    "key": "feynman-i.12.1",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.999999999999999,
+    "var_r2": 0.999999999999999,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.4497871398925781,
+    "var_t": 0.1948561668395996,
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "full_expr": "mul(X1, X0)",
+    "var_expr": "mul(X0, X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.11.19",
+    "n_true": 6,
+    "n_cols": 26,
+    "sel_cols": 5,
+    "full_r2": -1.361576908558841,
+    "var_r2": 0.009769916695115954,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.4972691535949707,
+    "var_t": 2.0772364139556885,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x5",
+      "x6"
+    ],
+    "sel_vars": [
+      "__d18",
+      "__d9",
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "full_expr": "add(mul(mul(X22, X0), add(X3, mul(X21, sin(X4)))), log(tan(add(sqrt(mul(mul(X22, X0), add(X3, mul(X21, sin(X4))))), 0.648))))",
+    "var_expr": "log(cos(X0))",
+    "recall": 0.5
+  },
+  {
+    "key": "feynman-iii.15.12",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13441038131713867,
+    "var_t": 0.11672186851501465,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "sub(X16, X16)",
+    "var_expr": "log(log(add(mul(abs(sqrt(X0)), sub(cos(X2), abs(X1))), abs(sin(mul(X2, -0.120))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.43.43",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.06771941270166626,
+    "var_r2": -0.06311806689001243,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.2651193141937256,
+    "var_t": 2.074899196624756,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "sqrt(add(abs(X13), sqrt(add(abs(cos(sqrt(sqrt(X16)))), sub(add(div(abs(X6), add(sqrt(X16), sqrt(X16))), tan(X2)), sqrt(X7))))))",
+    "var_expr": "add(X0, sin(X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.34.2a",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.0014301665058475965,
+    "var_r2": -0.0014299417841732165,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 1.7840697765350342,
+    "var_t": 2.1886229515075684,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "sub(sub(cos(X1), cos(X1)), tan(X9))",
+    "var_expr": "sqrt(tan(sqrt(X2)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.8.14",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 3,
+    "full_r2": -0.22187098151135132,
+    "var_r2": 0.12925938097828094,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.395634174346924,
+    "var_t": 2.577086925506592,
+    "true_vars": [
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "__d18",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "add(abs(X3), abs(X2))",
+    "var_expr": "add(abs(X0), sqrt(add(add(add(mul(X1, X1), cos(abs(X0))), cos(X1)), cos(sqrt(add(abs(X0), sqrt(mul(X1, sqrt(sqrt(abs(add(sqrt(X1), cos(add(mul(X1, X1), cos(X1)))))))))))))))",
+    "recall": 0.5
+  },
+  {
+    "key": "feynman-i.43.31",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.20124134810063343,
+    "var_r2": -0.20124135371017648,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.1798126697540283,
+    "var_t": 2.413095235824585,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "div(X3, X0)",
+    "var_expr": "sub(X1, X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.6.11",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.0017178700708169181,
+    "var_r2": -0.0017178699843696243,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6628336906433105,
+    "var_t": 2.5071592330932617,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "full_expr": "X3",
+    "var_expr": "div(log(X0), log(sub(X0, abs(sub(X1, mul(X1, X2))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.13.18",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -1.988245094786123e-06,
+    "var_r2": -1.988245094786123e-06,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.62972092628479,
+    "var_t": 2.8798201084136963,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x4"
+    ],
+    "full_expr": "mul(sin(sin(sin(X7))), mul(X8, X0))",
+    "var_expr": "X0",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.17.37",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.12808966636657715,
+    "var_t": 0.12484216690063477,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "full_expr": "sin(X0)",
+    "var_expr": "mul(abs(X0), cos(X1))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.24.6",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 3,
+    "full_r2": -0.05147752430101016,
+    "var_r2": -0.0483143445651375,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8292696475982666,
+    "var_t": 2.9327337741851807,
+    "true_vars": [
+      "x0",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d6",
+      "x0",
+      "x4"
+    ],
+    "full_expr": "X4",
+    "var_expr": "abs(mul(cos(0.735), sqrt(sqrt(tan(sqrt(X2))))))",
+    "recall": 0.5
+  },
+  {
+    "key": "feynman-ii.21.32",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.000369787036512248,
+    "var_r2": 0.08688503540444903,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6530375480651855,
+    "var_t": 3.951617956161499,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "cos(mul(X6, add(cos(log(cos(X1))), add(X10, add(X10, tan(X22))))))",
+    "var_expr": "add(div(add(add(abs(X0), mul(X0, X2)), sqrt(abs(abs(X0)))), sqrt(add(abs(X0), log(sub(X2, X0))))), add(div(add(add(sub(0.945, 0.613), mul(X0, X2)), add(mul(X0, -0.754), -0.419)), sqrt(sin(add(-0.032, X1)))), add(cos(sqrt(div(X2, -0.784))), div(add(add(add(sqrt(div(X2, -0.784)), mul(X0, X2)), mul(X0, X2)), sqrt(X0)), sqrt(abs(mul(X0, -0.754)))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.12.2",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.00011624102677854076,
+    "var_r2": -0.00011624102693663652,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8243825435638428,
+    "var_t": 2.9172348976135254,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3"
+    ],
+    "full_expr": "sub(-0.510, X12)",
+    "var_expr": "log(sin(X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.13.4",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 2,
+    "full_r2": 0.09292687766936636,
+    "var_r2": 0.6210480938639154,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1865968704223633,
+    "var_t": 3.539018392562866,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x1",
+      "x4"
+    ],
+    "full_expr": "abs(sub(mul(abs(X0), mul(add(log(add(sin(abs(X0)), X8)), sqrt(X0)), X23)), mul(add(mul(X2, X23), abs(cos(abs(sub(mul(sub(mul(abs(X0), mul(add(log(add(sin(abs(X0)), X8)), sqrt(X0)), X23)), mul(add(mul(add(mul(X2, X23), abs(cos(abs(cos(abs(sub(cos(mul(add(add(abs(X0), sqrt(X0)), abs(X0)), abs(sub(mul(add(mul(X2, X23), add(abs(X0), add(sqrt(X8), mul(X2, X23)))), abs(X0)), cos(sqrt(sin(abs(X0)))))))), cos(sqrt(cos(abs(sub(mul(add(mul(X2, X23), abs(X0)), abs(X0)), cos(add(mul(X2, X23), abs(X0))))))))))))))), abs(X0)), abs(cos(abs(sub(mul(abs(X0), abs(X0)), cos(sqrt(cos(sqrt(sqrt(X0)))))))))), abs(X0))), abs(X0)), cos(sqrt(cos(sqrt(sqrt(X0)))))))))), abs(X0))))",
+    "var_expr": "add(add(mul(abs(add(mul(X1, X1), tan(X0))), mul(sqrt(sin(tan(sqrt(add(0.978, X0))))), div(add(-0.171, X0), sub(sin(sin(sin(sub(0.015, -0.955)))), -0.955)))), sqrt(add(sqrt(sin(add(mul(abs(add(mul(X1, X1), tan(X0))), mul(sqrt(sin(mul(X0, X0))), div(add(-0.171, X0), sub(0.015, -0.955)))), sub(0.015, -0.955)))), sin(tan(sqrt(add(0.978, X0))))))), mul(X0, X0))",
+    "recall": 0.5
+  },
+  {
+    "key": "feynman-i.12.11",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 6,
+    "full_r2": 0.4735292088862971,
+    "var_r2": 0.4735292088862971,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.494635820388794,
+    "var_t": 2.6207141876220703,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d4",
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "mul(X1, X0)",
+    "var_expr": "mul(X1, X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.34.10",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.9998504149950482,
+    "var_r2": 0.9998550577688783,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6706655025482178,
+    "var_t": 3.2150590419769287,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "X0",
+    "var_expr": "add(add(abs(sub(add(X0, X1), sin(cos(-0.444)))), cos(sqrt(add(abs(add(0.439, X0)), X0)))), X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.34.29a",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 4,
+    "full_r2": 0.9999999999999927,
+    "var_r2": 0.9999999999999927,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.15569639205932617,
+    "var_t": 0.14989590644836426,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "__d18",
+      "__d2",
+      "x0",
+      "x2"
+    ],
+    "full_expr": "abs(X1)",
+    "var_expr": "mul(add(tan(cos(mul(X2, X1))), sqrt(sqrt(abs(X1)))), mul(X1, mul(add(add(-0.961, -0.593), sub(-0.361, X3)), mul(add(X2, 0.837), sin(X3)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.10.7",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.9997851420770599,
+    "var_r2": 0.9997851420770599,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.627924919128418,
+    "var_t": 2.5355024337768555,
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "full_expr": "X0",
+    "var_expr": "X0",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.38.12",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13125967979431152,
+    "var_t": 0.16414213180541992,
+    "true_vars": [
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d15",
+      "x1",
+      "x3"
+    ],
+    "full_expr": "mul(X0, X1)",
+    "var_expr": "mul(log(tan(add(mul(0.165, X1), sqrt(X0)))), sqrt(log(cos(mul(X1, X0)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.34.8",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 6,
+    "full_r2": 0.9999963335518539,
+    "var_r2": 0.9999963335518539,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13684439659118652,
+    "var_t": 0.12709259986877441,
+    "true_vars": [
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d10",
+      "__d16",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "sqrt(sin(abs(log(X0))))",
+    "var_expr": "log(div(sin(X2), sin(X2)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.16.6",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 3,
+    "full_r2": 0.9997766613439071,
+    "var_r2": 0.999776660873462,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6224021911621094,
+    "var_t": 3.980698585510254,
+    "true_vars": [
+      "x0",
+      "x1"
+    ],
+    "sel_vars": [
+      "__d13",
+      "x0",
+      "x1"
+    ],
+    "full_expr": "add(X1, X0)",
+    "var_expr": "add(sub(add(X1, sub(X0, -0.613)), tan(sub(mul(X1, -0.994), sin(X1)))), sin(div(add(add(X1, add(sin(div(add(add(X1, sub(X0, add(0.527, -0.939))), cos(-0.985)), sub(mul(X1, -0.994), sin(X1)))), X0)), sin(div(mul(tan(tan(abs(-0.939))), -0.994), cos(sin(div(sqrt(abs(-0.922)), add(X0, X1))))))), add(add(X1, mul(X1, -0.994)), sin(sub(X0, -0.613))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.14.14",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": -0.0050223899684456175,
+    "var_r2": -0.0050223899684456175,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.928644895553589,
+    "var_t": 3.1521878242492676,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d14",
+      "x0",
+      "x1",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "cos(sin(cos(cos(sin(X11)))))",
+    "var_expr": "div(X0, tan(log(cos(sub(tan(X3), log(tan(X3)))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.18",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.3276931301500394,
+    "var_r2": -0.32769313015005586,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.7404518127441406,
+    "var_t": 3.026615619659424,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x5"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x5"
+    ],
+    "full_expr": "sin(tan(X11))",
+    "var_expr": "tan(sin(abs(abs(div(mul(log(X2), X2), sqrt(-0.916))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.13.12",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.99997943350209,
+    "var_r2": 0.99997943350209,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.49106287956237793,
+    "var_t": 0.1512281894683838,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "mul(X2, sub(X21, X21))",
+    "var_expr": "mul(sub(X0, X0), tan(X2))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.18.4",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": 0.34037536555691594,
+    "var_r2": 0.2834862346123799,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.236834764480591,
+    "var_t": 2.897888660430908,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d8",
+      "x0",
+      "x2",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "mul(sqrt(cos(sqrt(tan(sqrt(X5))))), mul(cos(cos(sqrt(sqrt(cos(sqrt(cos(0.918))))))), X1))",
+    "var_expr": "mul(X3, sqrt(0.541))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.37.1",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13964462280273438,
+    "var_t": 0.14112162590026855,
+    "true_vars": [
+      "x0",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "mul(abs(log(log(X0))), sin(sin(abs(X5))))",
+    "var_expr": "mul(abs(add(X2, sub(sin(X0), X2))), X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.39.10",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.2110559325654615,
+    "var_r2": 0.9999903639621802,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 3.043304920196533,
+    "var_t": 3.3108019828796387,
+    "true_vars": [
+      "x0",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x4"
+    ],
+    "full_expr": "sub(abs(add(X17, abs(X7))), sub(sin(sin(X18)), sub(abs(X7), sin(X16))))",
+    "var_expr": "div(mul(mul(mul(X1, X0), add(add(add(add(0.980, abs(X1)), abs(X1)), abs(X1)), abs(X1))), add(add(0.980, abs(X1)), abs(X1))), sin(0.701))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.32.5",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.050810499799333275,
+    "var_r2": -0.05085430058747509,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.824662446975708,
+    "var_t": 2.8719305992126465,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "div(X0, X1)",
+    "var_expr": "sub(X0, X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.29.4",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 1,
+    "full_r2": -0.30716078771038613,
+    "var_r2": 0.8473976043351992,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.002079486846924,
+    "var_t": 4.849280595779419,
+    "true_vars": [
+      "x2"
+    ],
+    "sel_vars": [
+      "x2"
+    ],
+    "full_expr": "log(X0)",
+    "var_expr": "add(add(abs(mul(cos(log(X0)), add(cos(log(X0)), log(abs(X0))))), add(mul(cos(log(sub(X0, 0.006))), mul(add(add(abs(log(cos(add(X0, 0.690)))), add(cos(mul(-0.133, X0)), log(X0))), add(mul(cos(log(X0)), mul(log(abs(X0)), abs(log(log(abs(log(add(X0, X0)))))))), add(cos(mul(-0.133, X0)), log(X0)))), sin(add(sqrt(log(-0.795)), sub(sqrt(0.129), cos(mul(log(log(mul(X0, 0.569))), abs(0.936)))))))), add(cos(mul(-0.133, X0)), log(abs(X0))))), add(mul(cos(log(X0)), mul(log(mul(log(0.211), mul(X0, 0.569))), abs(log(log(abs(log(add(X0, X0)))))))), add(cos(mul(-0.133, X0)), log(X0))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.8",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.12537455558776855,
+    "var_t": 0.16786742210388184,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "sin(abs(X0))",
+    "var_expr": "sin(abs(X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.11.3",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": 0.6714816695502117,
+    "var_r2": 0.6714816695501671,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 0.16632413864135742,
+    "var_t": 0.15395331382751465,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "div(X0, X4)",
+    "var_expr": "mul(mul(X2, 0.147), sub(X4, X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.34.2",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 5,
+    "full_r2": 0.9999999999952328,
+    "var_r2": 0.9999999999952328,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.14281249046325684,
+    "var_t": 0.1477646827697754,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d4",
+      "__d9",
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "full_expr": "log(X0)",
+    "var_expr": "sqrt(log(sin(sub(X3, X3))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.48.2",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 4,
+    "full_r2": 0.9999998125283769,
+    "var_r2": 0.9999998125283769,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.14877820014953613,
+    "var_t": 0.15059280395507812,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "__d10",
+      "__d8",
+      "x0",
+      "x2"
+    ],
+    "full_expr": "mul(tan(X0), X12)",
+    "var_expr": "abs(abs(X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.15.10",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.9999999097579285,
+    "var_r2": 0.9999999096976793,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 3.5305750370025635,
+    "var_t": 3.0288658142089844,
+    "true_vars": [
+      "x0",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x3"
+    ],
+    "full_expr": "add(add(X21, X10), sub(sub(cos(sub(sub(sub(cos(sub(mul(X1, X0), cos(sub(cos(sub(add(X21, X10), mul(X1, X0))), sub(add(X21, X10), add(add(X21, X10), sub(sub(cos(cos(sub(sub(mul(X2, X0), sub(sub(cos(sub(cos(sub(sub(mul(X2, X0), sub(add(X21, X10), mul(X1, X0))), X10)), mul(X1, X0))), add(X21, X10)), tan(sub(X0, sin(X16))))), tan(sub(sub(X0, tan(sub(mul(X1, X0), sin(X16)))), mul(X1, sub(sub(X19, X20), X10))))))), sub(add(X21, X10), mul(X1, X0))), log(X6)))))))), sub(sub(X0, sin(X16)), mul(X1, X0))), log(X6)), mul(X1, X0))), sub(add(X21, X10), mul(X1, X0))), log(X6)))",
+    "var_expr": "add(add(mul(X0, X1), X0), X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.8.54",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.03833476159782734,
+    "var_r2": -0.15362133547898638,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8435041904449463,
+    "var_t": 2.8977606296539307,
+    "true_vars": [
+      "x0",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x3"
+    ],
+    "full_expr": "abs(abs(abs(-0.299)))",
+    "var_expr": "0.232",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.34.27",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 1,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.12975478172302246,
+    "var_t": 0.16216826438903809,
+    "true_vars": [
+      "x1"
+    ],
+    "sel_vars": [
+      "x1"
+    ],
+    "full_expr": "log(sin(div(X3, X0)))",
+    "var_expr": "sin(mul(log(log(div(sin(0.204), sub(0.823, X0)))), tan(div(sin(cos(-0.942)), sqrt(log(-0.105))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.39.11",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.03707703807144913,
+    "var_r2": 0.1720472920399302,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1706769466400146,
+    "var_t": 4.635128498077393,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "full_expr": "div(div(log(sin(X18)), X22), cos(cos(cos(X9))))",
+    "var_expr": "mul(mul(add(add(abs(abs(add(abs(abs(mul(abs(X0), cos(log(0.105))))), mul(abs(abs(mul(abs(X0), mul(mul(tan(X2), add(X1, -0.627)), add(add(abs(abs(abs(0.292))), mul(X1, X2)), cos(X0)))))), X2)))), mul(X1, X2)), abs(mul(add(add(abs(abs(abs(0.292))), add(abs(abs(mul(add(div(mul(tan(X2), add(X1, -0.627)), add(-0.115, X0)), mul(mul(mul(add(add(abs(abs(add(abs(X2), mul(abs(abs(mul(abs(X0), mul(mul(tan(X2), add(X1, -0.627)), abs(mul(add(div(mul(cos(X0), add(X1, -0.627)), add(-0.115, mul(X1, X2))), mul(tan(X2), add(X1, -0.627))), sin(-0.627))))))), X2)))), mul(X1, X2)), abs(mul(add(add(abs(abs(abs(0.292))), add(abs(abs(mul(add(div(mul(tan(X2), add(X1, -0.627)), add(-0.115, X0)), mul(abs(X2), add(X1, -0.627))), sin(add(tan(X2), cos(X0)))))), mul(X1, X2))), abs(mul(log(0.105), mul(X1, X2)))), sin(add(sub(X0, X2), abs(abs(cos(sqrt(sin(-0.047)))))))))), sin(add(sub(X0, X2), cos(X0)))), sin(add(sub(X0, X2), abs(abs(cos(cos(0.957))))))), sin(add(sub(X0, X2), cos(X0))))), sin(add(tan(X2), cos(X0)))))), abs(abs(mul(add(div(mul(div(mul(tan(X2), add(sin(add(sub(X0, X2), cos(X0))), mul(abs(abs(mul(abs(X0), add(abs(abs(mul(X1, X2))), mul(X1, X2))))), X2))), add(-0.115, X0)), add(X1, -0.627)), add(-0.115, X0)), mul(tan(X2), add(X1, -0.627))), sin(add(tan(X2), cos(X0)))))))), abs(mul(log(0.105), mul(X1, X2)))), sin(add(sub(X0, X2), abs(abs(cos(sqrt(sin(-0.047)))))))))), sin(add(sub(X0, X2), cos(X0)))), sin(add(sub(X0, X2), abs(abs(cos(cos(0.957)))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.15.14",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.136552095413208,
+    "var_t": 0.15537190437316895,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "log(X1)",
+    "var_expr": "mul(log(sin(X1)), sqrt(div(X0, -0.416)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.19.51",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.008787822157132696,
+    "var_r2": -0.008787822157132696,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.912713050842285,
+    "var_t": 2.9506375789642334,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "abs(X16)",
+    "var_expr": "X0",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.4.32",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.24727220679635042,
+    "var_r2": -0.05131296074369751,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.008098840713501,
+    "var_t": 3.0571694374084473,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "sqrt(tan(sub(X13, X2)))",
+    "var_expr": "mul(add(X1, add(0.594, X1)), sqrt(X1))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.8.7",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 3,
+    "full_r2": -0.11366381682264737,
+    "var_r2": -0.11420459559032414,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.201205253601074,
+    "var_t": 3.096395492553711,
+    "true_vars": [
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d18",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "mul(abs(X4), cos(sub(mul(abs(X4), sqrt(X21)), cos(X4))))",
+    "var_expr": "abs(mul(add(mul(sin(mul(div(sin(sqrt(sin(div(abs(X2), X2)))), X2), X1)), X1), abs(X2)), X1))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.34.14",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.9999986855171068,
+    "var_r2": 0.9999999997402635,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 2.8849220275878906,
+    "var_t": 3.3556809425354004,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "X1",
+    "var_expr": "sub(sub(add(X1, X0), tan(sub(add(X1, X0), add(X1, X1)))), tan(mul(add(sub(add(X1, X0), add(X1, X0)), sub(add(X1, cos(X0)), tan(sqrt(div(mul(add(sqrt(abs(-0.516)), div(sin(X0), abs(0.833))), sqrt(abs(X1))), div(sub(-0.228, X1), add(X1, abs(0.200)))))))), cos(abs(cos(-0.582))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.10",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.9892684639957833,
+    "var_r2": 0.9892684639957833,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8288991451263428,
+    "var_t": 2.793175220489502,
+    "true_vars": [
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "x2",
+      "x3"
+    ],
+    "full_expr": "cos(X0)",
+    "var_expr": "cos(X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.24.17",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.03581863114958461,
+    "var_r2": 0.636247537586159,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.8468666076660156,
+    "var_t": 6.19527006149292,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "add(add(add(add(cos(add(add(add(add(log(abs(X0)), log(add(add(X0, log(abs(X0))), log(abs(X0))))), log(abs(X0))), log(abs(X0))), log(abs(log(log(abs(X0))))))), log(abs(X0))), log(abs(X0))), log(abs(X0))), add(log(abs(X0)), log(abs(X0))))",
+    "var_expr": "sqrt(add(div(X1, sqrt(X0)), mul(sqrt(mul(sqrt(add(log(X0), mul(mul(sqrt(sqrt(X0)), sin(0.007)), div(sqrt(X0), log(X0))))), sin(0.007))), add(div(X1, log(X0)), mul(sqrt(mul(sqrt(sqrt(X0)), sin(0.007))), add(mul(sqrt(mul(sqrt(mul(sqrt(mul(sqrt(sqrt(X0)), sin(0.007))), add(mul(sqrt(mul(sqrt(sqrt(X0)), sin(0.007))), add(div(sqrt(X0), log(X0)), log(sqrt(mul(sqrt(mul(div(sqrt(X0), log(sqrt(mul(sqrt(sqrt(X0)), sin(0.007))))), sin(0.007))), add(div(sqrt(X0), log(X0)), log(sqrt(X0)))))))), log(sqrt(mul(X0, X1)))))), sin(0.007))), add(mul(sqrt(mul(sqrt(mul(sqrt(mul(sqrt(sqrt(X0)), sin(0.007))), add(mul(sqrt(mul(sqrt(sqrt(X0)), sin(0.007))), add(div(sqrt(X0), log(X0)), log(sqrt(mul(sqrt(mul(div(sqrt(X0), log(X0)), sin(0.007))), add(mul(sqrt(sqrt(X0)), sin(0.007)), log(sqrt(X0)))))))), log(sqrt(mul(X0, X1)))))), sin(0.007))), add(div(sqrt(X0), log(X0)), log(sqrt(mul(sqrt(mul(div(sqrt(X0), log(X0)), sin(0.007))), add(div(sqrt(X0), log(X0)), log(sqrt(X0)))))))), log(sqrt(sqrt(add(log(X0), mul(mul(sqrt(sqrt(X0)), sin(0.007)), div(sqrt(X0), log(X0))))))))), log(log(X0))))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.4",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.13955772386539778,
+    "var_r2": -0.11339734259077128,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 4.879199504852295,
+    "var_t": 4.061929941177368,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "log(sub(sqrt(X8), add(sqrt(mul(sub(div(mul(log(0.932), add(sqrt(mul(X20, X3)), sqrt(X8))), tan(sub(X3, X8))), add(add(X17, X24), sub(sub(X11, X8), abs(log(sub(mul(log(0.932), log(X4)), add(sqrt(add(log(X4), X24)), sub(tan(sub(X11, X8)), sqrt(X8))))))))), X3)), sub(tan(sqrt(mul(sub(div(mul(log(0.932), sqrt(mul(X20, X3))), tan(sin(X21))), add(sqrt(mul(X20, X3)), tan(add(X11, X1)))), X3))), sqrt(X8)))))",
+    "var_expr": "log(sqrt(abs(add(sub(sqrt(div(X2, 0.097)), X4), sqrt(log(sqrt(div(X2, 0.097))))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.6.15a",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.008574142437163479,
+    "var_r2": -0.008574142437163479,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1432039737701416,
+    "var_t": 2.915461778640747,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "add(mul(sqrt(div(abs(X23), add(sub(sin(X6), sub(X14, log(sin(abs(X19))))), abs(cos(mul(sqrt(sin(add(X14, sin(sin(X6))))), log(X16))))))), sin(X11)), log(X16))",
+    "var_expr": "sub(-0.314, X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.17",
+    "n_true": 6,
+    "n_cols": 26,
+    "sel_cols": 6,
+    "full_r2": -0.07749777905908539,
+    "var_r2": -0.07749777905908717,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.884305000305176,
+    "var_t": 3.1242623329162598,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "div(X9, X4)",
+    "var_expr": "sin(add(sin(X2), cos(X1)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.44.4",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": -0.002548785648647245,
+    "var_r2": -0.002547552852072865,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.881427049636841,
+    "var_t": 3.0097272396087646,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d7",
+      "x0",
+      "x1",
+      "x3",
+      "x5"
+    ],
+    "full_expr": "sqrt(div(X14, X6))",
+    "var_expr": "div(0.834, add(div(0.834, sin(cos(X1))), log(X1)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.50.26",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 3,
+    "full_r2": -0.44526839858891454,
+    "var_r2": -0.3432639300832281,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.758643627166748,
+    "var_t": 3.041738510131836,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "abs(X0)",
+    "var_expr": "sub(sub(abs(sub(sqrt(X2), X0)), X2), sqrt(abs(X2)))",
+    "recall": 0.75
+  },
+  {
+    "key": "feynman-iii.4.33",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.14839577674865723,
+    "var_t": 0.16999077796936035,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "sub(X21, X21)",
+    "var_expr": "mul(log(add(add(mul(X0, X1), tan(X1)), abs(sin(X1)))), log(div(cos(add(X1, X1)), mul(log(X1), add(X0, X0)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.36.38",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.01925560986721986,
+    "var_r2": -0.01925560986721986,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.4016127586364746,
+    "var_t": 3.0453197956085205,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "tan(X1)",
+    "var_expr": "sin(X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.3",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.5570376885922872,
+    "var_r2": 0.7851449403333141,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.82167387008667,
+    "var_t": 3.6271023750305176,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "X0",
+    "var_expr": "mul(cos(X1), mul(cos(X1), sub(add(cos(X1), mul(cos(X1), sub(mul(cos(X1), sub(X0, 0.487)), 0.487))), log(sub(add(mul(sin(0.213), sub(sub(add(sin(0.213), mul(cos(X1), sub(X0, 0.487))), log(mul(cos(X1), X0))), cos(X1))), X3), 0.487)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.35.18",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.731513912135578,
+    "var_r2": 0.9999980154676151,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 2.9772112369537354,
+    "var_t": 3.7460498809814453,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "log(add(add(div(sqrt(sqrt(X2)), log(tan(X15))), sin(X11)), X13))",
+    "var_expr": "sub(sub(add(mul(0.372, X0), sub(abs(-0.420), mul(X0, -0.048))), mul(add(mul(sqrt(abs(0.372)), add(X0, X1)), sub(mul(sub(mul(X0, X2), abs(-0.420)), X2), mul(X0, -0.048))), -0.048)), mul(X0, -0.048))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.9.18",
+    "n_true": 8,
+    "n_cols": 28,
+    "sel_cols": 4,
+    "full_r2": 0.1396508416914194,
+    "var_r2": 0.1396508416914194,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.745784044265747,
+    "var_t": 0.3056905269622803,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x6",
+      "x7",
+      "x8",
+      "x9"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x4",
+      "x9"
+    ],
+    "full_expr": "sub(0.009, 0.009)",
+    "var_expr": "tan(tan(abs(sin(sin(tan(sub(X2, X2)))))))",
+    "recall": 0.5
+  },
+  {
+    "key": "feynman-iii.9.52",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.03827563657741573,
+    "var_r2": -0.03827563657741573,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.797654390335083,
+    "var_t": 2.966451644897461,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "X2",
+    "var_expr": "X0",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.11.17",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.0005112045364172868,
+    "var_r2": -0.0005112045364172868,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.910037040710449,
+    "var_t": 2.9967377185821533,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "tan(sub(sub(X15, X14), X14))",
+    "var_expr": "abs(-0.368)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.15.3x",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.004273933662111373,
+    "var_r2": 0.9974436574544844,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1095378398895264,
+    "var_t": 3.2880663871765137,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "full_expr": "sqrt(log(div(log(div(sin(X9), X18)), sqrt(X18))))",
+    "var_expr": "mul(X2, add(log(mul(X2, add(log(sub(X0, X1)), sub(-0.612, X1)))), sub(mul(X2, tan(abs(X2))), X1)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.15",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.9998685040979742,
+    "var_r2": 0.9998685040979534,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.792656421661377,
+    "var_t": 3.190582275390625,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "full_expr": "X1",
+    "var_expr": "add(X1, sin(cos(add(X1, sub(tan(log(add(X1, abs(0.104)))), sin(cos(abs(-0.735))))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.13.23",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 4,
+    "full_r2": 0.9995555619461283,
+    "var_r2": 0.9995555619461283,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8674473762512207,
+    "var_t": 3.3441619873046875,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "__d6",
+      "__d7",
+      "x0",
+      "x2"
+    ],
+    "full_expr": "abs(abs(X0))",
+    "var_expr": "add(tan(add(X2, tan(add(log(add(add(tan(add(div(X2, log(X2)), X0)), tan(X2)), X0)), X0)))), X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-iii.21.20",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": -0.0003501073949194744,
+    "var_r2": -0.0003501073915956887,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.188661813735962,
+    "var_t": 3.1763105392456055,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d14",
+      "x1",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "cos(abs(X10))",
+    "var_expr": "cos(mul(tan(X0), sqrt(X3)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.6.15b",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.009484820831473728,
+    "var_r2": -0.009484820831473728,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.9461491107940674,
+    "var_t": 3.301441192626953,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "sin(div(sin(X7), sin(mul(X18, X7))))",
+    "var_expr": "div(log(X1), mul(log(sin(-0.795)), -0.359))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.30.3",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 2,
+    "full_r2": -0.014013119325647416,
+    "var_r2": -0.010495126343895045,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.9461722373962402,
+    "var_t": 3.1327195167541504,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1"
+    ],
+    "full_expr": "sqrt(X12)",
+    "var_expr": "add(abs(abs(div(abs(X0), mul(0.983, 0.583)))), abs(-0.191))",
+    "recall": 0.6666666666666666
+  },
+  {
+    "key": "feynman-i.6.20b",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 4,
+    "full_r2": -0.07416862552000625,
+    "var_r2": -0.05552532399883825,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8878698348999023,
+    "var_t": 2.829972743988037,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d7",
+      "x0",
+      "x2",
+      "x3"
+    ],
+    "full_expr": "mul(-0.358, -0.087)",
+    "var_expr": "tan(0.042)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.12",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.012011957571018472,
+    "var_r2": -0.01201195757043827,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1003057956695557,
+    "var_t": 3.004300355911255,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "X23",
+    "var_expr": "sub(X0, X3)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.11",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.10336133419785976,
+    "var_r2": 0.9999999999999992,
+    "full_exact": false,
+    "var_exact": true,
+    "full_t": 3.0918502807617188,
+    "var_t": 2.8362605571746826,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "sub(sub(X2, sqrt(sub(X2, sqrt(sqrt(add(sqrt(sub(X2, log(X17))), X2)))))), sqrt(sqrt(sqrt(sub(sqrt(sub(X2, X5)), add(X14, X2))))))",
+    "var_expr": "mul(mul(X0, X2), X2)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.35.21",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.04404828606793121,
+    "var_r2": -0.04404828606793121,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.6894760131835938,
+    "var_t": 2.6920435428619385,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x5",
+      "x6"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x5",
+      "x6"
+    ],
+    "full_expr": "X1",
+    "var_expr": "X1",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.39.22",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.0710694430512635,
+    "var_r2": -0.07106944185086239,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.034160852432251,
+    "var_t": 3.160576343536377,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "X21",
+    "var_expr": "sqrt(abs(X2))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.29.16",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": 0.7468544935643309,
+    "var_r2": 0.8153914151483628,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.986109495162964,
+    "var_t": 2.984527111053467,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d1",
+      "x1",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "add(mul(X1, 0.764), X0)",
+    "var_expr": "abs(sqrt(sub(mul(X0, X0), mul(sub(X1, X0), X1))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.11.20",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.006628203186959114,
+    "var_r2": -0.006628211076353807,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.9305927753448486,
+    "var_t": 3.0852210521698,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x5"
+    ],
+    "full_expr": "log(X14)",
+    "var_expr": "sin(cos(X2))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.16",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": 0.05674615035751662,
+    "var_r2": 0.06903985235359045,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.4608311653137207,
+    "var_t": 3.5240800380706787,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "add(sqrt(add(sqrt(mul(mul(sin(tan(sin(X2))), X2), X2)), sin(sqrt(add(sqrt(mul(mul(sin(sqrt(sub(X16, X2))), X2), X2)), sin(sqrt(sin(sin(add(log(div(X3, X22)), sin(abs(tan(X2))))))))))))), sin(log(div(X3, X22))))",
+    "var_expr": "mul(cos(sin(sin(sin(cos(sin(sin(add(sub(sub(sub(mul(X2, X2), mul(X4, 0.139)), log(abs(div(abs(sqrt(X2)), cos(cos(sin(sin(add(abs(div(sin(abs(sin(sub(sub(mul(X2, X2), div(mul(X4, 0.139), X2)), log(sin(mul(sin(sin(add(sqrt(cos(sqrt(X2))), abs(sqrt(X2))))), sqrt(X2)))))))), cos(cos(0.500)))), X2))))))))), abs(sqrt(X2))), sqrt(X2))))))))), sqrt(X2))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.11.28",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": 0.23880259299838147,
+    "var_r2": 0.23880259299838147,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.046541213989258,
+    "var_t": 1.9990756511688232,
+    "true_vars": [
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2"
+    ],
+    "full_expr": "cos(X1)",
+    "var_expr": "cos(X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.41.16",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 4,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.13555049896240234,
+    "var_t": 0.14442992210388184,
+    "true_vars": [
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d0",
+      "__d18",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "tan(sqrt(tan(sin(sub(X19, X19)))))",
+    "var_expr": "sqrt(log(abs(sub(X3, X3))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.19",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 3,
+    "full_r2": -0.004058783616716077,
+    "var_r2": -0.004058783616716077,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.840851306915283,
+    "var_t": 3.5971121788024902,
+    "true_vars": [
+      "x2",
+      "x4",
+      "x5",
+      "x6"
+    ],
+    "sel_vars": [
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "cos(X20)",
+    "var_expr": "add(X0, sqrt(abs(sub(X2, X1))))",
+    "recall": 0.75
+  },
+  {
+    "key": "feynman-bonus.2",
+    "n_true": 6,
+    "n_cols": 26,
+    "sel_cols": 6,
+    "full_r2": -0.11001740089564249,
+    "var_r2": -0.11001740089564249,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.872826337814331,
+    "var_t": 2.8464057445526123,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x7"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x7"
+    ],
+    "full_expr": "cos(mul(X15, X7))",
+    "var_expr": "cos(sin(X4))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.6.20a",
+    "n_true": 1,
+    "n_cols": 21,
+    "sel_cols": 1,
+    "full_r2": 0.8048503368932346,
+    "var_r2": 0.985312757945224,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1648690700531006,
+    "var_t": 3.977323532104492,
+    "true_vars": [
+      "x2"
+    ],
+    "sel_vars": [
+      "x2"
+    ],
+    "full_expr": "sin(sin(sin(sin(sin(sin(sin(sin(sin(div(cos(log(sqrt(-0.067))), sqrt(X0)))))))))))",
+    "var_expr": "div(cos(sqrt(sqrt(X0))), sub(sqrt(div(div(add(log(-0.455), cos(X0)), cos(sqrt(X0))), cos(add(sqrt(X0), -0.284)))), log(log(sqrt(0.644)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.14",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 5,
+    "full_r2": -0.017779543069182946,
+    "var_r2": -0.0177623034311154,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.0400688648223877,
+    "var_t": 3.3469555377960205,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x5",
+      "x6"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x5",
+      "x6"
+    ],
+    "full_expr": "add(X2, sub(X2, 0.872))",
+    "var_expr": "cos(mul(cos(cos(sin(X4))), sqrt(X2)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.1",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": 0.9999999999999992,
+    "var_r2": 0.9999999999999992,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.1406099796295166,
+    "var_t": 0.15441393852233887,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "log(sin(X2))",
+    "var_expr": "add(mul(sub(log(sub(-0.540, X1)), sub(sub(X0, X2), sub(X1, X3))), mul(sin(log(X2)), cos(sub(-0.450, X1)))), tan(sin(log(log(X2)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.13.34",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 2,
+    "full_r2": -0.2635339524507292,
+    "var_r2": 0.9983937664418131,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.926145076751709,
+    "var_t": 3.0425539016723633,
+    "true_vars": [
+      "x0",
+      "x2"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2"
+    ],
+    "full_expr": "cos(X10)",
+    "var_expr": "add(abs(cos(mul(X1, X0))), mul(X1, X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.37.4",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.5728837753825379,
+    "var_r2": 0.5728837753825379,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.8813915252685547,
+    "var_t": 2.7206404209136963,
+    "true_vars": [
+      "x2",
+      "x3",
+      "x5"
+    ],
+    "sel_vars": [
+      "x2",
+      "x3",
+      "x5"
+    ],
+    "full_expr": "add(X1, X0)",
+    "var_expr": "add(X1, X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.20",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.11835050582885742,
+    "var_t": 0.13638615608215332,
+    "true_vars": [
+      "x2",
+      "x3",
+      "x5"
+    ],
+    "sel_vars": [
+      "x2",
+      "x3",
+      "x5"
+    ],
+    "full_expr": "div(abs(log(mul(sub(X10, X10), sin(X1)))), abs(sin(abs(log(0.829)))))",
+    "var_expr": "log(mul(sqrt(div(cos(abs(X1)), sqrt(cos(X2)))), mul(abs(log(cos(X2))), div(abs(abs(-0.011)), div(add(X0, X0), add(0.224, X2))))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.40.1",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 5,
+    "full_r2": 0.9876156199913397,
+    "var_r2": 0.9876156199913397,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.564465045928955,
+    "var_t": 2.9515628814697266,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x6"
+    ],
+    "sel_vars": [
+      "__d6",
+      "x0",
+      "x2",
+      "x4",
+      "x6"
+    ],
+    "full_expr": "add(X15, X0)",
+    "var_expr": "abs(X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-ii.11.27",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.18856120109558105,
+    "var_t": 0.1519155502319336,
+    "true_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "sel_vars": [
+      "x1",
+      "x2",
+      "x3"
+    ],
+    "full_expr": "sub(X20, X20)",
+    "var_expr": "log(sqrt(mul(abs(sub(-0.778, X0)), div(mul(X1, X1), sub(-0.656, X2)))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.32.17",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 4,
+    "full_r2": -0.006134936485816311,
+    "var_r2": -0.006150650340383423,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.0203142166137695,
+    "var_t": 3.1736435890197754,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4",
+      "x5"
+    ],
+    "full_expr": "add(cos(sqrt(X9)), cos(sqrt(sin(X1))))",
+    "var_expr": "mul(mul(log(sin(div(mul(div(-0.369, X1), mul(div(X3, X3), X1)), log(X0)))), cos(0.951)), X1)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.6",
+    "n_true": 7,
+    "n_cols": 27,
+    "sel_cols": 7,
+    "full_r2": -0.03065369584444322,
+    "var_r2": -0.030653695867928876,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.0688257217407227,
+    "var_t": 3.4288747310638428,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x5",
+      "x6",
+      "x7"
+    ],
+    "sel_vars": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x5",
+      "x6",
+      "x7"
+    ],
+    "full_expr": "sqrt(X9)",
+    "var_expr": "sub(add(tan(X2), X3), add(mul(sin(abs(log(cos(X1)))), tan(sqrt(div(X0, mul(abs(abs(sub(X3, mul(div(X4, X3), X4)))), div(div(sqrt(X4), abs(-0.955)), cos(0.908))))))), log(X3)))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.15.3t",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": 0.999999968286126,
+    "var_r2": 0.9999999682856495,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.14718174934387207,
+    "var_t": 0.1389298439025879,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "tan(X0)",
+    "var_expr": "sin(abs(X0))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-i.6.20",
+    "n_true": 2,
+    "n_cols": 22,
+    "sel_cols": 3,
+    "full_r2": -0.23194118173316403,
+    "var_r2": 0.23032677102557586,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.9450459480285645,
+    "var_t": 3.2309465408325195,
+    "true_vars": [
+      "x1",
+      "x3"
+    ],
+    "sel_vars": [
+      "__d6",
+      "x1",
+      "x3"
+    ],
+    "full_expr": "abs(-0.034)",
+    "var_expr": "abs(log(cos(sub(sin(div(-0.137, X0)), 0.087))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.5",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 3,
+    "full_r2": -0.2250741280892672,
+    "var_r2": 0.5412667441184202,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.9540297985076904,
+    "var_t": 4.309533357620239,
+    "true_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "sel_vars": [
+      "x0",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "sqrt(log(cos(X9)))",
+    "var_expr": "div(sub(0.549, X0), sub(tan(div(div(log(X0), div(div(X1, X0), div(div(sub(tan(div(abs(div(sub(0.549, X0), X0)), log(X0))), log(abs(sqrt(sub(X1, X0))))), div(sub(0.549, X0), sub(tan(0.549), log(X0)))), div(div(sub(0.549, X0), sub(tan(sub(sub(tan(div(abs(tan(0.112)), tan(div(abs(tan(0.112)), log(X0))))), log(abs(sqrt(sub(X1, X0))))), log(X0))), log(X0))), tan(div(abs(div(abs(cos(sin(div(abs(cos(abs(tan(0.112)))), div(X1, X0))))), div(X1, X0))), log(X0))))))), div(div(sub(0.549, X0), sub(tan(sub(sub(0.549, X0), log(X0))), log(X0))), div(X1, X0)))), log(div(X1, X0))))",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.13",
+    "n_true": 5,
+    "n_cols": 25,
+    "sel_cols": 4,
+    "full_r2": -1.8003931743670876e-05,
+    "var_r2": -1.8003927446219592e-05,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 2.7044687271118164,
+    "var_t": 2.836742401123047,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x5",
+      "x6",
+      "x7"
+    ],
+    "sel_vars": [
+      "x1",
+      "x5",
+      "x6",
+      "x7"
+    ],
+    "full_expr": "abs(cos(X12))",
+    "var_expr": "sqrt(0.720)",
+    "recall": 0.8
+  },
+  {
+    "key": "feynman-iii.10.19",
+    "n_true": 4,
+    "n_cols": 24,
+    "sel_cols": 3,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.14102816581726074,
+    "var_t": 0.15775108337402344,
+    "true_vars": [
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "sel_vars": [
+      "__d11",
+      "x2",
+      "x4"
+    ],
+    "full_expr": "mul(cos(abs(add(abs(sub(X3, X21)), div(cos(X1), abs(X20))))), sqrt(mul(sin(log(div(X0, X17))), cos(abs(sin(X21))))))",
+    "var_expr": "mul(sqrt(mul(add(X0, sin(div(X1, X2))), X1)), X0)",
+    "recall": 0.5
+  },
+  {
+    "key": "feynman-bonus.9",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 4,
+    "full_r2": -0.0160144850602697,
+    "var_r2": -0.016014473633017667,
+    "full_exact": false,
+    "var_exact": false,
+    "full_t": 3.1151204109191895,
+    "var_t": 3.2757856845855713,
+    "true_vars": [
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "sel_vars": [
+      "__d0",
+      "x1",
+      "x3",
+      "x4"
+    ],
+    "full_expr": "div(X10, X2)",
+    "var_expr": "div(X3, X0)",
+    "recall": 1.0
+  },
+  {
+    "key": "feynman-bonus.7",
+    "n_true": 3,
+    "n_cols": 23,
+    "sel_cols": 4,
+    "full_r2": 1.0,
+    "var_r2": 1.0,
+    "full_exact": true,
+    "var_exact": true,
+    "full_t": 0.1611309051513672,
+    "var_t": 0.14873957633972168,
+    "true_vars": [
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "sel_vars": [
+      "__d8",
+      "x0",
+      "x1",
+      "x2"
+    ],
+    "full_expr": "mul(tan(X20), log(X1))",
+    "var_expr": "sub(tan(X0), tan(mul(X3, tan(X0))))",
+    "recall": 1.0
+  }
+]
