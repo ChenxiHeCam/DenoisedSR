@@ -1,0 +1,90 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\signature{Chenxi He\\Cavendish Laboratory\\University of Cambridge\\\texttt{ch2067@cam.ac.uk}}
+\address{Chenxi He\\Cavendish Laboratory\\University of Cambridge\\Cambridge CB3 0HE, UK}
+\date{June 10, 2026}
+
+\begin{document}
+\begin{letter}{Editorial Office\\Communications Physics\\Nature Portfolio}
+\opening{Dear Editor,}
+
+We are pleased to submit our manuscript ``\emph{Learned variable-support priors
+accelerate symbolic regression of physical laws}'' for consideration as an
+Article in \emph{Communications Physics}.
+
+\textbf{What we report.} Symbolic regression (SR) is the method of choice for
+recovering interpretable physical laws from data, but its cost scales steeply
+with the number of candidate variables and operators, most of which never
+appear in the true equation. We introduce DenoisedSR, a learned front-end that
+reads a small set of observations ($q \approx 100$) and predicts which input
+columns are relevant. The front-end couples a graph-attention network trained
+over a physical-law co-occurrence graph with a statistical-feature random
+forest; its output is a reduced variable/operator set that any conventional SR
+backend can consume. DenoisedSR is therefore solver-agnostic by design.
+
+\textbf{Why this matters to a broad physics readership.}
+Across four external benchmarks of physical and symbolic laws---AI-Feynman,
+Strogatz, Nguyen and the SRSD-Feynman suite of Matsubara et al.---the predictor
+attains recall $\ge 0.96$ and never catastrophically discards a true variable.
+Supplied to a fixed-budget evolutionary backend (PySR), the prior raises
+exact-law recovery from $42\pm13\%$ to a seed-stable $60\pm0\%$, shrinks the
+candidate-column set by $85\%$, and speeds time-to-solution by up to
+$6\times$. The same qualitative gain reproduces on two structurally different
+backends: classical genetic programming (gplearn) and the 2026 Nature
+Computational Science cover algorithm PSE (Ruan et al., parallel GPU
+enumeration); on PSE we observe a $+34$ to $+67$ percentage-point lift in
+exact recovery. The prior is observation-conditioned and adds only
+${\sim}40$~ms per task, making it a high-leverage, low-risk preprocessing
+step rather than a competing search algorithm. Beyond the headline metric,
+our analysis dissects why the prior works (variable selection from
+column-target statistics, operator selection from physics-knowledge-graph
+priors), establishes that the gain widens with distractor density rather than
+benchmark choice, and documents the natural boundary of the approach (the
+prior is neutral when distractor density is already low).
+
+\textbf{Fit for the journal.}
+This work sits squarely at the intersection of data-driven physics and
+machine-learning methodology---two communities \emph{Communications Physics}
+serves well. We believe it will be of broad interest to physicists who use
+or develop symbolic regression, and to the wider community working on
+scientific machine learning. The contribution is complementary to the
+dimensional-analysis and physics-aware priors that already strengthen
+scientific SR: we contribute the upstream step of deciding \emph{which
+measured quantities enter the law at all}.
+
+\textbf{Open data and code.} All experimental artifacts and trained model
+weights are publicly released on GitHub
+(\url{https://github.com/ChenxiHeCam/DenoisedSR}) and archived on Zenodo
+(\href{https://doi.org/10.5281/zenodo.20584889}{10.5281/zenodo.20584889}).
+The release includes paper-reproducing evaluation scripts, all recorded
+JSON artifacts that back every figure and table, and the trained
+graph-attention weights.
+
+\textbf{Originality.} The manuscript reports original work, has not been
+published elsewhere, and is not under consideration by any other journal.
+
+\textbf{Suggested reviewers} (with non-overlapping expertise across SR
+methodology, neural-symbolic methods, and physical-law discovery; please
+substitute or amend as the editor sees fit):
+
+\begin{itemize}\itemsep0pt
+\item \textbf{Miles Cranmer}, University of Cambridge --- creator of PySR;
+expert in symbolic regression for physics. \emph{[suggest: \texttt{mc2473@cam.ac.uk}]}
+\item \textbf{Silviu-Marian Udrescu}, Massachusetts Institute of Technology
+--- first author of AI-Feynman; symbolic regression and physics. \emph{[suggest: \texttt{sudrescu@mit.edu}]}
+\item \textbf{Yoshitomo Matsubara}, OMRON SINIC X --- author of SRSD-Feynman benchmark; SR for scientific discovery. \emph{[suggest: \texttt{yoshitomo.matsubara@sinicx.com}]}
+\item \textbf{Kai Ruan}, Renmin University of China --- first author of PSE
+(Nature Computational Science 2026); SR scalability. \emph{[suggest: via group page]}
+\item \textbf{Pierre-Alexandre Kamienny}, Meta AI --- end-to-end neural symbolic regression; complementary perspective on assignment problem.
+\end{itemize}
+
+\textbf{Opposed reviewers.} None.
+
+We hope you will find the work suitable for review.
+
+\closing{Sincerely yours,}
+
+\end{letter}
+\end{document}
