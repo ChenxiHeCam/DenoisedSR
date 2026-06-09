@@ -257,14 +257,21 @@ learned prior---identical recovery rate across all three seeds---is itself a
 result: the front-end removes a source of stochasticity that the unguided solver
 must absorb.
 
-The gain holds---and widens---across distractor counts. Repeating the same
-protocol with $5$, $10$, $20$ and $30$ distractor columns (three seeds at
-$d\in\{5,20,30\}$, two at $d=10$), DenoisedSR's exact-recovery rate stays in
-the $60$--$63\%$ band while full PySR's mean exact recovery falls from $59\%$
-at $d=5$ to $41\%$ at $d=30$. The gap grows monotonically with the distractor
-count---$3$, $10$, $18$, $21$ percentage points respectively
-(Fig.~\ref{fig:distractor})---confirming that the front-end's advantage is the
-exponential reduction in irrelevant branches it removes.
+The gain holds---and widens---monotonically with distractor count. Repeating
+the same protocol with $5$, $10$, $20$ and $30$ distractor columns at five
+random seeds per level, DenoisedSR's exact-recovery rate stays in a tight
+$60.7$--$62.0\%$ band (within-seed s.d.\ $1.5$--$3.0$ pp) while full PySR
+falls from $56.7{\pm}4.7\%$ at $d{=}5$ to $44.0{\pm}6.8\%$ at $d{=}30$. The
+gap grows monotonically with the distractor count---$5.3$, $11.3$, $15.3$,
+$18.0$ percentage points respectively (Fig.~\ref{fig:distractor})---confirming
+that the front-end's advantage is the exponential reduction in irrelevant
+branches it removes. The same monotonic pattern shows up on SRSD-Feynman: when
+SRSD's $\sim$$2$ physically plausible dummies are stripped and replaced with
+$20$ random distractors to match the AI-Feynman protocol, the gap of full vs.\
+DenoisedSR flips from $-4$\,pp (the neutral case discussed below) to
+\emph{$+12$\,pp} (full $42\%$ vs.\ DenoisedSR $54\%$ exact). The variable
+prior is therefore neutral on SRSD only because SRSD itself supplies few
+dummies; it does not stop working when the data are SRSD's.
 
 The mechanism is concrete and visible in the recovered expressions
 (Table~\ref{tab:cases}). Over many irrelevant columns an unguided solver reaches a
@@ -296,11 +303,12 @@ recovery in expectation.}
 \includegraphics[width=0.55\linewidth]{figures/fig_distractor.png}
 \caption{\textbf{Gain is robust---and grows---with distractor count.} Exact-law
 recovery on the same $30$-equation Feynman subset, varying the number of random
-distractor columns from $5$ to $30$ (mean$\pm$s.d.; $d\in\{5,20,30\}$ use three
-seeds, $d=10$ uses two). DenoisedSR's variable prior delivers $60$--$63\%$
-exact recovery across the range while full PySR mean falls from $59\%$ at $d=5$
-to $41\%$ at $d=30$; the per-seed value of full search at $d=20$ varies between
-$30\%$ and $57\%$.}
+distractor columns from $5$ to $30$ (five random seeds per level; error bars
+$\pm$s.d.). DenoisedSR's variable prior delivers $60.7$--$62.0\%$ exact recovery
+across the range with within-seed s.d.\ $1.5$--$3.0$\,pp, while full PySR
+falls from $56.7\%$ at $d=5$ to $44.0\%$ at $d=30$ with substantially larger
+seed variance (up to $\pm 11.5$\,pp at $d=20$). The gap grows monotonically
+($+5.3$, $+11.3$, $+15.3$, $+18.0$\,pp).}
 \label{fig:distractor}
 \end{figure}
 
@@ -472,7 +480,13 @@ essentially neutral---the underlying search space is small enough that PySR
 does not benefit from further pruning, and the operator prior trades
 exact-recovery slots rather than adding them on net. The recall-first design
 ensures the prior fails safely here: it does not catastrophically hurt PySR,
-it simply does not help.
+it simply does not help. Replacing SRSD's $\sim$$2$ dummies with $20$ random
+distractors (matching the AI-Feynman protocol) restores the gain---full PySR
+drops to $42\%$ exact while DenoisedSR remains at $54\%$, a $+12$\,pp lead in
+the same direction as Fig.~\ref{fig:distractor}. The variable prior is
+therefore not specific to AI-Feynman: it tracks the distractor-density regime,
+working whenever there are many irrelevant columns to remove and being safely
+neutral when there are not.
 
 \begin{figure}[t]\centering
 \includegraphics[width=0.50\linewidth]{figures/fig_gplearn.png}
